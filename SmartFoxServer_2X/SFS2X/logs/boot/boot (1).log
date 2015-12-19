@@ -1,0 +1,531 @@
+18 Dez 2015 | 13:44:42,272 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+18 Dez 2015 | 13:44:42,280 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+18 Dez 2015 | 13:44:42,282 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 1888MB
+	os.name: Windows 8
+	os.arch: amd64
+	os.version: 6.2
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thoma\AppData\Local\Temp\
+	Default charset: UTF-8
+
+18 Dez 2015 | 13:44:42,325 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Bluetooth Device (Personal Area Network)
+		 ->fe80:0:0:0:6d02:2a20:84e7:58d3%3
+	Card: Microsoft Kernel Debug Network Adapter
+	Card: Intel(R) Dual Band Wireless-AC 7260
+		 ->192.168.1.4
+	Card: Bluetooth Device (RFCOMM Protocol TDI)
+	Card: Microsoft 6to4 Adapter
+	Card: Microsoft Teredo Tunneling Adapter
+		 ->2001:0:9d38:6ab8:44c:a24:a6f1:dec4
+		 ->fe80:0:0:0:44c:a24:a6f1:dec4%8
+	Card: Microsoft Hosted Network Virtual Adapter
+		 ->fe80:0:0:0:1c0a:5a61:5dea:265d%9
+	Card: Microsoft Wi-Fi Direct Virtual Adapter
+		 ->fe80:0:0:0:1e7:ed53:c243:53bb%10
+	Card: Microsoft ISATAP Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:104%11
+	Card: Microsoft ISATAP Adapter #2
+	Card: Intel(R) Ethernet Connection I218-LM
+		 ->fe80:0:0:0:3c23:91cf:2a1b:d789%13
+	Card: Intel(R) Ethernet Connection I218-LM-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Ethernet Connection I218-LM-QoS Packet Scheduler-0000
+	Card: Intel(R) Ethernet Connection I218-LM-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-QoS Packet Scheduler-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+
+18 Dez 2015 | 13:44:42,333 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@779a060f
+18 Dez 2015 | 13:44:42,363 | INFO  | main | bootLogger |     | TCP Selector opened
+18 Dez 2015 | 13:44:42,372 | INFO  | main | bootLogger |     | UDP Selector opened
+18 Dez 2015 | 13:44:42,375 | INFO  | main | bootLogger |     | AcceptSelector opened
+18 Dez 2015 | 13:44:42,381 | WARN  | main | bootLogger |     | Was not able to bind socket: { 0.0.0.0:9933, (Tcp) }
+18 Dez 2015 | 13:44:42,387 | WARN  | main | bootLogger |     | Was not able to bind socket: { 127.0.0.1:9933, (Udp) }
+18 Dez 2015 | 13:44:42,387 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+18 Dez 2015 | 13:44:42,388 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+18 Dez 2015 | 13:44:42,388 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+18 Dez 2015 | 13:44:42,388 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@3e7ddaa2
+18 Dez 2015 | 13:44:42,388 | INFO  | main | bootLogger |     | SocketReader started
+18 Dez 2015 | 13:44:42,388 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+18 Dez 2015 | 13:44:42,389 | ERROR | main | bootLogger |     | No bound sockets! Check the boot logs for possible problems!
+18 Dez 2015 | 13:44:42,491 | ERROR | main | bootLogger |     | Failed starting up websocket engine: Failed to bind to: /127.0.0.1:8888
+18 Dez 2015 | 13:44:42,493 | WARN  | main | bootLogger |     | org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:8888
+	org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.boot(WebSocketBoot.java:69)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.<init>(WebSocketBoot.java:34)
+	com.smartfoxserver.bitswarm.websocket.WebSocketService.init(WebSocketService.java:43)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.bootSequence(BitSwarmEngine.java:331)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.start(BitSwarmEngine.java:175)
+	com.smartfoxserver.v2.SmartFoxServer.start(SmartFoxServer.java:285)
+	com.smartfoxserver.v2.Main.main(Main.java:27)
+
+18 Dez 2015 | 13:44:42,495 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+18 Dez 2015 | 13:44:42,495 | INFO  | main | bootLogger |     | DatagramReader started
+18 Dez 2015 | 13:44:42,497 | INFO  | main | bootLogger |     | Security Manager started
+18 Dez 2015 | 13:44:42,498 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+18 Dez 2015 | 13:44:42,500 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+18 Dez 2015 | 13:45:11,581 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+18 Dez 2015 | 13:45:11,584 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+18 Dez 2015 | 13:45:11,584 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 1888MB
+	os.name: Windows 8
+	os.arch: amd64
+	os.version: 6.2
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thoma\AppData\Local\Temp\
+	Default charset: UTF-8
+
+18 Dez 2015 | 13:45:11,622 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Bluetooth Device (Personal Area Network)
+		 ->fe80:0:0:0:6d02:2a20:84e7:58d3%3
+	Card: Microsoft Kernel Debug Network Adapter
+	Card: Intel(R) Dual Band Wireless-AC 7260
+		 ->192.168.1.4
+	Card: Bluetooth Device (RFCOMM Protocol TDI)
+	Card: Microsoft 6to4 Adapter
+	Card: Microsoft Teredo Tunneling Adapter
+		 ->2001:0:9d38:6ab8:44c:a24:a6f1:dec4
+		 ->fe80:0:0:0:44c:a24:a6f1:dec4%8
+	Card: Microsoft Hosted Network Virtual Adapter
+		 ->fe80:0:0:0:1c0a:5a61:5dea:265d%9
+	Card: Microsoft Wi-Fi Direct Virtual Adapter
+		 ->fe80:0:0:0:1e7:ed53:c243:53bb%10
+	Card: Microsoft ISATAP Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:104%11
+	Card: Microsoft ISATAP Adapter #2
+	Card: Intel(R) Ethernet Connection I218-LM
+		 ->fe80:0:0:0:3c23:91cf:2a1b:d789%13
+	Card: Intel(R) Ethernet Connection I218-LM-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Ethernet Connection I218-LM-QoS Packet Scheduler-0000
+	Card: Intel(R) Ethernet Connection I218-LM-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-QoS Packet Scheduler-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+
+18 Dez 2015 | 13:45:11,628 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@5674c175
+18 Dez 2015 | 13:45:11,643 | INFO  | main | bootLogger |     | TCP Selector opened
+18 Dez 2015 | 13:45:11,650 | INFO  | main | bootLogger |     | UDP Selector opened
+18 Dez 2015 | 13:45:11,653 | INFO  | main | bootLogger |     | AcceptSelector opened
+18 Dez 2015 | 13:45:11,658 | WARN  | main | bootLogger |     | Was not able to bind socket: { 0.0.0.0:9933, (Tcp) }
+18 Dez 2015 | 13:45:11,661 | WARN  | main | bootLogger |     | Was not able to bind socket: { 127.0.0.1:9933, (Udp) }
+18 Dez 2015 | 13:45:11,662 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+18 Dez 2015 | 13:45:11,662 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+18 Dez 2015 | 13:45:11,662 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+18 Dez 2015 | 13:45:11,663 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@4bcdf052
+18 Dez 2015 | 13:45:11,663 | INFO  | main | bootLogger |     | SocketReader started
+18 Dez 2015 | 13:45:11,663 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+18 Dez 2015 | 13:45:11,663 | ERROR | main | bootLogger |     | No bound sockets! Check the boot logs for possible problems!
+18 Dez 2015 | 13:45:11,736 | ERROR | main | bootLogger |     | Failed starting up websocket engine: Failed to bind to: /127.0.0.1:8888
+18 Dez 2015 | 13:45:11,737 | WARN  | main | bootLogger |     | org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:8888
+	org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.boot(WebSocketBoot.java:69)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.<init>(WebSocketBoot.java:34)
+	com.smartfoxserver.bitswarm.websocket.WebSocketService.init(WebSocketService.java:43)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.bootSequence(BitSwarmEngine.java:331)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.start(BitSwarmEngine.java:175)
+	com.smartfoxserver.v2.SmartFoxServer.start(SmartFoxServer.java:285)
+	com.smartfoxserver.v2.Main.main(Main.java:27)
+
+18 Dez 2015 | 13:45:11,739 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+18 Dez 2015 | 13:45:11,739 | INFO  | main | bootLogger |     | DatagramReader started
+18 Dez 2015 | 13:45:11,741 | INFO  | main | bootLogger |     | Security Manager started
+18 Dez 2015 | 13:45:11,742 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+18 Dez 2015 | 13:45:11,744 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+18 Dez 2015 | 13:45:17,550 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+18 Dez 2015 | 13:45:17,553 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+18 Dez 2015 | 13:45:17,554 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 1888MB
+	os.name: Windows 8
+	os.arch: amd64
+	os.version: 6.2
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thoma\AppData\Local\Temp\
+	Default charset: UTF-8
+
+18 Dez 2015 | 13:45:17,592 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Bluetooth Device (Personal Area Network)
+		 ->fe80:0:0:0:6d02:2a20:84e7:58d3%3
+	Card: Microsoft Kernel Debug Network Adapter
+	Card: Intel(R) Dual Band Wireless-AC 7260
+		 ->192.168.1.4
+	Card: Bluetooth Device (RFCOMM Protocol TDI)
+	Card: Microsoft 6to4 Adapter
+	Card: Microsoft Teredo Tunneling Adapter
+		 ->2001:0:9d38:6ab8:44c:a24:a6f1:dec4
+		 ->fe80:0:0:0:44c:a24:a6f1:dec4%8
+	Card: Microsoft Hosted Network Virtual Adapter
+		 ->fe80:0:0:0:1c0a:5a61:5dea:265d%9
+	Card: Microsoft Wi-Fi Direct Virtual Adapter
+		 ->fe80:0:0:0:1e7:ed53:c243:53bb%10
+	Card: Microsoft ISATAP Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:104%11
+	Card: Microsoft ISATAP Adapter #2
+	Card: Intel(R) Ethernet Connection I218-LM
+		 ->fe80:0:0:0:3c23:91cf:2a1b:d789%13
+	Card: Intel(R) Ethernet Connection I218-LM-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Ethernet Connection I218-LM-QoS Packet Scheduler-0000
+	Card: Intel(R) Ethernet Connection I218-LM-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-QoS Packet Scheduler-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+
+18 Dez 2015 | 13:45:17,597 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@5c082421
+18 Dez 2015 | 13:45:17,611 | INFO  | main | bootLogger |     | TCP Selector opened
+18 Dez 2015 | 13:45:17,617 | INFO  | main | bootLogger |     | UDP Selector opened
+18 Dez 2015 | 13:45:17,621 | INFO  | main | bootLogger |     | AcceptSelector opened
+18 Dez 2015 | 13:45:17,627 | WARN  | main | bootLogger |     | Was not able to bind socket: { 0.0.0.0:9933, (Tcp) }
+18 Dez 2015 | 13:45:17,631 | WARN  | main | bootLogger |     | Was not able to bind socket: { 127.0.0.1:9933, (Udp) }
+18 Dez 2015 | 13:45:17,632 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+18 Dez 2015 | 13:45:17,632 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+18 Dez 2015 | 13:45:17,632 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+18 Dez 2015 | 13:45:17,633 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@5aafe97b
+18 Dez 2015 | 13:45:17,633 | INFO  | main | bootLogger |     | SocketReader started
+18 Dez 2015 | 13:45:17,634 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+18 Dez 2015 | 13:45:17,634 | ERROR | main | bootLogger |     | No bound sockets! Check the boot logs for possible problems!
+18 Dez 2015 | 13:45:17,705 | ERROR | main | bootLogger |     | Failed starting up websocket engine: Failed to bind to: /127.0.0.1:8888
+18 Dez 2015 | 13:45:17,707 | WARN  | main | bootLogger |     | org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:8888
+	org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.boot(WebSocketBoot.java:69)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.<init>(WebSocketBoot.java:34)
+	com.smartfoxserver.bitswarm.websocket.WebSocketService.init(WebSocketService.java:43)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.bootSequence(BitSwarmEngine.java:331)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.start(BitSwarmEngine.java:175)
+	com.smartfoxserver.v2.SmartFoxServer.start(SmartFoxServer.java:285)
+	com.smartfoxserver.v2.Main.main(Main.java:27)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	java.lang.reflect.Method.invoke(Unknown Source)
+	com.exe4j.runtime.LauncherEngine.launch(Unknown Source)
+	com.exe4j.runtime.WinLauncher.main(Unknown Source)
+	com.install4j.runtime.launcher.WinLauncher.main(Unknown Source)
+
+18 Dez 2015 | 13:45:17,708 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+18 Dez 2015 | 13:45:17,710 | INFO  | main | bootLogger |     | DatagramReader started
+18 Dez 2015 | 13:45:17,711 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+18 Dez 2015 | 13:45:17,711 | INFO  | main | bootLogger |     | Security Manager started
+18 Dez 2015 | 13:45:17,714 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+18 Dez 2015 | 13:45:41,424 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+18 Dez 2015 | 13:45:41,426 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+18 Dez 2015 | 13:45:41,427 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 1888MB
+	os.name: Windows 8
+	os.arch: amd64
+	os.version: 6.2
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thoma\AppData\Local\Temp\
+	Default charset: UTF-8
+
+18 Dez 2015 | 13:45:41,464 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Bluetooth Device (Personal Area Network)
+		 ->fe80:0:0:0:6d02:2a20:84e7:58d3%3
+	Card: Microsoft Kernel Debug Network Adapter
+	Card: Intel(R) Dual Band Wireless-AC 7260
+		 ->192.168.1.4
+	Card: Bluetooth Device (RFCOMM Protocol TDI)
+	Card: Microsoft 6to4 Adapter
+	Card: Microsoft Teredo Tunneling Adapter
+		 ->2001:0:9d38:6ab8:44c:a24:a6f1:dec4
+		 ->fe80:0:0:0:44c:a24:a6f1:dec4%8
+	Card: Microsoft Hosted Network Virtual Adapter
+		 ->fe80:0:0:0:1c0a:5a61:5dea:265d%9
+	Card: Microsoft Wi-Fi Direct Virtual Adapter
+		 ->fe80:0:0:0:1e7:ed53:c243:53bb%10
+	Card: Microsoft ISATAP Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:104%11
+	Card: Microsoft ISATAP Adapter #2
+	Card: Intel(R) Ethernet Connection I218-LM
+		 ->fe80:0:0:0:3c23:91cf:2a1b:d789%13
+	Card: Intel(R) Ethernet Connection I218-LM-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Ethernet Connection I218-LM-QoS Packet Scheduler-0000
+	Card: Intel(R) Ethernet Connection I218-LM-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-QoS Packet Scheduler-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+
+18 Dez 2015 | 13:45:41,470 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@6aebec56
+18 Dez 2015 | 13:45:41,486 | INFO  | main | bootLogger |     | TCP Selector opened
+18 Dez 2015 | 13:45:41,494 | INFO  | main | bootLogger |     | UDP Selector opened
+18 Dez 2015 | 13:45:41,498 | INFO  | main | bootLogger |     | AcceptSelector opened
+18 Dez 2015 | 13:45:41,503 | WARN  | main | bootLogger |     | Was not able to bind socket: { 0.0.0.0:9933, (Tcp) }
+18 Dez 2015 | 13:45:41,507 | WARN  | main | bootLogger |     | Was not able to bind socket: { 127.0.0.1:9933, (Udp) }
+18 Dez 2015 | 13:45:41,508 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+18 Dez 2015 | 13:45:41,508 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+18 Dez 2015 | 13:45:41,508 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+18 Dez 2015 | 13:45:41,509 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@13d66e72
+18 Dez 2015 | 13:45:41,509 | INFO  | main | bootLogger |     | SocketReader started
+18 Dez 2015 | 13:45:41,509 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+18 Dez 2015 | 13:45:41,510 | ERROR | main | bootLogger |     | No bound sockets! Check the boot logs for possible problems!
+18 Dez 2015 | 13:45:41,586 | ERROR | main | bootLogger |     | Failed starting up websocket engine: Failed to bind to: /127.0.0.1:8888
+18 Dez 2015 | 13:45:41,588 | WARN  | main | bootLogger |     | org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:8888
+	org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.boot(WebSocketBoot.java:69)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.<init>(WebSocketBoot.java:34)
+	com.smartfoxserver.bitswarm.websocket.WebSocketService.init(WebSocketService.java:43)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.bootSequence(BitSwarmEngine.java:331)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.start(BitSwarmEngine.java:175)
+	com.smartfoxserver.v2.SmartFoxServer.start(SmartFoxServer.java:285)
+	com.smartfoxserver.v2.Main.main(Main.java:27)
+
+18 Dez 2015 | 13:45:41,590 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+18 Dez 2015 | 13:45:41,590 | INFO  | main | bootLogger |     | DatagramReader started
+18 Dez 2015 | 13:45:41,592 | INFO  | main | bootLogger |     | Security Manager started
+18 Dez 2015 | 13:45:41,592 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+18 Dez 2015 | 13:45:41,594 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+18 Dez 2015 | 13:47:17,704 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+18 Dez 2015 | 13:47:17,705 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+18 Dez 2015 | 13:47:17,706 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 1888MB
+	os.name: Windows 8
+	os.arch: amd64
+	os.version: 6.2
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thoma\AppData\Local\Temp\
+	Default charset: UTF-8
+
+18 Dez 2015 | 13:47:17,742 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Bluetooth Device (Personal Area Network)
+		 ->fe80:0:0:0:6d02:2a20:84e7:58d3%3
+	Card: Microsoft Kernel Debug Network Adapter
+	Card: Intel(R) Dual Band Wireless-AC 7260
+		 ->192.168.1.4
+	Card: Bluetooth Device (RFCOMM Protocol TDI)
+	Card: Microsoft 6to4 Adapter
+	Card: Microsoft Teredo Tunneling Adapter
+		 ->2001:0:9d38:6ab8:44c:a24:a6f1:dec4
+		 ->fe80:0:0:0:44c:a24:a6f1:dec4%8
+	Card: Microsoft Hosted Network Virtual Adapter
+		 ->fe80:0:0:0:1c0a:5a61:5dea:265d%9
+	Card: Microsoft Wi-Fi Direct Virtual Adapter
+		 ->fe80:0:0:0:1e7:ed53:c243:53bb%10
+	Card: Microsoft ISATAP Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:104%11
+	Card: Microsoft ISATAP Adapter #2
+	Card: Intel(R) Ethernet Connection I218-LM
+		 ->fe80:0:0:0:3c23:91cf:2a1b:d789%13
+	Card: Intel(R) Ethernet Connection I218-LM-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Ethernet Connection I218-LM-QoS Packet Scheduler-0000
+	Card: Intel(R) Ethernet Connection I218-LM-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-QoS Packet Scheduler-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+
+18 Dez 2015 | 13:47:17,747 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@6e8deccd
+18 Dez 2015 | 13:47:17,761 | INFO  | main | bootLogger |     | TCP Selector opened
+18 Dez 2015 | 13:47:17,768 | INFO  | main | bootLogger |     | UDP Selector opened
+18 Dez 2015 | 13:47:17,770 | INFO  | main | bootLogger |     | AcceptSelector opened
+18 Dez 2015 | 13:47:17,776 | WARN  | main | bootLogger |     | Was not able to bind socket: { 0.0.0.0:9933, (Tcp) }
+18 Dez 2015 | 13:47:17,779 | WARN  | main | bootLogger |     | Was not able to bind socket: { 127.0.0.1:9933, (Udp) }
+18 Dez 2015 | 13:47:17,780 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+18 Dez 2015 | 13:47:17,780 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+18 Dez 2015 | 13:47:17,780 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+18 Dez 2015 | 13:47:17,781 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@1a12b4d3
+18 Dez 2015 | 13:47:17,781 | INFO  | main | bootLogger |     | SocketReader started
+18 Dez 2015 | 13:47:17,781 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+18 Dez 2015 | 13:47:17,782 | ERROR | main | bootLogger |     | No bound sockets! Check the boot logs for possible problems!
+18 Dez 2015 | 13:47:17,850 | ERROR | main | bootLogger |     | Failed starting up websocket engine: Failed to bind to: /127.0.0.1:8888
+18 Dez 2015 | 13:47:17,851 | WARN  | main | bootLogger |     | org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:8888
+	org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.boot(WebSocketBoot.java:69)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketBoot.<init>(WebSocketBoot.java:34)
+	com.smartfoxserver.bitswarm.websocket.WebSocketService.init(WebSocketService.java:43)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.bootSequence(BitSwarmEngine.java:331)
+	com.smartfoxserver.bitswarm.core.BitSwarmEngine.start(BitSwarmEngine.java:175)
+	com.smartfoxserver.v2.SmartFoxServer.start(SmartFoxServer.java:285)
+	com.smartfoxserver.v2.Main.main(Main.java:27)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	java.lang.reflect.Method.invoke(Unknown Source)
+	com.exe4j.runtime.LauncherEngine.launch(Unknown Source)
+	com.exe4j.runtime.WinLauncher.main(Unknown Source)
+	com.install4j.runtime.launcher.WinLauncher.main(Unknown Source)
+
+18 Dez 2015 | 13:47:17,854 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+18 Dez 2015 | 13:47:17,854 | INFO  | main | bootLogger |     | DatagramReader started
+18 Dez 2015 | 13:47:17,856 | INFO  | main | bootLogger |     | Security Manager started
+18 Dez 2015 | 13:47:17,858 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+18 Dez 2015 | 13:47:17,859 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+18 Dez 2015 | 13:49:51,738 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+18 Dez 2015 | 13:49:51,740 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+18 Dez 2015 | 13:49:51,741 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 1888MB
+	os.name: Windows 8
+	os.arch: amd64
+	os.version: 6.2
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thoma\AppData\Local\Temp\
+	Default charset: UTF-8
+
+18 Dez 2015 | 13:49:51,776 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Bluetooth Device (Personal Area Network)
+		 ->fe80:0:0:0:6d02:2a20:84e7:58d3%3
+	Card: Microsoft Kernel Debug Network Adapter
+	Card: Intel(R) Dual Band Wireless-AC 7260
+		 ->192.168.1.4
+	Card: Bluetooth Device (RFCOMM Protocol TDI)
+	Card: Microsoft 6to4 Adapter
+	Card: Microsoft Teredo Tunneling Adapter
+		 ->2001:0:9d38:6ab8:44c:a24:a6f1:dec4
+		 ->fe80:0:0:0:44c:a24:a6f1:dec4%8
+	Card: Microsoft Hosted Network Virtual Adapter
+		 ->fe80:0:0:0:1c0a:5a61:5dea:265d%9
+	Card: Microsoft Wi-Fi Direct Virtual Adapter
+		 ->fe80:0:0:0:1e7:ed53:c243:53bb%10
+	Card: Microsoft ISATAP Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:104%11
+	Card: Microsoft ISATAP Adapter #2
+	Card: Intel(R) Ethernet Connection I218-LM
+		 ->fe80:0:0:0:3c23:91cf:2a1b:d789%13
+	Card: Intel(R) Ethernet Connection I218-LM-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Ethernet Connection I218-LM-QoS Packet Scheduler-0000
+	Card: Intel(R) Ethernet Connection I218-LM-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-QoS Packet Scheduler-0000
+	Card: Intel(R) Dual Band Wireless-AC 7260-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+	Card: Microsoft Hosted Network Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+	Card: Microsoft Hosted Network Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+	Card: Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+
+18 Dez 2015 | 13:49:51,780 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@6e8deccd
+18 Dez 2015 | 13:49:51,795 | INFO  | main | bootLogger |     | TCP Selector opened
+18 Dez 2015 | 13:49:51,803 | INFO  | main | bootLogger |     | UDP Selector opened
+18 Dez 2015 | 13:49:51,808 | INFO  | main | bootLogger |     | AcceptSelector opened
+18 Dez 2015 | 13:49:51,813 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+18 Dez 2015 | 13:49:51,815 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+18 Dez 2015 | 13:49:51,815 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+18 Dez 2015 | 13:49:51,815 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+18 Dez 2015 | 13:49:51,815 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+18 Dez 2015 | 13:49:51,816 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@23406fd7
+18 Dez 2015 | 13:49:51,816 | INFO  | main | bootLogger |     | SocketReader started
+18 Dez 2015 | 13:49:51,816 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+18 Dez 2015 | 13:49:51,876 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+18 Dez 2015 | 13:49:51,876 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+18 Dez 2015 | 13:49:51,876 | INFO  | main | bootLogger |     | DatagramReader started
+18 Dez 2015 | 13:49:51,876 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+18 Dez 2015 | 13:49:51,877 | INFO  | main | bootLogger |     | Security Manager started
+18 Dez 2015 | 13:49:51,879 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]

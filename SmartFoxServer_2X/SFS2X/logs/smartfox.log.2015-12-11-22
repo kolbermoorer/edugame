@@ -1,0 +1,142 @@
+11 Dez 2015 | 22:18:17,039 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 14, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 62796
+11 Dez 2015 | 22:18:17,324 | WARN  | SFSWorker:Ext:3 | entities.managers.SFSExtensionManager |     | com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException
+Message: Unknown column 'points' in 'field list'
+Description: Error during event handling: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'points' in 'field list', Listener: com.smartfoxserver.v2.components.login.LoginAssistantEventHandler@238661f8
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+java.lang.reflect.Constructor.newInstance(Unknown Source)
+com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+com.mysql.jdbc.Util.getInstance(Util.java:387)
+com.mysql.jdbc.SQLError.createSQLException(SQLError.java:941)
+com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3870)
+com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3806)
+com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2470)
+com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2617)
+com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2550)
+com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+com.smartfoxserver.v2.db.SFSDBManager.executeQuery(SFSDBManager.java:153)
+com.smartfoxserver.v2.components.login.LoginAssistantEventHandler.handleServerEvent(LoginAssistantEventHandler.java:59)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchZoneLevelEvent(SFSExtensionManager.java:690)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:887)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 22:18:23,511 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 14, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:62796 }
+11 Dez 2015 | 22:18:25,811 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 15, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 62834
+11 Dez 2015 | 22:18:25,848 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSExtensionManager |     | com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException
+Message: Unknown column 'points' in 'field list'
+Description: Error during event handling: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'points' in 'field list', Listener: com.smartfoxserver.v2.components.login.LoginAssistantEventHandler@238661f8
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+java.lang.reflect.Constructor.newInstance(Unknown Source)
+com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+com.mysql.jdbc.Util.getInstance(Util.java:387)
+com.mysql.jdbc.SQLError.createSQLException(SQLError.java:941)
+com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3870)
+com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3806)
+com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2470)
+com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2617)
+com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2550)
+com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:1962)
+org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+org.apache.commons.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+com.smartfoxserver.v2.db.SFSDBManager.executeQuery(SFSDBManager.java:153)
+com.smartfoxserver.v2.components.login.LoginAssistantEventHandler.handleServerEvent(LoginAssistantEventHandler.java:59)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchZoneLevelEvent(SFSExtensionManager.java:690)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:887)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 22:20:28,035 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+11 Dez 2015 | 22:20:33,365 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 15, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:62834 }
+11 Dez 2015 | 22:20:35,806 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 16, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 62905
+11 Dez 2015 | 22:20:35,825 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. Password don't match for User: tkutschk
+11 Dez 2015 | 22:20:59,463 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 17, Type: DEFAULT, Logged: No, IP: 0 } on Server port: 9933 <---> 0
+11 Dez 2015 | 22:20:59,496 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 17, Type: DEFAULT, Logged: No, IP: 0 }
+11 Dez 2015 | 22:20:59,512 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 18, Type: DEFAULT, Logged: No, IP: 0 } on Server port: 9933 <---> 0
+11 Dez 2015 | 22:20:59,576 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 0, Priv: 0, Sess: 0 ) , Type: Flash PlugIn:WIN 20,0,0,228
+11 Dez 2015 | 22:20:59,584 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 0, Priv: 0, Sess: 0 ) , asSpect: false
+11 Dez 2015 | 22:21:16,434 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 16, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:62905 }
+11 Dez 2015 | 22:21:18,494 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 19, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 62956
+11 Dez 2015 | 22:21:18,532 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. Password don't match for User: tkutschk
+11 Dez 2015 | 22:21:22,563 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 19, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:62956 }
+11 Dez 2015 | 22:23:24,656 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 20, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 63047
+11 Dez 2015 | 22:23:24,686 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#1, Id: 1, Priv: 0, Sess: 127.0.0.1:63047 ) , Type: JavaScript
+11 Dez 2015 | 22:23:24,719 | WARN  | SFSWorker:Ext:4 | components.signup.SignUpAssistant |     | com.mysql.jdbc.MysqlDataTruncation:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.MysqlDataTruncation
+Message: Data truncation: Data too long for column 'email' at row 1
+Description: A SQL error occurred during the SignUp process
+User info: ( User Name: Guest#1, Id: 1, Priv: 0, Sess: 127.0.0.1:63047 ) 
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3868)
+com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3806)
+com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2470)
+com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2617)
+com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2550)
+com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073)
+com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009)
+com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094)
+com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994)
+org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+com.smartfoxserver.v2.db.SFSDBManager.executeInsert(SFSDBManager.java:257)
+com.smartfoxserver.v2.components.signup.SignUpAssistantComponent.writeToDatabase(SignUpAssistantComponent.java:563)
+com.smartfoxserver.v2.components.signup.SignUpAssistantComponent.handleSubmit(SignUpAssistantComponent.java:421)
+com.smartfoxserver.v2.components.signup.SignUpAssistantComponent.handleClientRequest(SignUpAssistantComponent.java:153)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 22:23:36,096 | WARN  | SFSWorker:Ext:1 | Extensions |     | {Admin}: {ExtensionManager}: Module access prevented; remove file config/ExtensionManagerLock.txt to allow module usage 
+11 Dez 2015 | 22:24:18,441 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 20, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:63047 }
+11 Dez 2015 | 22:24:18,444 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#1, Id: 1, Priv: 0, Sess: 127.0.0.1:63047 ) , SessionLen: 53759, Type: JavaScript
+11 Dez 2015 | 22:24:26,220 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 21, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 63102
+11 Dez 2015 | 22:24:26,251 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#2, Id: 2, Priv: 0, Sess: 127.0.0.1:63102 ) , Type: JavaScript
+11 Dez 2015 | 22:25:02,144 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: signup, Type: JAVA, Lev: ZONE, { Zone: Registration }, {} }
+11 Dez 2015 | 22:25:11,273 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 21, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:63102 }
+11 Dez 2015 | 22:25:11,274 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#2, Id: 2, Priv: 0, Sess: 127.0.0.1:63102 ) , SessionLen: 45024, Type: JavaScript
+11 Dez 2015 | 22:25:18,897 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 22, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 63135
+11 Dez 2015 | 22:25:18,914 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#3, Id: 3, Priv: 0, Sess: 127.0.0.1:63135 ) , Type: JavaScript
+11 Dez 2015 | 22:25:31,168 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 23, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 63174
+11 Dez 2015 | 22:25:31,211 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:63174 ) , Type: JavaScript
+11 Dez 2015 | 22:25:31,231 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:63174 ) , asSpect: false
+11 Dez 2015 | 22:55:10,255 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/1
+11 Dez 2015 | 22:55:10,257 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+11 Dez 2015 | 22:55:10,259 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/1
+11 Dez 2015 | 22:55:10,260 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: CCU: 1/3
+11 Dez 2015 | 22:55:25,164 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 22, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:63135 }
+11 Dez 2015 | 22:55:25,165 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#3, Id: 3, Priv: 0, Sess: 127.0.0.1:63135 ) , SessionLen: 1806251, Type: JavaScript
+11 Dez 2015 | 22:55:34,918 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 23, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:63174 }
+11 Dez 2015 | 22:55:34,921 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:63174 ) , SessionLen: 1803711, Type: JavaScript

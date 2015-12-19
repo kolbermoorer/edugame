@@ -1,0 +1,205 @@
+package sfs2x.extensions.room.play;
+
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
+
+public class EduGameBoard {
+	private Sparql sparql;
+	private ArrayList<String[]> settings;
+	private ArrayList<String[]> resourceList;
+	private Card[] cardArray;
+	private final int NUMBER_OF_CARDS_PER_CATEGORY = 8;
+	
+	public EduGameBoard(int numberOfCards, ArrayList<String[]> settings) {
+		setCardArray(new Card[numberOfCards]); 										// initiate # cards
+		setSettings(settings); 														//set settings for category, topic and level
+		setSparql(new Sparql()); 													// initiate new Sparql class
+	}
+	
+	//get the resources attached to the topics, choose 8 for each topic
+	public void generateResourceList() {
+		String lastName = null;														
+		sparql.setQueryString(getSettings(), "getResources");
+		sparql.executeQuery();
+		ResultSet rs =sparql.getResults();
+		ArrayList<String[]> resources = new ArrayList<String[]>();
+		ArrayList<String[]> temp = null;
+		int index = -1;
+		while (rs.hasNext()) {
+			QuerySolution qs = rs.next();
+			String category = qs.get("category").toString(); //category of card
+			String uri = qs.get("uri").toString(); //resource uri of card
+			String name = qs.get("name").toString(); //name of card
+			if (!category.equals(lastName)) { //is there a new category because of the union?
+				if (index > -1) {
+					setSubset(temp, resources, NUMBER_OF_CARDS_PER_CATEGORY); //if yes get defined number of cards per category
+				}
+				lastName = category;
+				index++;
+				temp = new ArrayList<String[]>(); //temporary holder to manage all resources
+			}
+			temp.add(new String[]{category,uri, name});
+		}
+		setSubset(temp, resources, NUMBER_OF_CARDS_PER_CATEGORY); //because the last element does not have a successor we need to set the subset once more for last category
+		setResourceList(resources);
+		sparql.getQexec().close();
+	}
+	
+	public void setSubset(ArrayList<String[]> temp, ArrayList<String[]> resources, int nCards) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+        for (int i=1; i<temp.size(); i++) { //add same number of indexes as there exists resources for topic
+            list.add(new Integer(i));
+        }
+        Collections.shuffle(list); //shuffle the resources so that n random resources are at start of list
+        for (int i=0; i<nCards; i++) { //get first n random resources
+            int index = list.get(i);
+            resources.add(temp.get(index));
+        }
+	}
+	
+	public void generateCardList() {
+		sparql.setQueryString(getResourceList(), "getDetails");
+		sparql.executeQuery();
+		ResultSet rs =sparql.getResults();
+		generateCards(rs);
+		sparql.getQexec().close();
+	}
+
+	public void generateCards(ResultSet rs) {
+		String lastName = null;
+		Card card = null;
+		List<String[]> properties = null;
+		int index = -1;
+		while (rs.hasNext()) {
+			QuerySolution qs = rs.next();
+			String category = qs.get("category").toString(); //category of card
+			//String topic = qs.get("topic").toString(); //topic of card
+			String name = qs.get("name").toString(); //name of card
+			if (!name.equals(lastName)) {
+				if(index > -1)
+					card.setProperties(properties);
+				properties = new ArrayList<String[]>();
+				lastName = name;
+				index++;
+				card = cardArray[index] = new Card();
+				card.setCategory(category);
+				card.setCardId(index);
+				card.setPlayerId(playerId);
+				//card.setTopic(topic);
+				card.setName(name);
+			}
+			String property = qs.get("property_uri").toString();
+			String value = qs.get("value").toString();
+			if(property.toLowerCase().contains("thumbnail")) {
+				card.setImage(value);
+			}
+			properties.add(new String[]{property,value});
+		}
+		card.setProperties(properties);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public String getAllCards() throws IOException {
+		JSONArray list = new JSONArray();
+		
+		Card[] initiatedCards = getCardArray();
+		for (Card card : initiatedCards) {
+			String category = card.getCategory();
+			String name = card.getName();
+			if(!categoryExists(list,category)) {
+				JSONObject obj=new JSONObject();
+				obj.put("category",card.getCategory());
+				//obj.put("topic",card.getTopic());
+				obj.put("cards", new JSONObject());
+				list.add(obj);
+			}
+			int pos = getCategoryPosition(list,category);
+			JSONObject data = (JSONObject) list.get(pos);
+			JSONObject cards = (JSONObject) data.get("cards");
+			String[] extraData = getExtraData(card);
+			JSONObject extraDataContainer = new JSONObject();
+			extraDataContainer.put("image", extraData[0]);
+			extraDataContainer.put("uri", extraData[1]);
+			cards.put(name, extraDataContainer);
+		}
+		StringWriter out = new StringWriter();
+		list.writeJSONString(out);
+		String jsonText = out.toString();
+		  
+		return jsonText;
+	}
+	
+	private boolean categoryExists(JSONArray jsonArray, String categoryToFind){
+	    return jsonArray.toString().contains("\"category\":\""+ categoryToFind +"\"");
+	}
+	
+	private int getCategoryPosition(JSONArray jsonArray, String categoryToFind){
+		int pos=0;
+		for (Object wrapper : jsonArray) {
+			if(wrapper.toString().contains("\"category\":\""+ categoryToFind +"\"")) {
+				return pos;
+			}
+			else
+				pos++;
+		}
+		return 0;
+	}
+	
+	//search for the wiki link so that the users are able to inform themselves prior to the game
+	private String[] getExtraData(Card card) {
+		String uri = null;
+		String image = null;
+		List<String[]> properties = card.getProperties();
+		for (String[] property : properties) {
+			if(property[0].contains("isPrimaryTopicOf")) {
+				uri = property[1];
+			}
+			if(property[0].contains("thumbnail")) {
+				image = property[1];
+			}
+		}
+		return new String[]{image,uri};
+	}
+
+	public Card[] getCardArray() {
+		return cardArray;
+	}
+	public void setCardArray(Card[] cardArray) {
+		this.cardArray = cardArray;
+	}
+	public Sparql getSparql() {
+		return sparql;
+	}
+	public void setSparql(Sparql sparql) {
+		this.sparql = sparql;
+	}
+
+	public ArrayList<String[]> getSettings() {
+		return settings;
+	}
+
+	public void setSettings(ArrayList<String[]> settings) {
+		this.settings = settings;
+	}
+
+
+	public ArrayList<String[]> getResourceList() {
+		return resourceList;
+	}
+
+
+	public void setResourceList(ArrayList<String[]> resourceList) {
+		this.resourceList = resourceList;
+	}
+
+	
+}

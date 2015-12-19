@@ -1,0 +1,79 @@
+09 Dez 2015 | 04:30:35,612 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+09 Dez 2015 | 04:30:35,635 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+09 Dez 2015 | 04:30:36,519 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+09 Dez 2015 | 04:30:36,559 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+09 Dez 2015 | 04:30:36,695 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+09 Dez 2015 | 04:30:36,698 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+09 Dez 2015 | 04:30:36,718 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+09 Dez 2015 | 04:30:36,727 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+09 Dez 2015 | 04:30:36,733 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+09 Dez 2015 | 04:30:36,785 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+09 Dez 2015 | 04:30:36,814 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+09 Dez 2015 | 04:30:39,166 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+09 Dez 2015 | 04:30:39,184 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+09 Dez 2015 | 04:30:39,209 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+09 Dez 2015 | 04:30:41,211 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+09 Dez 2015 | 04:30:41,247 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+09 Dez 2015 | 04:30:41,266 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+09 Dez 2015 | 04:30:41,484 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+09 Dez 2015 | 04:30:41,485 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+09 Dez 2015 | 04:30:41,486 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+09 Dez 2015 | 04:30:43,424 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+09 Dez 2015 | 04:31:26,936 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 64378
+09 Dez 2015 | 04:31:27,193 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:64378 ) , Type: JavaScript
+09 Dez 2015 | 04:31:27,203 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:64378 ) , asSpect: false
+09 Dez 2015 | 04:55:41,523 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+09 Dez 2015 | 04:55:41,525 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+09 Dez 2015 | 04:55:41,526 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+09 Dez 2015 | 04:55:41,528 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

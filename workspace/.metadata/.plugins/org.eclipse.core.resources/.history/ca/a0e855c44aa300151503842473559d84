@@ -1,0 +1,35 @@
+package sfs2x.extensions.room.play;
+
+import org.json.simple.JSONObject;
+
+import com.smartfoxserver.v2.entities.User;
+import com.smartfoxserver.v2.entities.data.ISFSObject;
+import com.smartfoxserver.v2.entities.data.SFSObject;
+import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
+
+public class PickCardHandler extends BaseClientRequestHandler{
+
+	@Override
+	public void handleClientRequest(User user, ISFSObject params) {
+		int cardId = params.getInt("cardId");
+		JSONObject obj=new JSONObject();
+		RoomExtension gameExt = (RoomExtension) getParentExtension();
+		Card[] cards = gameExt.getGameBoard().getCardArray();
+		for (Card card : cards) {
+			if(card.getCardId() == cardId) {
+				String category = card.getCategory();
+				String name = card.getName();
+				int id = card.getCardId();
+				String image = card.getImage();
+				String wikiLink = card.getWikiLink();
+				
+				
+				obj.put("category", category);
+			}
+		}
+		ISFSObject resObj = SFSObject.newInstance(); 
+		resObj.putSFSArray("usersInLobby", usersInLobby);
+		send("pickCard", resObj, user);	
+	}
+
+}

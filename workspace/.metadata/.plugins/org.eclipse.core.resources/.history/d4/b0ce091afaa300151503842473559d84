@@ -1,0 +1,60 @@
+package sfs2x.extensions.room.play;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import com.smartfoxserver.v2.entities.User;
+import com.smartfoxserver.v2.entities.data.ISFSObject;
+import com.smartfoxserver.v2.entities.variables.SFSUserVariable;
+import com.smartfoxserver.v2.entities.variables.UserVariable;
+import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
+
+public class StartHandler extends BaseClientRequestHandler{
+
+	@Override
+	public void handleClientRequest(User myself, ISFSObject params)
+	{
+		boolean start = params.getBool("start");
+		RoomExtension gameExt = (RoomExtension) getParentExtension();
+		ArrayList<User> users = gameExt.getGameBoard().getUsersInGame();
+		for (User user : users) {
+			if(user.getId() == myself.getId()) {
+				UserVariable ready = new SFSUserVariable("ready", true);
+				ready.setHidden(true);
+				getApi().setUserVariables(user, Arrays.asList(ready));
+			}
+		}
+		
+		int startCount = 0;
+		for (User user : users) {
+			boolean userReady = (boolean) user.getVariable("ready").getValue();
+			if (userReady) 
+				startCount++;
+		}
+		
+		if(startCount == 1) {
+			gameExt.startGame();
+		}
+//		if (user.isPlayer())
+//		{
+//			String category = params.getUtfString("category");
+//			String topic = params.getUtfString("topic");
+//			String level = params.getUtfString("level");
+//			
+//			ArrayList<String[]> settings = gameExt.getSettings();
+//			settings.add(new String[]{category,topic,level});
+//
+//			// Checks if two players are available and start game
+//			if (gameExt.getGameRoom().getSize().getUserCount() == 2) {
+//				try {
+//					gameExt.initGame();
+//				} catch (IOException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//		}
+	}
+
+}

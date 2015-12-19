@@ -1,0 +1,12 @@
+08 Dez 2015 | 00:27:21,673 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 51910
+08 Dez 2015 | 00:27:21,841 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:51910 ) , Type: JavaScript
+08 Dez 2015 | 00:27:21,851 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:51910 ) , asSpect: false
+08 Dez 2015 | 00:28:18,552 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create room name: test 
+08 Dez 2015 | 00:28:18,568 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: test, Id: 2, Group: default, isGame: true ]
+08 Dez 2015 | 00:28:18,571 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: test, Id: 2, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:51910 ) , asSpect: false
+08 Dez 2015 | 00:55:56,298 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+08 Dez 2015 | 00:55:56,299 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+08 Dez 2015 | 00:55:56,300 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+08 Dez 2015 | 00:55:56,300 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1
+08 Dez 2015 | 00:58:26,216 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:51910 }
+08 Dez 2015 | 00:58:26,221 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:51910 ) , SessionLen: 1864379, Type: JavaScript

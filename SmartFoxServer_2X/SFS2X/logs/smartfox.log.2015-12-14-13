@@ -1,0 +1,84 @@
+14 Dez 2015 | 13:03:58,299 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+14 Dez 2015 | 13:04:05,128 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 34, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:51568 }
+14 Dez 2015 | 13:04:05,129 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 33, Priv: 0, Sess: 127.0.0.1:51568 ) , SessionLen: 269492, Type: JavaScript
+14 Dez 2015 | 13:04:31,960 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 35, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 51649
+14 Dez 2015 | 13:04:31,998 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 34, Priv: 0, Sess: 127.0.0.1:51649 ) , Type: JavaScript
+14 Dez 2015 | 13:04:32,012 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 34, Priv: 0, Sess: 127.0.0.1:51649 ) , asSpect: false
+14 Dez 2015 | 13:05:03,159 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 35, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:51649 }
+14 Dez 2015 | 13:05:03,160 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 34, Priv: 0, Sess: 127.0.0.1:51649 ) , SessionLen: 31162, Type: JavaScript
+14 Dez 2015 | 13:05:05,344 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 36, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 51686
+14 Dez 2015 | 13:05:05,382 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 35, Priv: 0, Sess: 127.0.0.1:51686 ) , Type: JavaScript
+14 Dez 2015 | 13:05:05,399 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 35, Priv: 0, Sess: 127.0.0.1:51686 ) , asSpect: false
+14 Dez 2015 | 13:35:58,834 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 36, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:51686 }
+14 Dez 2015 | 13:35:58,835 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 35, Priv: 0, Sess: 127.0.0.1:51686 ) , SessionLen: 1853453, Type: JavaScript
+14 Dez 2015 | 13:40:15,145 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+14 Dez 2015 | 13:40:15,165 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+14 Dez 2015 | 13:40:16,418 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+14 Dez 2015 | 13:40:16,468 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+14 Dez 2015 | 13:40:16,753 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+14 Dez 2015 | 13:40:16,756 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+14 Dez 2015 | 13:40:16,779 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+14 Dez 2015 | 13:40:16,791 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+14 Dez 2015 | 13:40:16,799 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+14 Dez 2015 | 13:40:16,857 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+14 Dez 2015 | 13:40:16,895 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+14 Dez 2015 | 13:40:19,667 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+14 Dez 2015 | 13:40:19,682 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+14 Dez 2015 | 13:40:19,714 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+14 Dez 2015 | 13:40:21,913 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+14 Dez 2015 | 13:40:21,929 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+14 Dez 2015 | 13:40:21,960 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+14 Dez 2015 | 13:40:22,305 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+14 Dez 2015 | 13:40:22,307 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+14 Dez 2015 | 13:40:22,314 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!

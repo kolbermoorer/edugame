@@ -1,0 +1,51 @@
+12 Dez 2015 | 03:35:41,649 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 25, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52225
+12 Dez 2015 | 03:35:41,699 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52225 ) , Type: JavaScript
+12 Dez 2015 | 03:35:41,708 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52225 ) , asSpect: false
+12 Dez 2015 | 03:35:43,113 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create room name: Test1428 
+12 Dez 2015 | 03:35:43,143 | WARN  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | com.smartfoxserver.v2.exceptions.SFSExtensionException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSExtensionException
+Message: Class not found: sfs2x.extensions.room.play.RoomExtension
+Description: Failure while creating room extension.
+Possible Causes: If the CreateRoom request was sent from client make sure that the extension name matches the name of an existing extension
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.createJavaExtension(SFSExtensionManager.java:358)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.createExtension(SFSExtensionManager.java:260)
+com.smartfoxserver.v2.entities.managers.SFSRoomManager.createRoomExtension(SFSRoomManager.java:259)
+com.smartfoxserver.v2.entities.managers.SFSRoomManager.createRoom(SFSRoomManager.java:211)
+com.smartfoxserver.v2.entities.SFSZone.createRoom(SFSZone.java:247)
+com.smartfoxserver.v2.api.SFSApi.createRoom(SFSApi.java:727)
+sfs2x.extensions.game.CreateRoomHandler.createRoom(CreateRoomHandler.java:49)
+sfs2x.extensions.game.CreateRoomHandler.handleClientRequest(CreateRoomHandler.java:30)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Dez 2015 | 03:35:43,147 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test1428, Id: 2, Group: default, isGame: true ]
+12 Dez 2015 | 03:35:43,149 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Test1428, Id: 2, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52225 ) , asSpect: false
+12 Dez 2015 | 03:35:43,173 | WARN  | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSExtensionException: No extensions can be invoked: { Zone: EduGame }, RoomId: 2
+	com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+12 Dez 2015 | 03:42:12,593 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 25, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52225 }
+12 Dez 2015 | 03:42:12,595 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52225 ) , SessionLen: 390896, Type: JavaScript
+12 Dez 2015 | 03:42:15,224 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 26, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52378
+12 Dez 2015 | 03:42:15,268 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:52378 ) , Type: JavaScript
+12 Dez 2015 | 03:42:15,294 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:52378 ) , asSpect: false
+12 Dez 2015 | 03:42:16,976 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create room name: Test257 
+12 Dez 2015 | 03:42:16,982 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+12 Dez 2015 | 03:42:16,984 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test257, Id: 3, Group: default, isGame: true ]
+12 Dez 2015 | 03:42:16,987 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Test257, Id: 3, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:52378 ) , asSpect: false
+12 Dez 2015 | 03:55:10,474 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+12 Dez 2015 | 03:55:10,476 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+12 Dez 2015 | 03:55:10,477 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+12 Dez 2015 | 03:55:10,478 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

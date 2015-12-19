@@ -1,0 +1,253 @@
+11 Dez 2015 | 09:42:02,565 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 0 } on Server port: 9933 <---> 0
+11 Dez 2015 | 09:42:02,643 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: DEFAULT, Logged: No, IP: 0 }
+11 Dez 2015 | 09:42:02,661 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: DEFAULT, Logged: No, IP: 0 } on Server port: 9933 <---> 0
+11 Dez 2015 | 09:42:02,725 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 0, Priv: 0, Sess: 0 ) , Type: Flash PlugIn:WIN 20,0,0,228
+11 Dez 2015 | 09:42:02,733 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 0, Priv: 0, Sess: 0 ) , asSpect: false
+11 Dez 2015 | 09:42:25,676 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53690
+11 Dez 2015 | 09:42:27,832 | WARN  | SFSWorker:Ext:2 | entities.managers.SFSExtensionManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: Error during event handling: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server., Listener: com.smartfoxserver.v2.components.login.LoginAssistantEventHandler@15e40b56
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+java.lang.reflect.Constructor.newInstance(Unknown Source)
+com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:983)
+com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:339)
+com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2252)
+com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2285)
+com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2084)
+com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:795)
+com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+java.lang.reflect.Constructor.newInstance(Unknown Source)
+com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:327)
+java.sql.DriverManager.getConnection(Unknown Source)
+java.sql.DriverManager.getConnection(Unknown Source)
+org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+java.sql.DriverManager.getConnection(Unknown Source)
+java.sql.DriverManager.getConnection(Unknown Source)
+com.smartfoxserver.v2.db.SFSDBManager.getConnection(SFSDBManager.java:113)
+com.smartfoxserver.v2.db.SFSDBManager.executeQuery(SFSDBManager.java:139)
+com.smartfoxserver.v2.components.login.LoginAssistantEventHandler.handleServerEvent(LoginAssistantEventHandler.java:59)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchZoneLevelEvent(SFSExtensionManager.java:690)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:887)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 09:42:28,689 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:53690 }
+11 Dez 2015 | 09:42:31,105 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53726
+11 Dez 2015 | 09:42:33,141 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSExtensionManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: Error during event handling: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server., Listener: com.smartfoxserver.v2.components.login.LoginAssistantEventHandler@15e40b56
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+java.lang.reflect.Constructor.newInstance(Unknown Source)
+com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:983)
+com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:339)
+com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2252)
+com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2285)
+com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2084)
+com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:795)
+com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+java.lang.reflect.Constructor.newInstance(Unknown Source)
+com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:327)
+java.sql.DriverManager.getConnection(Unknown Source)
+java.sql.DriverManager.getConnection(Unknown Source)
+org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+java.sql.DriverManager.getConnection(Unknown Source)
+java.sql.DriverManager.getConnection(Unknown Source)
+com.smartfoxserver.v2.db.SFSDBManager.getConnection(SFSDBManager.java:113)
+com.smartfoxserver.v2.db.SFSDBManager.executeQuery(SFSDBManager.java:139)
+com.smartfoxserver.v2.components.login.LoginAssistantEventHandler.handleServerEvent(LoginAssistantEventHandler.java:59)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchZoneLevelEvent(SFSExtensionManager.java:690)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:887)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 09:43:05,243 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:53726 }
+11 Dez 2015 | 09:43:07,432 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 5, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53775
+11 Dez 2015 | 09:43:07,457 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:53775 ) , Type: JavaScript
+11 Dez 2015 | 09:43:07,466 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:53775 ) , asSpect: false
+11 Dez 2015 | 09:43:19,194 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 5, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53775 }
+11 Dez 2015 | 09:43:19,196 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:53775 ) , SessionLen: 11739, Type: JavaScript
+11 Dez 2015 | 09:43:24,821 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 6, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53812
+11 Dez 2015 | 09:43:26,859 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSExtensionManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: Error during event handling: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server., Listener: com.smartfoxserver.v2.components.login.LoginAssistantEventHandler@15e40b56
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+java.lang.reflect.Constructor.newInstance(Unknown Source)
+com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:983)
+com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:339)
+com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2252)
+com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2285)
+com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2084)
+com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:795)
+com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+java.lang.reflect.Constructor.newInstance(Unknown Source)
+com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:327)
+java.sql.DriverManager.getConnection(Unknown Source)
+java.sql.DriverManager.getConnection(Unknown Source)
+org.apache.commons.dbcp.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:75)
+org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1148)
+org.apache.commons.dbcp.PoolingDriver.connect(PoolingDriver.java:180)
+java.sql.DriverManager.getConnection(Unknown Source)
+java.sql.DriverManager.getConnection(Unknown Source)
+com.smartfoxserver.v2.db.SFSDBManager.getConnection(SFSDBManager.java:113)
+com.smartfoxserver.v2.db.SFSDBManager.executeQuery(SFSDBManager.java:139)
+com.smartfoxserver.v2.components.login.LoginAssistantEventHandler.handleServerEvent(LoginAssistantEventHandler.java:59)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchZoneLevelEvent(SFSExtensionManager.java:690)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:887)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 09:43:44,836 | WARN  | SFSWorker:Ext:3 | Extensions |     | {Admin}: {ExtensionManager}: Module access prevented; remove file config/ExtensionManagerLock.txt to allow module usage 
+11 Dez 2015 | 09:45:58,624 | INFO  | SFSWorker:Ext:2 | Extensions |     | {Admin}: Halting SmartFoxServer... 
+11 Dez 2015 | 09:45:58,626 | WARN  | SFSWorker:Ext:2 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER HALTING ***
+11 Dez 2015 | 09:45:58,629 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 3 seconds...
+11 Dez 2015 | 09:45:59,631 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 2 seconds...
+11 Dez 2015 | 09:46:00,632 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 1 seconds...
+11 Dez 2015 | 09:46:01,635 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+11 Dez 2015 | 09:46:01,635 | INFO  | Thread-1 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+11 Dez 2015 | 09:46:01,649 | INFO  | Thread-2 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+11 Dez 2015 | 09:46:05,541 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+11 Dez 2015 | 09:46:05,557 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+11 Dez 2015 | 09:46:06,354 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+11 Dez 2015 | 09:46:06,386 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+11 Dez 2015 | 09:46:06,510 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+11 Dez 2015 | 09:46:06,510 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+11 Dez 2015 | 09:46:06,526 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+11 Dez 2015 | 09:46:06,526 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+11 Dez 2015 | 09:46:06,542 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+11 Dez 2015 | 09:46:06,588 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+11 Dez 2015 | 09:46:06,604 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 09:46:08,914 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 09:46:08,929 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+11 Dez 2015 | 09:46:08,945 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 09:46:29,981 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException
+Message: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+11 Dez 2015 | 09:46:34,343 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+11 Dez 2015 | 09:46:34,358 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+11 Dez 2015 | 09:46:34,572 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+11 Dez 2015 | 09:46:34,574 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+11 Dez 2015 | 09:46:34,574 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+11 Dez 2015 | 09:46:36,378 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+11 Dez 2015 | 09:55:34,588 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+11 Dez 2015 | 09:55:34,590 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/0
+11 Dez 2015 | 09:55:34,592 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+11 Dez 2015 | 09:55:34,594 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/0

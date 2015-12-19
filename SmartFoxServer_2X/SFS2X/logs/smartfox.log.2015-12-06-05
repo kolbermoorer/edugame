@@ -1,0 +1,339 @@
+06 Dez 2015 | 05:03:50,875 | INFO  | SFSWorker:Ext:2 | Extensions |     | {Admin}: Halting SmartFoxServer... 
+06 Dez 2015 | 05:03:50,883 | WARN  | SFSWorker:Ext:2 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER HALTING ***
+06 Dez 2015 | 05:03:50,888 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 3 seconds...
+06 Dez 2015 | 05:03:51,892 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 2 seconds...
+06 Dez 2015 | 05:03:52,893 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 1 seconds...
+06 Dez 2015 | 05:03:53,896 | INFO  | Thread-1 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+06 Dez 2015 | 05:03:53,896 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+06 Dez 2015 | 05:03:53,911 | INFO  | Thread-2 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+06 Dez 2015 | 05:03:58,814 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+06 Dez 2015 | 05:03:58,825 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+06 Dez 2015 | 05:03:59,493 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+06 Dez 2015 | 05:03:59,530 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+06 Dez 2015 | 05:03:59,619 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+06 Dez 2015 | 05:03:59,621 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+06 Dez 2015 | 05:03:59,637 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+06 Dez 2015 | 05:03:59,646 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+06 Dez 2015 | 05:03:59,650 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\BasicExamples.zone.xml
+06 Dez 2015 | 05:03:59,692 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+06 Dez 2015 | 05:03:59,727 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+06 Dez 2015 | 05:03:59,750 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: BasicExamples 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:03:59,776 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: BasicExamples } - Could not override maxUserIdleTime. The provided value (300 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:03:59,799 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: BasicExamples }, [ Room: The Lobby, Id: 0, Group: default, isGame: false ]
+06 Dez 2015 | 05:03:59,811 | INFO  | main | Extensions |     | {tris}: Tris game Extension for SFS2X started, rel. 1.0.5 
+06 Dez 2015 | 05:03:59,820 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:03:59,821 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: EduGame } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:04:00,141 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 1, Group: default, isGame: false ]
+06 Dez 2015 | 05:04:00,148 | ERROR | main | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: LoginAssistant doesn't work with ROOM LEVEL Extensions!
+Description: Extension initialization failed.
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.components.login.LoginAssistantComponent.<init>(LoginAssistantComponent.java:61)
+sfs2x.extensions.login.LoginExtension.initLoginAssistant(LoginExtension.java:30)
+sfs2x.extensions.login.LoginExtension.init(LoginExtension.java:18)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.createExtension(SFSExtensionManager.java:303)
+com.smartfoxserver.v2.entities.managers.SFSZoneManager.createRoom(SFSZoneManager.java:723)
+com.smartfoxserver.v2.entities.managers.SFSZoneManager.createZone(SFSZoneManager.java:419)
+com.smartfoxserver.v2.entities.managers.SFSZoneManager.initializeZones(SFSZoneManager.java:249)
+com.smartfoxserver.v2.SmartFoxServer.start(SmartFoxServer.java:266)
+com.smartfoxserver.v2.Main.main(Main.java:27)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+java.lang.reflect.Method.invoke(Unknown Source)
+com.exe4j.runtime.LauncherEngine.launch(Unknown Source)
+com.exe4j.runtime.WinLauncher.main(Unknown Source)
+com.install4j.runtime.launcher.WinLauncher.main(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:04:00,150 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:04:00,151 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: Registration } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:04:00,174 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 2, Group: default, isGame: false ]
+06 Dez 2015 | 05:04:00,187 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+06 Dez 2015 | 05:04:00,369 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+06 Dez 2015 | 05:04:00,370 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+06 Dez 2015 | 05:04:00,371 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+06 Dez 2015 | 05:04:02,112 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+06 Dez 2015 | 05:04:07,020 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 65231
+06 Dez 2015 | 05:04:07,155 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:65231 ) , Type: JavaScript
+06 Dez 2015 | 05:04:09,778 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:65231 }
+06 Dez 2015 | 05:04:09,781 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:65231 ) , SessionLen: 2627, Type: JavaScript
+06 Dez 2015 | 05:04:11,873 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 65263
+06 Dez 2015 | 05:04:11,902 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:65263 ) , Type: JavaScript
+06 Dez 2015 | 05:04:17,610 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:65263 }
+06 Dez 2015 | 05:04:17,612 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:65263 ) , SessionLen: 5711, Type: JavaScript
+06 Dez 2015 | 05:04:22,647 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 65295
+06 Dez 2015 | 05:04:22,657 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:65295 ) , Type: JavaScript
+06 Dez 2015 | 05:04:34,628 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: DEFAULT, Logged: No, IP: 127.0.0.1:65297 } on Server port: 9933 <---> 65297
+06 Dez 2015 | 05:04:34,695 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 3, Priv: 0, Sess: 127.0.0.1:65297 ) , Type: Flash PlugIn:WIN 19,0,0,245
+06 Dez 2015 | 05:04:34,702 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 2, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 3, Priv: 0, Sess: 127.0.0.1:65297 ) , asSpect: false
+06 Dez 2015 | 05:06:04,435 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSZoneManager |     | { Zone: Login } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:07:01,808 | INFO  | SFSWorker:Ext:3 | Extensions |     | {Admin}: Halting SmartFoxServer... 
+06 Dez 2015 | 05:07:01,810 | WARN  | SFSWorker:Ext:3 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER HALTING ***
+06 Dez 2015 | 05:07:01,814 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 3 seconds...
+06 Dez 2015 | 05:07:02,816 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 2 seconds...
+06 Dez 2015 | 05:07:03,817 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 1 seconds...
+06 Dez 2015 | 05:07:04,819 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+06 Dez 2015 | 05:07:04,819 | INFO  | Thread-1 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+06 Dez 2015 | 05:07:04,832 | INFO  | Thread-2 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+06 Dez 2015 | 05:07:10,333 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+06 Dez 2015 | 05:07:10,344 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+06 Dez 2015 | 05:07:11,022 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+06 Dez 2015 | 05:07:11,059 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+06 Dez 2015 | 05:07:11,146 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+06 Dez 2015 | 05:07:11,147 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+06 Dez 2015 | 05:07:11,163 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+06 Dez 2015 | 05:07:11,172 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+06 Dez 2015 | 05:07:11,176 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\BasicExamples.zone.xml
+06 Dez 2015 | 05:07:11,215 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+06 Dez 2015 | 05:07:11,247 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Login.zone.xml
+06 Dez 2015 | 05:07:11,269 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+06 Dez 2015 | 05:07:11,291 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: BasicExamples 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:07:11,317 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: BasicExamples } - Could not override maxUserIdleTime. The provided value (300 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:07:11,338 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: BasicExamples }, [ Room: The Lobby, Id: 0, Group: default, isGame: false ]
+06 Dez 2015 | 05:07:11,350 | INFO  | main | Extensions |     | {tris}: Tris game Extension for SFS2X started, rel. 1.0.5 
+06 Dez 2015 | 05:07:11,359 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:07:11,360 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: EduGame } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:07:11,672 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 1, Group: default, isGame: false ]
+06 Dez 2015 | 05:07:11,678 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Login 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:07:11,679 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: Login } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:07:11,686 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:07:11,687 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: Registration } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:07:11,709 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 2, Group: default, isGame: false ]
+06 Dez 2015 | 05:07:11,722 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+06 Dez 2015 | 05:07:11,909 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+06 Dez 2015 | 05:07:11,910 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+06 Dez 2015 | 05:07:11,911 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+06 Dez 2015 | 05:07:13,615 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+06 Dez 2015 | 05:09:23,683 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 65385
+06 Dez 2015 | 05:09:23,814 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:65385 ) , Type: JavaScript
+06 Dez 2015 | 05:09:40,080 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:65385 }
+06 Dez 2015 | 05:09:40,082 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:65385 ) , SessionLen: 16269, Type: JavaScript
+06 Dez 2015 | 05:09:42,515 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 65419
+06 Dez 2015 | 05:09:42,542 | WARN  | SFSWorker:Ext:3 | entities.managers.SFSExtensionManager |     | java.sql.SQLException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.sql.SQLException
+Message: The DBManager is NOT active in this Zone. SQL Query failed. Please activate it the DBManager from the AdminTool
+Description: Error during event handling: java.sql.SQLException: The DBManager is NOT active in this Zone. SQL Query failed. Please activate it the DBManager from the AdminTool, Listener: com.smartfoxserver.v2.components.login.LoginAssistantEventHandler@667876c7
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.db.SFSDBManager.checkState(SFSDBManager.java:339)
+com.smartfoxserver.v2.db.SFSDBManager.executeQuery(SFSDBManager.java:131)
+com.smartfoxserver.v2.components.login.LoginAssistantEventHandler.handleServerEvent(LoginAssistantEventHandler.java:59)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchZoneLevelEvent(SFSExtensionManager.java:690)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:887)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:09:45,320 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:65419 }
+06 Dez 2015 | 05:09:47,754 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 65451
+06 Dez 2015 | 05:09:47,781 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | java.sql.SQLException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.sql.SQLException
+Message: The DBManager is NOT active in this Zone. SQL Query failed. Please activate it the DBManager from the AdminTool
+Description: Error during event handling: java.sql.SQLException: The DBManager is NOT active in this Zone. SQL Query failed. Please activate it the DBManager from the AdminTool, Listener: com.smartfoxserver.v2.components.login.LoginAssistantEventHandler@667876c7
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.db.SFSDBManager.checkState(SFSDBManager.java:339)
+com.smartfoxserver.v2.db.SFSDBManager.executeQuery(SFSDBManager.java:131)
+com.smartfoxserver.v2.components.login.LoginAssistantEventHandler.handleServerEvent(LoginAssistantEventHandler.java:59)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchZoneLevelEvent(SFSExtensionManager.java:690)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:887)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:10:23,892 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: DEFAULT, Logged: No, IP: 127.0.0.1:65453 } on Server port: 9933 <---> 65453
+06 Dez 2015 | 05:10:23,943 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 1, Priv: 0, Sess: 127.0.0.1:65453 ) , Type: Flash PlugIn:WIN 19,0,0,245
+06 Dez 2015 | 05:10:23,952 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 2, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 1, Priv: 0, Sess: 127.0.0.1:65453 ) , asSpect: false
+06 Dez 2015 | 05:11:51,037 | INFO  | SFSWorker:Ext:4 | Extensions |     | {Admin}: Halting SmartFoxServer... 
+06 Dez 2015 | 05:11:51,037 | WARN  | SFSWorker:Ext:4 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER HALTING ***
+06 Dez 2015 | 05:11:51,038 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 3 seconds...
+06 Dez 2015 | 05:11:52,039 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 2 seconds...
+06 Dez 2015 | 05:11:53,039 | WARN  | Thread-19 | smartfoxserver.v2.SmartFoxServer |     | Server Halt in 1 seconds...
+06 Dez 2015 | 05:11:54,041 | INFO  | Thread-1 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+06 Dez 2015 | 05:11:54,041 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+06 Dez 2015 | 05:11:54,055 | INFO  | Thread-2 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+06 Dez 2015 | 05:11:57,167 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+06 Dez 2015 | 05:11:57,178 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+06 Dez 2015 | 05:11:57,850 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+06 Dez 2015 | 05:11:57,888 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+06 Dez 2015 | 05:11:57,975 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+06 Dez 2015 | 05:11:57,977 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+06 Dez 2015 | 05:11:57,994 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+06 Dez 2015 | 05:11:58,003 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+06 Dez 2015 | 05:11:58,007 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\BasicExamples.zone.xml
+06 Dez 2015 | 05:11:58,048 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+06 Dez 2015 | 05:11:58,083 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Login.zone.xml
+06 Dez 2015 | 05:11:58,107 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+06 Dez 2015 | 05:11:58,130 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: BasicExamples 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:11:58,157 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: BasicExamples } - Could not override maxUserIdleTime. The provided value (300 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:11:58,179 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: BasicExamples }, [ Room: The Lobby, Id: 0, Group: default, isGame: false ]
+06 Dez 2015 | 05:11:58,192 | INFO  | main | Extensions |     | {tris}: Tris game Extension for SFS2X started, rel. 1.0.5 
+06 Dez 2015 | 05:11:58,201 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:11:58,202 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: EduGame } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:11:58,522 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 1, Group: default, isGame: false ]
+06 Dez 2015 | 05:11:58,527 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Login 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:11:58,528 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: Login } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:11:58,543 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 05:11:58,544 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: Registration } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 05:11:58,569 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 2, Group: default, isGame: false ]
+06 Dez 2015 | 05:11:58,581 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+06 Dez 2015 | 05:11:58,771 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+06 Dez 2015 | 05:11:58,772 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+06 Dez 2015 | 05:11:58,772 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+06 Dez 2015 | 05:12:00,529 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+06 Dez 2015 | 05:12:08,705 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 49156
+06 Dez 2015 | 05:12:08,842 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: Login }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:49156 ) , Type: JavaScript
+06 Dez 2015 | 05:12:08,850 | WARN  | SFSWorker:Sys:3 | controllers.system.JoinRoom |     | Client requested non exixtent Room with name: Lobby
+06 Dez 2015 | 05:12:08,856 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - Requested room doesn't exist
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+

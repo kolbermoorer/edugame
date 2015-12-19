@@ -1,0 +1,543 @@
+package sfs2x.extensions.room.play;
+
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
+import com.smartfoxserver.v2.entities.User;
+
+public class EduGameBoard {
+	private User player1;
+	private User player2;
+	private Sparql sparql;
+	private ArrayList<String[]> settings;
+	private ArrayList<String[]> resourceList;
+	private Card[] cardArray;
+	private final int NUMBER_OF_CATEGORIES = 3;
+	private final int NUMBER_OF_CARDS_PER_CATEGORY = 8;
+	
+	public EduGameBoard(int numberOfCards, ArrayList<String[]> settings, User player1, User player2) {
+		setPlayer1(player1);
+		setPlayer2(player2);
+		setCardArray(new Card[numberOfCards]); 										// initiate # cards
+		setSettings(settings); 														//set settings for category, topic and level
+		setSparql(new Sparql()); 													// initiate new Sparql class
+	}
+	
+	public void generateTestDataset(int player1Id, int player2Id) {
+		Card card;
+		List<String[]> properties = null;
+		String property = "uri";
+		
+		//Airlines
+		card = cardArray[0] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Airline");
+		card.setCardId(1);
+		card.setPlayerId(player1Id);
+		card.setName("China Eastern Airlines");
+		card.setCharNumber("A1");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/ChinaEasternHQShanghaiAirHQ.jpg?width=300");
+		String value = "http://en.wikipedia.org/wiki/China_Eastern_Airlines";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[1] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Airline");
+		card.setCardId(6);
+		card.setPlayerId(player2Id);
+		card.setName("China Southern Airlines");
+		card.setCharNumber("A2");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/China_Southern_Airlines_A380_Kustov-1.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/China_Southern_Airlines";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[2] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Airline");
+		card.setCardId(2);
+		card.setPlayerId(player2Id);
+		card.setName("Aeroméxico");
+		card.setCharNumber("A3");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/AeroMéxicoHQMexicoCityDF.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Aeroméxico";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[3] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Airline");
+		card.setCardId(4);
+		card.setPlayerId(player1Id);
+		card.setName("Middle East Airlines");
+		card.setCharNumber("A4");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/MEA_Boeing_747-200_Marmet.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Middle_East_Airlines";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[4] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Airline");
+		card.setCardId(7);
+		card.setPlayerId(player1Id);
+		card.setName("Vietnam Airlines");
+		card.setCharNumber("B1");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/ATR72_VietnamAirlines_P6211002.JPG?width=300");
+		value = "http://en.wikipedia.org/wiki/Vietnam_Airlines";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[5] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Airline");
+		card.setCardId(3);
+		card.setPlayerId(player1Id);
+		card.setName("Alitalia");
+		card.setCharNumber("B2");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Alitalia_Airbus_A320_(EI-DTM).jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Alitalia";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[6] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Airline");
+		card.setCardId(5);
+		card.setPlayerId(player2Id);
+		card.setName("China Airlines");
+		card.setCharNumber("B3");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Boeing_727-109C_B-1822_China_Als_SIN_14.09.74_edited-2.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/China_Airlines";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[7] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Airline");
+		card.setCardId(0);
+		card.setPlayerId(player2Id);
+		card.setName("Air Europa");
+		card.setCharNumber("B4");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Air_Europa_Logo.png?width=300");
+		value = "http://en.wikipedia.org/wiki/Air_Europa";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		//Politician
+		card = cardArray[8] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Politician");
+		card.setCardId(13);
+		card.setPlayerId(player2Id);
+		card.setName("Lyndon B. Johnson");
+		card.setCharNumber("C1");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/37_Lyndon_Johnson_3x4.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Lyndon_B._Johnson";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[9] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Politician");
+		card.setCardId(12);
+		card.setPlayerId(player1Id);
+		card.setName("Woodrow Wilson");
+		card.setCharNumber("C2");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/President_Woodrow_Wilson_portrait_December_2_1912.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Woodrow_Wilson";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[10] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Politician");
+		card.setCardId(8);
+		card.setPlayerId(player2Id);
+		card.setName("Barack Obama");
+		card.setCharNumber("C3");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/President_Barack_Obama.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Barack_Obama";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[11] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Politician");
+		card.setCardId(15);
+		card.setPlayerId(player1Id);
+		card.setName("Harry S. Truman");
+		card.setCharNumber("C4");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Harry_S._Truman.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Harry_S._Truman";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[12] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Politician");
+		card.setCardId(14);
+		card.setPlayerId(player1Id);
+		card.setName("Franklin D. Roosevelt");
+		card.setCharNumber("D1");
+		card.setImage("http://en.wikipedia.org/wiki/Special:FilePath/FDR_in_1933.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Franklin_D._Roosevelt";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[13] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Politician");
+		card.setCardId(11);
+		card.setPlayerId(player2Id);
+		card.setName("James Buchanan");
+		card.setCharNumber("D2");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/James_Buchanan.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/James_Buchanan";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[14] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Politician");
+		card.setCardId(10);
+		card.setPlayerId(player2Id);
+		card.setName("Martin Van Buren");
+		card.setCharNumber("D3");
+		card.setImage("http://en.wikipedia.org/wiki/Special:FilePath/Martin_Van_Buren_by_Mathew_Brady_c1855-58.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Martin_Van_Buren";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[15] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Politician");
+		card.setCardId(9);
+		card.setPlayerId(player1Id);
+		card.setName("Franklin Pierce");
+		card.setCharNumber("D4");
+		card.setImage("http://en.wikipedia.org/wiki/Special:FilePath/Mathew_Brady_-_Franklin_Pierce_-_alternate_crop.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Franklin_Pierce";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		//Actor
+		card = cardArray[16] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Actor");
+		card.setCardId(22);
+		card.setPlayerId(player2Id);
+		card.setName("Madonna (entertainer)");
+		card.setCharNumber("E1");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Madonna_à_Nice_30_2.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Madonna_(entertainer)";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[17] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Actor");
+		card.setCardId(20);
+		card.setPlayerId(player1Id);
+		card.setName("Celine Dion");
+		card.setCharNumber("E2");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Céline_Dion_2012.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Celine_Dion";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[18] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Actor");
+		card.setCardId(23);
+		card.setPlayerId(player2Id);
+		card.setName("Cliff Richard");
+		card.setCharNumber("E3");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Cliff_Richard_(8454760629)_cropped.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Cliff_Richard";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[19] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Actor");
+		card.setCardId(16);
+		card.setPlayerId(player2Id);
+		card.setName("Christina Aguilera");
+		card.setCharNumber("E4");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Christina_Aguilera_2012_(Headshot).jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Christina_Aguilera";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[20] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Actor");
+		card.setCardId(18);
+		card.setPlayerId(player1Id);
+		card.setName("Sting (musician)");
+		card.setCharNumber("F1");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Sting_ThePolice_2007.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Sting_(musician)";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[21] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Actor");
+		card.setCardId(17);
+		card.setPlayerId(player1Id);
+		card.setName("John Lennon");
+		card.setCharNumber("F2");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/JohnLennonpeace.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/John_Lennon";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[22] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Actor");
+		card.setCardId(19);
+		card.setPlayerId(player2Id);
+		card.setName("Will Young");
+		card.setCharNumber("F3");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Will_Young_2011.jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Will_Young";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+		
+		card = cardArray[23] = new Card();
+		properties = new ArrayList<String[]>();
+		card.setCategory("Actor");
+		card.setCardId(21);
+		card.setPlayerId(player1Id);
+		card.setName("Britney Spears");
+		card.setCharNumber("F4");
+		card.setImage("http://commons.wikimedia.org/wiki/Special:FilePath/Britney_Spears_2013_(Straighten_Crop).jpg?width=300");
+		value = "http://en.wikipedia.org/wiki/Britney_Spears";
+		properties.add(new String[]{property,value});
+		card.setProperties(properties);
+	}
+	
+	//get the resources attached to the topics, choose 8 for each topic
+	public void generateResourceList() {
+		String lastName = null;														
+		sparql.setQueryString(getSettings(), "getResources");
+		sparql.executeQuery();
+		ResultSet rs =sparql.getResults();
+		ArrayList<String[]> resources = new ArrayList<String[]>();
+		ArrayList<String[]> temp = null;
+		int index = -1;
+		while (rs.hasNext()) {
+			QuerySolution qs = rs.next();
+			String category = qs.get("category").toString(); //category of card
+			String uri = qs.get("uri").toString(); //resource uri of card
+			String name = qs.get("name").toString(); //name of card
+			if (!category.equals(lastName)) { //is there a new category because of the union?
+				if (index > -1) {
+					setSubset(temp, resources, NUMBER_OF_CARDS_PER_CATEGORY); //if yes get defined number of cards per category
+				}
+				lastName = category;
+				index++;
+				temp = new ArrayList<String[]>(); //temporary holder to manage all resources
+			}
+			temp.add(new String[]{category,uri, name});
+		}
+		setSubset(temp, resources, NUMBER_OF_CARDS_PER_CATEGORY); //because the last element does not have a successor we need to set the subset once more for last category
+		setResourceList(resources);
+		sparql.getQexec().close();
+	}
+	
+	public void setSubset(ArrayList<String[]> temp, ArrayList<String[]> resources, int nCards) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+        for (int i=1; i<temp.size(); i++) { //add same number of indexes as there exists resources for topic
+            list.add(new Integer(i));
+        }
+        Collections.shuffle(list); //shuffle the resources so that n random resources are at start of list
+        for (int i=0; i<nCards; i++) { //get first n random resources
+            int index = list.get(i);
+            resources.add(temp.get(index));
+        }
+	}
+	
+	public void generateCardList() {
+		sparql.setQueryString(getResourceList(), "getDetails");
+		sparql.executeQuery();
+		ResultSet rs =sparql.getResults();
+		generateCards(rs);
+		sparql.getQexec().close();
+	}
+
+	public void generateCards(ResultSet rs) {
+		String lastName = null;
+		Card card = null;
+		List<String[]> properties = null;
+		ArrayList<Integer> userIdList = getBalancedRandomUserList();
+		int index = -1;
+		while (rs.hasNext()) {
+			QuerySolution qs = rs.next();
+			String category = qs.get("category").toString(); //category of card
+			//String topic = qs.get("topic").toString(); //topic of card
+			String name = qs.get("name").toString(); //name of card
+			if (!name.equals(lastName)) {
+				if(index > -1)
+					card.setProperties(properties);
+				properties = new ArrayList<String[]>();
+				lastName = name;
+				index++;
+				card = cardArray[index] = new Card();
+				card.setCategory(category);
+				card.setCardId(index);
+				card.setPlayerId(userIdList.get(index));
+				//card.setTopic(topic);
+				card.setName(name);
+			}
+			String property = qs.get("property_uri").toString();
+			String value = qs.get("value").toString();
+			if(property.toLowerCase().contains("thumbnail")) {
+				card.setImage(value);
+			}
+			properties.add(new String[]{property,value});
+		}
+		card.setProperties(properties);
+	}
+	
+	public ArrayList<Integer> getBalancedRandomUserList() {
+		int p1Id = getPlayer1().getId();
+		int p2Id = getPlayer2().getId();
+		ArrayList<Integer> listAll = new ArrayList<Integer>();
+		for (int i=0; i<NUMBER_OF_CATEGORIES; i++) {
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			for (int j=0; j<NUMBER_OF_CARDS_PER_CATEGORY/2; j++) {
+	    		list.add(new Integer(p1Id));
+	    	}
+	    	for (int j=0; j<NUMBER_OF_CARDS_PER_CATEGORY/2; j++) {
+	    		list.add(new Integer(p2Id));
+	    	}
+	    	Collections.shuffle(list);
+	    	listAll.addAll(list);
+		}
+		return listAll;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public String getAllCards() throws IOException {
+		JSONArray list = new JSONArray();
+		
+		Card[] initiatedCards = getCardArray();
+		for (Card card : initiatedCards) {
+			String category = card.getCategory();
+			String name = card.getName();
+			int id = card.getCardId();
+			int playerId = card.getPlayerId();
+			
+			if(!categoryExists(list,category)) {
+				JSONObject obj=new JSONObject();
+				obj.put("category", category);
+				//obj.put("topic",card.getTopic());
+				obj.put("cards", new JSONObject());
+				list.add(obj);
+			}
+			int pos = getCategoryPosition(list,category);
+			JSONObject data = (JSONObject) list.get(pos);
+			JSONObject cards = (JSONObject) data.get("cards");
+			String[] extraData = getExtraData(card);
+			JSONObject extraDataContainer = new JSONObject();
+			extraDataContainer.put("image", extraData[0]);
+			extraDataContainer.put("uri", extraData[1]);
+			extraDataContainer.put("id", id);
+			extraDataContainer.put("playerId", playerId);
+			cards.put(name, extraDataContainer);
+		}
+		StringWriter out = new StringWriter();
+		list.writeJSONString(out);
+		String jsonText = out.toString();
+		  
+		return jsonText;
+	}
+	
+	private boolean categoryExists(JSONArray jsonArray, String categoryToFind){
+	    return jsonArray.toString().contains("\"category\":\""+ categoryToFind +"\"");
+	}
+	
+	private int getCategoryPosition(JSONArray jsonArray, String categoryToFind){
+		int pos=0;
+		for (Object wrapper : jsonArray) {
+			if(wrapper.toString().contains("\"category\":\""+ categoryToFind +"\"")) {
+				return pos;
+			}
+			else
+				pos++;
+		}
+		return 0;
+	}
+	
+	//search for the wiki link so that the users are able to inform themselves prior to the game
+	private String[] getExtraData(Card card) {
+		String uri = null;
+		String image = null;
+		List<String[]> properties = card.getProperties();
+		for (String[] property : properties) {
+			if(property[0].contains("isPrimaryTopicOf")) {
+				uri = property[1];
+			}
+			if(property[0].contains("thumbnail")) {
+				image = property[1];
+			}
+		}
+		return new String[]{image,uri};
+	}
+	
+	
+	/*
+	 * Getter and setter
+	 */
+
+	public Card[] getCardArray() {
+		return cardArray;
+	}
+	public void setCardArray(Card[] cardArray) {
+		this.cardArray = cardArray;
+	}
+	public Sparql getSparql() {
+		return sparql;
+	}
+	public void setSparql(Sparql sparql) {
+		this.sparql = sparql;
+	}
+
+	public ArrayList<String[]> getSettings() {
+		return settings;
+	}
+
+	public void setSettings(ArrayList<String[]> settings) {
+		this.settings = settings;
+	}
+	public ArrayList<String[]> getResourceList() {
+		return resourceList;
+	}
+	public void setResourceList(ArrayList<String[]> resourceList) {
+		this.resourceList = resourceList;
+	}
+	public User getPlayer1() {
+		return player1;
+	}
+	public void setPlayer1(User player1) {
+		this.player1 = player1;
+	}
+	public User getPlayer2() {
+		return player2;
+	}
+	public void setPlayer2(User player2) {
+		this.player2 = player2;
+	}
+}

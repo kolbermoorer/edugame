@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>SmartFoxServer 2X</title>
+	<style type="text/css" media="screen">
+	
+		body{ font: 100% "Tahoma", Verdana, sans-serif; margin:20px; }
+		h1, h2 { color: #990000;}
+		h3 {color: #cc0000;}
+		.notes { font-size: 80%;}
+	</style>
+</head>
+<body>
+	<h2>
+		{ SmartFoxServer 2X -- 2.9 }
+</h2>
+	
+	<p>
+		<em>Version 2.9.0</em><br>
+		(c) 2009-2014 GOTOANDPLAY snc -- All rights reserved --<br>
+	</p>
+
+	<h3>&raquo; What's new </h3>
+	<ul>
+	<li><strong>Server Side</strong>
+      <ul>
+   	    <li>NEW: Improved thread management and scalability via AutoScaling-ThreadPools. The new system renders obsolete the previous manual configuration of System and Extension Controller threads. The AutoScaling-ThreadPool automatically detects higher loads and balances the number of threads and the queue size to handle increasing amounts of workload. The new thread pool are fully configurable in each and every detail although the default settings should cover a large number of scenarios.</li>
+   	    <li>NEW: Jetty 9.x replaces old Jetty 6.x offering improved performance, support for servlet api 3.0 and HTTPS support out of the box</li>
+   	    <li>NEW: BlueBox v. 3.0: revamped and improved edition compatible with the latest Jetty 9</li>
+   	    <li>NEW: HTTP Uploads API with new server side event to manage the uploaded files</li>
+   	    <li>NEW: Added support for websockets over SSL (WSS)</li>
+   	    <li>NEW: Added support for Scala 2.10</li>
+   	    <li>NEW: Added VARIABLES_MAP key for server side events such as USER_VARIABLES_UPDATE, ROOM_VARIABLES_UPDATE, BUDDY_VARIABLES_UPDATE. The value from this key is a Map of Variables.</li>
+   	    <li>NEW:  SignUp component now allows re-sending of activation email in a later session and activation of the account in a later session.</li>
+   	    <li>NEW: a few updated libraries (SLF4J, HttpClient)<br>
+   	      <br>
+        </li>
+      </ul>
+	</li>
+	<li><strong>AdminTool</strong>
+	  <ul>
+	    <li>NEW: Extension Manager module, allows to manage, upload and deploy extensions directly from the Admin GUI.</li>
+	    <li>NEW: &quot;Thread pools&quot; tab added to the Server Configurator module to configure the new threading system introduced in SmartFoxServer 2X v2.9.</li>
+	  </ul>
+	</li>
+	<ul>
+	  <li>NEW: Administration permissions can now be assigned in the &quot;Remote admin&quot; tab of the Server Configurator module. Administrators can now be given access to some modules only and server halting/restarting capability can be inhibited.</li>
+	  <li>NEW: New settings added to the &quot;Web server&quot; tab in Server Configurator module to activate HTTP and HTTPS support separately in the internal web server. Also, HTTP and HTTPS ports can now be configured from within the Admin Tool itself (no need to edit the Jetty configuration manually anymore).</li>
+	  <li>NEW: New settings added to the &quot;HTML5 WebSockets&quot; tab in Server Configurator module, now supporting SSL encryption activation.</li>
+	  <li>NEW: The &quot;new version&quot; alert in the Admin Tool's header now indicates the minimum required version in case the update is provided as a patch.</li>
+	  <li>NEW: New button to reset realtime charts added to Dashboard module.</li>
+	  <li>NEW: In the Zone Configurator module a new flag allows to explicitly declare that values entered in the Area of Interest and map limits settings of an MMORoom should be treated as floating point numbers.</li>
+	  <li>NEW: All passwords in Server Configurator module are now displayed as asterisks.</li>
+	  <li>NEW: Zone Monitor module now shows if the bad words filter is active on the monitored Room.</li>
+	  <li>NEW: All tables showing configuration parameters in Server Configurator, Zone Configurator and Zone Monitor modules now retain the column width if resized.</li>
+	  <li>FIX: Negative numbers couldn't be entered as map limits in the &quot;MMO settings&quot; tab of the Zone Configurator module.<br>
+	  <li>FIX: Fixed problem with new Zones created at runtime causing an index out of bounds error in ZoneMonitor</li>
+	    <br>
+	  </li>
+	</ul>
+</ul>
+	<h3>&raquo; Important Note</h3>
+	<p>If you are <strong>migrating from a previous</strong> SmartFoxServer 2X version (2.8 or less) please make sure to read the <a href="http://docs2x.smartfoxserver.com/GettingStarted/migration" target="_blank"><strong>Migration Guide</strong></a>.</p>
+	<p>&nbsp;</p>
+<hr/>
+	<p>
+  <strong>SmartFoxServer 2X</strong><br>
+		<em>Version 2.9.0</em><br>
+		(c) 2009-2014 GOTOANDPLAY snc -- All rights reserved --<br>
+	</p>
+</body>
+</html>

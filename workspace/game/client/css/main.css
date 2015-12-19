@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: small;
+	line-height: 1.2em;
+	color: #333333;
+	background-color: white; /*#C0C0C0;*/
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#game {
+	margin: 0 auto;
+	width: 620px;
+}
+
+#lobby{
+    padding: 20px;
+}
+
+#userInfo {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+#usernameLb {
+	color: #7E7E7E;
+	font: bold 25px Helvetica, Arial, sans-serif;
+	letter-spacing: -0.05em;
+	padding-right: 20px;
+}
+
+#scoreIcon {
+	width: 16px;
+	padding-right: 3px;
+	margin-top: -3px;
+}
+
+#left {
+	float:left;
+	width: 73%;
+    padding-right: 20px;
+}
+
+#publicMsgIn {
+	width: 615px;
+}
+
+#sendPublicMsgBt {
+	margin-left: 5px;
+}
+
+#roomControls {
+    height: 50px;
+}
+
+#createGameBt{
+    float: right;
+}
+
+#joinGameBt{
+    float: right;
+    margin-right: 10px;
+}
+
+#quickJoinBt{
+    float: left;
+}
+
+#right {
+	float:right;
+	width: 25%;
+}
+
+.item {
+    margin: 5px;
+}
+
+/* game css */
+.game {
+	padding: 0 !important;
+}
+
+#contenttabletopicList {
+	margin-top: 30px;
+}
+
+progress[value] {
+	width: 70px;
+	height: 10px;
+	margin-top: 3px;
+}
+
+#lookupWiki {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	/*border: 1px solid black;*/
+	display: none;
+}
+
+
+
+/* Floats self-clearing */
+
+.group:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* for IE6 */
+* html .group {
+	height: 1%;
+}
+
+/* for IE7 */
+*:first-child+html .group {
+	min-height: 1px;
+}
+
+
+/* BASIC STYLES */
+
+a:link, a:visited {
+	color: #3399FF;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #3366FF;
+}
+
+a img {
+	border: none;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 150%;
+	color: #CC0000;
+	padding-bottom: 20px;
+	line-height: 0.8em;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 120%;
+	color: #666666;
+	padding: 0px 0 10px 0;
+}
+
+label {
+	font-weight: bold;
+}
+
+.smallNote {
+	font-size: 80%;
+	color: #999999;
+}
+
+input.textInput {
+	font-size: 100%;
+	border: 1px solid #AAAAAA;
+	border-radius: 3px;
+	background-color: #FCFCFC;
+	height: 20px;
+	padding-left: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+input.small {
+	width: 140px;
+}
+
+input.smaller {
+	width: 110px;
+}
+
+input.textInput[disabled] {
+	border-color: #DCDCDC;
+	background-color: #F9F9F9;
+	color: #CCCCCC;
+}
+
+.floatItems * {
+	float: left;
+}
+
+.floatItems label,
+.floatItems p {
+	margin-right: 5px;
+	line-height: 24px;
+}
+
+.hidden {
+	opacity: 0;
+	z-index: -100;
+}
+
+.invisible {
+	display: none;
+}
+
+.vSep10 {
+	margin-bottom: 10px;
+}
+
+.vSep20 {
+	margin-bottom: 20px;
+}
+
+.error {
+	color: #CC0000;
+	padding-top: 10px;
+}
+
+.chatAreaElement {
+	padding: 3px;
+	font-size: 90%;
+}
+
+.chatAreaElement em {
+	color: #BBBBBB;
+}
+
+#createGameWinTabs * {
+	float: left;
+}
+
+#createGameWinTabs .item {
+	padding-bottom: 5px;
+	width: 99%;
+}
+
+#createGameWinTabs .item label {
+	width: 140px;
+	padding-top: 4px;
+	font-weight: normal;
+}
+
+#createGameWinTabs .item input {
+	width: 200px;
+}
+
+#createGameWinTabs .item .checkBox {
+	margin-top: 6px;
+}
+
+#createGameWinTabs hr {
+	border: 0;
+	width: 98%;
+	height: 1px;
+	background-color: #BBBBBB;
+	margin: 10px 0;
+}
+
+.popupWinControls {
+	float: left;
+	padding-top: 5px;
+	width: 100%;
+}
+
+.popupWinControls .leftButton {
+	float: left;
+}
+
+.popupWinControls .rightButton {
+	float: right;
+}
+
+.invitationExpLb {
+	float: left;
+	color: #999999;
+	margin: 5px;
+	width: 280px;
+	text-align: center;
+}
+
+#invitationMsgLb {
+	display: block;
+	min-height: 55px;
+}
+
+/* OVERRIDE JQWIDGETS BASIC STYLES */
+
+#roomList.jqx-listbox,
+#userList.jqx-listbox {
+	font-size: 90%;
+	border-left: none;
+	border-right: none;
+	border-radius: 0;
+}
+
+.jqx-listitem-state-normal .itemTitle {
+	color: #FE4200;
+}
+
+.jqx-listitem-state-hover .itemTitle {
+	color: #FFFFFF;
+}
+
+.jqx-listitem-state-selected .itemTitle {
+	color: #FFFFFF;
+}
+
+.jqx-listbox .itemSub {
+	font-size: 90%;
+}
+
+.jqx-tabs-content {
+	padding: 5px;
+}

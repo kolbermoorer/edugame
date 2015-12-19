@@ -1,0 +1,58 @@
+package sfs2x.extensions.room.play;
+
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.smartfoxserver.v2.entities.User;
+import com.smartfoxserver.v2.entities.data.ISFSObject;
+import com.smartfoxserver.v2.entities.data.SFSObject;
+import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
+
+public class PickCardHandler extends BaseClientRequestHandler{
+
+	@SuppressWarnings("unchecked")
+	public void handleClientRequest(User user, ISFSObject params) {
+		int cardId = params.getInt("cardId");
+		JSONObject obj=new JSONObject();
+		RoomExtension gameExt = (RoomExtension) getParentExtension();
+		Card[] cards = gameExt.getGameBoard().getCardArray();
+		for (Card card : cards) {
+			if(card.getCardId() == cardId) {
+				String category = card.getCategory();
+				String topic = card.getTopic();
+				String name = card.getName();
+				String image = card.getImage();
+				String charNumber = card.getCharNumber();
+				obj.put("category", category);
+				obj.put("topic", topic);
+				obj.put("name", name);
+				obj.put("image", image);
+				obj.put("charNumber", charNumber);
+				JSONArray propertyList=new JSONArray();
+				List<String[]> properties = card.getProperties();
+				for (String[] property : properties) {
+					JSONObject propertyObj =new JSONObject();
+					propertyObj.put(property[0], property[1]);
+					propertyList.add(propertyObj);
+				}
+				obj.put("properties", propertyList);
+			}
+		}
+		StringWriter out = new StringWriter();
+		try {
+			obj.writeJSONString(out);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String jsonText = out.toString();
+		
+		ISFSObject resObj = SFSObject.newInstance(); 
+		resObj.putUtfString("card", jsonText);
+		send("pickCard", resObj, user);	
+	}
+
+}

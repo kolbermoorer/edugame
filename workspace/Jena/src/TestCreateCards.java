@@ -1,0 +1,130 @@
+import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.query.ResultSetFormatter;
+
+public class TestCreateCards {
+	
+	
+	public static void main(String[] args) throws IOException {
+		int pId1 = 20;
+		int pId2 = 50;
+        
+		 Cards cards = new Cards(8);
+		 String endpoint =
+		 "http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org";
+		 String queryString= getQueryString(false, null);
+		 Query query = QueryFactory.create(queryString);
+		 QueryExecution qexec = QueryExecutionFactory.sparqlService(endpoint,
+		 query);
+		 FileWriter fileWriter = new FileWriter("C:/Sync/count_topics.txt");
+		 BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+		 try {
+			 ResultSet rs = qexec.execSelect();
+			 while (rs.hasNext()) {
+					QuerySolution qs = rs.next();
+					String category = qs.get("categoryUri").toString(); //category of card
+					queryString= getQueryString(true, category);
+					Query query2 = QueryFactory.create(queryString);
+					QueryExecution qexec2 = QueryExecutionFactory.sparqlService(endpoint, query2);
+					ResultSet rs2 = qexec2.execSelect();
+					int topics = 0;
+					while (rs2.hasNext()) {
+						topics++;
+						System.out.println(rs2.next().get("?subject").toString());
+					}
+					String text = "Category: " + category + " | Topics: " + topics;
+					bufferedWriter.write(text);
+					bufferedWriter.newLine();
+					
+					qexec2.close();					
+				}
+			 
+			 /*ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+			 ResultSetFormatter.outputAsJSON(outputStream, rs);
+			 String json = new String(outputStream.toByteArray());
+			 writeToFile(json);*/
+			 qexec.close();
+		 } catch (Exception e) {
+		 qexec.close();
+		 }
+		 bufferedWriter.close();
+	}
+
+	public static String getQueryString(Boolean getTopics, String category) {
+		String queryString;
+		if(!getTopics) {
+			queryString = 
+					"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+			                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+			                "PREFIX owl: <http://www.w3.org/2002/07/owl#>" +
+			                "SELECT * WHERE {" +
+			                    "?link rdf:type owl:Class " +
+			                    "bind(strafter(str(?link),'http://dbpedia.org/ontology/') as ?categoryUri) " +
+			                    "?link rdfs:label ?categoryLabel ." +
+			                    "FILTER (LANG(?categoryLabel)='en')" +
+			                    "optional{" +
+				                    "?link rdf:type owl:Class." +
+				                    "?link rdfs:comment ?description ." +
+				                    "FILTER (LANG(?description)='en')" +
+			                    "}" +
+			                    "optional{" +
+			                    	"?link rdf:type owl:Class. " +
+			                    	"?link rdfs:subClassOf ?upperCategory. " +
+			                    	"FILTER (strstarts( str(?upperCategory), 'http://dbpedia.org/ontology' ) ) " +
+			                    	"bind(strafter(str(?upperCategory),'http://dbpedia.org/ontology/') as ?upperCategoryUri) " +
+			                    	"?link rdfs:subClassOf/rdfs:label ?upperCategoryLabel " +
+			                    	"FILTER (LANG(?upperCategoryLabel)='en')" +
+			                    "}" +
+				                    
+			                "}" +
+			                "LIMIT 50";
+		}
+		else {
+			queryString = 
+					"PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>"+
+							"PREFIX dbo:<http://dbpedia.org/ontology/>"+
+							"PREFIX vrank:<http://purl.org/voc/vrank#>"+
+							"PREFIX dct:<http://purl.org/dc/terms/>"+
+							"SELECT DISTINCT ?subject (COUNT(DISTINCT ?s) AS ?count) (SUM(DISTINCT ?v)/COUNT(DISTINCT ?s) AS ?popularity) "+
+							"FROM <http://dbpedia.org> "+
+							"FROM <http://people.aifb.kit.edu/ath/#DBpedia_PageRank> "+
+							"WHERE { "+
+							"?s dct:subject ?subject. "+
+							"?s rdf:type ?type. "+
+							"filter (strstarts( str(?type), 'http://dbpedia.org/class/yago/" + category +"1' ) || strstarts( str(?type), 'http://dbpedia.org/ontology/" + category +"' )) "+
+							"?s vrank:hasRank/vrank:rankValue ?v. "+
+							"FILTER(?v > 5) "+
+							"} "+
+							"GROUP BY ?subject "+
+							"HAVING (COUNT(DISTINCT ?s) > 7) "+
+							"ORDER BY DESC(?popularity) "+
+							"LIMIT 20";
+		}
+		return queryString;
+	}
+	
+	public static void writeToFile(String json) {
+    	PrintWriter out = null;
+		try {
+			out = new PrintWriter("C:/Sync/output_categories.txt");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	out.println(json);
+    	out.close();
+    }
+}

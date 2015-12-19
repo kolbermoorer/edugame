@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="Rjgtav">
+	<title>EduGame | Master Thesis Prototype</title>
+
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	<link href="css/jqwidgets/jqx.base.css" rel="stylesheet" type="text/css" />
+	<link href="css/jqwidgets/jqx.arctic.css" rel="stylesheet" type="text/css" />
+	<link href="css/authenticate.css" rel="stylesheet" type="text/css" />
+
+    <!-- Load Game libs -->
+    <script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+    <script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+
+	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+
+	<!-- Load SFS2X JS API -->
+	<script type="text/javascript" src="libs/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="libs/SFS2X_API_JS.js"></script>
+	<script type="text/javascript" src="scripts/config.js"></script>
+	<script type="text/javascript" src="scripts/login.js"></script>
+	<script type="text/javascript" src="scripts/helper.js"></script>
+	<script type="text/javascript" src="scripts/Room.js"></script>
+	<script type="text/javascript" src="scripts/createGame.js"></script>
+	<script type="text/javascript" src="scripts/User.js"></script>
+	<script type="text/javascript" src="scripts/chat.js"></script>
+    <script type="text/javascript" src="scripts/EduGame.js"></script>
+	<script type="text/javascript" src="scripts/Card.js"></script>
+	
+	<!-- load jqxwidgets -->
+	<script type="text/javascript" src="libs/jqwidgets/jqxcore.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxbuttons.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxlistbox.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxscrollbar.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxdropdownlist.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxnavigationbar.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxpanel.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxexpander.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxwindow.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxtabs.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxcheckbox.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxdata.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxdatatable.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxnumberinput.js"></script>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var theme = "arctic";
+			var createGameBt = $("#createGameBt");
+			var logoutBt = $("#logoutBt");
+			var usersList = $("#userList");
+            var usersInRoomsList = $("#userInRoomsList");
+			var sendPublicMsgBt = $("#sendPublicMsgBt");
+			var nextCategoryBt = $("#nextCategoryBt");
+			var nextTopicBt = $("#nextTopicBt");
+			var doCreateGameBt = $("#doCreateGameBt");
+            var roomTable = $("#roomTable");
+            var joinGameBt = $("#joinGameBt");
+
+			//left side
+            roomTable.jqxDataTable({
+				width: "100%",
+				height:289,
+				pageable:true,
+				sortable: true,
+				selectionMode: 'custom',
+				columns: [
+					{ text: 'ID', dataField: 'id' },
+					{ text: 'Name', dataField: 'name'},
+					{ text: 'Type', dataField: 'type'},
+					{ text: 'Players', dataField: 'players', align: 'center', cellsAlign: 'right'},
+					{ text: 'Categories', dataField: 'categories', align: 'center', cellsAlign: 'right' }
+				]
+			});
+
+			createGameBt.jqxButton({width:150, theme:theme});
+			$("#quickJoinBt").jqxButton({width:150, disabled:true, theme:theme});
+            joinGameBt.jqxButton({width:100, disabled:true, theme:theme});
+
+			$("#publicChatAreaPn").jqxPanel({height:250, theme:theme, autoUpdate:true});
+			sendPublicMsgBt.jqxButton({width:100, theme:theme});
+			//logoutBt.jqxButton({width:100, theme:theme});
+
+			//right side
+			$("#sideBar").jqxNavigationBar({theme:theme});
+			usersList.jqxDataTable({
+				width: 246,
+				height:290,
+				pageable:true,
+				enableHover: false,
+				selectionMode: 'custom',
+				columns: [
+					{ text: 'Name', dataField: 'name' },
+					{ text: 'Rank', dataField: 'rank', align: 'center', cellsAlign: 'center'}
+				]
+			});
+
+			usersInRoomsList.jqxDataTable({
+				width: 246,
+				height:290,
+				pageable:true,
+				enableHover: false,
+				selectionMode: 'custom',
+				columns: [
+					{ text: 'Name', dataField: 'name' },
+					{ text: 'Rank', dataField: 'rank', align: 'center', cellsAlign: 'center'}
+				]
+			});
+
+			// Init game room creation window widgets
+			$("#createGameWin").jqxWindow({width:385, height:440, isModal:true, autoOpen:false, resizable:false, draggable:false, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+			$("#createGameWinTabs").jqxTabs({width:"100%", height:391, theme:theme});
+			nextCategoryBt.jqxButton({width:100, theme:theme});
+
+			nextTopicBt.jqxButton({width:100, disabled:true, theme:theme});
+			doCreateGameBt.jqxButton({width:100, disabled:true, theme:theme});
+			$("#gameTypeDd").jqxDropDownList({source:["Know the gap", "Defend your cards"], width:204, height:22, dropDownHeight:50, selectedIndex: 0});
+			$("#gameDifficultyDd").jqxDropDownList({source:["Normal", "Hard"], width:204, height:22, dropDownHeight:70, selectedIndex: 0});
+			$("#publicMsgIn").keyup(function(e) {
+				if(e.which == 13)
+					onSendPublicMessageBtClick();
+			});
+
+			// Game Popups
+			$("#waitGameWin").jqxWindow({width:250, height:150, isModal:true, autoOpen:false, resizable:false, draggable:false, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+
+
+			// Add event listeners
+			//logoutBt.click(onLogoutBtClick);
+			createGameBt.click(onCreateGameBtClick);
+			sendPublicMsgBt.click(onSendPublicMessageBtClick);
+			nextCategoryBt.click(onCategoryNextBtClick);
+			nextTopicBt.click(onTopicNextBtClick);
+			doCreateGameBt.click(onDoCreateGameBtClick);
+            joinGameBt.click(onJoinGameBtClick);
+
+		});
+	</script>
+</head>
+
+<body class="noselect" onLoad="init()">
+<div class="wrapper">
+	<div id="login" class="panel viewStack login">
+		<form action="javascript:onLoginBtClick();">
+			<h1>EduGame</h1>
+			<div>
+				<input type="text" placeholder="Username" required="" id="username" value="tkutschk"/>
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required="" id="password" value="leoleo1988"/>
+			</div>
+			<div>
+				<input type="submit" value="Login" />
+				<a href="#">Lost your password?</a>
+				<a href="#">Register</a>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="wrapper hidden viewStack lobby">
+	<div id="lobby" class="panel hidden viewStack lobby">
+		<div id="userInfo">
+			<span id="usernameLb"></span><img id="scoreIcon" src="css/jqwidgets/styles/images/star.png"/><span id="scoreLb"></span>
+		</div>
+		<div id="mainUI">
+			<div id="left">
+				<table id="roomTable" border="1">
+				</table>
+				<div id="roomControls">
+					<input type="button" id="createGameBt" value="Start New Game"/>
+					<input type="button" id="joinGameBt" value="Join Game"/>
+					<input type="button" id="quickJoinBt" value="Quick Game Join"/>
+				</div>
+				<div id="publicChatAreaPn"></div>
+				<div class="chatControls">
+					<input type="text" id="publicMsgIn" class="textInput" placeholder="Type your message &amp; hit send" />
+					<input type="button" id="sendPublicMsgBt" value="Send"/>
+					<!--<input type="button" id="logoutBt" value="Logout"/>-->
+				</div>
+			</div>
+			<div id="right">
+				<div id="sideBar">
+					<!-- Available Users-->
+					<div id="usersInLobbyHeader">Available players (0)</div>
+					<div>
+						<div id="userList"></div>
+					</div>
+					<!-- Users in Rooms -->
+                    <div id="usersInRoomsHeader">In Rooms (0)</div>
+					<div>
+						<div class="listControls">
+						</div>
+						<div id="userInRoomsList"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Game Room creation popup window -->
+		<div id="createGameWin">
+			<div id="createGameWinHeader">
+				<strong>Create new game</strong>
+			</div>
+			<div id="createGameWinContent">
+				<div id="createGameWinTabs">
+					<ul>
+						<li>Basic</li>
+						<li>Category</li>
+						<li>Topic</li>
+					</ul>
+					<div>
+						<div class="item"><label>Title</label><input type="text" id="gameNameIn" class="textInput" value="test"/></div>
+						<div class="item"><label>Type</label><div id="gameTypeDd"></div></div>
+						<div class="item"><label>Difficulty</label><div id="gameDifficultyDd"></div></div>
+						<div id="nextBtControl" class="popupWinControls">
+							<input type="button" id="nextCategoryBt" class="rightButton" value="Next"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div id="categoryList"></div>
+						<div id="nextTopicBtControl" class="popupWinControls">
+							<input type="button" id="nextTopicBt" class="rightButton" value="Next"/>
+						</div>
+					</div>
+
+					<div class="item">
+						<div id="topicList"></div>
+						<div id="createGameWinControls" class="popupWinControls">
+							<input type="button" id="doCreateGameBt" class="rightButton" value="Create Game"/>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="wrapper hidden viewStack game">
+	<div id="game" class="panel hidden viewStack game">
+		<div id="left">
+			<div id="gamebox" class="leftBox">
+				<iframe id="lookupWiki" width="640" height="640"></iframe>
+				<canvas id="gameContainer" width="1000" height="700">Your Browser doesn't support Canvas</canvas>
+			</div>
+		</div>
+		<!-- Game Popups -->
+		<div id="waitGameWin" class="gamePopup">
+			<div><strong>Waiting...</strong></div>
+			<div class="content">
+				<div id="firstRow"  style="display: table-row; height: 100%;">
+					<p class="gameMessage" id="message">Testing</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>

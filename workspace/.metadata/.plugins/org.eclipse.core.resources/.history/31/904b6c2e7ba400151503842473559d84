@@ -1,0 +1,20 @@
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class Test {
+
+	public static void main(String[] args) throws MalformedURLException, IOException {
+		//String url = "http://commons.wikimedia.org/wiki/Special:FilePath/Harry_S._Truman.jpg?width=300";
+		URL url = new URL("http://commons.wikimedia.org/wiki/Special:FilePath/Harry_S._Truman.jpg?width=300");
+		HttpURLConnection ucon = (HttpURLConnection) url.openConnection();
+		ucon.setInstanceFollowRedirects(false);
+		URL secondURL = new URL(ucon.getHeaderField("Location"));
+		URLConnection conn = secondURL.openConnection();
+		System.out.println( "orignal url: " + conn.getURL() );
+	}
+
+}

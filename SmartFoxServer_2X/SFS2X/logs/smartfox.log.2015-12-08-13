@@ -1,0 +1,244 @@
+08 Dez 2015 | 13:01:54,086 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 14, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58317 }
+08 Dez 2015 | 13:01:54,089 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 13, Priv: 0, Sess: 127.0.0.1:58317 ) , SessionLen: 463659, Type: JavaScript
+08 Dez 2015 | 13:02:15,971 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 15, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58402
+08 Dez 2015 | 13:02:15,984 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 14, Priv: 0, Sess: 127.0.0.1:58402 ) , Type: JavaScript
+08 Dez 2015 | 13:02:15,996 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 14, Priv: 0, Sess: 127.0.0.1:58402 ) , asSpect: false
+08 Dez 2015 | 13:05:28,640 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 15, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58402 }
+08 Dez 2015 | 13:05:28,642 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 14, Priv: 0, Sess: 127.0.0.1:58402 ) , SessionLen: 192658, Type: JavaScript
+08 Dez 2015 | 13:05:31,767 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 16, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58451
+08 Dez 2015 | 13:05:31,805 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 15, Priv: 0, Sess: 127.0.0.1:58451 ) , Type: JavaScript
+08 Dez 2015 | 13:05:31,820 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 15, Priv: 0, Sess: 127.0.0.1:58451 ) , asSpect: false
+08 Dez 2015 | 13:08:40,932 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 16, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58451 }
+08 Dez 2015 | 13:08:40,933 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 15, Priv: 0, Sess: 127.0.0.1:58451 ) , SessionLen: 189129, Type: JavaScript
+08 Dez 2015 | 13:08:42,675 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 17, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58496
+08 Dez 2015 | 13:08:42,706 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:58496 ) , Type: JavaScript
+08 Dez 2015 | 13:08:42,719 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:58496 ) , asSpect: false
+08 Dez 2015 | 13:09:12,632 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | com.hp.hpl.jena.query.QueryParseException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.hp.hpl.jena.query.QueryParseException
+Message: Lexical error at line 1, column 623.  Encountered: ")" (41), after : "null"
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.hp.hpl.jena.sparql.lang.ParserSPARQL11.perform(ParserSPARQL11.java:111)
+com.hp.hpl.jena.sparql.lang.ParserSPARQL11.parse$(ParserSPARQL11.java:53)
+com.hp.hpl.jena.sparql.lang.SPARQLParser.parse(SPARQLParser.java:34)
+com.hp.hpl.jena.query.QueryFactory.parse(QueryFactory.java:148)
+com.hp.hpl.jena.query.QueryFactory.create(QueryFactory.java:80)
+com.hp.hpl.jena.query.QueryFactory.create(QueryFactory.java:53)
+com.hp.hpl.jena.query.QueryFactory.create(QueryFactory.java:41)
+sfs2x.extensions.game.SparqlHandler.executeQuery(SparqlHandler.java:78)
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:68)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+08 Dez 2015 | 13:10:12,957 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 17, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58496 }
+08 Dez 2015 | 13:10:12,958 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:58496 ) , SessionLen: 90252, Type: JavaScript
+08 Dez 2015 | 13:10:15,089 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 18, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58537
+08 Dez 2015 | 13:10:15,114 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 17, Priv: 0, Sess: 127.0.0.1:58537 ) , Type: JavaScript
+08 Dez 2015 | 13:10:15,129 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 17, Priv: 0, Sess: 127.0.0.1:58537 ) , asSpect: false
+08 Dez 2015 | 13:10:32,540 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.hp.hpl.jena.query.QueryParseException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.hp.hpl.jena.query.QueryParseException
+Message: Lexical error at line 1, column 609.  Encountered: ")" (41), after : "null"
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.hp.hpl.jena.sparql.lang.ParserSPARQL11.perform(ParserSPARQL11.java:111)
+com.hp.hpl.jena.sparql.lang.ParserSPARQL11.parse$(ParserSPARQL11.java:53)
+com.hp.hpl.jena.sparql.lang.SPARQLParser.parse(SPARQLParser.java:34)
+com.hp.hpl.jena.query.QueryFactory.parse(QueryFactory.java:148)
+com.hp.hpl.jena.query.QueryFactory.create(QueryFactory.java:80)
+com.hp.hpl.jena.query.QueryFactory.create(QueryFactory.java:53)
+com.hp.hpl.jena.query.QueryFactory.create(QueryFactory.java:41)
+sfs2x.extensions.game.SparqlHandler.executeQuery(SparqlHandler.java:78)
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:68)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+08 Dez 2015 | 13:11:31,716 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+08 Dez 2015 | 13:11:35,120 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 18, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58537 }
+08 Dez 2015 | 13:11:35,122 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 17, Priv: 0, Sess: 127.0.0.1:58537 ) , SessionLen: 80007, Type: JavaScript
+08 Dez 2015 | 13:11:37,350 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 19, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58577
+08 Dez 2015 | 13:11:37,363 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:58577 ) , Type: JavaScript
+08 Dez 2015 | 13:11:37,372 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:58577 ) , asSpect: false
+08 Dez 2015 | 13:13:24,056 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 19, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58577 }
+08 Dez 2015 | 13:13:24,057 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:58577 ) , SessionLen: 106695, Type: JavaScript
+08 Dez 2015 | 13:13:27,253 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 20, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58621
+08 Dez 2015 | 13:13:27,272 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 19, Priv: 0, Sess: 127.0.0.1:58621 ) , Type: JavaScript
+08 Dez 2015 | 13:13:27,284 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 19, Priv: 0, Sess: 127.0.0.1:58621 ) , asSpect: false
+08 Dez 2015 | 13:14:40,265 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP
+Message: HTTP 500 error making the query: SPARQL Request Failed
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.rewrap(HttpQuery.java:414)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.execGet(HttpQuery.java:358)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.exec(HttpQuery.java:295)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execResultSetInner(QueryEngineHTTP.java:346)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execSelect(QueryEngineHTTP.java:338)
+sfs2x.extensions.game.SparqlHandler.executeQuery(SparqlHandler.java:80)
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:68)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+08 Dez 2015 | 13:15:34,532 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP
+Message: HTTP 500 error making the query: SPARQL Request Failed
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.rewrap(HttpQuery.java:414)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.execGet(HttpQuery.java:358)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.exec(HttpQuery.java:295)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execResultSetInner(QueryEngineHTTP.java:346)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execSelect(QueryEngineHTTP.java:338)
+sfs2x.extensions.game.SparqlHandler.executeQuery(SparqlHandler.java:80)
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:68)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+08 Dez 2015 | 13:15:45,641 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 20, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58621 }
+08 Dez 2015 | 13:15:45,643 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 19, Priv: 0, Sess: 127.0.0.1:58621 ) , SessionLen: 138372, Type: JavaScript
+08 Dez 2015 | 13:15:47,602 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 21, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58662
+08 Dez 2015 | 13:15:47,631 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:58662 ) , Type: JavaScript
+08 Dez 2015 | 13:15:47,645 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:58662 ) , asSpect: false
+08 Dez 2015 | 13:16:31,958 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP
+Message: HTTP 500 error making the query: SPARQL Request Failed
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.rewrap(HttpQuery.java:414)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.execGet(HttpQuery.java:358)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.exec(HttpQuery.java:295)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execResultSetInner(QueryEngineHTTP.java:346)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execSelect(QueryEngineHTTP.java:338)
+sfs2x.extensions.game.SparqlHandler.executeQuery(SparqlHandler.java:80)
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:68)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+08 Dez 2015 | 13:17:35,925 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP
+Message: HTTP 500 error making the query: SPARQL Request Failed
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.rewrap(HttpQuery.java:414)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.execGet(HttpQuery.java:358)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.exec(HttpQuery.java:295)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execResultSetInner(QueryEngineHTTP.java:346)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execSelect(QueryEngineHTTP.java:338)
+sfs2x.extensions.game.SparqlHandler.executeQuery(SparqlHandler.java:80)
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:68)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+08 Dez 2015 | 13:20:28,769 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP
+Message: HTTP 500 error making the query: SPARQL Request Failed
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.rewrap(HttpQuery.java:414)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.execGet(HttpQuery.java:358)
+com.hp.hpl.jena.sparql.engine.http.HttpQuery.exec(HttpQuery.java:295)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execResultSetInner(QueryEngineHTTP.java:346)
+com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP.execSelect(QueryEngineHTTP.java:338)
+sfs2x.extensions.game.SparqlHandler.executeQuery(SparqlHandler.java:80)
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:68)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+08 Dez 2015 | 13:25:00,183 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+08 Dez 2015 | 13:25:07,545 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 21, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58662 }
+08 Dez 2015 | 13:25:07,546 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:58662 ) , SessionLen: 559915, Type: JavaScript
+08 Dez 2015 | 13:25:09,894 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 22, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58736
+08 Dez 2015 | 13:25:09,910 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 21, Priv: 0, Sess: 127.0.0.1:58736 ) , Type: JavaScript
+08 Dez 2015 | 13:25:09,921 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 21, Priv: 0, Sess: 127.0.0.1:58736 ) , asSpect: false
+08 Dez 2015 | 13:26:00,570 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: HttpException: 500 
+08 Dez 2015 | 13:26:00,571 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfString(SFSObject.java:643)
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:70)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+08 Dez 2015 | 13:31:56,540 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 22, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58736 }
+08 Dez 2015 | 13:31:56,542 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 21, Priv: 0, Sess: 127.0.0.1:58736 ) , SessionLen: 406632, Type: JavaScript
+08 Dez 2015 | 13:31:58,495 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 23, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58791
+08 Dez 2015 | 13:31:58,529 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 22, Priv: 0, Sess: 127.0.0.1:58791 ) , Type: JavaScript
+08 Dez 2015 | 13:31:58,548 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 22, Priv: 0, Sess: 127.0.0.1:58791 ) , asSpect: false
+08 Dez 2015 | 13:55:57,343 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+08 Dez 2015 | 13:55:57,345 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+08 Dez 2015 | 13:55:57,345 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+08 Dez 2015 | 13:55:57,346 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

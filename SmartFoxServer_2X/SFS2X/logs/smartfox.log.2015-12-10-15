@@ -1,0 +1,56 @@
+10 Dez 2015 | 15:50:11,642 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+10 Dez 2015 | 15:50:11,674 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+10 Dez 2015 | 15:50:12,980 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+10 Dez 2015 | 15:50:13,047 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+10 Dez 2015 | 15:50:13,364 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+10 Dez 2015 | 15:50:13,364 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+10 Dez 2015 | 15:50:13,414 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+10 Dez 2015 | 15:50:13,424 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+10 Dez 2015 | 15:50:13,450 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+10 Dez 2015 | 15:50:13,520 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+10 Dez 2015 | 15:50:13,571 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+10 Dez 2015 | 15:50:14,173 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+10 Dez 2015 | 15:50:14,203 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+10 Dez 2015 | 15:50:14,246 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+10 Dez 2015 | 15:50:14,264 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+10 Dez 2015 | 15:50:14,742 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+10 Dez 2015 | 15:50:14,751 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+10 Dez 2015 | 15:50:14,751 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+10 Dez 2015 | 15:50:18,208 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+10 Dez 2015 | 15:55:14,759 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+10 Dez 2015 | 15:55:14,760 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/0
+10 Dez 2015 | 15:55:14,760 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+10 Dez 2015 | 15:55:14,760 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/0

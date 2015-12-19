@@ -1,0 +1,189 @@
+06 Dez 2015 | 16:12:10,732 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 7, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52292 }
+06 Dez 2015 | 16:12:10,741 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52292 ) , SessionLen: 1804940, Type: JavaScript
+06 Dez 2015 | 16:14:10,743 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 9, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52343 }
+06 Dez 2015 | 16:14:10,746 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: helmut, Id: 8, Priv: 0, Sess: 127.0.0.1:52343 ) , SessionLen: 1810641, Type: JavaScript
+06 Dez 2015 | 16:24:14,529 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+06 Dez 2015 | 16:24:20,766 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 10, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52526
+06 Dez 2015 | 16:24:20,799 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 9, Priv: 0, Sess: 127.0.0.1:52526 ) , Type: JavaScript
+06 Dez 2015 | 16:24:20,813 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 9, Priv: 0, Sess: 127.0.0.1:52526 ) , asSpect: false
+06 Dez 2015 | 16:24:20,813 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersInRoomsHandler.handleClientRequest(GetUsersInRoomsHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 16:30:35,637 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+06 Dez 2015 | 16:30:37,089 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 10, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52526 }
+06 Dez 2015 | 16:30:37,090 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 9, Priv: 0, Sess: 127.0.0.1:52526 ) , SessionLen: 376291, Type: JavaScript
+06 Dez 2015 | 16:30:39,287 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 11, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52603
+06 Dez 2015 | 16:30:39,312 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 10, Priv: 0, Sess: 127.0.0.1:52603 ) , Type: JavaScript
+06 Dez 2015 | 16:30:39,327 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 10, Priv: 0, Sess: 127.0.0.1:52603 ) , asSpect: false
+06 Dez 2015 | 16:30:59,112 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 12, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52615
+06 Dez 2015 | 16:30:59,142 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: helmut, Id: 11, Priv: 0, Sess: 127.0.0.1:52615 ) , Type: JavaScript
+06 Dez 2015 | 16:30:59,155 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: helmut, Id: 11, Priv: 0, Sess: 127.0.0.1:52615 ) , asSpect: false
+06 Dez 2015 | 16:32:40,007 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+06 Dez 2015 | 16:32:42,382 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 12, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52615 }
+06 Dez 2015 | 16:32:42,384 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: helmut, Id: 11, Priv: 0, Sess: 127.0.0.1:52615 ) , SessionLen: 103243, Type: JavaScript
+06 Dez 2015 | 16:32:48,929 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 13, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52649
+06 Dez 2015 | 16:32:48,962 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: helmut, Id: 12, Priv: 0, Sess: 127.0.0.1:52649 ) , Type: JavaScript
+06 Dez 2015 | 16:32:48,976 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: [SFSArray, size: 1] 
+06 Dez 2015 | 16:32:48,977 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: helmut, Id: 12, Priv: 0, Sess: 127.0.0.1:52649 ) , asSpect: false
+06 Dez 2015 | 16:34:28,010 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 11, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52603 }
+06 Dez 2015 | 16:34:28,013 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 10, Priv: 0, Sess: 127.0.0.1:52603 ) , SessionLen: 228700, Type: JavaScript
+06 Dez 2015 | 16:34:30,010 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 14, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52683
+06 Dez 2015 | 16:34:30,039 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 13, Priv: 0, Sess: 127.0.0.1:52683 ) , Type: JavaScript
+06 Dez 2015 | 16:34:30,052 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: [SFSArray, size: 2] 
+06 Dez 2015 | 16:34:30,053 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 13, Priv: 0, Sess: 127.0.0.1:52683 ) , asSpect: false
+06 Dez 2015 | 16:35:03,718 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+06 Dez 2015 | 16:35:03,732 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+06 Dez 2015 | 16:35:04,493 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+06 Dez 2015 | 16:35:04,533 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+06 Dez 2015 | 16:35:04,624 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+06 Dez 2015 | 16:35:04,626 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+06 Dez 2015 | 16:35:04,644 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+06 Dez 2015 | 16:35:04,653 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+06 Dez 2015 | 16:35:04,657 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\BasicExamples.zone.xml
+06 Dez 2015 | 16:35:04,698 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+06 Dez 2015 | 16:35:04,737 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+06 Dez 2015 | 16:35:04,774 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: BasicExamples 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 16:35:04,802 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: BasicExamples } - Could not override maxUserIdleTime. The provided value (300 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 16:35:04,824 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: BasicExamples }, [ Room: The Lobby, Id: 0, Group: default, isGame: false ]
+06 Dez 2015 | 16:35:04,837 | INFO  | main | Extensions |     | {tris}: Tris game Extension for SFS2X started, rel. 1.0.5 
+06 Dez 2015 | 16:35:04,846 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 16:35:04,847 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: EduGame } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 16:35:05,178 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 1, Group: default, isGame: false ]
+06 Dez 2015 | 16:35:05,188 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+06 Dez 2015 | 16:35:05,189 | WARN  | main | entities.managers.SFSZoneManager |     | { Zone: Registration } - Could not override maxUserIdleTime. The provided value (120 sec) is < sessionMaxIdleTime (1800 sec). You must provide a value > sessionMaxIdleTime. Please double check your configuration.
+06 Dez 2015 | 16:35:05,215 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 2, Group: default, isGame: false ]
+06 Dez 2015 | 16:35:05,229 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+06 Dez 2015 | 16:35:05,448 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+06 Dez 2015 | 16:35:05,449 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+06 Dez 2015 | 16:35:05,450 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+06 Dez 2015 | 16:35:07,225 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+06 Dez 2015 | 16:35:14,135 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52787
+06 Dez 2015 | 16:35:14,270 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:52787 ) , Type: JavaScript
+06 Dez 2015 | 16:35:14,279 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: [SFSArray, size: 0] 
+06 Dez 2015 | 16:35:14,280 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:52787 ) , asSpect: false
+06 Dez 2015 | 16:36:31,694 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52808
+06 Dez 2015 | 16:36:31,709 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: helmut, Id: 1, Priv: 0, Sess: 127.0.0.1:52808 ) , Type: JavaScript
+06 Dez 2015 | 16:36:31,720 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: [SFSArray, size: 2] 
+06 Dez 2015 | 16:36:31,721 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: helmut, Id: 1, Priv: 0, Sess: 127.0.0.1:52808 ) , asSpect: false
+06 Dez 2015 | 16:37:48,202 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+06 Dez 2015 | 16:37:49,747 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52787 }
+06 Dez 2015 | 16:37:49,750 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:52787 ) , SessionLen: 155481, Type: JavaScript
+06 Dez 2015 | 16:37:51,982 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52808 }
+06 Dez 2015 | 16:37:51,985 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: helmut, Id: 1, Priv: 0, Sess: 127.0.0.1:52808 ) , SessionLen: 80276, Type: JavaScript
+06 Dez 2015 | 16:37:54,534 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52876
+06 Dez 2015 | 16:37:54,558 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:52876 ) , Type: JavaScript
+06 Dez 2015 | 16:37:54,578 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: [SFSArray, size: 0] 
+06 Dez 2015 | 16:37:54,579 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:52876 ) , asSpect: false
+06 Dez 2015 | 16:38:12,755 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52887
+06 Dez 2015 | 16:38:12,788 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: helmut, Id: 3, Priv: 0, Sess: 127.0.0.1:52887 ) , Type: JavaScript
+06 Dez 2015 | 16:38:12,799 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: [SFSArray, size: 2] 
+06 Dez 2015 | 16:38:12,800 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: helmut, Id: 3, Priv: 0, Sess: 127.0.0.1:52887 ) , asSpect: false
+06 Dez 2015 | 16:41:32,951 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+06 Dez 2015 | 16:41:35,384 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 4, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52887 }
+06 Dez 2015 | 16:41:35,386 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: helmut, Id: 3, Priv: 0, Sess: 127.0.0.1:52887 ) , SessionLen: 202599, Type: JavaScript
+06 Dez 2015 | 16:41:37,506 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52876 }
+06 Dez 2015 | 16:41:37,507 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:52876 ) , SessionLen: 222949, Type: JavaScript
+06 Dez 2015 | 16:41:39,650 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 5, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52951
+06 Dez 2015 | 16:41:39,675 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:52951 ) , Type: JavaScript
+06 Dez 2015 | 16:41:39,687 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:52951 ) , asSpect: false
+06 Dez 2015 | 16:41:39,688 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: [SFSArray, size: 0] 
+06 Dez 2015 | 16:41:46,432 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 5, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52951 }
+06 Dez 2015 | 16:41:46,433 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:52951 ) , SessionLen: 6758, Type: JavaScript
+06 Dez 2015 | 16:41:48,065 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 6, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52983
+06 Dez 2015 | 16:41:48,097 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:52983 ) , Type: JavaScript
+06 Dez 2015 | 16:41:48,108 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: [SFSArray, size: 0] 
+06 Dez 2015 | 16:41:48,109 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:52983 ) , asSpect: false
+06 Dez 2015 | 16:42:00,338 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 7, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52993
+06 Dez 2015 | 16:42:00,371 | INFO  | SFSWorker:Ext:3 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:52983 ) 
+06 Dez 2015 | 16:42:00,377 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 6, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52983 }
+06 Dez 2015 | 16:42:00,380 | INFO  | SFSWorker:Ext:3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 6, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52983 }
+06 Dez 2015 | 16:42:00,382 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:52983 ) , SessionLen: 12285, Type: JavaScript
+06 Dez 2015 | 16:42:00,385 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:52983 ) , SessionLen: 12289, Type: JavaScript
+06 Dez 2015 | 16:42:02,391 | INFO  | pool-1-thread-3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52993 ) , Type: JavaScript
+06 Dez 2015 | 16:42:02,401 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: [SFSArray, size: 0] 
+06 Dez 2015 | 16:42:02,402 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52993 ) , asSpect: false
+06 Dez 2015 | 16:42:11,717 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 8, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52994
+06 Dez 2015 | 16:42:11,745 | INFO  | SFSWorker:Ext:4 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52993 ) 
+06 Dez 2015 | 16:42:11,749 | INFO  | SFSWorker:Ext:4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 7, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52993 }
+06 Dez 2015 | 16:42:11,749 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 7, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52993 }
+06 Dez 2015 | 16:42:11,752 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:52993 ) , SessionLen: 9360, Type: JavaScript
+06 Dez 2015 | 16:42:13,757 | INFO  | pool-1-thread-1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:52994 ) , Type: JavaScript
+06 Dez 2015 | 16:42:13,774 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: [SFSArray, size: 0] 
+06 Dez 2015 | 16:42:13,775 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:52994 ) , asSpect: false
+06 Dez 2015 | 16:42:15,635 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 8, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52994 }
+06 Dez 2015 | 16:42:15,636 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:52994 ) , SessionLen: 1879, Type: JavaScript
+06 Dez 2015 | 16:42:17,257 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 9, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53027
+06 Dez 2015 | 16:42:17,287 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 8, Priv: 0, Sess: 127.0.0.1:53027 ) , Type: JavaScript
+06 Dez 2015 | 16:42:17,297 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: [SFSArray, size: 0] 
+06 Dez 2015 | 16:42:17,298 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 8, Priv: 0, Sess: 127.0.0.1:53027 ) , asSpect: false
+06 Dez 2015 | 16:42:32,732 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 10, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53036
+06 Dez 2015 | 16:42:32,766 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: helmut, Id: 9, Priv: 0, Sess: 127.0.0.1:53036 ) , Type: JavaScript
+06 Dez 2015 | 16:42:32,776 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: [SFSArray, size: 0] 
+06 Dez 2015 | 16:42:32,779 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: helmut, Id: 9, Priv: 0, Sess: 127.0.0.1:53036 ) , asSpect: false
+06 Dez 2015 | 16:42:54,567 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create room name: test 
+06 Dez 2015 | 16:42:54,570 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: test, Id: 3, Group: default, isGame: true ]
+06 Dez 2015 | 16:42:54,573 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: test, Id: 3, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: helmut, Id: 9, Priv: 0, Sess: 127.0.0.1:53036 ) , asSpect: false
+06 Dez 2015 | 16:43:12,792 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 9, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53027 }
+06 Dez 2015 | 16:43:12,794 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 8, Priv: 0, Sess: 127.0.0.1:53027 ) , SessionLen: 55508, Type: JavaScript
+06 Dez 2015 | 16:43:15,024 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 11, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53071
+06 Dez 2015 | 16:43:15,056 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 10, Priv: 0, Sess: 127.0.0.1:53071 ) , Type: JavaScript
+06 Dez 2015 | 16:43:15,075 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 1, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 10, Priv: 0, Sess: 127.0.0.1:53071 ) , asSpect: false
+06 Dez 2015 | 16:43:15,076 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: [SFSArray, size: 1] 
+06 Dez 2015 | 16:55:05,477 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+06 Dez 2015 | 16:55:05,479 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/2
+06 Dez 2015 | 16:55:05,480 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: BasicExamples }, CCU: 0/0
+06 Dez 2015 | 16:55:05,482 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+06 Dez 2015 | 16:55:05,483 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/2

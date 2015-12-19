@@ -1,0 +1,37 @@
+package sfs2x.extensions.room.play;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import com.smartfoxserver.v2.entities.User;
+import com.smartfoxserver.v2.entities.data.ISFSObject;
+import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
+
+public class ReadyHandler extends BaseClientRequestHandler
+{
+	@Override
+	public void handleClientRequest(User user, ISFSObject params)
+	{
+		RoomExtension gameExt = (RoomExtension) getParentExtension();
+		
+		if (user.isPlayer())
+		{
+			String category = params.getUtfString("category");
+			String topic = params.getUtfString("topic");
+			String level = params.getUtfString("level");
+			
+			ArrayList<String[]> settings = gameExt.getSettings();
+			settings.add(new String[]{category,topic,level});
+
+			// Checks if two players are available and start game
+			if (gameExt.getGameRoom().getSize().getUserCount() == 2) {
+				try {
+					gameExt.startGame();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1932 @@
+16 Dez 2015 | 15:10:56,817 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 13, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52577 }
+16 Dez 2015 | 15:10:56,821 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 12, Priv: 0, Sess: 127.0.0.1:52577 ) , SessionLen: 1021780, Type: JavaScript
+16 Dez 2015 | 15:10:59,253 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 14, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52579 }
+16 Dez 2015 | 15:10:59,254 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 13, Priv: 0, Sess: 127.0.0.1:52579 ) , SessionLen: 1020671, Type: JavaScript
+16 Dez 2015 | 15:11:01,880 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 15, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52673
+16 Dez 2015 | 15:11:01,917 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 14, Priv: 0, Sess: 127.0.0.1:52673 ) , Type: JavaScript
+16 Dez 2015 | 15:11:01,932 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 14, Priv: 0, Sess: 127.0.0.1:52673 ) , asSpect: false
+16 Dez 2015 | 15:11:02,674 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create room name: Test494 
+16 Dez 2015 | 15:11:02,680 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:11:02,684 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ]
+16 Dez 2015 | 15:11:02,687 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Test494, Id: 9, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 14, Priv: 0, Sess: 127.0.0.1:52673 ) , asSpect: false
+16 Dez 2015 | 15:11:05,421 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 16, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52675
+16 Dez 2015 | 15:11:05,439 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 15, Priv: 0, Sess: 127.0.0.1:52675 ) , Type: JavaScript
+16 Dez 2015 | 15:11:05,453 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 15, Priv: 0, Sess: 127.0.0.1:52675 ) , asSpect: false
+16 Dez 2015 | 15:11:07,258 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Test494, Id: 9, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 15, Priv: 0, Sess: 127.0.0.1:52675 ) , asSpect: false
+16 Dez 2015 | 15:20:00,241 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 15, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52673 }
+16 Dez 2015 | 15:20:00,244 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 14, Priv: 0, Sess: 127.0.0.1:52673 ) , SessionLen: 538327, Type: JavaScript
+16 Dez 2015 | 15:20:00,445 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:00,596 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:00,673 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:00,718 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:00,769 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:00,833 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:00,868 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:00,918 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:00,969 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,020 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,069 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,118 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,169 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,219 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,268 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,318 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,370 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,418 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,468 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,518 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,568 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,618 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,668 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,718 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,768 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,818 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,872 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,918 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:01,968 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,018 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,068 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,118 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,168 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,218 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,268 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,318 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,370 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,421 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,468 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,519 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,570 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,618 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,668 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,718 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,768 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,818 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,868 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,919 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:02,968 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,019 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,070 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,118 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,169 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,218 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,270 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,318 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,368 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,420 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,468 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,518 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,568 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,618 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,668 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,718 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,768 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,819 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,868 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,918 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:03,968 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,018 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,068 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,118 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,168 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,218 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,268 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,318 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,369 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,418 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,468 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,518 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,568 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,618 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,668 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,720 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,768 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,818 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,868 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,918 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:04,968 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:05,018 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:05,068 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:05,118 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Test494, Id: 9, Group: default, isGame: true ] }
+Extension Cmd: start
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.RoomExtension.startGame(RoomExtension.java:86)
+sfs2x.extensions.room.play.StartHandler.handleClientRequest(StartHandler.java:39)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+16 Dez 2015 | 15:20:05,169 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 16, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52675 }
+16 Dez 2015 | 15:20:05,170 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 15, Priv: 0, Sess: 127.0.0.1:52675 ) , SessionLen: 539731, Type: JavaScript
+16 Dez 2015 | 15:24:26,014 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 17, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52935
+16 Dez 2015 | 15:24:26,052 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:52935 ) , Type: JavaScript
+16 Dez 2015 | 15:24:26,068 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:52935 ) , asSpect: false
+16 Dez 2015 | 15:24:26,901 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create room name: Test696 
+16 Dez 2015 | 15:24:26,912 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:24:26,918 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test696, Id: 10, Group: default, isGame: true ]
+16 Dez 2015 | 15:24:26,921 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Test696, Id: 10, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:52935 ) , asSpect: false
+16 Dez 2015 | 15:24:29,104 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 18, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52937
+16 Dez 2015 | 15:24:29,124 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 17, Priv: 0, Sess: 127.0.0.1:52937 ) , Type: JavaScript
+16 Dez 2015 | 15:24:29,134 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 17, Priv: 0, Sess: 127.0.0.1:52937 ) , asSpect: false
+16 Dez 2015 | 15:24:30,966 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Test696, Id: 10, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 17, Priv: 0, Sess: 127.0.0.1:52937 ) , asSpect: false
+16 Dez 2015 | 15:28:05,628 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 17, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52935 }
+16 Dez 2015 | 15:28:05,630 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:52935 ) , SessionLen: 219579, Type: JavaScript
+16 Dez 2015 | 15:28:07,400 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 18, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52937 }
+16 Dez 2015 | 15:28:07,401 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 17, Priv: 0, Sess: 127.0.0.1:52937 ) , SessionLen: 218278, Type: JavaScript
+16 Dez 2015 | 15:28:10,542 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 19, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53024
+16 Dez 2015 | 15:28:10,572 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:53024 ) , Type: JavaScript
+16 Dez 2015 | 15:28:10,589 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:53024 ) , asSpect: false
+16 Dez 2015 | 15:28:11,733 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create room name: Test3261 
+16 Dez 2015 | 15:28:11,738 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:28:11,742 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test3261, Id: 11, Group: default, isGame: true ]
+16 Dez 2015 | 15:28:11,744 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Test3261, Id: 11, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:53024 ) , asSpect: false
+16 Dez 2015 | 15:28:14,099 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 20, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53026
+16 Dez 2015 | 15:28:14,120 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 19, Priv: 0, Sess: 127.0.0.1:53026 ) , Type: JavaScript
+16 Dez 2015 | 15:28:14,130 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 19, Priv: 0, Sess: 127.0.0.1:53026 ) , asSpect: false
+16 Dez 2015 | 15:28:15,451 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Test3261, Id: 11, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 19, Priv: 0, Sess: 127.0.0.1:53026 ) , asSpect: false
+16 Dez 2015 | 15:29:32,417 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 19, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53024 }
+16 Dez 2015 | 15:29:32,419 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:53024 ) , SessionLen: 81847, Type: JavaScript
+16 Dez 2015 | 15:29:33,667 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 20, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53026 }
+16 Dez 2015 | 15:29:33,667 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 19, Priv: 0, Sess: 127.0.0.1:53026 ) , SessionLen: 79547, Type: JavaScript
+16 Dez 2015 | 15:29:35,114 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 21, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53122
+16 Dez 2015 | 15:29:35,127 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:53122 ) , Type: JavaScript
+16 Dez 2015 | 15:29:35,136 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:53122 ) , asSpect: false
+16 Dez 2015 | 15:29:36,211 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create room name: Test2385 
+16 Dez 2015 | 15:29:36,215 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:29:36,218 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test2385, Id: 12, Group: default, isGame: true ]
+16 Dez 2015 | 15:29:36,220 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Test2385, Id: 12, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:53122 ) , asSpect: false
+16 Dez 2015 | 15:29:38,800 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 22, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53124
+16 Dez 2015 | 15:29:38,816 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 21, Priv: 0, Sess: 127.0.0.1:53124 ) , Type: JavaScript
+16 Dez 2015 | 15:29:38,827 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 21, Priv: 0, Sess: 127.0.0.1:53124 ) , asSpect: false
+16 Dez 2015 | 15:29:41,746 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Test2385, Id: 12, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 21, Priv: 0, Sess: 127.0.0.1:53124 ) , asSpect: false
+16 Dez 2015 | 15:30:08,215 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 21, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53122 }
+16 Dez 2015 | 15:30:08,217 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:53122 ) , SessionLen: 33090, Type: JavaScript
+16 Dez 2015 | 15:30:09,258 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 22, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53124 }
+16 Dez 2015 | 15:30:09,259 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 21, Priv: 0, Sess: 127.0.0.1:53124 ) , SessionLen: 30444, Type: JavaScript
+16 Dez 2015 | 15:30:11,150 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 23, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53193
+16 Dez 2015 | 15:30:11,182 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 22, Priv: 0, Sess: 127.0.0.1:53193 ) , Type: JavaScript
+16 Dez 2015 | 15:30:11,197 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 22, Priv: 0, Sess: 127.0.0.1:53193 ) , asSpect: false
+16 Dez 2015 | 15:30:12,140 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create room name: Test3137 
+16 Dez 2015 | 15:30:12,144 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:30:12,147 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test3137, Id: 13, Group: default, isGame: true ]
+16 Dez 2015 | 15:30:12,148 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Test3137, Id: 13, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 22, Priv: 0, Sess: 127.0.0.1:53193 ) , asSpect: false
+16 Dez 2015 | 15:30:14,212 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 24, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53195
+16 Dez 2015 | 15:30:14,232 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 23, Priv: 0, Sess: 127.0.0.1:53195 ) , Type: JavaScript
+16 Dez 2015 | 15:30:14,245 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 23, Priv: 0, Sess: 127.0.0.1:53195 ) , asSpect: false
+16 Dez 2015 | 15:30:17,927 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Test3137, Id: 13, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 23, Priv: 0, Sess: 127.0.0.1:53195 ) , asSpect: false
+16 Dez 2015 | 15:32:14,914 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 23, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53193 }
+16 Dez 2015 | 15:32:14,916 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 22, Priv: 0, Sess: 127.0.0.1:53193 ) , SessionLen: 123734, Type: JavaScript
+16 Dez 2015 | 15:32:15,832 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 24, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53195 }
+16 Dez 2015 | 15:32:15,833 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 23, Priv: 0, Sess: 127.0.0.1:53195 ) , SessionLen: 121601, Type: JavaScript
+16 Dez 2015 | 15:32:17,249 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 25, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53265
+16 Dez 2015 | 15:32:17,265 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 24, Priv: 0, Sess: 127.0.0.1:53265 ) , Type: JavaScript
+16 Dez 2015 | 15:32:17,282 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 24, Priv: 0, Sess: 127.0.0.1:53265 ) , asSpect: false
+16 Dez 2015 | 15:32:17,935 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create room name: Test9570 
+16 Dez 2015 | 15:32:17,940 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:32:17,943 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test9570, Id: 14, Group: default, isGame: true ]
+16 Dez 2015 | 15:32:17,944 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Test9570, Id: 14, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 24, Priv: 0, Sess: 127.0.0.1:53265 ) , asSpect: false
+16 Dez 2015 | 15:32:19,996 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 26, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53267
+16 Dez 2015 | 15:32:20,009 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 25, Priv: 0, Sess: 127.0.0.1:53267 ) , Type: JavaScript
+16 Dez 2015 | 15:32:20,020 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 25, Priv: 0, Sess: 127.0.0.1:53267 ) , asSpect: false
+16 Dez 2015 | 15:32:22,884 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Test9570, Id: 14, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 25, Priv: 0, Sess: 127.0.0.1:53267 ) , asSpect: false
+16 Dez 2015 | 15:32:43,953 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 25, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53265 }
+16 Dez 2015 | 15:32:43,955 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 24, Priv: 0, Sess: 127.0.0.1:53265 ) , SessionLen: 26690, Type: JavaScript
+16 Dez 2015 | 15:32:44,986 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 26, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53267 }
+16 Dez 2015 | 15:32:44,988 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 25, Priv: 0, Sess: 127.0.0.1:53267 ) , SessionLen: 24979, Type: JavaScript
+16 Dez 2015 | 15:32:46,472 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 27, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53335
+16 Dez 2015 | 15:32:46,498 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 26, Priv: 0, Sess: 127.0.0.1:53335 ) , Type: JavaScript
+16 Dez 2015 | 15:32:46,512 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 26, Priv: 0, Sess: 127.0.0.1:53335 ) , asSpect: false
+16 Dez 2015 | 15:32:47,343 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create room name: Test1261 
+16 Dez 2015 | 15:32:47,347 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:32:47,350 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test1261, Id: 15, Group: default, isGame: true ]
+16 Dez 2015 | 15:32:47,351 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Test1261, Id: 15, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 26, Priv: 0, Sess: 127.0.0.1:53335 ) , asSpect: false
+16 Dez 2015 | 15:32:49,550 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 28, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53337
+16 Dez 2015 | 15:32:49,570 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 27, Priv: 0, Sess: 127.0.0.1:53337 ) , Type: JavaScript
+16 Dez 2015 | 15:32:49,584 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 27, Priv: 0, Sess: 127.0.0.1:53337 ) , asSpect: false
+16 Dez 2015 | 15:32:52,341 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Test1261, Id: 15, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 27, Priv: 0, Sess: 127.0.0.1:53337 ) , asSpect: false
+16 Dez 2015 | 15:38:34,452 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 27, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53335 }
+16 Dez 2015 | 15:38:34,453 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 26, Priv: 0, Sess: 127.0.0.1:53335 ) , SessionLen: 347955, Type: JavaScript
+16 Dez 2015 | 15:38:35,669 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 28, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53337 }
+16 Dez 2015 | 15:38:35,670 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 27, Priv: 0, Sess: 127.0.0.1:53337 ) , SessionLen: 346100, Type: JavaScript
+16 Dez 2015 | 15:38:39,039 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 29, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53441
+16 Dez 2015 | 15:38:39,054 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 28, Priv: 0, Sess: 127.0.0.1:53441 ) , Type: JavaScript
+16 Dez 2015 | 15:38:39,065 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 28, Priv: 0, Sess: 127.0.0.1:53441 ) , asSpect: false
+16 Dez 2015 | 15:38:40,721 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create room name: Test9636 
+16 Dez 2015 | 15:38:40,727 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:38:40,730 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test9636, Id: 16, Group: default, isGame: true ]
+16 Dez 2015 | 15:38:40,732 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Test9636, Id: 16, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 28, Priv: 0, Sess: 127.0.0.1:53441 ) , asSpect: false
+16 Dez 2015 | 15:38:43,438 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 30, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53443
+16 Dez 2015 | 15:38:43,458 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 29, Priv: 0, Sess: 127.0.0.1:53443 ) , Type: JavaScript
+16 Dez 2015 | 15:38:43,472 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 29, Priv: 0, Sess: 127.0.0.1:53443 ) , asSpect: false
+16 Dez 2015 | 15:38:46,481 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Test9636, Id: 16, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 29, Priv: 0, Sess: 127.0.0.1:53443 ) , asSpect: false
+16 Dez 2015 | 15:39:58,085 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 29, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53441 }
+16 Dez 2015 | 15:39:58,087 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 28, Priv: 0, Sess: 127.0.0.1:53441 ) , SessionLen: 79034, Type: JavaScript
+16 Dez 2015 | 15:39:59,015 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 30, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53443 }
+16 Dez 2015 | 15:39:59,016 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 29, Priv: 0, Sess: 127.0.0.1:53443 ) , SessionLen: 75558, Type: JavaScript
+16 Dez 2015 | 15:40:00,824 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 31, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53515
+16 Dez 2015 | 15:40:00,859 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 30, Priv: 0, Sess: 127.0.0.1:53515 ) , Type: JavaScript
+16 Dez 2015 | 15:40:00,872 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 30, Priv: 0, Sess: 127.0.0.1:53515 ) , asSpect: false
+16 Dez 2015 | 15:40:01,919 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create room name: Test4174 
+16 Dez 2015 | 15:40:01,923 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:40:01,927 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test4174, Id: 17, Group: default, isGame: true ]
+16 Dez 2015 | 15:40:01,929 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Test4174, Id: 17, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 30, Priv: 0, Sess: 127.0.0.1:53515 ) , asSpect: false
+16 Dez 2015 | 15:40:04,339 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 32, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53517
+16 Dez 2015 | 15:40:04,353 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 31, Priv: 0, Sess: 127.0.0.1:53517 ) , Type: JavaScript
+16 Dez 2015 | 15:40:04,363 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 31, Priv: 0, Sess: 127.0.0.1:53517 ) , asSpect: false
+16 Dez 2015 | 15:40:06,760 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Test4174, Id: 17, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 31, Priv: 0, Sess: 127.0.0.1:53517 ) , asSpect: false
+16 Dez 2015 | 15:47:59,972 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 31, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53515 }
+16 Dez 2015 | 15:47:59,974 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 30, Priv: 0, Sess: 127.0.0.1:53515 ) , SessionLen: 479115, Type: JavaScript
+16 Dez 2015 | 15:48:00,855 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 32, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53517 }
+16 Dez 2015 | 15:48:00,855 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 31, Priv: 0, Sess: 127.0.0.1:53517 ) , SessionLen: 476503, Type: JavaScript
+16 Dez 2015 | 15:48:02,607 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 33, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53618
+16 Dez 2015 | 15:48:02,635 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 32, Priv: 0, Sess: 127.0.0.1:53618 ) , Type: JavaScript
+16 Dez 2015 | 15:48:02,654 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 32, Priv: 0, Sess: 127.0.0.1:53618 ) , asSpect: false
+16 Dez 2015 | 15:48:03,485 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create room name: Test7280 
+16 Dez 2015 | 15:48:03,489 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:48:03,492 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test7280, Id: 18, Group: default, isGame: true ]
+16 Dez 2015 | 15:48:03,494 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Test7280, Id: 18, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 32, Priv: 0, Sess: 127.0.0.1:53618 ) , asSpect: false
+16 Dez 2015 | 15:48:05,947 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 34, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53620
+16 Dez 2015 | 15:48:05,966 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 33, Priv: 0, Sess: 127.0.0.1:53620 ) , Type: JavaScript
+16 Dez 2015 | 15:48:05,980 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 33, Priv: 0, Sess: 127.0.0.1:53620 ) , asSpect: false
+16 Dez 2015 | 15:48:08,588 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Test7280, Id: 18, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 33, Priv: 0, Sess: 127.0.0.1:53620 ) , asSpect: false
+16 Dez 2015 | 15:53:39,918 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 33, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53618 }
+16 Dez 2015 | 15:53:39,920 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 32, Priv: 0, Sess: 127.0.0.1:53618 ) , SessionLen: 337285, Type: JavaScript
+16 Dez 2015 | 15:53:40,950 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 34, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53620 }
+16 Dez 2015 | 15:53:40,951 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 33, Priv: 0, Sess: 127.0.0.1:53620 ) , SessionLen: 334985, Type: JavaScript
+16 Dez 2015 | 15:53:42,488 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 35, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53723
+16 Dez 2015 | 15:53:42,524 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 34, Priv: 0, Sess: 127.0.0.1:53723 ) , Type: JavaScript
+16 Dez 2015 | 15:53:42,541 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 34, Priv: 0, Sess: 127.0.0.1:53723 ) , asSpect: false
+16 Dez 2015 | 15:53:43,944 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create room name: Test148 
+16 Dez 2015 | 15:53:43,950 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:53:43,953 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test148, Id: 19, Group: default, isGame: true ]
+16 Dez 2015 | 15:53:43,955 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Test148, Id: 19, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 34, Priv: 0, Sess: 127.0.0.1:53723 ) , asSpect: false
+16 Dez 2015 | 15:53:46,716 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 36, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53725
+16 Dez 2015 | 15:53:46,729 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 35, Priv: 0, Sess: 127.0.0.1:53725 ) , Type: JavaScript
+16 Dez 2015 | 15:53:46,738 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 35, Priv: 0, Sess: 127.0.0.1:53725 ) , asSpect: false
+16 Dez 2015 | 15:53:58,703 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Test148, Id: 19, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 35, Priv: 0, Sess: 127.0.0.1:53725 ) , asSpect: false
+16 Dez 2015 | 15:55:27,432 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+16 Dez 2015 | 15:55:27,433 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 1/2
+16 Dez 2015 | 15:55:27,433 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+16 Dez 2015 | 15:55:27,434 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 1/2
+16 Dez 2015 | 15:55:39,875 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 35, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53723 }
+16 Dez 2015 | 15:55:39,877 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 34, Priv: 0, Sess: 127.0.0.1:53723 ) , SessionLen: 117353, Type: JavaScript
+16 Dez 2015 | 15:55:40,787 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 36, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53725 }
+16 Dez 2015 | 15:55:40,787 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 35, Priv: 0, Sess: 127.0.0.1:53725 ) , SessionLen: 114059, Type: JavaScript
+16 Dez 2015 | 15:55:43,549 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 37, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53799
+16 Dez 2015 | 15:55:43,581 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 36, Priv: 0, Sess: 127.0.0.1:53799 ) , Type: JavaScript
+16 Dez 2015 | 15:55:43,594 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 36, Priv: 0, Sess: 127.0.0.1:53799 ) , asSpect: false
+16 Dez 2015 | 15:55:45,261 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create room name: Test6382 
+16 Dez 2015 | 15:55:45,267 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
+16 Dez 2015 | 15:55:45,271 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test6382, Id: 20, Group: default, isGame: true ]
+16 Dez 2015 | 15:55:45,273 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Test6382, Id: 20, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 36, Priv: 0, Sess: 127.0.0.1:53799 ) , asSpect: false
+16 Dez 2015 | 15:55:48,298 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 38, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53801
+16 Dez 2015 | 15:55:48,311 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 37, Priv: 0, Sess: 127.0.0.1:53801 ) , Type: JavaScript
+16 Dez 2015 | 15:55:48,330 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 37, Priv: 0, Sess: 127.0.0.1:53801 ) , asSpect: false
+16 Dez 2015 | 15:55:50,597 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Test6382, Id: 20, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 37, Priv: 0, Sess: 127.0.0.1:53801 ) , asSpect: false

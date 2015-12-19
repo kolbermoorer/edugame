@@ -1,0 +1,86 @@
+package sfs2x.extensions.room.play;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import com.smartfoxserver.v2.entities.Room;
+import com.smartfoxserver.v2.entities.User;
+import com.smartfoxserver.v2.entities.data.ISFSObject;
+import com.smartfoxserver.v2.entities.data.SFSObject;
+import com.smartfoxserver.v2.extensions.SFSExtension;
+
+public class RoomExtension extends SFSExtension
+{
+	private ArrayList<String[]> settings;
+	private EduGameBoard gameBoard;
+	private User whoseTurn;
+	private volatile boolean gameStarted;
+	private LastGameEndResponse lastGameEndResponse;
+	
+	private final String version = "1.0.5";
+	
+	public static void main(String[] args) {
+	}
+
+	@Override
+	public void init() {
+		trace("Tris game Extension for SFS2X started, rel. " + version);
+		setSettings(new ArrayList<String[]>(3));
+		addRequestHandler("ready", ReadyHandler.class);		
+	}
+	
+	Room getGameRoom()
+	{
+		return this.getParentRoom();
+	}
+    
+    LastGameEndResponse getLastGameEndResponse()
+    {
+	    return lastGameEndResponse;
+    }
+    
+    void startGame() throws IOException
+	{
+    	if (gameStarted)
+			throw new IllegalStateException("Game is already started!");
+		
+		lastGameEndResponse = null;
+		gameStarted = true;
+
+		User player1 = getParentRoom().getUserByPlayerId(1);
+		User player2 = getParentRoom().getUserByPlayerId(2);
+		
+		ArrayList<String[]> settings = getSettings(); //get two selected topics from dropdown 
+		settings.add(new String[]{"Actor","http://dbpedia.org/resource/Category:Ivor_Novello_Award_winners","Normal"}); //add random setting to have 3 setups in total
+
+		gameBoard = new EduGameBoard(24, settings);
+		gameBoard.generateResourceList();
+		gameBoard.generateCardList();
+		//String json = gameBoard.getAllCards();
+		
+		// No turn assigned? Let's start with player 1
+		if (whoseTurn == null)
+			whoseTurn = player1;
+		
+		// Send START event to client
+		ISFSObject resObj = new SFSObject();
+		//resObj.putUtfString("cards", json);
+		resObj.putInt("t", whoseTurn.getPlayerId());
+		resObj.putUtfString("p1n", player1.getName());
+		resObj.putInt("p1i", player1.getId());
+		resObj.putInt("p2i", player2.getId());
+		resObj.putUtfString("p2n", player2.getName());
+		resObj.putInt("p2i", player2.getId());
+		
+		send("start", resObj, getParentRoom().getUserList());
+	}
+
+	public ArrayList<String[]> getSettings() {
+		return settings;
+	}
+
+	public void setSettings(ArrayList<String[]> settings) {
+		this.settings = settings;
+	}
+
+}

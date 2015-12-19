@@ -1,0 +1,1 @@
+@..\jre\bin\java.exe -cp "./;lib/*;lib/jetty/lib/*;extensions/__lib__/*" -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n -Dfile.encoding=UTF-8 com.smartfoxserver.v2.Main %1 %2
