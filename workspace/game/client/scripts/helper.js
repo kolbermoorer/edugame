@@ -27,7 +27,7 @@ function onGameExtensionResponse(event)
             populateUsersLists(event.params);
             break;
         case "getCategories":
-            var categories = JSON.parse(event.params.data);
+            var categories = JSON.parse(event.params.categories);
             populateCategoryList(categories);
             break;
         case "getTopics":

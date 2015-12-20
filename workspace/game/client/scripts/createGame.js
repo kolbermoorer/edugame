@@ -1,35 +1,58 @@
-var DETAILS_HEIGHT = 200;
+var DETAILS_HEIGHT = 220;
 var last_row_opened;
 
 /**
  * Create game button click handler.
  * Shows the game room creation panel.
  */
-function onCreateGameBtClick(event)
-{
+function onCreateGameBtClick() {
     $("#createGameWin").jqxWindow("open");
+    $('#createGameWinTabs').jqxTabs('disableAt', 1);
+    $('#createGameWinTabs').jqxTabs('disableAt', 2);
     /*var params = {};
-    params.roomName = "Test" + Math.floor(Math.random() * 10000);
-    params.roomType = "Test";
-    params.roomCategory = "Test";
-    sfs.send(new SFS2X.Requests.System.ExtensionRequest("createRoom", params));*/
+     params.roomName = "Test" + Math.floor(Math.random() * 10000);
+     params.roomType = "Test";
+     params.roomCategory = "Test";
+     sfs.send(new SFS2X.Requests.System.ExtensionRequest("createRoom", params));*/
 }
 
-function onCategoryNextBtClick(event)
-{
+function onCloseBtClick() {
+    $("#createGameWin").jqxWindow("close");
+}
+
+function onCategoryBackBtClick() {
+    $('#createGameWinTabs').jqxTabs('disableAt', 1);
+    $("#createGameWinTabs").jqxTabs({selectedItem: 0});
+}
+
+function onPickCategoryBtClick() {
+    var tableRows = $("#categoryList").jqxDataTable('getRows').length;
+    var randomNumber = Math.floor(Math.random() * tableRows);
+    $("#categoryList").jqxDataTable('selectRow', randomNumber);
+    var selectedIndex = $("#categoryList").jqxDataTable('getSelection')[0].uid;
+    $("#categoryList").jqxDataTable('scrollOffset', Math.round((selectedIndex*28.05) / 10) * 10+10, 0);
+
+}
+
+function onCategoryNextBtClick() {
+    $('#createGameWinTabs').jqxTabs('enableAt', 1);
     var params = {};
-    params.type = "getCategories";
-    sfs.send(new SFS2X.Requests.System.ExtensionRequest("sparql",params));
+    sfs.send(new SFS2X.Requests.System.ExtensionRequest("getCategories", params));
 }
 
-function onTopicNextBtClick(event)
-{
+function onTopicBackBtClick() {
+    $('#createGameWinTabs').jqxTabs('disableAt', 2);
+    $("#createGameWinTabs").jqxTabs({selectedItem: 1});
+}
+
+function onTopicNextBtClick() {
+    $('#createGameWinTabs').jqxTabs('enableAt', 2);
     var categoryListSelected = $("#categoryList").jqxDataTable('getSelection')[0];
     var categoryLabel = categoryListSelected.categoryLabel;
     var categoryUri = categoryListSelected.categoryUri;
     var upperCategoryLabel = (typeof categoryListSelected.upperCategoryLabel === "undefined" ? "" : categoryListSelected.upperCategoryLabel);
     var upperCategoryUri = (typeof categoryListSelected.upperCategoryUri === "undefined" ? "" : categoryListSelected.upperCategoryUri);
-    executeSparql(categoryLabel, categoryUri, upperCategoryLabel, upperCategoryUri );
+    executeSparql(categoryLabel, categoryUri, upperCategoryLabel, upperCategoryUri);
 }
 
 function executeSparql(categoryLabel, categoryUri, upperCategoryLabel, upperCategoryUri) {
@@ -42,21 +65,19 @@ function executeSparql(categoryLabel, categoryUri, upperCategoryLabel, upperCate
     params.upperCategoryUri = upperCategoryUri;
     params.level = level;
     trace(params);
-    sfs.send(new SFS2X.Requests.System.ExtensionRequest("sparql",params));
+    sfs.send(new SFS2X.Requests.System.ExtensionRequest("sparql", params));
 }
 
 /**
  * Create game button click event listener (create game panel).
  * Create a new game using the parameters entered in the game creation popup window.
  */
-function onDoCreateGameBtClick(event)
-{
+function onDoCreateGameBtClick() {
     var roomName = "Test"; //$("#gameNameIn").val();
     var roomType = "TestType"; //$("#gameTypeDd").jqxDropDownList('getSelectedItem').label;
     var roomCategory = "TestCategory"; //$("#categoryList").jqxListBox('getSelectedItem').label;
 
-    if (roomName != "")
-    {
+    if (roomName != "") {
         var params = {};
         params.roomName = roomName;
         params.roomType = roomType;
@@ -65,67 +86,67 @@ function onDoCreateGameBtClick(event)
     }
 }
 
-function populateCategoryList(data)
-{
-    var categories = data.results.bindings;
+function populateCategoryList(categories) {
     trace(categories);
-    var data = new Array();
-    categories.forEach(function(category) {
-        var categoryLabel = category.categoryLabel.value;
-        var categoryUri = category.categoryUri.value;
-        var upperCategoryLabel = (typeof category.upperCategoryLabel === "undefined" ? "" : category.upperCategoryLabel.value);
-        var upperCategoryUri = (typeof category.upperCategoryUri === "undefined" ? "" : category.upperCategoryUri.value);
+    var data = [];
+    categories.forEach(function (category) {
         var row = {};
-        row["categoryLabel"] = toTitleCase(categoryLabel);
-        row["categoryUri"] = categoryUri;
-        row["upperCategoryLabel"] = toTitleCase(upperCategoryLabel);
-        row["upperCategoryUri"] = upperCategoryUri;
+        row["id"] = category.id;
+        row["categoryLabel"] = toTitleCase(category.categoryLabel);
+        row["categoryUri"] = category.categoryUri;
+        row["topicCount"] = category.count;
         data.push(row);
     });
-    data.sort(function(a,b) {return (a.categoryLabel > b.categoryLabel) ? 1 : ((b.categoryLabel > a.categoryLabel) ? -1 : 0);} );
+    data.sort(function (a, b) {
+        return (a.categoryLabel > b.categoryLabel) ? 1 : ((b.categoryLabel > a.categoryLabel) ? -1 : 0);
+    });
 
     var source =
     {
         localData: data,
         dataType: "array",
-        dataFields:
-            [
-                { name: 'categoryLabel', type: 'string' },
-                { name: 'categoryUri', type: 'string' },
-                { name: 'upperCategoryLabel', type: 'string' },
-                { name: 'upperCategoryUri', type: 'string' }
-            ]
+        dataFields: [
+            {name: 'id', type: 'int'},
+            {name: 'categoryLabel', type: 'string'},
+            {name: 'categoryUri', type: 'string'},
+            {name: 'topicCount', type: 'int'}
+        ]
     };
     var dataAdapter = new $.jqx.dataAdapter(source);
     $("#categoryList").jqxDataTable({
-        width: "95%",
-        height:300,
+        width: 366,
+        height: 300,
         source: dataAdapter,
-        pageable:false,
-        showHeader: false,
+        pageable: false,
+        filterable: true,
+        autoRowHeight: true,
+        showHeader: true,
+        sortable:true,
         selectionMode: 'singleRow',
         columns: [
-            { text: 'Category', dataField: 'categoryLabel', width: "100%", autoCellHeight: false}
+            {text: 'Category', dataField: 'categoryLabel', sortable:true, width: 267},
+            {text: 'Topics', dataField: 'topicCount', width: 80, sortable:false, align: 'center', cellsAlign: 'center'}
         ]
     });
-
     $("#createGameWinTabs").jqxTabs({selectedItem: 1});
-    $("#categoryList").on('rowSelect', function (event) {$("#nextTopicBt").jqxButton({disabled:false});});
+    $("#categoryList").jqxDataTable('refresh');
+    $("#categoryList").on('rowSelect', function () {
+        $("#nextTopicBt").jqxButton({disabled: false});
+    });
 }
 
-function populateTopicList(data, sentParams)
-{
-    var topics = data.results.bindings;
+function populateTopicList(topicData, sentParams) {
+    var topics = topicData.results.bindings;
     trace(topics);
     var maxPop = 0;
-    topics.forEach(function(topic) {
+    topics.forEach(function (topic) {
         var pop = parseFloat(topic.popularity.value);
         if (pop > maxPop)
             maxPop = pop;
-    })
+    });
 
-    var data = new Array();
-    topics.forEach(function(topic) {
+    var data = [];
+    topics.forEach(function (topic) {
         var topicURI = topic.subject.value;
         var topicName = decodeURI(topicURI);
         topicName = topicName.split(':')[2];
@@ -135,54 +156,58 @@ function populateTopicList(data, sentParams)
         var row = {};
         row["name"] = topicName;
         row["count"] = topicCount;
-        row["popularity"] = '<progress max="' + maxPop + '" value="' + topicPopularity +'"></progress>';
+        row["popularity"] = '<progress max="' + maxPop + '" value="' + topicPopularity + '"></progress>';
         row["uri"] = topicURI;
-        row["categoryUri"] = sentParams.categoryUri
+        row["categoryUri"] = sentParams.categoryUri;
         data.push(row);
     });
     var source =
     {
         localData: data,
         dataType: "array",
-        dataFields:
-            [
-                { name: 'name', type: 'string' },
-                { name: 'count', type: 'integer' },
-                { name: 'popularity' },
-                { name: 'uri', type: 'string' },
-                { name: 'categoryUri', type: 'string' }
-            ],
+        dataFields: [
+            {name: 'name', type: 'string'},
+            {name: 'count', type: 'integer'},
+            {name: 'popularity'},
+            {name: 'uri', type: 'string'},
+            {name: 'categoryUri', type: 'string'}
+        ],
         sortcolumn: 'name',
         sortdirection: 'asc'
     };
     var dataAdapter = new $.jqx.dataAdapter(source);
 
     $("#topicList").jqxDataTable({
-        height:290,
+        width: 366,
+        height: 290,
         source: dataAdapter,
-        pageable:false,
+        pageable: false,
         rowDetails: true,
+        filterable: true,
         showHeader: true,
+        autoRowHeight: true,
         sortable: true,
         initRowDetails: initRowDetails,
         selectionMode: 'singleRow',
         columns: [
-            { text: 'Topic', dataField: 'name', width: 190, autoCellHeight: false},
-            { text: '#', dataField: 'count', width: 45, align: 'center', cellsAlign: 'center'},
-            { text: 'Popularity', dataField: 'popularity', width: 80, align: 'center', cellsAlign: 'center'},
+            {text: 'Topic', dataField: 'name', width: 170},
+            {text: 'Cards', dataField: 'count', width: 60, align: 'center', cellsAlign: 'center'},
+            {text: 'Popularity', dataField: 'popularity', width: 90, align: 'center', cellsAlign: 'center', filterable: false}
         ]
     });
     $("#createGameWinTabs").jqxTabs({selectedItem: 2});
-    $("#topicList").on('rowSelect', function (event) {$("#doCreateGameBt").jqxButton({disabled:false});});
+    //$(".jqx-icon-search").click();
+    $("#topicList").jqxDataTable('refresh');
+    $("#topicList").on('rowSelect', function () {
+        $("#doCreateGameBt").jqxButton({disabled: false});
+    });
 }
-
 
 
 function initRowDetails(id, row, element, rowinfo) {
     last_row_opened = element;
     $("#topicList").jqxDataTable('showDetails', id);
     rowinfo.detailsHeight = DETAILS_HEIGHT;
-    //var category = $("#categoryList").jqxDataTable('getSelection')[0];
     var level = $("#gameDifficultyDd").jqxDropDownList('getSelectedItem').label;
     var params = {};
     params.type = "getEntries";
@@ -190,15 +215,14 @@ function initRowDetails(id, row, element, rowinfo) {
     params.level = level;
     params.uri = row.uri;
     trace(params);
-    sfs.send(new SFS2X.Requests.System.ExtensionRequest("sparql",params));
+    sfs.send(new SFS2X.Requests.System.ExtensionRequest("sparql", params));
 }
 
-function populateEntryList(data)
-{
-    var entries = data.results.bindings;
+function populateEntryList(entryData) {
+    var entries = entryData.results.bindings;
     trace(entries);
-    var data = new Array();
-    entries.forEach(function(entry) {
+    var data = [];
+    entries.forEach(function (entry) {
         var entryName = entry.name.value;
         var entryUri = "<a href=" + entry.website.value + " target='_blank'>WikiLink</a>";
         var row = {};
@@ -206,33 +230,42 @@ function populateEntryList(data)
         row["uri"] = entryUri;
         data.push(row);
     });
-    data.sort(function(a,b) {return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);} );
+    data.sort(function (a, b) {
+        return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
+    });
     var source =
     {
         localData: data,
         dataType: "array",
-        dataFields:
-            [
-                { name: 'name', type: 'string' },
-                { name: 'uri', type: 'string' }
-            ]
+        dataFields: [
+            {name: 'name', type: 'string'},
+            {name: 'uri', type: 'string'}
+        ]
     };
-
+    last_row_opened.append($("<span class='topicDetails'>Select all</span>"));
+    last_row_opened.append($("<span class='topicDetails'>Deselect all</span>"));
     last_row_opened.append($("<div style='margin: 10px;'></div>"));
-    var nestedDataTable = $(last_row_opened.children()[0]);
+    var nestedDataTable = $(last_row_opened.children()[2]);
     var dataAdapter = new $.jqx.dataAdapter(source);
     nestedDataTable.jqxDataTable({
-        width: 310,
-        height:DETAILS_HEIGHT-30,
+        width: 317,
+        height: DETAILS_HEIGHT - 30,
         source: dataAdapter,
         enableHover: false,
         selectionMode: 'custom',
-        pageable:false,
+        autoRowHeight: true,
+        pageable: false,
         showHeader: false,
         columns: [
-            { text: 'Entry', dataField: 'name', width: 200, autoCellHeight: false},
-            { text: 'Link', dataField: 'uri', align: 'center', cellsAlign: 'center', width: 80}
+            {
+                text: '',
+                width: 30,
+                cellsRenderer: function (row) {
+                    return '<input type="checkbox" id="' + row +'" class="cbResource">';
+                }
+            },
+            {text: 'Entry', dataField: 'name', width: 190},
+            {text: 'Link', dataField: 'uri', align: 'center', cellsAlign: 'center', width: 80}
         ]
     });
-
 }

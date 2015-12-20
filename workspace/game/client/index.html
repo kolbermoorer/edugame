@@ -11,8 +11,10 @@
 	<link href="css/authenticate.css" rel="stylesheet" type="text/css" />
 
     <!-- Load Game libs -->
-    <script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
-    <script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script>
+    <!-- <script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+    <script src="https://code.createjs.com/tweenjs-0.6.1.min.js"></script> -->
+	<script type="text/javascript" src="libs/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="libs/tweenjs-0.6.2.min.js"></script>
 
 	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
 
@@ -25,7 +27,7 @@
 	<script type="text/javascript" src="scripts/Room.js"></script>
 	<script type="text/javascript" src="scripts/createGame.js"></script>
 	<script type="text/javascript" src="scripts/User.js"></script>
-	<script type="text/javascript" src="scripts/chat.js"></script>
+	<script type="text/javascript" src="scripts/Chat.js"></script>
     <script type="text/javascript" src="scripts/EduGame.js"></script>
 	<script type="text/javascript" src="scripts/Card.js"></script>
 	
@@ -44,6 +46,7 @@
 	<script type="text/javascript" src="libs/jqwidgets/jqxdata.js"></script>
 	<script type="text/javascript" src="libs/jqwidgets/jqxdatatable.js"></script>
 	<script type="text/javascript" src="libs/jqwidgets/jqxnumberinput.js"></script>
+	<script type="text/javascript" src="libs/jqwidgets/jqxtextarea.js"></script>
 	
 
 	<script type="text/javascript">
@@ -54,7 +57,12 @@
 			var usersList = $("#userList");
             var usersInRoomsList = $("#userInRoomsList");
 			var sendPublicMsgBt = $("#sendPublicMsgBt");
+			var closeBt = $("#closeBt");
+			var backCategoryBt = $("#backCategoryBt");
+			var pickCategoryBt = $("#pickCategoryBt");
 			var nextCategoryBt = $("#nextCategoryBt");
+			var backTopicBt = $("#backTopicBt");
+			var pickTopicBt = $("#pickTopicBt");
 			var nextTopicBt = $("#nextTopicBt");
 			var doCreateGameBt = $("#doCreateGameBt");
             var roomTable = $("#roomTable");
@@ -111,18 +119,27 @@
 			});
 
 			// Init game room creation window widgets
-			$("#createGameWin").jqxWindow({width:385, height:440, isModal:true, autoOpen:false, resizable:false, draggable:false, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+			$("#createGameWin").jqxWindow({width:400, height:448, isModal:true, autoOpen:false, resizable:false, draggable:false, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
 			$("#createGameWinTabs").jqxTabs({width:"100%", height:391, theme:theme});
+
+			closeBt.jqxButton({width:100, theme:theme});
 			nextCategoryBt.jqxButton({width:100, theme:theme});
 
+			backCategoryBt.jqxButton({width:100, theme:theme});
+			pickCategoryBt.jqxButton({width:100, theme:theme});
 			nextTopicBt.jqxButton({width:100, disabled:true, theme:theme});
+
+			backTopicBt.jqxButton({width:100, theme:theme});
+			pickTopicBt.jqxButton({width:100, theme:theme});
 			doCreateGameBt.jqxButton({width:100, disabled:true, theme:theme});
-			$("#gameTypeDd").jqxDropDownList({source:["Know the gap", "Defend your cards"], width:204, height:22, dropDownHeight:50, selectedIndex: 0});
-			$("#gameDifficultyDd").jqxDropDownList({source:["Normal", "Hard"], width:204, height:22, dropDownHeight:70, selectedIndex: 0});
-			$("#publicMsgIn").keyup(function(e) {
-				if(e.which == 13)
-					onSendPublicMessageBtClick();
-			});
+			$('#gameNameIn').jqxTextArea({ placeHolder: 'Enter a Name', height: 22, width: 170, minLength: 1 });
+			$("#gameTypeDd").jqxDropDownList({source:["Know the gap", "Defend your cards"], width:170, height:22, dropDownHeight:50, selectedIndex: 0});
+			$("#gameDifficultyDd").jqxDropDownList({source:["Normal", "Hard"], width:170, height:22, dropDownHeight:70, selectedIndex: 0});
+
+			// Game View
+			$("#gameChatAreaPn").jqxPanel({width:260, height:200, theme:theme, autoUpdate:true});
+			$("#sendGameMsgBt").jqxButton({width:76, theme:theme});
+			//$("#leaveGameBt").jqxButton({width:100, theme:theme});
 
 			// Game Popups
 			$("#waitGameWin").jqxWindow({width:250, height:150, isModal:true, autoOpen:false, resizable:false, draggable:false, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
@@ -131,11 +148,30 @@
 			// Add event listeners
 			//logoutBt.click(onLogoutBtClick);
 			createGameBt.click(onCreateGameBtClick);
-			sendPublicMsgBt.click(onSendPublicMessageBtClick);
+			closeBt.click(onCloseBtClick);
+			backCategoryBt.click(onCategoryBackBtClick);
+			pickCategoryBt.click(onPickCategoryBtClick);
 			nextCategoryBt.click(onCategoryNextBtClick);
+			backTopicBt.click(onTopicBackBtClick);
 			nextTopicBt.click(onTopicNextBtClick);
 			doCreateGameBt.click(onDoCreateGameBtClick);
             joinGameBt.click(onJoinGameBtClick);
+
+			// Game View
+			sendPublicMsgBt.click(onSendMessageBtClick);
+			$("#sendGameMsgBt").click(onSendMessageBtClick);
+
+			$("#publicMsgIn").keyup(function(e) {
+				if(e.which == 13) {
+					onSendMessageBtClick();
+				}
+			});
+
+			$("#gameMsgIn").keyup(function(e) {
+				if(e.which == 13) {
+					onSendMessageBtClick();
+				}
+			});
 
 		});
 	</script>
@@ -166,7 +202,7 @@
 			<span id="usernameLb"></span><img id="scoreIcon" src="css/jqwidgets/styles/images/star.png"/><span id="scoreLb"></span>
 		</div>
 		<div id="mainUI">
-			<div id="left">
+			<div class="left">
 				<table id="roomTable" border="1">
 				</table>
 				<div id="roomControls">
@@ -181,7 +217,7 @@
 					<!--<input type="button" id="logoutBt" value="Logout"/>-->
 				</div>
 			</div>
-			<div id="right">
+			<div class="right">
 				<div id="sideBar">
 					<!-- Available Users-->
 					<div id="usersInLobbyHeader">Available players (0)</div>
@@ -211,25 +247,32 @@
 						<li>Topic</li>
 					</ul>
 					<div>
-						<div class="item"><label>Title</label><input type="text" id="gameNameIn" class="textInput" value="test"/></div>
-						<div class="item"><label>Type</label><div id="gameTypeDd"></div></div>
-						<div class="item"><label>Difficulty</label><div id="gameDifficultyDd"></div></div>
+						<div class="item"><label>Title</label><textarea id="gameNameIn" class="basicControls"></textarea></div> <!--<input type="text" id="gameNameIn" class="textInput" value="test"/></div>-->
+						<div class="item"><label>Type</label><div id="gameTypeDd" class="basicControls"></div></div>
+						<div class="item"><label>Difficulty</label><div id="gameDifficultyDd" class="basicControls"></div></div>
 						<div id="nextBtControl" class="popupWinControls">
-							<input type="button" id="nextCategoryBt" class="rightButton" value="Next"/>
+							<input type="button" id="closeBt" class="backBt" value="Back"/>
+							<input type="button" id="nextCategoryBt" class="nextBt" value="Next"/>
 						</div>
 					</div>
 
 					<div class="item">
-						<div id="categoryList"></div>
+						<div id="categoryContainer">
+							<div id="categoryList"></div>
+						</div>
 						<div id="nextTopicBtControl" class="popupWinControls">
-							<input type="button" id="nextTopicBt" class="rightButton" value="Next"/>
+							<input type="button" id="backCategoryBt" class="backBt" value="Back"/>
+							<input type="button" id="pickCategoryBt" class="middleBt" value="Pick random!"/>
+							<input type="button" id="nextTopicBt" class="nextBt" value="Next"/>
 						</div>
 					</div>
 
 					<div class="item">
 						<div id="topicList"></div>
 						<div id="createGameWinControls" class="popupWinControls">
-							<input type="button" id="doCreateGameBt" class="rightButton" value="Create Game"/>
+							<input type="button" id="backTopicBt" class="backBt" value="Back"/>
+							<input type="button" id="pickTopicBt" class="middleBt" value="Pick random!"/>
+							<input type="button" id="doCreateGameBt" class="nextBt" value="Create Game"/>
 						</div>
 					</div>
 
@@ -241,10 +284,15 @@
 </div>
 <div class="wrapper hidden viewStack game">
 	<div id="game" class="panel hidden viewStack game">
-		<div id="left">
-			<div id="gamebox" class="leftBox">
-				<iframe id="lookupWiki" width="640" height="640"></iframe>
-				<canvas id="gameContainer" width="1000" height="700">Your Browser doesn't support Canvas</canvas>
+		<div id="gamebox" class="leftBox">
+			<iframe id="lookupWiki" width="640" height="640"></iframe>
+			<canvas id="gameContainer" width="1000" height="700">Your Browser doesn't support Canvas</canvas>
+		</div>
+		<div class="gameBarControls">
+			<div id="gameChatAreaPn"></div>
+			<div class="vSeparateTop">
+				<input type="text" id="gameMsgIn" class="textInput smaller" placeholder="Type your message" style="width: 176px"/>
+				<input type="button" id="sendGameMsgBt" value="Send"/>
 			</div>
 		</div>
 		<!-- Game Popups -->

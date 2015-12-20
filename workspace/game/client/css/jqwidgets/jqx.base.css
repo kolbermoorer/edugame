@@ -158,7 +158,7 @@
     margin: 0 0 0 0;
     cursor: pointer;
     margin-top: 10px;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 
 button.jqx-button, input[type=button].jqx-button,  input[type=submit].jqx-button {
@@ -641,7 +641,7 @@ button.jqx-button, input[type=button].jqx-button,  input[type=submit].jqx-button
 /*applied to a cell in jqxDataTable*/
 .jqx-cell {
     min-height: 23px;
-    padding: 3px; /*6px 4px;*/
+    padding: 6px 4px;
     margin: 0;
     border-collapse: separate;
     border-spacing: 0px;
@@ -654,6 +654,7 @@ button.jqx-button, input[type=button].jqx-button,  input[type=submit].jqx-button
     -moz-box-sizing: border-box;
     white-space: normal;
     line-height: 1.231;
+    vertical-align: middle;
 }
 .jqx-grid-cell-nowrap {white-space: nowrap;}
 

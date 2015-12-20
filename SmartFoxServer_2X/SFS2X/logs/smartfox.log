@@ -1,52 +1,11 @@
-19 Dez 2015 | 08:06:57,940 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
-19 Dez 2015 | 08:06:57,960 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
- _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
-|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
-|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
-|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
-
-19 Dez 2015 | 08:06:58,988 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
-19 Dez 2015 | 08:06:59,038 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
-19 Dez 2015 | 08:06:59,274 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
-
-===================================
-LICENSE DETAILS
------------------------------------
-Type            : Community Edition
-Max users       : 100
-===================================
-
-19 Dez 2015 | 08:06:59,284 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
-19 Dez 2015 | 08:06:59,304 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
-19 Dez 2015 | 08:06:59,314 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
-19 Dez 2015 | 08:06:59,328 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
-19 Dez 2015 | 08:06:59,376 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
-19 Dez 2015 | 08:06:59,412 | INFO  | main | entities.managers.SFSZoneManager |     | 
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
- >> Zone: EduGame 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-19 Dez 2015 | 08:07:00,022 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
-19 Dez 2015 | 08:07:00,052 | INFO  | main | entities.managers.SFSZoneManager |     | 
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
- >> Zone: Registration 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-19 Dez 2015 | 08:07:00,102 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
-19 Dez 2015 | 08:07:00,122 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
-19 Dez 2015 | 08:07:00,521 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
-19 Dez 2015 | 08:07:00,524 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
- _____ _____ _____    ___ __ __ 
-|   __|   __|   __|  |_  |  |  |
-|__   |   __|__   |  |  _|-   -|
-|_____|__|  |_____|  |___|__|__|                                         
- _____ _____ _____ ____  __ __ 
-| __  |   __|  _  |    \|  |  |
-|    -|   __|     |  |  |_   _|
-|__|__|_____|__|__|____/  |_|  
-[ 2.9.0 ] 
-
-19 Dez 2015 | 08:07:00,525 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
-19 Dez 2015 | 08:07:03,154 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+20 Dez 2015 | 09:00:50,120 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 209, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:50930 }
+20 Dez 2015 | 09:00:50,122 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 210, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:51089 }
+20 Dez 2015 | 09:00:50,163 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 209, Priv: 0, Sess: 127.0.0.1:51089 ) , SessionLen: 70946, Type: JavaScript
+20 Dez 2015 | 09:00:50,177 | WARN  | New I/O worker #3 | websocket.netty.WebSocketServerHandler |     | java.io.IOException: Eine bestehende Verbindung wurde softwaregesteuert
+durch den Hostcomputer abgebrochen
+20 Dez 2015 | 09:00:50,174 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: Anzahl der Spieler im Raum nach Verlassen des Spielers: 1 
+20 Dez 2015 | 09:00:50,202 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: Room was destroyed succesfully! 
+20 Dez 2015 | 09:00:50,202 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 211, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:51093 }
+20 Dez 2015 | 09:00:50,204 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk1, Id: 210, Priv: 0, Sess: 127.0.0.1:51093 ) , SessionLen: 54768, Type: JavaScript
+20 Dez 2015 | 09:00:50,137 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk2, Id: 208, Priv: 0, Sess: 127.0.0.1:50930 ) , SessionLen: 889579, Type: JavaScript
+20 Dez 2015 | 09:00:50,203 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Test, Id: 10, Group: default, isGame: true ], Duration: 61743

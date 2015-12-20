@@ -3,7 +3,7 @@ var BOARD_WIDTH = 700;
 var BOARD_HEIGHT = 700;
 var CARD_BACKSIDE_WIDTH = 80;
 var CARD_BACKSIDE_HEIGHT = 114;
-var SPACE_BETWEEN_CARDS = 20;
+var SPACE_BETWEEN_CARDS = 10;
 var CARD_FRONTSIDE_WIDTH = 240;
 var CARD_FRONTSIDE_HEIGHT = 342;
 var NUMBER_OF_CATEGORIES = 3;
@@ -29,6 +29,7 @@ var cards = [];
 
 var player1 = {};
 var player2 = {};
+var whoseTurn;
 
 var p1NameCont;
 var p2NameCont;
@@ -41,13 +42,24 @@ var startButton;
 
 var ready;
 
-var disabler;
-var currentPopUp;
-
 function setReadyStatus(){
     gameStarted = false;
+
+    canvas = document.getElementById("gameContainer");
+    stage = new createjs.Stage(canvas);
+    stage.enableMouseOver();
+    stage.mouseEventsEnabled = true;
+    var boardBackground = new createjs.Bitmap("http://tkutschk.dubhe.uberspace.de/game/client/img/background/LAUAN.jpg");
+    stage.addChild(boardBackground);
+    createjs.Ticker.addEventListener("tick", handleTick);
+    function handleTick(event) {
+        if(inited)
+            setTimer(event);
+        stage.update();
+    }
+
     var params = {};
-    sfs.send( new SFS2X.Requests.System.ExtensionRequest("ready", params, sfs.lastJoinedRoom) )
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("ready", params, sfs.lastJoinedRoom) );
 }
 
 function initGame(params){
@@ -55,25 +67,16 @@ function initGame(params){
 
     player1.id = params.p1i;
     player1.name = params.p1n;
-    player1.mySelf = (player1.id == sfs.mySelf.id ? true : false );
+    player1.mySelf = (player1.id == sfs.mySelf.id);
 
     player2.id = params.p2i;
     player2.name = params.p2n;
-    player2.mySelf = (player2.id == sfs.mySelf.id ? true : false );
+    player2.mySelf = (player2.id == sfs.mySelf.id);
 
     if(inited == false){
         inited = true;
         ready = false;
-        canvas = document.getElementById("gameContainer");
-        stage = new createjs.Stage(canvas);
-        stage.enableMouseOver();
-        stage.mouseEventsEnabled = true;
         buildGameUI(params);
-    }
-    createjs.Ticker.addEventListener("tick", handleTick);
-    function handleTick(event) {
-        setTimer(event);
-        stage.update();
     }
 }
 
@@ -113,8 +116,6 @@ function startGame(params) {
  * Add game's elements to the canvas
  */
 function buildGameUI(params){
-    var boardBackground = new createjs.Bitmap("http://tkutschk.dubhe.uberspace.de/game/client/img/background/LAUAN.jpg");
-    stage.addChild(boardBackground);
     //--------------------------
     // Board
     //--------------------------
@@ -131,7 +132,7 @@ function buildGameUI(params){
     board.addChild(boardBG);
     board.width = BOARD_WIDTH;
     board.height = BOARD_HEIGHT;
-    buildTimer(180000);
+    buildTimer(1800000);
     buildCards(params.cardData, params.layouts);
 
     stage.addChild(board);
@@ -175,7 +176,8 @@ function buildNameContainers() {
     pBG.graphics.drawRoundRect(0, 0, pBG.width, pBG.height,12);
     pBG.cache(-2.5, -2.5, pBG.width+5, pBG.height+5);
     p1NameCont.addChild(pBG);
-    p1NameCont.name = new createjs.Text(player1.name, "bold 14px Verdana", "#000000");
+    var opponentName = (player1.mySelf ? player2.name : player1.name);
+    p1NameCont.name = new createjs.Text(opponentName, "bold 14px Verdana", "#000000");
     p1NameCont.name.textAlign = "center";
     p1NameCont.name.x = (pBG.width)/2;
     p1NameCont.name.y = 3;
@@ -189,7 +191,7 @@ function buildNameContainers() {
     p2NameCont = new createjs.Container();
     var p2BG = pBG.clone();
     p2NameCont.addChild(p2BG);
-    p2NameCont.name = new createjs.Text(player2.name, "bold 14px Verdana", "#000000");
+    p2NameCont.name = new createjs.Text(sfs.mySelf.name, "bold 14px Verdana", "#000000");
     p2NameCont.name.textAlign = "center";
     p2NameCont.name.x = p1NameCont.name.x;
     p2NameCont.name.y = p1NameCont.name.y;
@@ -242,11 +244,13 @@ function getOpponentName() {
     return (player1.mySelf ? player1.name : player2.name);
 }
 
+/*
 function showInformationWindow(params) {
     //var message = "Waiting for player " + ((sfs.mySelf.getPlayerId(sfs.lastJoinedRoom) == 1) ? "2" : "1");
     //showGamePopUp("wait", message);
     startGame(params);
 }
+*/
 
 /**
  * Set the "Player's turn" status message
@@ -275,7 +279,7 @@ function enableBoard(enable){
 function getCardDetails(event) {
     selectedCard = event.target.parent;
     var cardId = selectedCard.cardId;
-    var params = {}
+    var params = {};
     params.cardId = cardId;
     sfs.send( new SFS2X.Requests.System.ExtensionRequest("pickCard", params, sfs.lastJoinedRoom) );
 }
@@ -309,18 +313,18 @@ function flipBackwards() {
         });
 }
 
-function nextForwardActionFunc(event) {
+function nextForwardActionFunc() {
     if(nextForwardAction.localeCompare("openWikiPage") > -1) {
         var wikiUri = selectedCard.wikiUri.replace("en.wikipedia", "en.m.wikipedia");
-        $('#lookupWiki').css('display', 'inline');
-        $('#lookupWiki').attr('src', wikiUri);
+        $('#lookupWiki').css('display', 'inline').attr('src', wikiUri);
+        //$('#lookupWiki').attr('src', wikiUri);
         nextForwardAction = "";
     }
     previousSelectedCard = selectedCard;
     selectedCard = null;
 }
 
-function nextBackwardActionFunc(event) {
+function nextBackwardActionFunc() {
     if (nextBackwardAction.localeCompare("moveCardToPreviousPosition") > -1) {
         $.each(cards, function (index, card) {
             if (card.categoryId == previousSelectedCard.categoryId) {
@@ -354,6 +358,8 @@ function nextBackwardActionFunc(event) {
 /**
  * Show the Game PopUp
  */
+
+/*
 function showGamePopUp(id, message){
     //if(currentPopUp != undefined)
     //    removeGamePopUp();
@@ -367,9 +373,6 @@ function showGamePopUp(id, message){
     currentPopUp.children(".content").children("#firstRow").children("#message").html(message);
 }
 
-/**
- * Hide the Game PopUp
- */
 function removeGamePopUp(){
     if(currentPopUp != undefined){
         disabler.visible = false;
@@ -378,3 +381,4 @@ function removeGamePopUp(){
         currentPopUp = undefined;
     }
 }
+*/

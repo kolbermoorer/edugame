@@ -63,13 +63,15 @@ function onUserEnterRoom(event)
 {
     if (event.room.name == LOBBY_ROOM_NAME)
     {
-        writeToLobbyChatArea("<em>User " + event.user.name + " entered the lobby</em>");
-        updateUserLists();
-        populateRoomsList();
+        if(!inGame) {
+            writeToChatArea("<em>User " + event.user.name + " entered the lobby</em>");
+            updateUserLists();
+            populateRoomsList();
+        }
     }
     else
     {
-        //TODO
+        writeToChatArea("<em>User " + event.user.name + " entered the game</em>");
     }
 }
 
@@ -91,6 +93,7 @@ function onUserExitRoom(event)
 
 function onJoinGameBtClick()
 {
+    //noinspection JSUnresolvedFunction
     var roomId = $("#roomTable").jqxDataTable('getSelection')[0].id;
     var room = sfs.getRoomById(roomId);
     sfs.send(new SFS2X.Requests.System.JoinRoomRequest(room));
@@ -102,8 +105,7 @@ function onJoinGameBtClick()
 function populateRoomsList()
 {
     var rooms = sfs.roomManager.getRoomList();
-    var source = [];
-    var data = new Array();
+    var data = [];
     for (var r in rooms)
     {
         var room = rooms[r];

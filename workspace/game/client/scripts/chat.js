@@ -1,32 +1,23 @@
-
-
-/**
- * Public message send button click handler.
- * Send a public message, which will be displayed in the chat area (see onPublicMessage event).
- */
-function onSendPublicMessageBtClick(event)
+function onSendMessageBtClick()
 {
-    if ($("#publicMsgIn").val() != "")
-    {
-        var isSent = sfs.send(new SFS2X.Requests.System.PublicMessageRequest($("#publicMsgIn").val()));
-
+    var chatWindow = (inGame ? $("#gameMsgIn") : $("#publicMsgIn"));
+    if(chatWindow != "") {
+        var isSent = sfs.send(new SFS2X.Requests.System.PublicMessageRequest(chatWindow.val()));
         if (isSent)
-            $("#publicMsgIn").val("");
+            chatWindow.val("");
     }
 }
 
 function onPublicMessage(event)
 {
     var sender = (event.sender.isItMe ? "You" : event.sender.name);
-
-    if (event.room.name == LOBBY_ROOM_NAME)
-        writeToLobbyChatArea("<b>" + sender + ": </b>" + event.message);
+    writeToChatArea("<b>" + sender + ": </b>" + event.message);
 }
 
-function writeToLobbyChatArea(text)
-{
-    $("#publicChatAreaPn").jqxPanel("append", "<p class='chatAreaElement'>" + text + "</p>");
+function writeToChatArea(text) {
+    var chatWindow = (inGame ? $("#gameChatAreaPn") : $("#publicChatAreaPn"));
+    chatWindow.jqxPanel("append", "<p class='chatAreaElement'>" + text + "</p>");
+    if (chatWindow.jqxPanel("getScrollHeight") != 1000)
+        chatWindow.jqxPanel("scrollTo", 0, chatWindow.jqxPanel("getScrollHeight"));
 
-    if ($("#publicChatAreaPn").jqxPanel("getScrollHeight") != 1000)
-        $("#publicChatAreaPn").jqxPanel("scrollTo", 0, $("#publicChatAreaPn").jqxPanel("getScrollHeight"));
 }

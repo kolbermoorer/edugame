@@ -1,12 +1,10 @@
 var ZONE_NAME = "EduGame";
 var LOBBY_ROOM_NAME = "Lobby";
 var USERVAR_RANKING = "rank";
-var GAME_ROOMS_GROUP_NAME = "gameRooms";
-var EXTENSION_ID = "game";
-var EXTENSIONS_CLASS = "sfs2x.extensions.game.GameExtension";
 
 var sfs = null;
 var currentGameStarted = false;
+var inGame = false;
 
 function init()
 {

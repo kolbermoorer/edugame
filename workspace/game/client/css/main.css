@@ -44,7 +44,7 @@ body {
 	margin-top: -3px;
 }
 
-#left {
+.left {
 	float:left;
 	width: 73%;
     padding-right: 20px;
@@ -75,7 +75,7 @@ body {
     float: left;
 }
 
-#right {
+.right {
 	float:right;
 	width: 25%;
 }
@@ -84,13 +84,42 @@ body {
     margin: 5px;
 }
 
+/* buttons */
+
+.backBt {
+	position: absolute;
+	left: 16px;
+	bottom: 22px;
+}
+
+.middleBt {
+	position: absolute;
+	left: 150px;
+	bottom: 22px;
+}
+
+.nextBt {
+	position: absolute;
+	right: 16px;
+	bottom: 22px;
+}
+
+/* labels */
+.topicDetails {
+	margin: 10px;
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.inactive {
+	display: none;
+}
+
 /* game css */
 .game {
 	padding: 0 !important;
-}
-
-#contenttabletopicList {
-	margin-top: 30px;
 }
 
 progress[value] {
@@ -105,6 +134,12 @@ progress[value] {
 	left: 30px;
 	/*border: 1px solid black;*/
 	display: none;
+}
+
+.gameBarControls {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
 }
 
 
@@ -214,13 +249,14 @@ input.textInput[disabled] {
 	display: none;
 }
 
+/*
 .vSep10 {
 	margin-bottom: 10px;
 }
 
 .vSep20 {
 	margin-bottom: 20px;
-}
+}*/
 
 .error {
 	color: #CC0000;
@@ -236,35 +272,25 @@ input.textInput[disabled] {
 	color: #BBBBBB;
 }
 
-#createGameWinTabs * {
-	float: left;
-}
-
 #createGameWinTabs .item {
 	padding-bottom: 5px;
-	width: 99%;
+	width: 98%;
 }
 
 #createGameWinTabs .item label {
 	width: 140px;
-	padding-top: 4px;
+	padding-top: 10px;
 	font-weight: normal;
 }
 
-#createGameWinTabs .item input {
-	width: 200px;
-}
-
-#createGameWinTabs .item .checkBox {
+#createGameWinTabs .jqx-text-area  {
 	margin-top: 6px;
+	margin-bottom: 6px;
 }
 
-#createGameWinTabs hr {
-	border: 0;
-	width: 98%;
-	height: 1px;
-	background-color: #BBBBBB;
-	margin: 10px 0;
+#createGameWinTabs .jqx-dropdownlist-state-normal  {
+	margin-top: 6px;
+	margin-bottom: 6px;
 }
 
 .popupWinControls {
@@ -273,13 +299,8 @@ input.textInput[disabled] {
 	width: 100%;
 }
 
-.popupWinControls .leftButton {
-	float: left;
-}
 
-.popupWinControls .rightButton {
-	float: right;
-}
+
 
 .invitationExpLb {
 	float: left;

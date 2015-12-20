@@ -1,5 +1,5 @@
 var shifts;
-var clickedCard;
+//var clickedCard;
 
 function buildCards(data, layouts) {
     var zIndex = 0;
@@ -9,23 +9,24 @@ function buildCards(data, layouts) {
         var cardsInStack = stack.cards;
         var categoryName = stack.category;
         var offset=0;
-        var card;
+        var card = null;
         $.each( cardsInStack, function( index, properties ) {
             card = new createjs.Container();
             card.zIndex = zIndex;
             zIndex++;
             card.categoryId = j;
             card.cardId = properties.id;
+            card.categoryName = categoryName;
             card.playerId = properties.playerId;
             card.wikiUri = properties.uri;
-            //card.rotation = 90;
-            card.y = BOARD_HEIGHT/2-CARD_BACKSIDE_HEIGHT+(CARD_BACKSIDE_HEIGHT+SPACE_BETWEEN_CARDS)*j-offset;
-            card.x = BOARD_WIDTH+CARD_BACKSIDE_WIDTH/2+10-offset; //(CARD_BACKSIDE_WIDTH+SPACE_BETWEEN_CARDS)*j-offset;
+            //card.y = BOARD_HEIGHT/2-CARD_BACKSIDE_HEIGHT+(CARD_BACKSIDE_HEIGHT+SPACE_BETWEEN_CARDS)*j-offset;
+            //card.x = BOARD_WIDTH+CARD_BACKSIDE_WIDTH/2+10-offset;
+            card.x = BOARD_WIDTH+CARD_BACKSIDE_WIDTH/2+24+(CARD_BACKSIDE_WIDTH+SPACE_BETWEEN_CARDS)*j-offset;
+            card.y = BOARD_HEIGHT/2-offset-70;
             card.initY = card.y;
             card.initX = card.x;
             card.offset = offset;
-            //card.x = BOARD_WIDTH+CARD_BACKSIDE_HEIGHT/2+20+(CARD_BACKSIDE_HEIGHT/2)*j-offset;
-            //card.y = BOARD_HEIGHT/2-CARD_BACKSIDE_WIDTH-SPACE_BETWEEN_CARDS+(CARD_BACKSIDE_WIDTH+SPACE_BETWEEN_CARDS)*j-offset;
+
 
             var backSide = new createjs.Bitmap("http://tkutschk.dubhe.uberspace.de/game/client/img/cards/category0" + layouts[j] + "_small.png");
             backSide.regX = CARD_BACKSIDE_WIDTH/2;
@@ -38,6 +39,7 @@ function buildCards(data, layouts) {
             frontSide.regY = ($("#lookupWiki").height()+20)/2;
             frontSide.scaleX = 0;
             frontSide.scaleY = 0;
+            frontSide.cache(0,0,$("#lookupWiki").width()+20, $("#lookupWiki").height()+20);
             card.addChild(frontSide);
 
             cards.push(card);
@@ -60,7 +62,7 @@ function showWikiPage(event) {
     executeFlip(event);
 }
 
-function executeFlip(event) {
+function executeFlip() {
     selectedCard.removeEventListener("click", showWikiPage);
     selectedCard.cursor = null;
     $.each( cards, function( index, card ) {
@@ -118,7 +120,7 @@ function spreadCards() {
             if(card.playerId == sfs.mySelf.id)
                 stackP1[categoryId]++;
         } else {
-            x = CARD_BACKSIDE_WIDTH/2 + leftSpace + 2 * categoryId + 100*categoryId-stackP2[categoryId];;
+            x = CARD_BACKSIDE_WIDTH/2 + leftSpace + 2 * categoryId + 100*categoryId-stackP2[categoryId];
             y = board.height-CARD_BACKSIDE_HEIGHT/2-20-stackP2[categoryId];
             if(card.playerId == sfs.mySelf.id)
                 stackP2[categoryId]++;
@@ -205,8 +207,8 @@ function fillCard(cardDetails) {
     img.src = cardDetails.image;
 
     $(img).one('load',function(){
-        orgWidth = img.width;
-        orgHeight = img.height;
+        var orgWidth = img.width;
+        var orgHeight = img.height;
         var scale = 120 / orgHeight;
         var shape = new createjs.Bitmap(img);
         shape.scaleX = scale;
