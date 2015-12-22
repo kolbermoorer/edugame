@@ -62,21 +62,26 @@ function setReadyStatus(){
     sfs.send( new SFS2X.Requests.System.ExtensionRequest("ready", params, sfs.lastJoinedRoom) );
 }
 
-function initGame(params){
-    whoseTurn = params.t;
+/**
+ * @param {{t:int, p1i:int, p1n:String, p2i:int, p2n:String, cardData: Array, layouts: Array}} data
+ */
+function initGame(data){
+    whoseTurn = data.t;
 
-    player1.id = params.p1i;
-    player1.name = params.p1n;
-    player1.mySelf = (player1.id == sfs.mySelf.id);
+    player1.id = sfs.mySelf.id; //data.p1i;
+    player1.name = sfs.mySelf.name; //data.p1n;
+    player1.mySelf = true; //(player1.id == sfs.mySelf.id);
+    player1.stack = [0, 0, 0];
 
-    player2.id = params.p2i;
-    player2.name = params.p2n;
-    player2.mySelf = (player2.id == sfs.mySelf.id);
+    player2.id = (data.p1i == sfs.mySelf.id ? data.p2i : data.p1i);
+    player2.name = (data.p1i == sfs.mySelf.id ? data.p2n : data.p1n);
+    player2.mySelf = false; //(player2.id == sfs.mySelf.id);
+    player2.stack = [0, 0, 0];
 
     if(inited == false){
         inited = true;
         ready = false;
-        buildGameUI(params);
+        buildGameUI(data.cardData, data.layouts);
     }
 }
 
@@ -102,7 +107,7 @@ function startGame(params) {
         buildNameContainers();
         buildStatusField();
         shuffleCards();
-        setTurn();
+        setStatusText(1);
         timerTF.ms = 1800000; //30 min = 18.000.000 ms
     }
     else {
@@ -115,10 +120,7 @@ function startGame(params) {
 /**
  * Add game's elements to the canvas
  */
-function buildGameUI(params){
-    //--------------------------
-    // Board
-    //--------------------------
+function buildGameUI(cardArray, layoutArray){
     board = new createjs.Container();
 
     //Background
@@ -133,7 +135,7 @@ function buildGameUI(params){
     board.width = BOARD_WIDTH;
     board.height = BOARD_HEIGHT;
     buildTimer(1800000);
-    buildCards(params.cardData, params.layouts);
+    buildCards(cardArray, layoutArray);
 
     stage.addChild(board);
 
@@ -165,8 +167,8 @@ function setTimer(event) {
 }
 
 function buildNameContainers() {
-    //Player1
-    p1NameCont = new createjs.Container();
+    //Player2
+    p2NameCont = new createjs.Container();
     var pBG = new createjs.Shape();
     pBG.graphics.setStrokeStyle(1);
     pBG.graphics.beginStroke("black");
@@ -175,31 +177,30 @@ function buildNameContainers() {
     pBG.height = 25;
     pBG.graphics.drawRoundRect(0, 0, pBG.width, pBG.height,12);
     pBG.cache(-2.5, -2.5, pBG.width+5, pBG.height+5);
-    p1NameCont.addChild(pBG);
-    var opponentName = (player1.mySelf ? player2.name : player1.name);
-    p1NameCont.name = new createjs.Text(opponentName, "bold 14px Verdana", "#000000");
-    p1NameCont.name.textAlign = "center";
-    p1NameCont.name.x = (pBG.width)/2;
-    p1NameCont.name.y = 3;
-    p1NameCont.addChild(p1NameCont.name);
+    p2NameCont.addChild(pBG);
+    p2NameCont.name = new createjs.Text(player2.name, "bold 14px Verdana", "#000000");
+    p2NameCont.name.textAlign = "center";
+    p2NameCont.name.x = (pBG.width)/2;
+    p2NameCont.name.y = 3;
+    p2NameCont.addChild(p2NameCont.name);
 
-    p1NameCont.x = 20;
-    p1NameCont.y = 20;
-    stage.addChild(p1NameCont);
+    p2NameCont.x = 20;
+    p2NameCont.y = 20;
+    stage.addChild(p2NameCont);
 
     //Player2
-    p2NameCont = new createjs.Container();
+    p1NameCont = new createjs.Container();
     var p2BG = pBG.clone();
-    p2NameCont.addChild(p2BG);
-    p2NameCont.name = new createjs.Text(sfs.mySelf.name, "bold 14px Verdana", "#000000");
-    p2NameCont.name.textAlign = "center";
-    p2NameCont.name.x = p1NameCont.name.x;
-    p2NameCont.name.y = p1NameCont.name.y;
-    p2NameCont.addChild(p2NameCont.name);
-    p2NameCont.x = BOARD_WIDTH-pBG.width-20;
-    p2NameCont.y = BOARD_HEIGHT-pBG.height-20;
+    p1NameCont.addChild(p2BG);
+    p1NameCont.name = new createjs.Text(player1.name, "bold 14px Verdana", "#000000");
+    p1NameCont.name.textAlign = "center";
+    p1NameCont.name.x = p2NameCont.name.x;
+    p1NameCont.name.y = p2NameCont.name.y;
+    p1NameCont.addChild(p1NameCont.name);
+    p1NameCont.x = BOARD_WIDTH-pBG.width-20;
+    p1NameCont.y = BOARD_HEIGHT-pBG.height-20;
 
-    stage.addChild(p2NameCont);
+    stage.addChild(p1NameCont);
 }
 function buildStatusField() {
     statusTF = new createjs.Text("Hello World", "bold 14px Verdana", "#000000");
@@ -225,7 +226,7 @@ function buildStartGameButton() {
     startButton.name.x = (pBG.width-5)/2;
     startButton.name.y = 3;
     startButton.addChild(startButton.name);
-    startButton.waitingFor = new createjs.Text("Player '" + getOpponentName() + "' is NOT ready!", "10px Verdana", "#000000");
+    startButton.waitingFor = new createjs.Text("Player '" + player2.name + "' is NOT ready!", "10px Verdana", "#000000");
     startButton.waitingFor.textAlign = "center";
     startButton.waitingFor.x = startButton.name.x;
     startButton.waitingFor.y = startButton.name.y + pBG.height + 10;
@@ -240,63 +241,95 @@ function buildStartGameButton() {
 
 }
 
-function getOpponentName() {
-    return (player1.mySelf ? player1.name : player2.name);
-}
-
-/*
-function showInformationWindow(params) {
-    //var message = "Waiting for player " + ((sfs.mySelf.getPlayerId(sfs.lastJoinedRoom) == 1) ? "2" : "1");
-    //showGamePopUp("wait", message);
-    startGame(params);
-}
-*/
-
 /**
  * Set the "Player's turn" status message
  */
-function setTurn(){
-    statusTF.text = (sfs.mySelf.getPlayerId(sfs.lastJoinedRoom) == whoseTurn) ? "It's your turn" : "It's your opponent's turn";
+function setStatusText(level){
+    if(level == 1) {
+        statusTF.text = (myTurn()) ? "It's your turn. Select a card to create a question for your opponent!" : "It's your opponent's turn. Get ready for his cards' question!";
+    }
+}
+
+function myTurn() {
+    return (player1.id == whoseTurn);
 }
 
 /**
  * Enable board click
  */
-function enableBoard(enable){
-    if(sfs.mySelf.getPlayerId(sfs.lastJoinedRoom) == whoseTurn)
-    {
-        trace("Anzahl Karten: " + cards.length);
-        for(var i = 0; i<cards.length; i++){
-            var card = cards[i];
-            if(enable)
-                card.addEventListener("click", getCardDetails);
-            else
-                card.removeEventListener("click", getCardDetails);
+function enableBoard(){
+    //var playerStacks = [0, 0, 0];
+    //var enemyStacks = [0, 0, 0];
+    trace(player1.stack);
+    $.each( cards, function( index, card ) {
+        card.topCard = false;
+        if(card.playerId == player1.id) {
+            //card.zIndex = playerStacks[card.categoryId];
+            //playerStacks[card.categoryId]++;
+            if(card.stackPosition == player1.stack[card.categoryId]) {
+                if (sfs.mySelf.id == whoseTurn) {
+                    card.addEventListener("click", getCardDetails);
+                    card.cursor = "pointer";
+                    card.topCard = true;
+                }
+                else {
+                    card.cursor = "not-allowed";
+                    card.topCard = true;
+                }
+            }
         }
-    }
+        else {
+            //card.zIndex = enemyStacks[card.categoryId];
+            card.cursor = "not-allowed";
+            //enemyStacks[card.categoryId]++;
+        }
+    });
 }
 
 function getCardDetails(event) {
     selectedCard = event.target.parent;
     var cardId = selectedCard.cardId;
+    trace(selectedCard);
+    $.each( cards, function( index, card ) {
+        if(card.topCard) {
+            card.removeEventListener("click", getCardDetails);
+            if(card.cardId == cardId) {
+                card.cursor = null;
+            }
+            else
+                card.cursor = "not-allowed";
+        }
+        else if(card.zIndex == (selectedCard.zIndex-1) && card.categoryId == selectedCard.categoryId) {
+            card.cursor = "not-allowed";
+        }
+    });
     var params = {};
     params.cardId = cardId;
     sfs.send( new SFS2X.Requests.System.ExtensionRequest("pickCard", params, sfs.lastJoinedRoom) );
 }
 
 function flip() {
-    var backSide = selectedCard.children[0];
-    var frontSide = selectedCard.children[1];
     createjs.Tween.get(selectedCard, { loop: false })
         .to({ x: BOARD_WIDTH/2, y:BOARD_HEIGHT/2}, 700, createjs.Ease.getPowInOut(4))
         .call(function() {
-            createjs.Tween.get(backSide, { loop: false })
-                .to({scaleX: 0}, 300)
-                .call(function() {
-                    createjs.Tween.get(frontSide, { loop: false })
-                        .to({scaleX: 1, scaleY: 1}, 300)
-                        .call(nextForwardActionFunc);
-                });
+            if(myTurn()) {
+                flipFrontwards();
+            }
+            else
+                createjs.Tween.get(selectedCard, {loop: false})
+                    .to({alpha:1}, 1000);
+        });
+}
+
+function flipFrontwards() {
+    var backSide = selectedCard.children[0];
+    var frontSide = selectedCard.children[1];
+    createjs.Tween.get(backSide, {loop: false})
+        .to({scaleX: 0}, 300)
+        .call(function () {
+            createjs.Tween.get(frontSide, {loop: false})
+                .to({scaleX: 1, scaleY: 1}, 300)
+                .call(nextForwardActionFunc);
         });
 }
 
@@ -314,40 +347,45 @@ function flipBackwards() {
 }
 
 function nextForwardActionFunc() {
-    if(nextForwardAction.localeCompare("openWikiPage") > -1) {
-        var wikiUri = selectedCard.wikiUri.replace("en.wikipedia", "en.m.wikipedia");
-        $('#lookupWiki').css('display', 'inline').attr('src', wikiUri);
-        //$('#lookupWiki').attr('src', wikiUri);
-        nextForwardAction = "";
+    if(typeof nextForwardAction != 'undefined') {
+        if(nextForwardAction.localeCompare("openWikiPage") > -1) {
+            var wikiUri = selectedCard.wikiUri.replace("en.wikipedia", "en.m.wikipedia");
+            $('#lookupWiki').css('display', 'inline').attr('src', wikiUri);
+            //$('#lookupWiki').attr('src', wikiUri);
+            nextForwardAction = "";
+        }
     }
-    previousSelectedCard = selectedCard;
-    selectedCard = null;
+
+    //previousSelectedCard = selectedCard;
+    //selectedCard = null;
 }
 
 function nextBackwardActionFunc() {
-    if (nextBackwardAction.localeCompare("moveCardToPreviousPosition") > -1) {
-        $.each(cards, function (index, card) {
-            if (card.categoryId == previousSelectedCard.categoryId) {
-                if (card.id != previousSelectedCard.id) {
-                    card.zIndex++;
-                    card.x--;
-                    card.y--;
-                    card.initX--;
-                    card.initY--;
-                    card.offset++;
+    if(typeof nextBackwardAction != 'undefined') {
+        if (nextBackwardAction.localeCompare("moveCardToPreviousPosition") > -1) {
+            $.each(cards, function (index, card) {
+                if (card.categoryId == previousSelectedCard.categoryId) {
+                    if (card.id != previousSelectedCard.id) {
+                        card.zIndex++;
+                        card.x--;
+                        card.y--;
+                        card.initX--;
+                        card.initY--;
+                        card.offset++;
+                    }
+                    else {
+                        card.zIndex = 0;
+                        card.initX += card.offset;
+                        card.initY += card.offset;
+                        card.offset = 0;
+                    }
                 }
-                else {
-                    card.zIndex = 0;
-                    card.initX += card.offset;
-                    card.initY += card.offset;
-                    card.offset = 0;
-                }
-            }
-        });
-        cardContainer.sortChildren(sortByZ);
-        createjs.Tween.get(previousSelectedCard, {loop: false})
-            .to({x: previousSelectedCard.initX, y: previousSelectedCard.initY}, 700, createjs.Ease.getPowInOut(4));
+            });
+            cardContainer.sortChildren(sortByZ);
+            createjs.Tween.get(previousSelectedCard, {loop: false})
+                .to({x: previousSelectedCard.initX, y: previousSelectedCard.initY}, 700, createjs.Ease.getPowInOut(4));
 
+        }
     }
 
 }

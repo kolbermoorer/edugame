@@ -26,12 +26,12 @@ function onRegisterBtClick()
         performSignup();
 }
 
-function onConnection(event)
+function onConnection()
 {
     sfs.send(new SFS2X.Requests.System.LoginRequest(null));
 }
 
-function onLogin(event) {
+function onLogin() {
     performSignup();
 }
 
@@ -40,7 +40,7 @@ function performSignup () {
     params.username = $("#username").val();
     params.password = $("#password").val();
     params.email = $("#email").val();
-    var registered = sfs.send(new SFS2X.Requests.System.ExtensionRequest("$SignUp.Submit", params));
+    sfs.send(new SFS2X.Requests.System.ExtensionRequest("$SignUp.Submit", params));
 }
 
 function onExtensionResponse(event)
@@ -66,6 +66,5 @@ function trace(txt, showAlert)
 function showError(text)
 {
     trace(text);
-    $("#errorLb").html("<b>ATTENTION</b><br/>" + text);
-    $("#errorLb").toggle();
+    $("#errorLb").html("<b>ATTENTION</b><br/>" + text).toggle();
 }

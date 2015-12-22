@@ -19,5 +19,4 @@ function writeToChatArea(text) {
     chatWindow.jqxPanel("append", "<p class='chatAreaElement'>" + text + "</p>");
     if (chatWindow.jqxPanel("getScrollHeight") != 1000)
         chatWindow.jqxPanel("scrollTo", 0, chatWindow.jqxPanel("getScrollHeight"));
-
 }

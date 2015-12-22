@@ -1,4 +1,5 @@
 var shifts;
+var lookupWiki;
 //var clickedCard;
 
 function buildCards(data, layouts) {
@@ -33,13 +34,15 @@ function buildCards(data, layouts) {
             backSide.regY = CARD_BACKSIDE_HEIGHT/2;
             card.addChild(backSide);
 
+            lookupWiki = $("#lookupWiki");
+
             var frontSide = new createjs.Shape();
-            frontSide.graphics.beginStroke("black").setStrokeStyle(1).beginFill("white").drawRoundRect(0.5, 0.5, $("#lookupWiki").width()+20, $("#lookupWiki").height()+20, 10);
-            frontSide.regX = ($("#lookupWiki").width()+20)/2;
-            frontSide.regY = ($("#lookupWiki").height()+20)/2;
+            frontSide.graphics.beginStroke("black").setStrokeStyle(1).beginFill("white").drawRoundRect(0.5, 0.5, lookupWiki.width()+20, lookupWiki.height()+20, 10);
+            frontSide.regX = (lookupWiki.width()+20)/2;
+            frontSide.regY = (lookupWiki.height()+20)/2;
             frontSide.scaleX = 0;
             frontSide.scaleY = 0;
-            frontSide.cache(0,0,$("#lookupWiki").width()+20, $("#lookupWiki").height()+20);
+            frontSide.cache(0,0,lookupWiki.width()+20, lookupWiki.height()+20);
             card.addChild(frontSide);
 
             cards.push(card);
@@ -55,7 +58,7 @@ function buildCards(data, layouts) {
 function showWikiPage(event) {
     selectedCard = event.target.parent;
     if(typeof previousSelectedCard != 'undefined') {
-        $('#lookupWiki').css('display', 'none');
+        lookupWiki.css('display', 'none');
         nextBackwardAction = "moveCardToPreviousPosition";
         flipBackwards();
     }
@@ -98,33 +101,34 @@ function shiftComplete() {
     shifts++;
     if(shifts == NUMBER_OF_CATEGORIES*NUMBER_OF_CARDS_PER_CATEGORY) {
         cardContainer.sortChildren(sortByZ);
-        trace(cards);
         spreadCards();
-        enableBoard(true);
+        enableBoard();
     }
 }
 
 function spreadCards() {
     var waitTime = 0;
     var leftSpace = (board.width-(NUMBER_OF_CATEGORIES-1)*100-86)/2;
-    var stackP1 = {0:0,1:0,2:0};
-    var stackP2 = {0:0,1:0,2:0};
     $.each( cards, function( index, card ) {
         var randomWait = Math.floor(Math.random() * (100 - 10 + 1)) + 10;
         var categoryId = card.categoryId;
         var x;
         var y;
-        if(card.playerId != sfs.mySelf.id) { //shift card to top
-            x = CARD_BACKSIDE_WIDTH/2 + leftSpace + 2 * categoryId + 100*categoryId-stackP1[categoryId];
-            y = CARD_BACKSIDE_HEIGHT/2+20-stackP1[categoryId];
-            if(card.playerId == sfs.mySelf.id)
-                stackP1[categoryId]++;
+        if(card.playerId != player1.id) { //shift card to top
+            player2.stack[categoryId]++;
+            x = CARD_BACKSIDE_WIDTH/2 + leftSpace + 2 * categoryId + 100*categoryId;
+            y = CARD_BACKSIDE_HEIGHT/2+20;
+            card.offset = 0;
+            card.stackPosition = player2.stack[categoryId];
         } else {
-            x = CARD_BACKSIDE_WIDTH/2 + leftSpace + 2 * categoryId + 100*categoryId-stackP2[categoryId];
-            y = board.height-CARD_BACKSIDE_HEIGHT/2-20-stackP2[categoryId];
-            if(card.playerId == sfs.mySelf.id)
-                stackP2[categoryId]++;
+            player1.stack[categoryId]++;
+            x = CARD_BACKSIDE_WIDTH/2 + leftSpace + 2 * categoryId + 100*categoryId-player1.stack[categoryId];
+            y = board.height-CARD_BACKSIDE_HEIGHT/2-20-player1.stack[categoryId];
+            card.offset = player1.stack[categoryId];
+            card.stackPosition = player1.stack[categoryId];
         }
+        card.initX = x;
+        card.initY = y;
         createjs.Tween.get(card, { loop: false })
             .wait(waitTime).to({ x: x, y:y}, 100, createjs.Ease.getPowInOut(4))
             .call(setOpacity);
@@ -137,11 +141,16 @@ function setOpacity(event) {
     if(card.playerId != sfs.mySelf.id)
         createjs.Tween.get(card, { loop: false })
             .to({alpha:0.1}, 1000);
-    else
-        card.cursor = "pointer";
 }
 
 function fillCard(cardDetails) {
+    if(!myTurn()) {
+        $.each( cards, function( index, card ) {
+            if(card.cardId == cardDetails.id)
+                selectedCard = card;
+        });
+    }
+
     trace(cardDetails);
     var frontSide = new createjs.Container();
     frontSide.scaleX = 0;
@@ -149,8 +158,12 @@ function fillCard(cardDetails) {
     frontSide.regX = CARD_FRONTSIDE_WIDTH/2;
     frontSide.regY = CARD_FRONTSIDE_HEIGHT/2;
 
+    var shadow = new createjs.Shadow("#ff0000", 0, 0, 5);
+    shadow.blur= 10;
+
     var frontSideShape = new createjs.Shape();
     frontSideShape.graphics.beginStroke("black").setStrokeStyle(1).beginFill("white").drawRoundRect(0.5, 0.5, CARD_FRONTSIDE_WIDTH, CARD_FRONTSIDE_HEIGHT, 10);
+    frontSideShape.shadow = shadow;
     frontSide.addChild(frontSideShape);
 
     var charNumberContainer = new createjs.Container();
@@ -182,7 +195,6 @@ function fillCard(cardDetails) {
     var pixel = 14;
     var y = 5;
     var category = cardDetails.topic;
-    trace(category.length);
     if(category.length>24 && category.length<46) {
         y = 2;
     }
@@ -238,6 +250,9 @@ function fillCard(cardDetails) {
 
     var top = cardNameContainer.y+40;
     var row=0;
+    var blurFilter = new createjs.BlurFilter(20, 5, 1);
+    var bounds = blurFilter.getBounds();
+
     for (row; row < NUMBER_OF_PROPERTIES_PER_CARD; row++) {
         var cardPropertyContainer = new createjs.Container();
         var cardPropertyShape = new createjs.Shape();
@@ -247,6 +262,8 @@ function fillCard(cardDetails) {
         cardPropertyShape.graphics.beginStroke("gray");
         var propertyBackground = (row%2 == 0 ? "#c4c4c4" : "#e9e9e9");
         cardPropertyShape.graphics.beginFill(propertyBackground);
+        cardPropertyShape.overColor = "#3281FF";
+        cardPropertyShape.outColor = propertyBackground;
         cardPropertyShape.width = CARD_FRONTSIDE_WIDTH - 20;
         cardPropertyShape.height = 22;
         cardPropertyShape.graphics.drawRect(0, 0, cardPropertyShape.width, cardPropertyShape.height);
@@ -259,7 +276,6 @@ function fillCard(cardDetails) {
             propertyText = Object.keys(property)[0];
             valueText = property[Object.keys(property)[0]];
         }
-        trace(property);
         cardPropertyContainer.property = new createjs.Text(propertyText, "bold 12px Verdana", "#000000");
         cardPropertyContainer.property.textAlign = "left";
         cardPropertyContainer.property.x = 3;
@@ -268,6 +284,17 @@ function fillCard(cardDetails) {
         cardPropertyContainer.value.textAlign = "right";
         cardPropertyContainer.value.x = cardPropertyShape.width-3;
         cardPropertyContainer.value.y = 3;
+        if(!myTurn()) {
+            cardPropertyContainer.cursor = "help";
+            cardPropertyContainer.value.filters = [blurFilter];
+            cardPropertyContainer.value.cache(-80+bounds.x, -0.5+bounds.y, 80+bounds.width, 22+bounds.height);
+
+        } else {
+            cardPropertyContainer.cursor = "pointer";
+            cardPropertyContainer.addEventListener("rollover", changeBackground);
+            cardPropertyContainer.addEventListener("rollout", changeBackground);
+            cardPropertyContainer.addEventListener("click", createQuestionUI);
+        }
         cardPropertyContainer.addChild(cardPropertyContainer.property);
         cardPropertyContainer.addChild(cardPropertyContainer.value);
 
@@ -278,6 +305,203 @@ function fillCard(cardDetails) {
     selectedCard.addChild(frontSide);
 }
 
+function changeBackground(event) {
+    var backgroundShape = event.target.children[0];
+    var backgroundColor = (event.type === "rollover" ? backgroundShape.overColor : backgroundShape.outColor);
+    backgroundShape.graphics.clear().beginStroke("gray").beginFill(backgroundColor).drawRect(0, 0, backgroundShape.width, backgroundShape.height).endFill();
+}
+
+function createQuestionUI(event) {
+    moveLeft();
+    var selectedProperty = event.target;
+
+    var params = {};
+    //params.cardId = cardId;
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("sendQuestion", params, sfs.lastJoinedRoom) );
+}
+
+function moveLeft() {
+    createjs.Tween.get(selectedCard, { loop: false })
+        .to({ x: BOARD_WIDTH/4}, 700, createjs.Ease.getPowInOut(4));
+}
+
+function buildTestButtons() {
+    var answerCheckRight = new createjs.Container();
+    var pBG = new createjs.Shape();
+    pBG.graphics.setStrokeStyle(1);
+    pBG.graphics.beginStroke("black");
+    pBG.graphics.beginFill("orange");
+    pBG.width = 100;
+    pBG.height = 25;
+    pBG.graphics.drawRoundRect(0, 0, pBG.width, pBG.height,5);
+    pBG.cache(-2.5, -2.5, pBG.width+5, pBG.height+5);
+    answerCheckRight.addChild(pBG);
+    answerCheckRight.name = new createjs.Text("Answer (T)", "bold 14px Verdana", "#000000");
+    answerCheckRight.name.textAlign = "center";
+    answerCheckRight.name.x = (pBG.width-5)/2;
+    answerCheckRight.name.y = 3;
+    answerCheckRight.addChild(answerCheckRight.name);
+    answerCheckRight.x = BOARD_WIDTH*(3/4);
+    answerCheckRight.y = BOARD_HEIGHT/2;
+    answerCheckRight.cursor = "pointer";
+    answerCheckRight.addEventListener("click", function() {
+        var params = {};
+        params.answer = true;
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
+    });
+    stage.addChild(answerCheckRight);
+
+    var answerCheckWrong = new createjs.Container();
+    var pBG = new createjs.Shape();
+    pBG.graphics.setStrokeStyle(1);
+    pBG.graphics.beginStroke("black");
+    pBG.graphics.beginFill("orange");
+    pBG.width = 100;
+    pBG.height = 25;
+    pBG.graphics.drawRoundRect(0, 0, pBG.width, pBG.height,5);
+    pBG.cache(-2.5, -2.5, pBG.width+5, pBG.height+5);
+    answerCheckWrong.addChild(pBG);
+    answerCheckWrong.name = new createjs.Text("Answer (F)", "bold 14px Verdana", "#000000");
+    answerCheckWrong.name.textAlign = "center";
+    answerCheckWrong.name.x = (pBG.width-5)/2;
+    answerCheckWrong.name.y = 3;
+    answerCheckWrong.addChild(answerCheckWrong.name);
+    answerCheckWrong.x = BOARD_WIDTH*(3/4);
+    answerCheckWrong.y = BOARD_HEIGHT/2+40;
+    answerCheckWrong.cursor = "pointer";
+    answerCheckWrong.addEventListener("click", function() {
+        var params = {};
+        params.answer = false;
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
+    });
+    stage.addChild(answerCheckWrong);
+}
+
+function handleMove(answer) {
+    previousSelectedCard = selectedCard;
+    flipBackwards();
+    if(myTurn() && answer.correct) { //lost the card, send to top
+        player1.stack[previousSelectedCard.categoryId]--;
+        player2.stack[previousSelectedCard.categoryId]++;
+        previousSelectedCard.playerId = player2.id;
+        previousSelectedCard.initX += previousSelectedCard.offset;
+        previousSelectedCard.initY = CARD_BACKSIDE_HEIGHT/2+20;
+        previousSelectedCard.offset=0;
+        $.each(cards, function (index, card) {
+            if (card.categoryId == previousSelectedCard.categoryId && card.playerId != player1.id) {
+                if (card.id != previousSelectedCard.id) {
+                    card.zIndex++;
+                    card.stackPosition++;
+                }
+                else {
+                    card.zIndex = 0;
+                    card.stackPosition = 0;
+                }
+            }
+        });
+        createjs.Tween.get(previousSelectedCard, {loop: false})
+            .to({alpha:0.1}, 1000);
+    }
+    else if(myTurn() && !answer.correct) { //keep the card, send back to bottom
+        $.each(cards, function (index, card) {
+            if (card.categoryId == previousSelectedCard.categoryId && card.playerId == player1.id) {
+                if (card.id != previousSelectedCard.id) {
+                    card.zIndex++;
+                    card.stackPosition++;
+                    card.x--;
+                    card.y--;
+                    card.initX--;
+                    card.initY--;
+                    card.offset++;
+                }
+                else {
+                    card.zIndex = 0;
+                    card.stackPosition = 0;
+                    card.initX += card.offset;
+                    card.initY += card.offset;
+                    card.offset = 0;
+                }
+            }
+        });
+    }
+    else if(!myTurn() && answer.correct) { //win the card, send to bottom
+        player1.stack[previousSelectedCard.categoryId]++;
+        player2.stack[previousSelectedCard.categoryId]--;
+        previousSelectedCard.playerId = player1.id;
+        previousSelectedCard.initY = board.height-CARD_BACKSIDE_HEIGHT/2-20;
+        $.each(cards, function (index, card) {
+            if (card.categoryId == previousSelectedCard.categoryId && card.playerId == player1.id) {
+                if (card.id != previousSelectedCard.id) {
+                    card.zIndex++;
+                    card.stackPosition++;
+                    card.x--;
+                    card.y--;
+                    card.initX--;
+                    card.initY--;
+                    card.offset++;
+                }
+                else {
+                    card.zIndex = 0;
+                    card.stackPosition = 0;
+                    card.initX += card.offset;
+                    card.initY += card.offset;
+                    card.offset = 0;
+                }
+            }
+        });
+    }
+    else if(!myTurn() && !answer.correct) { //didn't win the card, send back to top
+        $.each(cards, function (index, card) {
+            if (card.categoryId == previousSelectedCard.categoryId && card.playerId != player1.id) {
+                if (card.id != previousSelectedCard.id) {
+                    card.zIndex++;
+                    card.stackPosition++;
+                }
+                else {
+                    card.zIndex = 0;
+                    card.stackPosition = 0;
+                }
+            }
+        });
+        createjs.Tween.get(previousSelectedCard, {loop: false})
+            .to({alpha:0.1}, 1000);
+    }
+
+    cardContainer.sortChildren(sortByZ);
+    createjs.Tween.get(previousSelectedCard, {loop: false})
+        .to({x: previousSelectedCard.initX, y: previousSelectedCard.initY}, 700, createjs.Ease.getPowInOut(4));
+
+
+    whoseTurn = answer.t;
+    checkWinStack();
+    setStatusText(1);
+    enableBoard();
+}
+
+function checkWinStack() {
+    var finalX, finalY, move;
+    trace("p1Stack: " + player1.stack[previousSelectedCard.categoryId] + " | p2Stack: " + player2.stack[previousSelectedCard.categoryId]);
+    if(player1.stack[previousSelectedCard.categoryId] == 8) {
+        move = true;
+        finalX = BOARD_WIDTH - ( 66 + CARD_BACKSIDE_WIDTH*(5/6)+CARD_BACKSIDE_WIDTH/3*previousSelectedCard.categoryId );
+        finalY = BOARD_HEIGHT-70;
+    }
+    else if(player2.stack[previousSelectedCard.categoryId] == 8) {
+        move = true;
+        finalX = 56 + CARD_BACKSIDE_WIDTH/6 + CARD_BACKSIDE_WIDTH/3*previousSelectedCard.categoryId;
+        finalY = 70;
+    }
+
+    if(move) {
+        $.each(cards, function (index, card) {
+            if (card.categoryId == previousSelectedCard.categoryId) {
+                createjs.Tween.get(card, {loop: false})
+                    .to({x: finalX, y: finalY}, 700, createjs.Ease.getPowInOut(4))
+                    .to({scaleX: 0.33, scaleY: 0.33}, 300);
+            }
+        });
+    }
+}
 
 function sortByZ(a,b) {
     if (a.zIndex < b.zIndex) return -1;

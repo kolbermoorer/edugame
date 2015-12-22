@@ -1,6 +1,5 @@
-/**
- * Created by Thoma on 30.11.2015.
- */
+var username;
+var password;
 
 function onLoginBtClick()
 {
@@ -11,7 +10,7 @@ function onLoginBtClick()
         performLogin();
 }
 
-function onConnection(event)
+function onConnection()
 {
     performLogin();
 }
@@ -63,7 +62,7 @@ function onLoginError(event)
  */
 function onLogoutBtClick()
 {
-    var isSent = sfs.send(new SFS2X.Requests.System.LogoutRequest());
+    sfs.send(new SFS2X.Requests.System.LogoutRequest());
 }
 
 function onLogout(event)

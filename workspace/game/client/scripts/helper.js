@@ -9,15 +9,14 @@ function trace(txt, showAlert)
 function showError(text)
 {
     trace(text);
-    $("#errorLb").html("<b>ATTENTION</b><br/>" + text);
-    $("#errorLb").toggle();
+    $("#errorLb").html("<b>ATTENTION</b><br/>" + text).toggle();
 }
 
 function onGameExtensionResponse(event)
 {
     var cmd = event.cmd;
     var params = event.params;
-    trace(params);
+    //trace(params);
 
     switch(cmd){
         case "updateRoomTable":
@@ -32,12 +31,7 @@ function onGameExtensionResponse(event)
             break;
         case "getTopics":
             var topics = JSON.parse(event.params.data);
-            if (topics.results.bindings.length < 1) {
-                trace("No topics could be found for category '" + params.sentParams.categoryLabel + "': Do you want to search for upper category '" + params.sentParams.upperCategoryLabel + "'?");
-                executeSparql(params.sentParams.upperCategoryLabel, params.sentParams.upperCategoryUri );
-            }
-            else
-                populateTopicList(topics, event.params.sentParams);
+            populateTopicList(topics, event.params.sentParams);
             break;
         case "getEntries":
             var entries = JSON.parse(event.params.data);
@@ -55,6 +49,14 @@ function onGameExtensionResponse(event)
             fillCard(cardDetails);
             flip();
             break;
+        case "sendQuestion":
+            buildTestButtons();
+            flipFrontwards();
+            moveLeft();
+            break;
+        case "checkAnswer":
+            handleMove(params);
+            break;
     }
 }
 
@@ -65,6 +67,8 @@ function setView(viewId, doSwitch)
     }
     else if (viewId == "lobby")
     {
+        buildMainUI();
+        addEventListenerMain();
         updateUserLists();
         populateRoomsList();
     }

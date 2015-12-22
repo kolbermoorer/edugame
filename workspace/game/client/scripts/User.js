@@ -4,7 +4,7 @@ function updateUserLists() {
 
 function populateUsersLists(lists) {
     var usersInLobby = lists.usersInLobby;
-    var data = new Array();
+    var data = [];
     for (var index in usersInLobby) {
         var user = usersInLobby[index];
         var row = {};
@@ -26,7 +26,7 @@ function populateUsersLists(lists) {
     $("#userList").jqxDataTable({source: dataAdapter});
 
     var usersInRooms = lists.usersInRooms;
-    data = new Array();
+    data = [];
     for (var index in usersInRooms) {
         var user = usersInRooms[index];
         var row = {};
