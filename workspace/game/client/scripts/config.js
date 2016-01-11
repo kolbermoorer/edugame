@@ -47,6 +47,10 @@ var gameChatAreaPn;
 var sendGameMsgBt;
 //var leaveGameBt;
 
+//game popups
+var waitGameWin;
+var endGameWin;
+
 function init()
 {
     trace("Application started");
@@ -148,6 +152,11 @@ function buildMainUI() {
     gameChatAreaPn = $("#gameChatAreaPn").jqxPanel({width:260, height:200, theme:theme, autoUpdate:true});
     sendGameMsgBt = $("#sendGameMsgBt").jqxButton({width:76, theme:theme});
     //leaveGameBt = $("#leaveGameBt").jqxButton({width:100, theme:theme});
+
+    // game popups
+    waitGameWin = $("#waitGameWin").jqxWindow({width:250, height:150, autoOpen:false, resizable:false, draggable:false, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    //endGameWin = $("#endGameWin").jqxWindow({width:250, height:150, autoOpen:false, resizable:false, draggable:false, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+
 }
 
 function addEventListenerMain() {

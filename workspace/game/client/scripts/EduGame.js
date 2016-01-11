@@ -40,11 +40,12 @@ var timerTF;
 var statusTF;
 var startButton;
 
+var currentPopUp;
+
 var ready;
 
 function setReadyStatus(){
     gameStarted = false;
-
     canvas = document.getElementById("gameContainer");
     stage = new createjs.Stage(canvas);
     stage.enableMouseOver();
@@ -58,8 +59,17 @@ function setReadyStatus(){
         stage.update();
     }
 
+    resetGameBoard();
+
+    var message = "Waiting for other players ...";
+    showGamePopUp("wait", message);
+
     var params = {};
     sfs.send( new SFS2X.Requests.System.ExtensionRequest("ready", params, sfs.lastJoinedRoom) );
+}
+
+function resetGameBoard() {
+    $(".gameBarControls").css("display", "none");
 }
 
 /**
@@ -83,6 +93,8 @@ function initGame(data){
         ready = false;
         buildGameUI(data.cardData, data.layouts);
     }
+    $(".gameBarControls").css("display", "block");
+    removeGamePopUp();
 }
 
 function setStartStatus() {
@@ -396,27 +408,26 @@ function nextBackwardActionFunc() {
 /**
  * Show the Game PopUp
  */
-
-/*
 function showGamePopUp(id, message){
-    //if(currentPopUp != undefined)
-    //    removeGamePopUp();
+    if(currentPopUp != undefined)
+        removeGamePopUp();
 
     //disabler.visible = true;
 
     currentPopUp = $("#"+id+"GameWin");
-
     currentPopUp.jqxWindow("open");
-    currentPopUp.jqxWindow("move", (canvas.width/2) - (currentPopUp.jqxWindow("width") / 2) + canvas.offsetLeft, (canvas.height/2) - (currentPopUp.jqxWindow("height") / 2) + canvas.offsetTop);
-    currentPopUp.children(".content").children("#firstRow").children("#message").html(message);
+    //currentPopUp.jqxWindow("move", canvas.offsetLeft, (BOARD_HEIGHT/2) - (currentPopUp.jqxWindow("height") / 2));
+    currentPopUp.children(".content").children(".firstRow").children(".message").html(message);
 }
 
+/**
+ * Hide the Game PopUp
+ */
 function removeGamePopUp(){
     if(currentPopUp != undefined){
-        disabler.visible = false;
+        //disabler.visible = false;
 
         currentPopUp.jqxWindow("close");
         currentPopUp = undefined;
     }
 }
-*/
