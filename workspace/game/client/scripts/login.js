@@ -38,14 +38,14 @@ function onLogin(event)
         "\n\tData: " + event.data);
 
     $("#usernameLb").html(event.user.name);
-    $("#scoreLb").html(event.data.score);
+    $("#scoreLb").html(event.data.points);
 
-    var ranking = event.data.score;
-    var rankingVar = new SFS2X.Entities.Variables.SFSUserVariable(USERVAR_RANKING, ranking);
+    var points = event.data.points;
+    var rankingVar = new SFS2X.Entities.Variables.SFSUserVariable(USERVAR_RANKING, points);
     sfs.send(new SFS2X.Requests.System.SetUserVariablesRequest([rankingVar]));
 
+    updateBadges(event.data);
     joinLobbyRoom();
-
 }
 
 function onLoginError(event)

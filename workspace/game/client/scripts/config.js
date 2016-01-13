@@ -1,12 +1,23 @@
 var ZONE_NAME = "EduGame";
 var LOBBY_ROOM_NAME = "Lobby";
-var USERVAR_RANKING = "rank";
+var USERVAR_RANKING = "points";
 
 var sfs = null;
 var currentGameStarted = false;
 var inGame = false;
 
 var theme = "arctic";
+
+//badges section
+var highscoreButton;
+var takeSurveyBt;
+var enableSurveyBt;
+var gamesPlayedTotal;
+var badges;
+
+//ranking window
+var rankingWin;
+var rankingWinTable;
 
 //left side room table
 var roomTable;
@@ -25,6 +36,9 @@ var sideBar;
 var usersList;
 var usersInRoomsList;
 
+//achievements Popup
+var achievementsWin;
+
 //game creation window
 var createGameWin;
 var createGameWinTabs;
@@ -41,6 +55,9 @@ var backTopicBt;
 var pickTopicBt;
 var nextTopicBt;
 var doCreateGameBt;
+var last_row_opened;
+var last_row_opened_number;
+var selectedTopicRow;
 
 //game view
 var gameChatAreaPn;
@@ -111,38 +128,58 @@ function buildMainUI() {
     sideBar = $("#sideBar").jqxNavigationBar({theme:theme});
     usersList = $("#userList").jqxDataTable({
         width: 246,
-        height:290,
+        height:272,
         pageable:true,
         enableHover: false,
         selectionMode: 'custom',
         columns: [
-            { text: 'Name', dataField: 'name' },
-            { text: 'Rank', dataField: 'rank', align: 'center', cellsAlign: 'center'}
+            { text: 'Name', dataField: 'username' },
+            { text: 'Points', dataField: 'points', align: 'center', cellsAlign: 'center'}
         ]
     });
     usersInRoomsList = $("#userInRoomsList").jqxDataTable({
         width: 246,
-        height:290,
+        height:272,
         pageable:true,
         enableHover: false,
         selectionMode: 'custom',
         columns: [
-            { text: 'Name', dataField: 'name' },
-            { text: 'Rank', dataField: 'rank', align: 'center', cellsAlign: 'center'}
+            { text: 'Name', dataField: 'username' },
+            { text: 'Points', dataField: 'points', align: 'center', cellsAlign: 'center'}
+        ]
+    });
+
+    // badges section
+    highscoreButton = $("#highscoreBt").jqxButton({width:120, disabled:false, theme:theme});
+    takeSurveyBt = $("#takeSurveyBt").jqxButton({width:120, disabled:!enableSurveyBt, theme:theme});
+    achievementsWin = $("#achievementsWin").jqxWindow({width:400, height:190, isModal:true, autoOpen:false, resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+
+    //ranking window
+    rankingWin = $("#rankingWin").jqxWindow({width:260, height:340, isModal:true, autoOpen:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    rankingWinTable= $("#rankingWinTable").jqxDataTable({
+        width: 250,
+        height:290,
+        pageable:false,
+        enableHover: false,
+        selectionMode: 'custom',
+        columns: [
+            { text: '#', dataField: 'rank', align: 'center', cellsAlign: 'center'},
+            { text: 'User', dataField: 'username', align: 'center'},
+            { text: 'Points', dataField: 'points', align: 'center', cellsAlign: 'center'}
         ]
     });
 
 
     //game creation popup
-    createGameWin = $("#createGameWin").jqxWindow({width:400, height:448, isModal:true, autoOpen:false, resizable:false, draggable:true, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    createGameWin = $("#createGameWin").jqxWindow({width:400, height:448, isModal:true, autoOpen:false, resizable:false, draggable:false, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
     createGameWinTabs = $("#createGameWinTabs").jqxTabs({width:"100%", height:391, theme:theme});
     closeBt = $("#closeBt").jqxButton({width:100, theme:theme});
-    gameNameIn = $('#gameNameIn').jqxTextArea({ placeHolder: 'Enter a Name', height: 22, width: 170, minLength: 1 });
-    gameTypeDd = $("#gameTypeDd").jqxDropDownList({source:["Know the gap", "Defend your cards"], width:170, height:22, dropDownHeight:50, selectedIndex: 0});
-    gameDifficultyDd = $("#gameDifficultyDd").jqxDropDownList({source:["Normal", "Hard"], width:170, height:22, dropDownHeight:70, selectedIndex: 0});
+    gameNameIn = $('#gameNameIn').jqxTextArea({ placeHolder: 'Enter a Name', height: 22, width: 180, maxLength: 16});
+    gameTypeDd = $("#gameTypeDd").jqxDropDownList({source:["Defeat your Enemy", "The Will To Cooperate"], width:180, height:22, dropDownHeight:60, selectedIndex: 0});
+    gameDifficultyDd = $("#gameDifficultyDd").jqxDropDownList({source:["Normal", "Hard"], width:180, height:22, dropDownHeight:70, selectedIndex: 0});
     backCategoryBt = $("#backCategoryBt").jqxButton({width:100, theme:theme});
     pickCategoryBt = $("#pickCategoryBt").jqxButton({width:100, theme:theme});
-    nextCategoryBt = $("#nextCategoryBt").jqxButton({width:100, theme:theme});
+    nextCategoryBt = $("#nextCategoryBt").jqxButton({width:100, theme:theme, disabled: true});
     backTopicBt = $("#backTopicBt").jqxButton({width:100, theme:theme});
     pickTopicBt = $("#pickTopicBt").jqxButton({width:100, theme:theme});
     nextTopicBt = $("#nextTopicBt").jqxButton({width:100, theme:theme});
@@ -168,7 +205,22 @@ function addEventListenerMain() {
     sendPublicMsgBt.click(onSendMessageBtClick);
     logoutBt.click(onLogoutBtClick);
 
+    //badges
+    badges = $(".badge-click").click(onBadgeClick);
+    takeSurveyBt.click(onTakeSurveyBtClick);
+
+    // highscore
+    highscoreButton.click(onHighscoreBtClick);
+
     //game creation window
+    gameNameIn.keyup(function(e) {
+        var name = gameNameIn.val();
+        if (name.length > 0)
+            nextCategoryBt.jqxButton({disabled: false});
+        else
+            nextCategoryBt.jqxButton({disabled: true});
+    });
+
     closeBt.click(onCloseBtClick);
     backCategoryBt.click(onCategoryBackBtClick);
     pickCategoryBt.click(onPickCategoryBtClick);
@@ -176,6 +228,29 @@ function addEventListenerMain() {
     backTopicBt.click(onTopicBackBtClick);
     nextTopicBt.click(onTopicNextBtClick);
     doCreateGameBt.click(onDoCreateGameBtClick);
+
+    $('body').on('click', 'span.fillUpCards', function() {
+        var row = $(this).attr("row");
+        var selectedCheckboxes=$('input[topic-row=' + row + ']:checked').length;
+        var notSelected = $('input[topic-row=' + row + ']:not(:checked)');
+        var selectRandomNotSelected = shuffle(notSelected).slice(0, 8-selectedCheckboxes);
+        selectRandomNotSelected.prop('checked', true);
+    });
+
+    $('body').on('click', 'span.deselectAll', function() {
+        var row = $(this).attr("row");
+        $('input[topic-row=' + row + ']').prop('checked', false);
+    });
+
+    $('body').on('click', 'input.cbResource', function() {
+        var row = $(this).attr("topic-row");
+        var selectedCheckboxes=$('input[topic-row=' + row + ']:checked').length;
+        if(selectedCheckboxes > 8) {
+            $(this).prop('checked', false);
+            trace("Maximum of 8 cards can be selected.", true);
+        }
+    });
+
 
     // game view
     sendGameMsgBt.click(onSendMessageBtClick);

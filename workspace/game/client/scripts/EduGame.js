@@ -65,7 +65,20 @@ function setReadyStatus(){
     showGamePopUp("wait", message);
 
     var params = {};
+    params.cards = getSelectedCardsForGame();
     sfs.send( new SFS2X.Requests.System.ExtensionRequest("ready", params, sfs.lastJoinedRoom) );
+}
+
+function getSelectedCardsForGame() {
+    var selectedCards = $('input[topic-row=' + selectedTopicRow + ']:checked');
+    if(selectedCards.length < 8) {
+        var notSelected = $('input[topic-row=' + selectedTopicRow + ']:not(:checked)');
+        var selectRandomNotSelected = shuffle(notSelected).slice(0, 8-selectedCards.length);
+        selectRandomNotSelected.prop('checked', true);
+    }
+    selectedCards = $('input[topic-row=' + selectedTopicRow + ']:checked');
+
+    return selectedCards;
 }
 
 function resetGameBoard() {

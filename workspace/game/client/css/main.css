@@ -95,6 +95,62 @@ body {
     margin: 5px;
 }
 
+#performance-container {
+	margin-top: 25px;
+}
+
+#achievementsHeader {
+	color: #7E7E7E;
+	font: bold 20px Helvetica, Arial, sans-serif;
+	letter-spacing: -0.05em;
+	position: relative;
+	left: 60px;
+}
+
+#badges-container{
+	margin-top: 20px;
+	margin-left: 13px;
+	z-index: 100;
+}
+
+.badges {
+	float: left;
+	width: 64px;
+	margin: 0 15px 15px 0;
+}
+
+/*
+.badges-grey {
+	-webkit-filter: grayscale(100%);
+}*/
+
+.badge-text {
+	left: 36px;
+	bottom: 22px;
+	position: relative;
+	font-size: 11px;
+}
+
+.badge-click {
+	cursor: pointer;
+	z-index: 100;
+}
+
+.clr{clear:both;}
+
+#performance-buttons{
+	margin-top: 60px;
+}
+
+#takeSurveyBt {
+	float: right;
+}
+
+#windowContent {
+	margin: 10px;
+	text-align: justify;
+}
+
 /* buttons */
 
 .backBt {

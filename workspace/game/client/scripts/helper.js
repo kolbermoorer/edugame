@@ -25,13 +25,18 @@ function onGameExtensionResponse(event)
         case "getAllUsersInZone":
             populateUsersLists(event.params);
             break;
+        case "getRankingList":
+            var rankingList = JSON.parse(event.params.rankingList);
+            populateRankingList(rankingList);
+            break;
         case "getCategories":
-            var categories = JSON.parse(event.params.categories);
+            var categories = JSON.parse(event.params.data);
             populateCategoryList(categories);
             break;
         case "getTopics":
             var topics = JSON.parse(event.params.data);
-            populateTopicList(topics, event.params.sentParams);
+            //populateTopicList(topics, event.params.sentParams);
+            populateTopicList(topics);
             break;
         case "getEntries":
             var entries = JSON.parse(event.params.data);

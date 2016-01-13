@@ -2,46 +2,32 @@ function updateUserLists() {
     sfs.send(new SFS2X.Requests.System.ExtensionRequest("getAllUsersInZone"));
 }
 
-function populateUsersLists(lists) {
-    var usersInLobby = lists.usersInLobby;
-    var data = [];
-    for (var index in usersInLobby) {
-        var user = usersInLobby[index];
-        var row = {};
-        row["name"] = user[0];
-        row["rank"] = user[1];
-        data.push(row);
-    }
+function populateUsersLists(data) {
+    var usersInLobby = JSON.parse(data["usersInLobby"]);
+    trace(usersInLobby);
     var source =
     {
-        localData: data,
-        dataType: "array",
+        localData: usersInLobby,
+        dataType: "json",
         dataFields:
             [
-                { name: 'name', type: 'string' },
-                { name: 'rank', type: 'int' }
+                { name: 'username', type: 'string' },
+                { name: 'points', type: 'int' }
             ]
     };
+    trace(source);
     var dataAdapter = new $.jqx.dataAdapter(source);
     $("#userList").jqxDataTable({source: dataAdapter});
 
-    var usersInRooms = lists.usersInRooms;
-    data = [];
-    for (var index in usersInRooms) {
-        var user = usersInRooms[index];
-        var row = {};
-        row["name"] = user[0];
-        row["rank"] = user[1];
-        data.push(row);
-    }
+    var usersInRooms = JSON.parse(data["usersInRooms"]);
     source =
     {
-        localData: data,
-        dataType: "array",
+        localData: usersInRooms,
+        dataType: "json",
         dataFields:
             [
-                { name: 'name', type: 'string' },
-                { name: 'rank', type: 'int' }
+                { name: 'username', type: 'string' },
+                { name: 'points', type: 'int' }
             ]
     };
     var dataAdapter = new $.jqx.dataAdapter(source);
@@ -49,5 +35,24 @@ function populateUsersLists(lists) {
 
     $("#usersInLobbyHeader").text("Available Players (" + usersInLobby.length + ")");
     $("#usersInRoomsHeader").text("In Rooms (" + usersInRooms.length + ")");
-    //TODO add ranking list
+}
+
+function onHighscoreBtClick() {
+    sfs.send(new SFS2X.Requests.System.ExtensionRequest("getRankingList"));
+}
+
+function populateRankingList(data) {
+    var source =
+    {
+        localData: data,
+        dataType: "json",
+        dataFields: [
+            { name: 'rank', type: 'int'},
+            { name: 'username', type: 'string'},
+            { name: 'points', type: 'int'}
+        ]
+    };
+    var dataAdapter = new $.jqx.dataAdapter(source);
+    rankingWinTable.jqxDataTable({source: dataAdapter, sortable: true});
+    rankingWin.jqxWindow("open");
 }

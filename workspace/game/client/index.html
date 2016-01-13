@@ -28,6 +28,7 @@
     <script type="text/javascript" src="scripts/Chat.js"></script>
     <script type="text/javascript" src="scripts/EduGame.js"></script>
     <script type="text/javascript" src="scripts/Card.js"></script>
+    <script type="text/javascript" src="scripts/Badge.js"></script>
 
     <!-- load jqxwidgets -->
     <script type="text/javascript" src="libs/jqwidgets/jqxcore.js"></script>
@@ -104,8 +105,63 @@
                     <div id="userInRoomsList"></div>
                 </div>
             </div>
+            <div id="performance-container">
+                <span id="achievementsHeader">Achievements</span>
+                <div id="badges-container">
+                    <div class="badges badges-grey">
+                        <img id="qm-img" src="img/badges/quiz-master-box-gray.png" class="badge-click" title="Quiz Master" alt="" width="64" height="64">
+                        <span id="qm-value" class="badge-text">0</span>
+                    </div>
+                    <div class="badges badges-grey">
+                        <img id="vm-img" src="img/badges/victory-march-box-gray.png" class="badge-click" title="Victory March" alt="" width="64" height="64">
+                        <span id="vm-value" class="badge-text">0</span>
+                    </div>
+                    <div class="badges badges-grey">
+                        <img id="in-img" src="img/badges/invincible-box-gray.png" class="badge-click" title="Invincible" alt="" width="64" height="64">
+                        <span id="in-value" class="badge-text">0</span>
+                    </div>
+
+                    <div class="clr"></div>
+
+                    <div class="badges badges-grey">
+                        <img id="vv-img" src="img/badges/victory-classIV-box-gray.png" title="V for Victory" class="badge-click" alt="" width="64" height="64">
+                        <span id="vv-value" class="badge-text">0</span>
+                    </div>
+                    <div class="badges badges-grey">
+                        <img id="cc-img" src="img/badges/contribution-box-gray.png" class="badge-click" title="Crucial Contribution" alt="invincible" width="64" height="64">
+                        <span id="cc-value" class="badge-text">0</span>
+                    </div>
+                    <div class="badges badges-grey">
+                        <img id="ts-img" src="img/badges/survey-box-gray.png" class="badge-click" title="Take Survey" alt="" width="64" height="64">
+                        <span id="ts-value" class="badge-text">0</span>
+                    </div>
+
+                </div>
+                <div id="performance-buttons">
+                    <input type="button" id="highscoreBt" value="Highscore List"/>
+                    <input type="button" id="takeSurveyBt" value="Take Survey"/>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div id="achievementsWin">
+        <div id="windowHeader">
+            WindowHeader
+        </div>
+        <div style="overflow: hidden;" id="windowContent">
+        </div>
+    </div>
+
+    <div id="rankingWin">
+        <div id="rankingWinHeader">
+            Ranking List
+        </div>
+        <div id="rankingWinContent">
+            <div id="rankingWinTable"></div>
+        </div>
+    </div>
+
     <!-- Game Room creation popup window -->
     <div id="createGameWin">
         <div id="createGameWinHeader">
@@ -119,7 +175,7 @@
                     <li>Topic</li>
                 </ul>
                 <div>
-                    <div class="item"><label>Title</label><textarea title="gameTitle" id="gameNameIn"
+                    <div class="item"><label>Title</label><textarea title="Name of the game (Mandatory)" id="gameNameIn"
                                                                     class="basicControls"></textarea></div>
                     <div class="item"><label>Type</label>
 

@@ -10,6 +10,7 @@ function onSendMessageBtClick()
 
 function onPublicMessage(event)
 {
+    //sfs.send(new SFS2X.Requests.System.ExtensionRequest("checkMessage", {u: event.sender.name, m: event.message, room: inGame}));
     var sender = (event.sender.isItMe ? "You" : event.sender.name);
     writeToChatArea("<b>" + sender + ": </b>" + event.message);
 }

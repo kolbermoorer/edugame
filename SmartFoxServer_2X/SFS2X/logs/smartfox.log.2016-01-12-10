@@ -1,0 +1,297 @@
+12 Jan 2016 | 10:11:34,560 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+12 Jan 2016 | 10:11:39,150 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 151, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52087 }
+12 Jan 2016 | 10:11:39,151 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 145, Priv: 0, Sess: 127.0.0.1:52087 ) , SessionLen: 1522580, Type: JavaScript
+12 Jan 2016 | 10:11:40,908 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 152, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52457
+12 Jan 2016 | 10:11:40,948 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 146, Priv: 0, Sess: 127.0.0.1:52457 ) , Type: JavaScript
+12 Jan 2016 | 10:11:40,977 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 146, Priv: 0, Sess: 127.0.0.1:52457 ) , asSpect: false
+12 Jan 2016 | 10:11:41,586 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:11:44,551 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:12:49,545 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+12 Jan 2016 | 10:12:54,075 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 152, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52457 }
+12 Jan 2016 | 10:12:54,076 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 146, Priv: 0, Sess: 127.0.0.1:52457 ) , SessionLen: 73129, Type: JavaScript
+12 Jan 2016 | 10:12:55,590 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 153, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52511
+12 Jan 2016 | 10:12:55,630 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 147, Priv: 0, Sess: 127.0.0.1:52511 ) , Type: JavaScript
+12 Jan 2016 | 10:12:55,657 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 147, Priv: 0, Sess: 127.0.0.1:52511 ) , asSpect: false
+12 Jan 2016 | 10:12:56,270 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:12:57,720 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:13:44,271 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+12 Jan 2016 | 10:13:48,208 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 153, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52511 }
+12 Jan 2016 | 10:13:48,209 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 147, Priv: 0, Sess: 127.0.0.1:52511 ) , SessionLen: 52580, Type: JavaScript
+12 Jan 2016 | 10:13:50,044 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 154, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52560
+12 Jan 2016 | 10:13:50,080 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 148, Priv: 0, Sess: 127.0.0.1:52560 ) , Type: JavaScript
+12 Jan 2016 | 10:13:50,101 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 148, Priv: 0, Sess: 127.0.0.1:52560 ) , asSpect: false
+12 Jan 2016 | 10:13:50,722 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:13:52,037 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:17:33,631 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 154, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52560 }
+12 Jan 2016 | 10:17:33,632 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 148, Priv: 0, Sess: 127.0.0.1:52560 ) , SessionLen: 223552, Type: JavaScript
+12 Jan 2016 | 10:17:35,944 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 155, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52616
+12 Jan 2016 | 10:17:35,981 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 149, Priv: 0, Sess: 127.0.0.1:52616 ) , Type: JavaScript
+12 Jan 2016 | 10:17:36,008 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 149, Priv: 0, Sess: 127.0.0.1:52616 ) , asSpect: false
+12 Jan 2016 | 10:17:36,615 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:17:38,368 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:21:51,133 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 155, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52616 }
+12 Jan 2016 | 10:21:51,134 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 149, Priv: 0, Sess: 127.0.0.1:52616 ) , SessionLen: 255153, Type: JavaScript
+12 Jan 2016 | 10:21:53,136 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 156, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52687
+12 Jan 2016 | 10:21:53,173 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 150, Priv: 0, Sess: 127.0.0.1:52687 ) , Type: JavaScript
+12 Jan 2016 | 10:21:53,194 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 150, Priv: 0, Sess: 127.0.0.1:52687 ) , asSpect: false
+12 Jan 2016 | 10:21:53,820 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:21:55,241 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:42:47,941 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 156, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52687 }
+12 Jan 2016 | 10:42:47,942 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 150, Priv: 0, Sess: 127.0.0.1:52687 ) , SessionLen: 1254770, Type: JavaScript
+12 Jan 2016 | 10:42:49,819 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 157, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53045
+12 Jan 2016 | 10:42:49,863 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 151, Priv: 0, Sess: 127.0.0.1:53045 ) , Type: JavaScript
+12 Jan 2016 | 10:42:49,884 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 151, Priv: 0, Sess: 127.0.0.1:53045 ) , asSpect: false
+12 Jan 2016 | 10:42:50,501 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:42:53,020 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:43:22,763 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 157, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53045 }
+12 Jan 2016 | 10:43:22,764 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 151, Priv: 0, Sess: 127.0.0.1:53045 ) , SessionLen: 32902, Type: JavaScript
+12 Jan 2016 | 10:43:24,557 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 158, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53095
+12 Jan 2016 | 10:43:24,578 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 152, Priv: 0, Sess: 127.0.0.1:53095 ) , Type: JavaScript
+12 Jan 2016 | 10:43:24,602 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 152, Priv: 0, Sess: 127.0.0.1:53095 ) , asSpect: false
+12 Jan 2016 | 10:43:25,239 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:43:27,021 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:43:43,209 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 158, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53095 }
+12 Jan 2016 | 10:43:43,210 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 152, Priv: 0, Sess: 127.0.0.1:53095 ) , SessionLen: 18632, Type: JavaScript
+12 Jan 2016 | 10:43:44,944 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 159, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53142
+12 Jan 2016 | 10:43:44,966 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 153, Priv: 0, Sess: 127.0.0.1:53142 ) , Type: JavaScript
+12 Jan 2016 | 10:43:44,988 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 153, Priv: 0, Sess: 127.0.0.1:53142 ) , asSpect: false
+12 Jan 2016 | 10:43:45,604 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:43:47,220 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:43:56,537 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 159, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53142 }
+12 Jan 2016 | 10:43:56,538 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 153, Priv: 0, Sess: 127.0.0.1:53142 ) , SessionLen: 11572, Type: JavaScript
+12 Jan 2016 | 10:43:58,304 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 160, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53188
+12 Jan 2016 | 10:43:58,336 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 154, Priv: 0, Sess: 127.0.0.1:53188 ) , Type: JavaScript
+12 Jan 2016 | 10:43:58,358 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 154, Priv: 0, Sess: 127.0.0.1:53188 ) , asSpect: false
+12 Jan 2016 | 10:43:58,973 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:44:00,572 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:44:10,903 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 160, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53188 }
+12 Jan 2016 | 10:44:10,904 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 154, Priv: 0, Sess: 127.0.0.1:53188 ) , SessionLen: 12568, Type: JavaScript
+12 Jan 2016 | 10:44:12,710 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 161, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53236
+12 Jan 2016 | 10:44:12,750 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 155, Priv: 0, Sess: 127.0.0.1:53236 ) , Type: JavaScript
+12 Jan 2016 | 10:44:12,777 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 155, Priv: 0, Sess: 127.0.0.1:53236 ) , asSpect: false
+12 Jan 2016 | 10:44:13,393 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:44:14,532 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:44:35,441 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 161, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53236 }
+12 Jan 2016 | 10:44:35,443 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 155, Priv: 0, Sess: 127.0.0.1:53236 ) , SessionLen: 22693, Type: JavaScript
+12 Jan 2016 | 10:44:37,127 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 162, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53284
+12 Jan 2016 | 10:44:37,168 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 156, Priv: 0, Sess: 127.0.0.1:53284 ) , Type: JavaScript
+12 Jan 2016 | 10:44:37,191 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 156, Priv: 0, Sess: 127.0.0.1:53284 ) , asSpect: false
+12 Jan 2016 | 10:44:37,808 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:44:39,217 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:45:16,674 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 162, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53284 }
+12 Jan 2016 | 10:45:16,675 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 156, Priv: 0, Sess: 127.0.0.1:53284 ) , SessionLen: 39508, Type: JavaScript
+12 Jan 2016 | 10:45:18,379 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 163, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53332
+12 Jan 2016 | 10:45:18,419 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 157, Priv: 0, Sess: 127.0.0.1:53332 ) , Type: JavaScript
+12 Jan 2016 | 10:45:18,442 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 157, Priv: 0, Sess: 127.0.0.1:53332 ) , asSpect: false
+12 Jan 2016 | 10:45:19,065 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getAllUsersInZone
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetUsersHandler.handleClientRequest(GetUsersHandler.java:33)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+12 Jan 2016 | 10:45:20,155 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:46:41,972 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:53:54,428 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Database connected! 
+12 Jan 2016 | 10:55:46,681 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+12 Jan 2016 | 10:55:46,682 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 1/1
+12 Jan 2016 | 10:55:46,683 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+12 Jan 2016 | 10:55:46,684 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 1/1
