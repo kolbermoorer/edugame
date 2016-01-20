@@ -1,0 +1,15 @@
+17 Jan 2016 | 01:15:06,402 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 56, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 49380
+17 Jan 2016 | 01:15:06,420 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 55, Priv: 0, Sess: 127.0.0.1:49380 ) , Type: JavaScript
+17 Jan 2016 | 01:15:06,434 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 55, Priv: 0, Sess: 127.0.0.1:49380 ) , asSpect: false
+17 Jan 2016 | 01:15:10,211 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+17 Jan 2016 | 01:15:10,231 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+17 Jan 2016 | 01:15:10,240 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room124, Id: 57, Group: default, isGame: true ]
+17 Jan 2016 | 01:15:10,241 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room124, Id: 57, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 55, Priv: 0, Sess: 127.0.0.1:49380 ) , asSpect: false
+17 Jan 2016 | 01:45:17,367 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 56, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:49380 }
+17 Jan 2016 | 01:45:17,370 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 55, Priv: 0, Sess: 127.0.0.1:49380 ) , SessionLen: 1810950, Type: JavaScript
+17 Jan 2016 | 01:45:17,394 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: Anzahl der Spieler im Raum nach Verlassen des Spielers: 0 
+17 Jan 2016 | 01:45:17,397 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room124, Id: 57, Group: default, isGame: true ], Duration: 1807170
+17 Jan 2016 | 01:55:27,851 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+17 Jan 2016 | 01:55:27,852 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+17 Jan 2016 | 01:55:27,853 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+17 Jan 2016 | 01:55:27,854 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

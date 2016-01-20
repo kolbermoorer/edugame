@@ -1,0 +1,369 @@
+15 Jan 2016 | 11:13:19,268 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+15 Jan 2016 | 11:13:23,288 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 82, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56955 }
+15 Jan 2016 | 11:13:23,289 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 81, Priv: 0, Sess: 127.0.0.1:56955 ) , SessionLen: 1012058, Type: JavaScript
+15 Jan 2016 | 11:13:24,783 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 83, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57191
+15 Jan 2016 | 11:13:24,798 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 82, Priv: 0, Sess: 127.0.0.1:57191 ) , Type: JavaScript
+15 Jan 2016 | 11:13:24,816 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 82, Priv: 0, Sess: 127.0.0.1:57191 ) , asSpect: false
+15 Jan 2016 | 11:13:28,042 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: createRoom
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.BaseSFSExtension.getTraceMessage(BaseSFSExtension.java:514)
+com.smartfoxserver.v2.extensions.BaseSFSExtension.trace(BaseSFSExtension.java:492)
+com.smartfoxserver.v2.extensions.BaseSFSExtension.trace(BaseSFSExtension.java:482)
+com.smartfoxserver.v2.extensions.BaseClientRequestHandler.trace(BaseClientRequestHandler.java:103)
+sfs2x.extensions.game.CreateRoomHandler.createRoom(CreateRoomHandler.java:40)
+sfs2x.extensions.game.CreateRoomHandler.handleClientRequest(CreateRoomHandler.java:36)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:15:02,121 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+15 Jan 2016 | 11:15:04,351 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 83, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:57191 }
+15 Jan 2016 | 11:15:04,352 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 82, Priv: 0, Sess: 127.0.0.1:57191 ) , SessionLen: 99554, Type: JavaScript
+15 Jan 2016 | 11:15:05,963 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 84, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57245
+15 Jan 2016 | 11:15:05,996 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 83, Priv: 0, Sess: 127.0.0.1:57245 ) , Type: JavaScript
+15 Jan 2016 | 11:15:06,017 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 83, Priv: 0, Sess: 127.0.0.1:57245 ) , asSpect: false
+15 Jan 2016 | 11:15:09,797 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 11:15:09,822 | WARN  | SFSWorker:Ext:1 | v2.entities.SFSRoom |     | Cannot delete non-existent Room Variable called: category, Owner: null
+15 Jan 2016 | 11:15:09,823 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test, Id: 2, Group: default, isGame: true ]
+15 Jan 2016 | 11:15:09,827 | WARN  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Unable to join the just created Room: [ Room: Test, Id: 2, Group: default, isGame: true ], reason: Join Error - Room is full: Test, Zone: { Zone: EduGame } - Can't add User: ( User Name: tkutschk, Id: 83, Priv: 0, Sess: 127.0.0.1:57245 )  
+15 Jan 2016 | 11:19:37,341 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+15 Jan 2016 | 11:19:43,116 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 84, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:57245 }
+15 Jan 2016 | 11:19:43,118 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 83, Priv: 0, Sess: 127.0.0.1:57245 ) , SessionLen: 277122, Type: JavaScript
+15 Jan 2016 | 11:19:45,542 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 85, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57393
+15 Jan 2016 | 11:19:45,584 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 84, Priv: 0, Sess: 127.0.0.1:57393 ) , Type: JavaScript
+15 Jan 2016 | 11:19:45,607 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 84, Priv: 0, Sess: 127.0.0.1:57393 ) , asSpect: false
+15 Jan 2016 | 11:20:27,036 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+15 Jan 2016 | 11:20:27,052 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+15 Jan 2016 | 11:20:27,848 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+15 Jan 2016 | 11:20:27,894 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+15 Jan 2016 | 11:20:28,035 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+15 Jan 2016 | 11:20:28,035 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+15 Jan 2016 | 11:20:28,050 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+15 Jan 2016 | 11:20:28,050 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+15 Jan 2016 | 11:20:28,066 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+15 Jan 2016 | 11:20:28,113 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+15 Jan 2016 | 11:20:28,144 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:20:28,553 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+15 Jan 2016 | 11:20:28,568 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:20:28,599 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+15 Jan 2016 | 11:20:28,615 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+15 Jan 2016 | 11:20:28,866 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+15 Jan 2016 | 11:20:28,867 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+15 Jan 2016 | 11:20:28,868 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+15 Jan 2016 | 11:20:35,379 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57470
+15 Jan 2016 | 11:20:35,544 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57470 ) , Type: JavaScript
+15 Jan 2016 | 11:20:35,561 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57470 ) , asSpect: false
+15 Jan 2016 | 11:20:42,393 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 11:20:42,444 | WARN  | SFSWorker:Ext:1 | v2.entities.SFSRoom |     | Cannot delete non-existent Room Variable called: category, Owner: null
+15 Jan 2016 | 11:20:42,445 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test, Id: 2, Group: default, isGame: true ]
+15 Jan 2016 | 11:20:42,455 | WARN  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Unable to join the just created Room: [ Room: Test, Id: 2, Group: default, isGame: true ], reason: Join Error - Room is full: Test, Zone: { Zone: EduGame } - Can't add User: ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57470 )  
+15 Jan 2016 | 11:25:00,792 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+15 Jan 2016 | 11:25:17,916 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57470 ) , SessionLen: 282373, Type: JavaScript
+15 Jan 2016 | 11:25:19,498 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:57470 }
+15 Jan 2016 | 11:25:21,080 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57559
+15 Jan 2016 | 11:25:21,099 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:57559 ) , Type: JavaScript
+15 Jan 2016 | 11:25:21,117 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:57559 ) , asSpect: false
+15 Jan 2016 | 11:25:52,131 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:57559 }
+15 Jan 2016 | 11:25:52,133 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:57559 ) , SessionLen: 31035, Type: JavaScript
+15 Jan 2016 | 11:25:53,636 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57608
+15 Jan 2016 | 11:25:53,679 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:57608 ) , Type: JavaScript
+15 Jan 2016 | 11:25:53,702 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:57608 ) , asSpect: false
+15 Jan 2016 | 11:26:08,151 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 11:26:08,200 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Room creation error. A room with the same name already exists: Test, { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:57608 )  
+15 Jan 2016 | 11:32:32,665 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+15 Jan 2016 | 11:32:37,910 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:57608 }
+15 Jan 2016 | 11:32:37,912 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:57608 ) , SessionLen: 404233, Type: JavaScript
+15 Jan 2016 | 11:32:40,229 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57727
+15 Jan 2016 | 11:32:40,275 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:57727 ) , Type: JavaScript
+15 Jan 2016 | 11:32:40,300 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:57727 ) , asSpect: false
+15 Jan 2016 | 11:32:54,531 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+15 Jan 2016 | 11:32:54,531 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+15 Jan 2016 | 11:32:55,189 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+15 Jan 2016 | 11:32:55,226 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+15 Jan 2016 | 11:32:55,328 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+15 Jan 2016 | 11:32:55,330 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+15 Jan 2016 | 11:32:55,346 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+15 Jan 2016 | 11:32:55,355 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+15 Jan 2016 | 11:32:55,359 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+15 Jan 2016 | 11:32:55,407 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+15 Jan 2016 | 11:32:55,435 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:32:55,796 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+15 Jan 2016 | 11:32:55,858 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:32:55,889 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+15 Jan 2016 | 11:32:55,889 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+15 Jan 2016 | 11:32:56,140 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+15 Jan 2016 | 11:32:56,141 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+15 Jan 2016 | 11:32:56,142 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+15 Jan 2016 | 11:32:59,026 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57800
+15 Jan 2016 | 11:32:59,175 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57800 ) , Type: JavaScript
+15 Jan 2016 | 11:32:59,193 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57800 ) , asSpect: false
+15 Jan 2016 | 11:33:03,092 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 11:33:03,131 | WARN  | SFSWorker:Ext:1 | v2.entities.SFSRoom |     | Cannot delete non-existent Room Variable called: category, Owner: null
+15 Jan 2016 | 11:33:03,132 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test, Id: 2, Group: default, isGame: true ]
+15 Jan 2016 | 11:33:03,136 | WARN  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Unable to join the just created Room: [ Room: Test, Id: 2, Group: default, isGame: true ], reason: Join Error - Room is full: Test, Zone: { Zone: EduGame } - Can't add User: ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57800 )  
+15 Jan 2016 | 11:34:07,221 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+15 Jan 2016 | 11:34:33,622 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:57800 }
+15 Jan 2016 | 11:34:33,625 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57800 ) , SessionLen: 94451, Type: JavaScript
+15 Jan 2016 | 11:34:37,497 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+15 Jan 2016 | 11:34:37,513 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+15 Jan 2016 | 11:34:38,171 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+15 Jan 2016 | 11:34:38,208 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+15 Jan 2016 | 11:34:38,310 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+15 Jan 2016 | 11:34:38,312 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+15 Jan 2016 | 11:34:38,328 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+15 Jan 2016 | 11:34:38,337 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+15 Jan 2016 | 11:34:38,341 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+15 Jan 2016 | 11:34:38,388 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+15 Jan 2016 | 11:34:38,415 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:34:38,769 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+15 Jan 2016 | 11:34:38,787 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:34:38,802 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+15 Jan 2016 | 11:34:38,818 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+15 Jan 2016 | 11:34:39,040 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+15 Jan 2016 | 11:34:39,041 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+15 Jan 2016 | 11:34:39,041 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+15 Jan 2016 | 11:34:42,892 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57920
+15 Jan 2016 | 11:34:43,046 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57920 ) , Type: JavaScript
+15 Jan 2016 | 11:34:43,065 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57920 ) , asSpect: false
+15 Jan 2016 | 11:34:47,893 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 11:34:47,953 | WARN  | SFSWorker:Ext:1 | v2.entities.SFSRoom |     | Cannot delete non-existent Room Variable called: category, Owner: null
+15 Jan 2016 | 11:34:47,954 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test, Id: 2, Group: default, isGame: true ]
+15 Jan 2016 | 11:34:47,958 | WARN  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Unable to join the just created Room: [ Room: Test, Id: 2, Group: default, isGame: true ], reason: Join Error - Room is full: Test, Zone: { Zone: EduGame } - Can't add User: ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:57920 )  
+15 Jan 2016 | 11:40:04,248 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+15 Jan 2016 | 11:40:08,061 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+15 Jan 2016 | 11:40:08,073 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+15 Jan 2016 | 11:40:08,760 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+15 Jan 2016 | 11:40:08,798 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+15 Jan 2016 | 11:40:08,904 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+15 Jan 2016 | 11:40:08,906 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+15 Jan 2016 | 11:40:08,922 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+15 Jan 2016 | 11:40:08,931 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+15 Jan 2016 | 11:40:08,936 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+15 Jan 2016 | 11:40:08,986 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+15 Jan 2016 | 11:40:09,015 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:40:09,386 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+15 Jan 2016 | 11:40:09,409 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:40:09,419 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+15 Jan 2016 | 11:40:09,435 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+15 Jan 2016 | 11:40:09,675 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+15 Jan 2016 | 11:40:09,676 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+15 Jan 2016 | 11:40:09,677 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+15 Jan 2016 | 11:40:13,201 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58004
+15 Jan 2016 | 11:40:13,349 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:58004 ) , Type: JavaScript
+15 Jan 2016 | 11:40:13,374 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:58004 ) , asSpect: false
+15 Jan 2016 | 11:40:17,373 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 11:40:17,395 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test, Id: 2, Group: default, isGame: true ]
+15 Jan 2016 | 11:40:17,400 | WARN  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Unable to join the just created Room: [ Room: Test, Id: 2, Group: default, isGame: true ], reason: Join Error - Room is full: Test, Zone: { Zone: EduGame } - Can't add User: ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:58004 )  
+15 Jan 2016 | 11:42:15,248 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58004 }
+15 Jan 2016 | 11:42:15,252 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:58004 ) , SessionLen: 121902, Type: JavaScript
+15 Jan 2016 | 11:42:17,112 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58063
+15 Jan 2016 | 11:42:17,154 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:58063 ) , Type: JavaScript
+15 Jan 2016 | 11:42:17,181 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:58063 ) , asSpect: false
+15 Jan 2016 | 11:52:17,657 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+15 Jan 2016 | 11:52:22,441 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58063 }
+15 Jan 2016 | 11:52:22,442 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:58063 ) , SessionLen: 605289, Type: JavaScript
+15 Jan 2016 | 11:52:26,986 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+15 Jan 2016 | 11:52:27,001 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+15 Jan 2016 | 11:52:27,641 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+15 Jan 2016 | 11:52:27,688 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+15 Jan 2016 | 11:52:27,781 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+15 Jan 2016 | 11:52:27,781 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+15 Jan 2016 | 11:52:27,797 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+15 Jan 2016 | 11:52:27,813 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+15 Jan 2016 | 11:52:27,813 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+15 Jan 2016 | 11:52:27,859 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+15 Jan 2016 | 11:52:27,891 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:52:28,249 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+15 Jan 2016 | 11:52:28,265 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+15 Jan 2016 | 11:52:28,296 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+15 Jan 2016 | 11:52:28,296 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+15 Jan 2016 | 11:52:28,536 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+15 Jan 2016 | 11:52:28,537 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+15 Jan 2016 | 11:52:28,538 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+15 Jan 2016 | 11:52:37,757 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58188
+15 Jan 2016 | 11:52:37,910 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:58188 ) , Type: JavaScript
+15 Jan 2016 | 11:52:37,927 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:58188 ) , asSpect: false
+15 Jan 2016 | 11:52:41,881 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 11:52:41,902 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: {"LAST_INSERT_ID()":"0"} 
+15 Jan 2016 | 11:52:41,903 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Test, Id: 2, Group: default, isGame: true ]
+15 Jan 2016 | 11:52:41,908 | WARN  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Unable to join the just created Room: [ Room: Test, Id: 2, Group: default, isGame: true ], reason: Join Error - Room is full: Test, Zone: { Zone: EduGame } - Can't add User: ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:58188 )  
+15 Jan 2016 | 11:55:28,547 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+15 Jan 2016 | 11:55:28,549 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+15 Jan 2016 | 11:55:28,551 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+15 Jan 2016 | 11:55:28,553 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

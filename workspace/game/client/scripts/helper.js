@@ -29,38 +29,41 @@ function onGameExtensionResponse(event)
             var rankingList = JSON.parse(event.params.rankingList);
             populateRankingList(rankingList);
             break;
-        case "getCategories":
-            var categories = JSON.parse(event.params.data);
-            populateCategoryList(categories);
-            break;
         case "getTopics":
             var topics = JSON.parse(event.params.data);
-            //populateTopicList(topics, event.params.sentParams);
+            trace(topics);
             populateTopicList(topics);
             break;
         case "getEntries":
             var entries = JSON.parse(event.params.data);
+            trace(entries);
             populateEntryList(entries);
             break;
         case "init":
             params.cardData = JSON.parse(params.cardData);
-            initGame(params);
+            trace(params);
+            initFirstPhase(params);
+            //initGame(params);
             break;
         case "start":
             startGame(params);
             break;
         case "pickCard":
-            var cardDetails = JSON.parse(params.card);
-            fillCard(cardDetails);
-            flip();
+            //var cardDetails = JSON.parse(params.card);
+            questionData = JSON.parse(params.card);
+            fillCard(questionData);
+            singePlayerMove();
+            //createQuestion(cardDetails);
+            //createQuestionUI(cardDetails);
+            //flip();
             break;
         case "sendQuestion":
-            buildTestButtons();
+            /*buildTestButtons();
             flipFrontwards();
-            moveLeft();
+            moveLeft();*/
             break;
         case "checkAnswer":
-            handleMove(params);
+            markAnswer(params);
             break;
     }
 }

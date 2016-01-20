@@ -4,7 +4,6 @@ function updateUserLists() {
 
 function populateUsersLists(data) {
     var usersInLobby = JSON.parse(data["usersInLobby"]);
-    trace(usersInLobby);
     var source =
     {
         localData: usersInLobby,
@@ -15,7 +14,6 @@ function populateUsersLists(data) {
                 { name: 'points', type: 'int' }
             ]
     };
-    trace(source);
     var dataAdapter = new $.jqx.dataAdapter(source);
     $("#userList").jqxDataTable({source: dataAdapter});
 

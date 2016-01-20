@@ -5,10 +5,11 @@ var lookupWiki;
 function buildCards(data, layouts) {
     var zIndex = 0;
     cardContainer = new createjs.Container();
+    trace(data);
     for (var j=0;j < data.length;j++) {
         var stack = data[j];
-        var cardsInStack = stack.cards;
-        var categoryName = stack.category;
+        var cardsInStack = stack["cards"];
+        var categoryName = stack["category"];
         var offset=0;
         var card = null;
         $.each( cardsInStack, function( index, properties ) {
@@ -16,12 +17,10 @@ function buildCards(data, layouts) {
             card.zIndex = zIndex;
             zIndex++;
             card.categoryId = j;
-            card.cardId = properties.id;
+            card.cardId = properties["id"];
             card.categoryName = categoryName;
-            card.playerId = properties.playerId;
-            card.wikiUri = properties.uri;
-            //card.y = BOARD_HEIGHT/2-CARD_BACKSIDE_HEIGHT+(CARD_BACKSIDE_HEIGHT+SPACE_BETWEEN_CARDS)*j-offset;
-            //card.x = BOARD_WIDTH+CARD_BACKSIDE_WIDTH/2+10-offset;
+            card.playerId = properties["playerId"]; //properties.playerId;
+            card.wikiUri = properties["uri"];
             card.x = BOARD_WIDTH+CARD_BACKSIDE_WIDTH/2+24+(CARD_BACKSIDE_WIDTH+SPACE_BETWEEN_CARDS)*j-offset;
             card.y = BOARD_HEIGHT/2-offset-70;
             card.initY = card.y;
@@ -57,6 +56,7 @@ function buildCards(data, layouts) {
 
 function showWikiPage(event) {
     selectedCard = event.target.parent;
+    trace(selectedCard);
     if(typeof previousSelectedCard != 'undefined') {
         lookupWiki.css('display', 'none');
         nextBackwardAction = "moveCardToPreviousPosition";
@@ -109,6 +109,7 @@ function shiftComplete() {
 function spreadCards() {
     var waitTime = 0;
     var leftSpace = (board.width-(NUMBER_OF_CATEGORIES-1)*100-86)/2;
+    trace(cards);
     $.each( cards, function( index, card ) {
         var randomWait = Math.floor(Math.random() * (100 - 10 + 1)) + 10;
         var categoryId = card.categoryId;
@@ -116,9 +117,10 @@ function spreadCards() {
         var y;
         if(card.playerId != player1.id) { //shift card to top
             player2.stack[categoryId]++;
-            x = CARD_BACKSIDE_WIDTH/2 + leftSpace + 2 * categoryId + 100*categoryId;
+            x = CARD_BACKSIDE_WIDTH/2 + leftSpace + 2 * categoryId + 100*categoryId-player2.stack[categoryId];;
             y = CARD_BACKSIDE_HEIGHT/2+20;
-            card.offset = 0;
+            //card.offset = 0;
+            card.offset = player2.stack[categoryId];
             card.stackPosition = player2.stack[categoryId];
         } else {
             player1.stack[categoryId]++;
@@ -130,8 +132,8 @@ function spreadCards() {
         card.initX = x;
         card.initY = y;
         createjs.Tween.get(card, { loop: false })
-            .wait(waitTime).to({ x: x, y:y}, 100, createjs.Ease.getPowInOut(4))
-            .call(setOpacity);
+            .wait(waitTime).to({ x: x, y:y}, 100, createjs.Ease.getPowInOut(4));
+            //.call(setOpacity);
         waitTime = waitTime + randomWait;
     });
 }
@@ -175,7 +177,7 @@ function fillCard(cardDetails) {
     charNumberShape.graphics.drawRect(0, 0, charNumberShape.width, charNumberShape.height);
     charNumberContainer.addChild(charNumberShape);
 
-    charNumberContainer.name = new createjs.Text(cardDetails.charNumber, "bold 14px Verdana", "#000000");
+    charNumberContainer.name = new createjs.Text(cardDetails["charNumber"], "bold 14px Verdana", "#000000");
     charNumberContainer.name.textAlign = "center";
     charNumberContainer.name.x = (charNumberShape.width)/2;
     charNumberContainer.name.y = 6;
@@ -195,8 +197,8 @@ function fillCard(cardDetails) {
     var pixel = 14;
     var y = 5;
     var category = cardDetails.topic;
-    if(category.length>24 && category.length<46) {
-        y = 2;
+    if(category.length>23 && category.length<46) {
+        y = 0;
     }
     else if(category.length>=46) {
         pixel = 10;
@@ -239,7 +241,7 @@ function fillCard(cardDetails) {
     cardNameContainer.name.textAlign = "center";
     cardNameContainer.name.x = (charNumberShape.width + cardCategoryShape.width)/2;
     cardNameContainer.name.y = 0;
-    cardNameContainer.category = new createjs.Text(cardDetails.category, "10px Verdana", "#000000");
+    cardNameContainer.category = new createjs.Text(cardDetails["description"], "10px Verdana", "#000000");
     cardNameContainer.category.textAlign = "center";
     cardNameContainer.category.x = cardNameContainer.name.x;
     cardNameContainer.category.y = 15;
@@ -257,7 +259,7 @@ function fillCard(cardDetails) {
         var cardPropertyContainer = new createjs.Container();
         var cardPropertyShape = new createjs.Shape();
         cardPropertyContainer.x = charNumberContainer.x;
-        cardPropertyContainer.y = top + row*22;
+        cardPropertyContainer.y = top + row*28;
         cardPropertyShape.graphics.setStrokeStyle(1);
         cardPropertyShape.graphics.beginStroke("gray");
         var propertyBackground = (row%2 == 0 ? "#c4c4c4" : "#e9e9e9");
@@ -265,7 +267,7 @@ function fillCard(cardDetails) {
         cardPropertyShape.overColor = "#3281FF";
         cardPropertyShape.outColor = propertyBackground;
         cardPropertyShape.width = CARD_FRONTSIDE_WIDTH - 20;
-        cardPropertyShape.height = 22;
+        cardPropertyShape.height = 28;
         cardPropertyShape.graphics.drawRect(0, 0, cardPropertyShape.width, cardPropertyShape.height);
         cardPropertyContainer.addChild(cardPropertyShape);
 
@@ -279,11 +281,23 @@ function fillCard(cardDetails) {
         cardPropertyContainer.property = new createjs.Text(propertyText, "bold 12px Verdana", "#000000");
         cardPropertyContainer.property.textAlign = "left";
         cardPropertyContainer.property.x = 3;
-        cardPropertyContainer.property.y = 3;
-        cardPropertyContainer.value = new createjs.Text(valueText, "12px Verdana", "#000000");
+        cardPropertyContainer.property.y = 5;
+
+        y = 5;
+        pixel = 12;
+        if(valueText.length>24 && valueText.length<46) {
+            y = 1;
+        }
+        else if(valueText.length>=46) {
+            pixel = 10;
+            y = 1;
+        }
+
+        cardPropertyContainer.value = new createjs.Text(valueText, pixel + "px Verdana", "#000000");
         cardPropertyContainer.value.textAlign = "right";
+        cardPropertyContainer.value.lineWidth = (CARD_FRONTSIDE_WIDTH-20)/2;
         cardPropertyContainer.value.x = cardPropertyShape.width-3;
-        cardPropertyContainer.value.y = 3;
+        cardPropertyContainer.value.y = y;
         if(!myTurn()) {
             cardPropertyContainer.cursor = "help";
             cardPropertyContainer.value.filters = [blurFilter];
@@ -293,7 +307,7 @@ function fillCard(cardDetails) {
             cardPropertyContainer.cursor = "pointer";
             cardPropertyContainer.addEventListener("rollover", changeBackground);
             cardPropertyContainer.addEventListener("rollout", changeBackground);
-            cardPropertyContainer.addEventListener("click", createQuestionUI);
+            //cardPropertyContainer.addEventListener("click", createQuestionUI);
         }
         cardPropertyContainer.addChild(cardPropertyContainer.property);
         cardPropertyContainer.addChild(cardPropertyContainer.value);
@@ -311,76 +325,15 @@ function changeBackground(event) {
     backgroundShape.graphics.clear().beginStroke("gray").beginFill(backgroundColor).drawRect(0, 0, backgroundShape.width, backgroundShape.height).endFill();
 }
 
-function createQuestionUI(event) {
-    moveLeft();
-    var selectedProperty = event.target;
-
-    var params = {};
-    //params.cardId = cardId;
-    sfs.send( new SFS2X.Requests.System.ExtensionRequest("sendQuestion", params, sfs.lastJoinedRoom) );
-}
-
 function moveLeft() {
     createjs.Tween.get(selectedCard, { loop: false })
-        .to({ x: BOARD_WIDTH/4}, 700, createjs.Ease.getPowInOut(4));
+        .to({ x: BOARD_WIDTH+((STAGE_WIDTH-BOARD_WIDTH)/2), y: BOARD_HEIGHT/3}, 700, createjs.Ease.getPowInOut(4));
 }
 
-function buildTestButtons() {
-    var answerCheckRight = new createjs.Container();
-    var pBG = new createjs.Shape();
-    pBG.graphics.setStrokeStyle(1);
-    pBG.graphics.beginStroke("black");
-    pBG.graphics.beginFill("orange");
-    pBG.width = 100;
-    pBG.height = 25;
-    pBG.graphics.drawRoundRect(0, 0, pBG.width, pBG.height,5);
-    pBG.cache(-2.5, -2.5, pBG.width+5, pBG.height+5);
-    answerCheckRight.addChild(pBG);
-    answerCheckRight.name = new createjs.Text("Answer (T)", "bold 14px Verdana", "#000000");
-    answerCheckRight.name.textAlign = "center";
-    answerCheckRight.name.x = (pBG.width-5)/2;
-    answerCheckRight.name.y = 3;
-    answerCheckRight.addChild(answerCheckRight.name);
-    answerCheckRight.x = BOARD_WIDTH*(3/4);
-    answerCheckRight.y = BOARD_HEIGHT/2;
-    answerCheckRight.cursor = "pointer";
-    answerCheckRight.addEventListener("click", function() {
-        var params = {};
-        params.answer = true;
-        sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
-    });
-    stage.addChild(answerCheckRight);
-
-    var answerCheckWrong = new createjs.Container();
-    var pBG = new createjs.Shape();
-    pBG.graphics.setStrokeStyle(1);
-    pBG.graphics.beginStroke("black");
-    pBG.graphics.beginFill("orange");
-    pBG.width = 100;
-    pBG.height = 25;
-    pBG.graphics.drawRoundRect(0, 0, pBG.width, pBG.height,5);
-    pBG.cache(-2.5, -2.5, pBG.width+5, pBG.height+5);
-    answerCheckWrong.addChild(pBG);
-    answerCheckWrong.name = new createjs.Text("Answer (F)", "bold 14px Verdana", "#000000");
-    answerCheckWrong.name.textAlign = "center";
-    answerCheckWrong.name.x = (pBG.width-5)/2;
-    answerCheckWrong.name.y = 3;
-    answerCheckWrong.addChild(answerCheckWrong.name);
-    answerCheckWrong.x = BOARD_WIDTH*(3/4);
-    answerCheckWrong.y = BOARD_HEIGHT/2+40;
-    answerCheckWrong.cursor = "pointer";
-    answerCheckWrong.addEventListener("click", function() {
-        var params = {};
-        params.answer = false;
-        sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
-    });
-    stage.addChild(answerCheckWrong);
-}
-
-function handleMove(answer) {
+function handleMove(answerCorrect) {
     previousSelectedCard = selectedCard;
     flipBackwards();
-    if(myTurn() && answer.correct) { //lost the card, send to top
+    if(myTurn() && !answerCorrect) { //lost the card, send to top
         player1.stack[previousSelectedCard.categoryId]--;
         player2.stack[previousSelectedCard.categoryId]++;
         previousSelectedCard.playerId = player2.id;
@@ -402,7 +355,7 @@ function handleMove(answer) {
         createjs.Tween.get(previousSelectedCard, {loop: false})
             .to({alpha:0.1}, 1000);
     }
-    else if(myTurn() && !answer.correct) { //keep the card, send back to bottom
+    /*else if(myTurn() && answerCorrect) { //keep the card, send back to bottom
         $.each(cards, function (index, card) {
             if (card.categoryId == previousSelectedCard.categoryId && card.playerId == player1.id) {
                 if (card.id != previousSelectedCard.id) {
@@ -423,8 +376,8 @@ function handleMove(answer) {
                 }
             }
         });
-    }
-    else if(!myTurn() && answer.correct) { //win the card, send to bottom
+    }*/
+    else if(myTurn() && answerCorrect) { //win the card, send to bottom
         player1.stack[previousSelectedCard.categoryId]++;
         player2.stack[previousSelectedCard.categoryId]--;
         previousSelectedCard.playerId = player1.id;
@@ -450,7 +403,7 @@ function handleMove(answer) {
             }
         });
     }
-    else if(!myTurn() && !answer.correct) { //didn't win the card, send back to top
+   /* else if(!myTurn() && !answer.correct) { //didn't win the card, send back to top
         $.each(cards, function (index, card) {
             if (card.categoryId == previousSelectedCard.categoryId && card.playerId != player1.id) {
                 if (card.id != previousSelectedCard.id) {
@@ -465,15 +418,15 @@ function handleMove(answer) {
         });
         createjs.Tween.get(previousSelectedCard, {loop: false})
             .to({alpha:0.1}, 1000);
-    }
+    }*/
 
     cardContainer.sortChildren(sortByZ);
     createjs.Tween.get(previousSelectedCard, {loop: false})
         .to({x: previousSelectedCard.initX, y: previousSelectedCard.initY}, 700, createjs.Ease.getPowInOut(4));
 
 
-    whoseTurn = answer.t;
-    checkWinStack();
+    //whoseTurn = answer.t;
+    //checkWinStack();
     setStatusText(1);
     enableBoard();
 }

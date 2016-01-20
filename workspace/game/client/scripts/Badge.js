@@ -1,10 +1,8 @@
 function updateBadges(data) {
-    trace(data);
     var winQuestionsRow = data["winQuestionsRow"];
     var winGamesRow = data["winGamesRow"];
     var gamesPlayed = data["win"]+data["lose"];
     var winrate = Math.round((data["win"]/(gamesPlayed))*10000)/100;
-    trace(winrate);
     var points = data["points"];
     var winContribution = data["winContribution"];
     var surveyTaken = data["surveyTaken"];

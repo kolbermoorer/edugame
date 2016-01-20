@@ -1,0 +1,23 @@
+15 Jan 2016 | 14:07:59,815 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 6, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:59602 }
+15 Jan 2016 | 14:07:59,823 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:59602 ) , SessionLen: 1814014, Type: JavaScript
+15 Jan 2016 | 14:07:59,844 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: Anzahl der Spieler im Raum nach Verlassen des Spielers: 0 
+15 Jan 2016 | 14:07:59,846 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room18, Id: 6, Group: default, isGame: true ], Duration: 1810762
+15 Jan 2016 | 14:52:08,791 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 7, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 60965
+15 Jan 2016 | 14:52:08,840 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:60965 ) , Type: JavaScript
+15 Jan 2016 | 14:52:08,859 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:60965 ) , asSpect: false
+15 Jan 2016 | 14:52:44,724 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 14:52:44,747 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room19, Id: 7, Group: default, isGame: true ]
+15 Jan 2016 | 14:52:44,752 | WARN  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Unable to join the just created Room: [ Room: Room19, Id: 7, Group: default, isGame: true ], reason: Join Error - Room is full: Room19, Zone: { Zone: EduGame } - Can't add User: ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:60965 )  
+15 Jan 2016 | 14:53:06,379 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 7, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:60965 }
+15 Jan 2016 | 14:53:06,380 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 6, Priv: 0, Sess: 127.0.0.1:60965 ) , SessionLen: 57540, Type: JavaScript
+15 Jan 2016 | 14:53:13,676 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 8, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 61016
+15 Jan 2016 | 14:53:13,692 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:61016 ) , Type: JavaScript
+15 Jan 2016 | 14:53:13,709 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:61016 ) , asSpect: false
+15 Jan 2016 | 14:53:26,311 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+15 Jan 2016 | 14:53:26,342 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+15 Jan 2016 | 14:53:26,349 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room20, Id: 8, Group: default, isGame: true ]
+15 Jan 2016 | 14:53:26,351 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room20, Id: 8, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 7, Priv: 0, Sess: 127.0.0.1:61016 ) , asSpect: false
+15 Jan 2016 | 14:55:39,713 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+15 Jan 2016 | 14:55:39,714 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+15 Jan 2016 | 14:55:39,716 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+15 Jan 2016 | 14:55:39,717 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

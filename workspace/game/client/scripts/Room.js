@@ -117,13 +117,13 @@ function populateRoomsList()
             var roomName = room.name;
             var roomType = room.variables["type"].value;
             var roomPlayers = players + "/" + maxPlayers;
-            var roomCategories = room.variables.category.value;
+            //var roomCategories = room.variables.category.value;
             var row = {};
             row["id"] = roomId;
             row["name"] = roomName;
             row["type"] = roomType;
             row["players"] =roomPlayers;
-            row["categories"] = roomCategories;
+            row["categories"] = "";
             row.roomObj = room;
             data.push(row);
         }

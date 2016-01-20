@@ -119,11 +119,6 @@ body {
 	margin: 0 15px 15px 0;
 }
 
-/*
-.badges-grey {
-	-webkit-filter: grayscale(100%);
-}*/
-
 .badge-text {
 	left: 36px;
 	bottom: 22px;
@@ -151,7 +146,59 @@ body {
 	text-align: justify;
 }
 
+/* game creation window */
+#singleplayer {
+	width: 193px;
+	height: 300px;
+	border-right: 1px solid lightgray;
+	float:left;
+	margin-top: 10px;
+}
+
+#multiplayer {
+	margin-top: 10px;
+}
+
+.title {
+	color: #7E7E7E;
+	font: bold 18px Helvetica, Arial, sans-serif;
+	letter-spacing: -0.05em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.subtitle {
+	color: #7E7E7E;
+	font: 14px Helvetica, Arial;
+	letter-spacing: -0.05em;
+	text-align: center;
+	font-style: italic;
+}
+
+#multiplayer{
+	width: 383px;
+	height: 300px;
+	float:left;
+}
+
+#compete {
+	border-right: 1px solid lightgray;
+}
+
+.gameTypeWin {
+	width: 189px;
+	height: 268px;
+	float:left;
+}
+
+
+
 /* buttons */
+
+.content {
+	position: relative;
+	text-align: center;
+}
 
 .backBt {
 	position: absolute;
@@ -159,11 +206,11 @@ body {
 	bottom: 22px;
 }
 
-.middleBt {
+/*.middleBt {
 	position: absolute;
 	left: 150px;
 	bottom: 22px;
-}
+}*/
 
 .nextBt {
 	position: absolute;
@@ -185,6 +232,11 @@ body {
 }
 
 /* game css */
+.popupContent {
+	text-align: center;
+	margin-top: 9px;
+}
+
 .game {
 	padding: 0 !important;
 }
@@ -207,9 +259,182 @@ progress[value] {
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
+	display: none;
+}
+
+#leaveGameBt {
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+
+/* question fields */
+.countdown {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	left: 550px;
+	bottom: 50px;
+	opacity: 0;
+}
+
+#questionBox {
+	display: none;
+	text-align: center;
+}
+
+#questionTitle {
+	width: 500px;
+	height: 60px;
+	position: absolute;
+	left: 100px;
+	top: 200px;
+	letter-spacing: +0.06em;
+	background: wheat;
+	border: 2px solid #8b9798;
+	border-radius: 5px;
+	line-height: 60px;
+	vertical-align: middle;
+}
+
+#questionAnswers {
+	position: absolute;
+	height: 60px;
+	top: 270px;
+	left: 100px;
+}
+
+.answerFields {
+	width: 160px;
+	height: 50px;
+	cursor: pointer;
+	background: lightgray;
+	border-radius: 5px;
+	border: 2px solid #8b9798;
+	text-align: center;
+	float: left;
+	position: relative;
+	margin-right: 5px;
+}
+
+.answerFields:hover {
+	background: #deeff1;
+}
+
+.answerFieldsContent {
+	top: 16px;
+	position: relative;
+}
+
+#errorAnswer {
+	width: 200px;
+	height: 50px;
+	background: lightgray;
+	position: absolute;
+	top: 350px;
+	left: 250px;
+	border: 2px solid gray;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#errorAnswer:hover{
+	background:#deeff1;
+}
+
+#errorAnswerText{
+	top: 10px;
+	position: relative;
+}
+
+#responseText {
+	font-size: 18px;
+	font-weight: bold;
+	color: green;
 }
 
 
+
+/* feedback box */
+#feedbackWrapper {
+	display: none;
+	position: absolute;
+	top: 350px;
+	left: 100px;
+	text-align: center;
+	width: 500px;
+}
+
+#feedbackTitle {
+	font-weight: bold;
+	margin-bottom: 5px;
+	left: -15px;
+	position: relative;
+}
+
+#feedback {
+	float: left;
+}
+
+#feedbackLeft {
+	float: left;
+	margin-left: 15px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#feedbackRight {
+	float: right;
+	margin-right: 95px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#nextAction {
+	font-size: 16px;
+	margin-top: 10px;
+	font-weight: bold;
+	text-align: left;
+}
+
+#nextActionContent {
+	font-weight: initial;
+	margin-top: 10px;
+}
+
+.nextActionBt {
+	background: #f6f6f6;
+	padding: 6px;
+	border-radius: 3px;
+	width: 130px;
+	color: #333333;
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid transparent;
+	cursor: pointer;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+/* gauge */
+.gaugeWidget {
+	position: absolute;
+	bottom: 40px;
+	right: 48px;
+	width: 200px;
+	height: 200px;
+	z-index: 50;
+	opacity: 0;
+}
+
+/* rating */
+#jqxRating {
+	display: block;
+	height: 18px;
+	width: 100px;
+	margin-top: -3px;
+	margin-left: 12px;
+}
 
 /* Floats self-clearing */
 

@@ -43,26 +43,24 @@ var achievementsWin;
 var createGameWin;
 var createGameWinTabs;
 var closeBt;
-var gameNameIn;
-var gameTypeDd;
-var gameDifficultyDd;
-var categoryList;
-var backCategoryBt;
-var pickCategoryBt;
-var nextCategoryBt;
+var nextBt;
+var singleBt;;
+var competeBt;
+var collaborateBt;
 var topicList;
 var backTopicBt;
-var pickTopicBt;
-var nextTopicBt;
 var doCreateGameBt;
 var last_row_opened;
 var last_row_opened_number;
 var selectedTopicRow;
 
 //game view
+var feedbackSlider;
 var gameChatAreaPn;
 var sendGameMsgBt;
-//var leaveGameBt;
+var leaveGameBt;
+var ratingStars;
+var gaugeMeter;
 
 //game popups
 var waitGameWin;
@@ -171,24 +169,60 @@ function buildMainUI() {
 
 
     //game creation popup
-    createGameWin = $("#createGameWin").jqxWindow({width:400, height:448, isModal:true, autoOpen:false, resizable:false, draggable:false, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
-    createGameWinTabs = $("#createGameWinTabs").jqxTabs({width:"100%", height:391, theme:theme});
+    createGameWin = $("#createGameWin").jqxWindow({width:600, height:448, isModal:true, autoOpen:false, resizable:false, draggable:false, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    createGameWinTabs = $("#createGameWinTabs").jqxTabs({width:"100%", height:395, theme:theme});
     closeBt = $("#closeBt").jqxButton({width:100, theme:theme});
-    gameNameIn = $('#gameNameIn').jqxTextArea({ placeHolder: 'Enter a Name', height: 22, width: 180, maxLength: 16});
-    gameTypeDd = $("#gameTypeDd").jqxDropDownList({source:["Defeat your Enemy", "The Will To Cooperate"], width:180, height:22, dropDownHeight:60, selectedIndex: 0});
-    gameDifficultyDd = $("#gameDifficultyDd").jqxDropDownList({source:["Normal", "Hard"], width:180, height:22, dropDownHeight:70, selectedIndex: 0});
-    backCategoryBt = $("#backCategoryBt").jqxButton({width:100, theme:theme});
-    pickCategoryBt = $("#pickCategoryBt").jqxButton({width:100, theme:theme});
-    nextCategoryBt = $("#nextCategoryBt").jqxButton({width:100, theme:theme, disabled: true});
+    nextBt = $("#nextBt").jqxButton({width:100, theme:theme});
+
+    singleBt = $("#single").jqxToggleButton({width:80, toggled: true, theme:theme});
+    competeBt = $("#compete").jqxToggleButton({width:80, toggled: false, theme:theme});
+    collaborateBt = $("#collaborate").jqxToggleButton({width:80, toggled: false, theme:theme});
+
     backTopicBt = $("#backTopicBt").jqxButton({width:100, theme:theme});
-    pickTopicBt = $("#pickTopicBt").jqxButton({width:100, theme:theme});
-    nextTopicBt = $("#nextTopicBt").jqxButton({width:100, theme:theme});
     doCreateGameBt = $("#doCreateGameBt").jqxButton({width:100, theme:theme});
 
     // game view
-    gameChatAreaPn = $("#gameChatAreaPn").jqxPanel({width:260, height:200, theme:theme, autoUpdate:true});
-    sendGameMsgBt = $("#sendGameMsgBt").jqxButton({width:76, theme:theme});
-    //leaveGameBt = $("#leaveGameBt").jqxButton({width:100, theme:theme});
+
+    //gameChatAreaPn = $("#gameChatAreaPn").jqxPanel({width:260, height:200, theme:theme, autoUpdate:true});
+    //sendGameMsgBt = $("#sendGameMsgBt").jqxButton({width:76, theme:theme});
+    leaveGameBt = $("#leaveGameBt").jqxButton({width:100, theme:theme});
+    ratingStars = $("#jqxRating").jqxRating({ width: 100, height: 18, singleVote:true, theme: theme});
+    gaugeMeter = $('#gauge').jqxGauge({
+        ranges: [{ startValue: 0, endValue: 30, style: { fill: '#e53d37', stroke: '#e53d37' }, startDistance: 0, endDistance: 0 },
+            { startValue: 30, endValue: 60, style: { fill: '#fad00b', stroke: '#fad00b' }, startDistance: 0, endDistance: 0 },
+            { startValue: 60, endValue: 100, style: { fill: '#4cb848', stroke: '#4cb848' }, startDistance: 0, endDistance: 0}],
+        cap: { size: '5%', style: { fill: '#2e79bb', stroke: '#2e79bb'} },
+        border: { style: { fill: '#8e9495', stroke: '#7b8384', 'stroke-width': 1 } },
+        ticksMinor: { interval: 5, size: '5%' },
+        ticksMajor: { interval: 10, size: '10%' },
+        pointer: { style: { fill: '#2e79bb' }, width: 5 },
+        max: 100,
+        animationDuration: 1500,
+        width: 200,
+        caption: { value: 'Quality of Question', position: 'bottom', offset: [0, 10], visible: true }
+    });
+    $(".countdown").TimeCircles({
+        "start": false,
+        "count_past_zero": false,
+        "time": {
+            "Days": {
+                "show": false
+            },
+            "Hours": {
+                "show": false
+            },
+            "Minutes": {
+                "show": false
+            },
+            "Seconds": {
+                "text": "Seconds",
+                "color": "#FF9999",
+                "show": true
+            }}
+    });
+    $(".countdown").TimeCircles().addListener(updateCountdown);
+
+
 
     // game popups
     waitGameWin = $("#waitGameWin").jqxWindow({width:250, height:150, autoOpen:false, resizable:false, draggable:false, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
@@ -213,47 +247,28 @@ function addEventListenerMain() {
     highscoreButton.click(onHighscoreBtClick);
 
     //game creation window
-    gameNameIn.keyup(function(e) {
-        var name = gameNameIn.val();
-        if (name.length > 0)
-            nextCategoryBt.jqxButton({disabled: false});
-        else
-            nextCategoryBt.jqxButton({disabled: true});
-    });
-
-    closeBt.click(onCloseBtClick);
-    backCategoryBt.click(onCategoryBackBtClick);
-    pickCategoryBt.click(onPickCategoryBtClick);
-    nextCategoryBt.click(onCategoryNextBtClick);
-    backTopicBt.click(onTopicBackBtClick);
-    nextTopicBt.click(onTopicNextBtClick);
-    doCreateGameBt.click(onDoCreateGameBtClick);
-
-    $('body').on('click', 'span.fillUpCards', function() {
-        var row = $(this).attr("row");
-        var selectedCheckboxes=$('input[topic-row=' + row + ']:checked').length;
-        var notSelected = $('input[topic-row=' + row + ']:not(:checked)');
-        var selectRandomNotSelected = shuffle(notSelected).slice(0, 8-selectedCheckboxes);
-        selectRandomNotSelected.prop('checked', true);
-    });
-
-    $('body').on('click', 'span.deselectAll', function() {
-        var row = $(this).attr("row");
-        $('input[topic-row=' + row + ']').prop('checked', false);
-    });
-
-    $('body').on('click', 'input.cbResource', function() {
-        var row = $(this).attr("topic-row");
-        var selectedCheckboxes=$('input[topic-row=' + row + ']:checked').length;
-        if(selectedCheckboxes > 8) {
-            $(this).prop('checked', false);
-            trace("Maximum of 8 cards can be selected.", true);
-        }
-    });
-
+    $(".selectBt").click(onSelectBtClick);
+    doCreateGameBt.click(onDoCreateGameBtClick); //open the first window to create the game
+    closeBt.click(onCloseBtClick); // close the create the game window
+    nextBt.click(onNextBtClick); //go to topic selection
+    backTopicBt.click(onTopicBackBtClick); //go back to basic settings decision
 
     // game view
-    sendGameMsgBt.click(onSendMessageBtClick);
+    $(".answerFields").click(onAnswerBtClick);
+    //sendGameMsgBt.click(onSendMessageBtClick);
+    $(document).on("mouseenter", ".ratingEnabled", function(e) {
+        e.stopPropagation();
+        var value = $(this).parent().parent().parent().index();
+        gaugeMeter.jqxGauge('value', value*20);
+    });
+    ratingStars.on('change', function (event) {
+        $(".jqx-rating-image").removeClass("ratingEnabled");
+        var value = event.value;
+        if(value > 0)
+            onSendFeedbackBtClick(value);
+    });
+
+    gaugeMeter.jqxGauge('value', 50);
 
     publicMsgIn.keyup(function(e) {
         if(e.which == 13) {
@@ -266,4 +281,8 @@ function addEventListenerMain() {
             onSendMessageBtClick();
         }
     });
+
+    leaveGameBt.click(onLeaveGameBtClick);
+    $("#openWikipediaBt").click(onOpenWikipediaBtClick);
+    $("#nextQuestionBt").click(onNextQuestionBtClick);
 }

@@ -1,13 +1,3 @@
-13 Jan 2016 | 09:02:58,813 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 175, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53868
-13 Jan 2016 | 09:02:58,863 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 174, Priv: 0, Sess: 127.0.0.1:53868 ) , Type: JavaScript
-13 Jan 2016 | 09:02:58,885 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 174, Priv: 0, Sess: 127.0.0.1:53868 ) , asSpect: false
-13 Jan 2016 | 09:03:06,355 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Query: SELECT * FROM topics WHERE categoryUri = 'Actor' 
-13 Jan 2016 | 09:03:07,411 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Query: SELECT link, label, website FROM cards WHERE category = 'Actor' AND topic = 'http://dbpedia.org/resource/Category:Ivor_Novello_Award_winners' 
-13 Jan 2016 | 09:03:09,256 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create room name: fsdffd 
-13 Jan 2016 | 09:03:09,313 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: Tris game Extension for SFS2X started, rel. 1.0.5 
-13 Jan 2016 | 09:03:09,324 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: fsdffd, Id: 6, Group: default, isGame: true ]
-13 Jan 2016 | 09:03:09,326 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: fsdffd, Id: 6, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 174, Priv: 0, Sess: 127.0.0.1:53868 ) , asSpect: false
-13 Jan 2016 | 09:03:47,692 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 176, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53891
-13 Jan 2016 | 09:03:47,718 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk1, Id: 175, Priv: 0, Sess: 127.0.0.1:53891 ) , Type: JavaScript
-13 Jan 2016 | 09:03:47,738 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 175, Priv: 0, Sess: 127.0.0.1:53891 ) , asSpect: false
-13 Jan 2016 | 09:03:50,122 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: fsdffd, Id: 6, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk1, Id: 175, Priv: 0, Sess: 127.0.0.1:53891 ) , asSpect: false
+20 Jan 2016 | 14:11:14,793 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:51847 }
+20 Jan 2016 | 14:11:14,798 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:51847 ) , SessionLen: 1202266, Type: JavaScript
+20 Jan 2016 | 14:11:14,878 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room411, Id: 3, Group: default, isGame: true ], Duration: 1170081
