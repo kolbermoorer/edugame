@@ -1,3 +1,5 @@
+var joined;
+
 function joinLobbyRoom()
 {
     if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME)
@@ -9,9 +11,9 @@ function joinLobbyRoom()
  */
 function onRoomAdd(event)
 {
-    trace("Room added: " + event.room);
+    console.log("Room added: " + event.room);
     updateUserLists();
-    updateRoomsList(event.room);
+    insertRoomInTable(event.room);
 }
 
 /*
@@ -19,9 +21,9 @@ function onRoomAdd(event)
  */
 function onRoomRemove(event)
 {
-    trace("Room removed: " + event.room);
+    console.log("Room removed: " + event.room);
     updateUserLists();
-    populateRoomsList();
+    removeRoomFromTable(event.room);
 
 }
 
@@ -30,7 +32,7 @@ function onRoomRemove(event)
  */
 function onRoomJoin(event)
 {
-    trace("Room joined: " + event.room);
+    console.log("Room joined: " + event.room);
 
     // User joined the lobby
     if (event.room.name == LOBBY_ROOM_NAME)
@@ -38,13 +40,23 @@ function onRoomJoin(event)
         setView("lobby", true);
         currentGameStarted = false;
     }
-    // User joined a game
+    // User CREATED AND JOINED a game
     else
     {
-        inGame = true;
-        setView("game", true);
-        // Initialize the game
-        setReadyStatus();
+        if(!joined) {
+            inGame = true;
+            if(gameType == "single")
+                setView("game", true);
+            else {
+                closeGameBt.jqxButton({disabled:false});
+                createGameBt.jqxButton({disabled:true});
+                waitGameWin.jqxWindow('open');
+            }
+            setReadyStatus();
+        }
+        else {
+            onJoin();
+        }
     }
 }
 
@@ -91,11 +103,21 @@ function onUserExitRoom(event)
     }
 }
 
+function onCloseGameBtClick()
+{
+    closeGameBt.jqxButton({disabled:true});
+    createGameBt.jqxButton({disabled:false});
+    if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME)
+        sfs.send(new SFS2X.Requests.System.LeaveRoomRequest());
+}
+
+
 function onJoinGameBtClick()
 {
-    //noinspection JSUnresolvedFunction
+    joined = true;
+    joinGameBt.jqxButton({disabled:true});
     var roomId = $("#roomTable").jqxDataTable('getSelection')[0].id;
-    var room = sfs.getRoomById(roomId);
+    var room = sfs.getRoomByName("Room" + roomId);
     sfs.send(new SFS2X.Requests.System.JoinRoomRequest(room));
 }
 
@@ -113,17 +135,21 @@ function populateRoomsList()
         {
             var players = room.getUserCount();
             var maxPlayers = room.maxUsers;
-            var roomId = room.id;
-            var roomName = room.name;
-            var roomType = room.variables["type"].value;
+            var roomNo = room["name"].replace("Room", "");
+            var roomName = room["name"];
+            var roomMode = room.variables["mode"].value;
             var roomPlayers = players + "/" + maxPlayers;
-            //var roomCategories = room.variables.category.value;
+            var userList = room.variables["userList"].value;
+            var roomCategories = room.variables["categories"].value;
+            var status = room.variables["status"].value;
             var row = {};
-            row["id"] = roomId;
+            row["id"] = roomNo;
             row["name"] = roomName;
-            row["type"] = roomType;
+            row["mode"] = roomMode;
             row["players"] =roomPlayers;
-            row["categories"] = "";
+            row["userList"] =JSON.stringify(userList);
+            row["categories"] = roomCategories;
+            row["status"] = status;
             row.roomObj = room;
             data.push(row);
         }
@@ -136,9 +162,12 @@ function populateRoomsList()
             [
                 { name: 'id', type: 'string' },
                 { name: 'name', type: 'string' },
-                { name: 'type', type: 'string' },
+                { name: 'mode', type: 'string' },
                 { name: 'players', type: 'string' },
-                { name: 'categories', type: 'string' }
+                { name: 'userList', type: 'string' },
+                { name: 'level', type: 'string' },
+                { name: 'categories', type: 'array' },
+                { name: 'status', type: 'string' }
             ],
         sortcolumn: 'players',
         sortdirection: 'asc'
@@ -146,40 +175,95 @@ function populateRoomsList()
     var dataAdapter = new $.jqx.dataAdapter(source);
     $("#roomTable").jqxDataTable({source: dataAdapter});
 
-    $("#roomTable").on('rowClick', function (event) {
-        var lastSelectedGame = $("#roomTable").jqxDataTable('getSelection')[0];
-        if (typeof lastSelectedGame == 'undefined') {
-            $("#joinGameBt").jqxButton({disabled:false});
-            $("#roomTable").jqxDataTable('selectRow', event.args.index);
-        }
-        else {
-            $("#roomTable").jqxDataTable('unselectRow', lastSelectedGame.uid);
-            if(lastSelectedGame.uid == event.args.index) {
+    $('#roomTable').on('rowSelect',
+        function (event)
+        {
+            var status = event.args.row.status;
+            if(status != "Waiting" || inGame) {
+                $("#roomTable").jqxDataTable('unselectRow', args.index);
                 $("#joinGameBt").jqxButton({disabled:true});
             }
-            else
-                $("#roomTable").jqxDataTable('selectRow', event.args.index);
-        }
-    });
-
+            else {
+                $("#joinGameBt").jqxButton({disabled:false});
+            }
+        });
 }
 
-function updateRoomsList(room) {
+function insertRoomInTable(room) {
+    var mode = room.variables.mode.value;
     $("#roomTable").jqxDataTable('addRow', null, {
-        id: room.id,
+        id: room.name.replace("Room", ""),
         name: room.name,
-        type: room.variables.type.value,
-        players: "1/2",
-        categories: room.variables.category.value
+        mode: mode,
+        players: (mode == "single" ? "1/1" : "1/2"),
+        userList: JSON.stringify(room.variables["userList"].value),
+        categories: room.variables.categories.value,
+        status: room.variables["status"].value
     }, 'first');
 }
 
-function updatePlayersInRoom (room) {
+function removeRoomFromTable (room) {
     var rows = $("#roomTable").jqxDataTable('getRows');
     for (var i = 0; i < rows.length; i++) {
-        var rowRoomId = rows[i].id;
-        if(rowRoomId == room.roomId) {
-            $("#roomTable").jqxDataTable('updateRow', rows[i].uid, {id: rowRoomId, name: rows[i].name, type: rows[i].type, players: room.countPlayers + "/2", categories: rows[i].categories});
+        var rowRoomName = rows[i].name;
+        if(rowRoomName == room.name) {
+            $("#roomTable").jqxDataTable('deleteRow', rows[i].uid);
+            return;
         }
     }
 }
+
+
+
+function updateRoomData (serverRoomData) {
+    var rows = $("#roomTable").jqxDataTable('getRows');
+    for (var i = 0; i < rows.length; i++) {
+        var rowRoomName = rows[i].name;
+        var room = sfs.roomManager.getRoomByName(rowRoomName);
+        var status = $.grep(room.getVariables(), function(e){ return e.name == "status"; });
+        if(rowRoomName == room.name) {
+            $("#roomTable").jqxDataTable('updateRow', rows[i].uid, {id: rows[i].id, name: rows[i].name, mode: rows[i].mode, players: serverRoomData["countPlayers"] + "/2", categories: rows[i].categories, status: serverRoomData["status"]});
+            $("#roomTable").jqxDataTable('unselectRow', rows[i].uid);
+            $("#joinGameBt").jqxButton({disabled:true});
+        }
+    }
+}
+
+function updateCategoriesInRoom (room) {
+    var rows = $("#roomTable").jqxDataTable('getRows');
+    for (var i = 0; i < rows.length; i++) {
+        var rowRoomName = rows[i].name;
+        if(rowRoomName == room["roomName"]) {
+            $("#roomTable").jqxDataTable('updateRow', rows[i].uid, {id: rows[i].id, name: rows[i].name,  mode: rows[i].mode, players: rows[i].players, categories: room["categories"], status: "Full"});
+        }
+    }
+}
+
+function onRoomTableRowEnter (room) {
+    var roomID = room.target.dataset.row;
+    roomInfoWin.jqxWindow('move', event.pageX+30, event.pageY+30);
+    roomInfoWin.jqxWindow('setTitle', 'Players in room #' + roomID);
+
+    var playersInRoom = JSON.parse(room.target.dataset.users);
+
+    var source =
+    {
+        localData: playersInRoom,
+        dataType: "array",
+        dataFields:
+            [
+                { name: 'name', type: 'string' },
+                { name: 'points', type: 'int' }
+            ]
+    };
+    var dataAdapter = new $.jqx.dataAdapter(source);
+    roomInfoWinTable.jqxDataTable({source: dataAdapter, sortable: true});
+
+
+    roomInfoWin.jqxWindow('open');
+}
+
+function onRoomTableRowExit () {
+    roomInfoWin.jqxWindow('close');
+}
+

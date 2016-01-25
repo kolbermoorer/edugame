@@ -1,0 +1,23 @@
+function onSendMessageBtClick()
+{
+    var chatWindow = (inGame && gameStarted ? $("#gameMsgIn") : $("#publicMsgIn"));
+    if(chatWindow.jqxInput('val') != "") {
+        var isSent = sfs.send(new SFS2X.Requests.System.PublicMessageRequest(chatWindow.val()));
+        if (isSent) {
+            chatWindow.jqxInput('val', '');
+        }
+    }
+}
+
+function onPublicMessage(event)
+{
+    var sender = (event.sender.isItMe ? "You" : event.sender.name);
+    writeToChatArea("<b>" + sender + ": </b>" + event.message);
+}
+
+function writeToChatArea(text) {
+    var chatWindow = (inGame && gameStarted ? $("#gameChatAreaPn") : $("#publicChatAreaPn"));
+    chatWindow.jqxPanel("append", "<p class='chatAreaElement'>" + text + "</p>");
+    if (chatWindow.jqxPanel("getScrollHeight") != 1000)
+        chatWindow.jqxPanel("scrollTo", 0, chatWindow.jqxPanel("getScrollHeight"));
+}

@@ -6,35 +6,64 @@
     <meta name="author" content="Rjgtav">
     <title>EduGame | Master Thesis Prototype</title>
 
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href="css/authenticate.css" rel="stylesheet" type="text/css" />
+    <link href="css/signup.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="libs/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="libs/SFS2X_API_JS.js"></script>
     <script type="text/javascript" src="scripts/signup.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
 </head>
 
 <body onLoad="init()">
+<div id="menuBar" style="text-align: center;">
+    <span>Master Thesis: "Automatically Generated Learning Content for an Educational Game"</span>
+    <img id="universityLogo" src="img/university_logo.jpg">
+</div>
 <div class="wrapper">
-    <section id="signup" class="panel">
-        <form action="javascript:onRegisterBtClick();">
-            <h1>EduGame</h1>
-            <div>
-                <input type="text" placeholder="Username" required="" id="username" />
-            </div>
-            <div>
-                <input type="password" placeholder="Password" required="" id="password" />
-            </div>
-            <div>
-                <input type="email" placeholder="Email" required="" id="email" />
-            </div>
-            <div>
-                <input type="submit" value="Register" id="register" />
-                <a href="#">Lost your password?</a>
-                <a href="#">Login</a>
-            </div>
-        </form>
-    </section>
+    <div class="container">
+        <section id="content">
+            <form action="javascript:onRegisterBtClick();">
+                <h1>Sign Up</h1>
+                <div>
+                    <input class="input" type="text" maxlength=20 placeholder="Enter a username (max. 20)" required="" id="username" />
+                </div>
+                <div>
+                    <input type="email" placeholder="Your Email" required="" id="email" />
+                </div>
+                <div>
+                    <input type="password" placeholder="Enter a password (min. 8)" required="" id="password" />
+                </div>
+                <div>
+                    <input type="password" placeholder="Re-Enter password" required="" id="passwordConfirmation" />
+                </div>
+                <div id="captchaWrapper" style="margin-bottom: 8px;"><div class="g-recaptcha" data-callback="onCaptchaFilled" style="margin-left: 5px;" data-sitekey="6Lcg7hETAAAAAAQLHmcF1M7hbknvoitalmk8zwGK"></div></div>
+                <input type="checkbox" id="agreeBox">
+                <label>Click here to indicate that you have read and agree to the notes on the right.</label>
+                <div id="statusText"></div>
+                <div>
+                    <div id="toLoginBt" class="nextAction">&#x27a5; To Login</div>
+                    <input type="submit" value="Sign up" />
+
+                </div>
+
+            </form>
+        </section>
+    </div>
+    <div id="welcomeText">
+        <span style="text-align: center;"><h2>Welcome to my "EduGame" <br></h2></span>I'm glad that you want to test my game! You help me really a lot with your participation!
+
+
+        <p>Things to notice:</p>
+        <ul>
+            <li>The game data including your personal information are only used for my master thesis and everything is deleted after I take off the game (in about 7 days). No clear names will be included in the thesis.</li>
+            <li>I do track a few things, that includes for example the number of clicks for a specific action. I do <b>NOT</b> track any personal chat information!</li>
+            <li>Game instructions are included at the beginning of the first match.</li>
+            <li>You participate in the lottery for prizes if you play and finish at least 3 games and filled out the survey. If you can't find the link in the lobby, click
+                <a href="http://www.surveygizmo.com/s3/2531497/Survey-on-EduGame">here</a>.</li>
+            <li>If you have any questions regarding the game or the survey send a mail to <a href="mailto:tkutschk@mail.uni-mannheim.de">tkutschk@mail.uni-mannheim.de</a></li>
+        </ul>
+        <p></p>
+        <span style="text-align: center;"><h5>Have fun playing, I hope you like the game.</h5></span>
+    </div>
 </div>
 </body>

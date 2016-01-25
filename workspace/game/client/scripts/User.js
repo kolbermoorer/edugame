@@ -25,6 +25,7 @@ function populateUsersLists(data) {
         dataFields:
             [
                 { name: 'username', type: 'string' },
+                { name: 'room', type: 'string' },
                 { name: 'points', type: 'int' }
             ]
     };

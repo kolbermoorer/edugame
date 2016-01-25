@@ -49,9 +49,9 @@
     <script type="text/javascript" src="libs/jqwidgets/jqxnumberinput.js"></script>
     <script type="text/javascript" src="libs/jqwidgets/jqxtextarea.js"></script>
     <script type="text/javascript" src="libs/jqwidgets/jqxslider.js"></script>
-    <script type="text/javascript" src="libs/jqwidgets/jqxgauge.js"></script>
     <script type="text/javascript" src="libs/jqwidgets/jqxdraw.js"></script>
     <script type="text/javascript" src="libs/jqwidgets/jqxrating.js"></script>
+    <script type="text/javascript" src="libs/jqwidgets/jqxinput.js"></script>
 
     <!-- load clock interface -->
     <script type="text/javascript" src="libs/TimeCircles.js"></script>
@@ -65,6 +65,10 @@
 </head>
 
 <body class="noselect" onLoad="init()">
+<div id="menuBar" style="text-align: center;">
+    <span>Master Thesis: "Automatically Generated Learning Content for an Educational Game"</span>
+    <img id="universityLogo" src="img/university_logo.jpg">
+</div>
 <div class="wrapper">
     <div id="login" class="panel viewStack login">
         <form action="javascript:onLoginBtClick();">
@@ -97,13 +101,23 @@
                 <div id="roomControls">
                     <input type="button" id="createGameBt" value="Start New Game"/>
                     <input type="button" id="joinGameBt" value="Join Game"/>
+                    <input type="button" id="closeGameBt" value="Close Game"/>
                     <input type="button" id="quickJoinBt" value="Quick Game Join"/>
                 </div>
                 <div id="publicChatAreaPn"></div>
                 <div class="chatControls">
-                    <textarea title="chatInputText" id="publicMsgIn"></textarea></div>
+                    <input type="text" id="publicMsgIn"/>
+                </div>
                 <input type="button" id="sendPublicMsgBt" value="Send"/>
                 <input type="button" id="logoutBt" value="Logout"/>
+                <div id="roomInfoWin">
+                    <div id="roomInfoWinHeader" style="background: lightblue;">
+                        Players in Room ...
+                    </div>
+                    <div style="overflow: hidden;" id="roomInfoWinContent">
+                        <div id="roomInfoWinTable"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="right">
@@ -207,7 +221,7 @@
                         </div>
                         <div class="gameTypeWin">
                             <div class="subtitle">
-                                <span>Compete</span>
+                                <span>Defeat your enemy</span>
                             </div>
                             <div class="content">
                                 <input type="button" id="compete" multiPlayer=true class="selectBt" value="Select"/>
@@ -215,7 +229,7 @@
                         </div>
                         <div class="gameTypeWin">
                             <div class="subtitle">
-                                <span>Collaborate</span>
+                                <span>The Will To Cooperate</span>
                             </div>
                             <div class="content">
                                 <input type="button" id="collaborate" multiPlayer=true class="selectBt" value="Select"/>
@@ -228,7 +242,10 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div id="topicList"></div>
+                    <div class="loadingCircle"><img src="img/loader.gif"/> <br> Loading topics</div>
+                    <div id="topicListWrapper">
+                        <!-- <div id="topicList"></div> -->
+                    </div>
                     <div id="createGameWinControls" class="popupWinControls">
                         <input type="button" id="backTopicBt" class="backBt" value="Back"/>
                         <input type="button" id="doCreateGameBt" class="nextBt" value="Create Game"/>
@@ -238,24 +255,91 @@
             </div>
         </div>
     </div>
+    <!-- Game Popups -->
+    <div id="loadingGameWin">
+        <div><strong>Loading cards</strong></div>
+        <div style="overflow: hidden;">
+        </div>
+    </div>
+    <div id="waitGameWin" class="gamePopup">
+        <div><strong>Game created</strong></div>
+        <div class="content" style="text-align: center;">
+            <p class="gameMessage message">Waiting for other players to join your game.</p>
+            <input type="button" id="okButton" value="OK" style="margin-right: 10px" />
+        </div>
+    </div>
+    <div id="afterGameWin" class="gamePopup">
+        <div><strong>Game is Over &#x27a0; Questions: 16 | Right: 8 | Wrong: 8 | Points earned: 67</strong></div>
+        <div style="overflow: hidden;">
+            <div id="afterGameWinTable" style="cursor: default;"></div>
+        </div>
+    </div>
 </div>
 <div class="wrapper hidden viewStack game">
     <div id="game" class="panel hidden viewStack game">
-        <div class="countdown" data-timer="60"></div>
         <div id="gamebox" class="leftBox">
-            <iframe id="lookupWiki" width="640" height="640"></iframe>
-            <canvas id="gameContainer" width="1000" height="700">Your Browser doesn't support Canvas</canvas>
-            <!-- Game Popups -->
-            <div id="waitGameWin" class="gamePopup">
-                <div><strong>Waiting...</strong></div>
-                <div class="content">
-                    <div class="firstRow" style="display: table-row; height: 100%;">
-                        <p class="gameMessage message">Testing</p>
+            <iframe id="lookupWiki" width="675" height="650"></iframe>
+            <div id="container">
+                <img id="gameBackground" src="img/background/LAUAN.jpg" style="width: 1000px; height: 700px;">
+                <canvas id="gameContainer" width="1000" height="700">Your Browser doesn't support Canvas</canvas>
+            </div>
+        </div>
+        <div id="instructionsWin" class="gamePopup">
+            <div><strong>Game Instructions</strong></div>
+            <div class="content">
+                <div id="instructionsWinTabs">
+                    <ul>
+                        <li>Card</li>
+                        <li>Wikipedia</li>
+                        <li>Time</li>
+                    </ul>
+                    <div class="item">
+                        <div class="instructionsTabText">Thank you for participating in my game! Before the actual game starts, you have now the possibility to onform yourself about the content in the game. </div>
+                        <div class="instructionsTabImage">
+                            <img src="img/cards/category01.png" style="width: 160px;">
+                            <div>The game consists of 16 playing cards in 3 different categories and topics about a specific person/thing/entity. </div>
+                        </div>
+                        <div class="popupWinControls">
+                            <input type="button" class="backBt" value="Back"/>
+                            <input type="button" class="nextBt" value="Next"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="instructionsTabText"></div>
+                        <div class="instructionsTabImage"></div>
+                        <div class="popupWinControls">
+                            <input type="button" class="backBt" value="Back"/>
+                            <input type="button" class="nextBt" value="Next"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="instructionsTabText"></div>
+                        <div class="instructionsTabImage"></div>
+                        <div class="popupWinControls">
+                            <input type="button" class="backBt" value="Back"/>
+                            <input type="button" class="nextBt" value="Next"/>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
+        <div class="countdown" data-timer="60"></div>
+        <div id="stackOverview">
+            <div class="stacks">
+                <b> Category </b><br><span></span><br><br>
+                <b> Topic </b><br><span></span><br>
+            </div>
+            <div class="stacks">
+                <b> Category </b><br><span></span><br><br>
+                <b> Topic </b><br><span></span><br>
+            </div>
+            <div class="stacks">
+                <b> Category </b><br><span></span><br><br>
+                <b> Topic </b><br><span></span><br>
+            </div>
+        </div>
+
+        <div id="statusTextWrapper"><span id="statusText">Amazing! Your answer was correct! You got +2 points!</span></div>
         <div id="questionBox">
             <div id="questionTitle">
                 <span id="questionTitleContent">What is the correct value for property '<span id="questionTitleProperty"></span>'?</span>
@@ -265,45 +349,38 @@
                 <div id="a2" class="answerFields"><span class="answerFieldsContent"><span id="answer2"></span></span></div>
                 <div id="a3" class="answerFields"><span class="answerFieldsContent"><span id="answer3"></span></span></div>
             </div>
-            <div id="errorAnswer"><span id="errorAnswerText">Show me next question, this makes no sense!</span></div>
+            <div id="errorAnswer">
+                <img id="errorSmiley" src="img/sad_smiley.png">
+                <span id="errorAnswerText">Show me next question, this makes no sense!<br><i>It does not affect your points, but increase the data quality.</i>
+                </span>
+            </div>
         </div>
         <div id="feedbackWrapper">
-            <div id="responseText">Amazing! Your answer was correct! You got +2 points!</div>
-            <div id="nextAction">
+            <div id='nextAction'>
                 <div>Next Action</div>
-                <div id="nextActionContent">
-                    <div>
-                        <div class="nextActionBt" id="openWikipediaBt">Open in Wikipedia</div>
-                        Get more information about <span id="cardName"></span> on Wikipedia
-                    </div>
-                    <div>
-                        <div class="nextActionBt" id="sendFeedbackBt">
-                        <div id='jqxWidget' style="font-size: 13px; font-family: Verdana;">
-                            <div id='jqxRating'></div>
-                        </div>
-                        </div>
-                        Help to increase the data quality of the game!
-                    </div>
-                    <div>
-                        <div class="nextActionBt" id="nextQuestionBt">Next Question</div>
-                        Open the next card.
-                    </div>
-                </div>
+                <div><div id="nextActionTable"></div></div>
             </div>
-
         </div>
-        <div class="gaugeWidget">
-            <div id='gauge' style="position: absolute; top: 0px; left: 0px;"></div>
+        <div id="gameButtons">
+            <span id="timerText">Autostart</span>
+            <div id="gameButtonsLeft">
+                <div class="timeToStartEnd" data-timer="301"></div>
+            </div>
+            <div id="gameButtonsRight">
+                <div id="startGameBt" class="gameButtonFields disabled"><span style="position: relative; top: 7px;">Start Game</span></div>
+                <div id="leaveGameBt" class="gameButtonFields enabled"><span style="position: relative; top: 7px;">Leave Game</span></div>
+            </div>
+            <div id="startStatusTextWrapper">
+                <span id="startStatusText">Click on 'Start Game' if you are ready!</span>
+            </div>
         </div>
-        <!-- <div class="gameBarControls">
+        <div class="gameBarControls">
             <div id="gameChatAreaPn"></div>
             <div class="vSeparateTop">
-                <input type="text" id="gameMsgIn" class="textInput smaller" placeholder="Type your message"
-                       style="width: 176px"/>
-                <input type="button" id="sendGameMsgBt" value="Send"/>
+                <input type="text" id="gameMsgIn"/>
+                <div id="sendGameMsgBt" class="gameButtonFields enabled"><span style="position: relative; top: 7px; width: 75px;">Send</span></div>
             </div>
-        </div> -->
-        <input type="button" id="leaveGameBt" value="Leave Game"/>
+        </div>
     </div>
 </div>
 

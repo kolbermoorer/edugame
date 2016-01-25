@@ -1,0 +1,28 @@
+25 Jan 2016 | 06:07:15,386 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 73, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 50740
+25 Jan 2016 | 06:07:15,399 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#72, Id: 72, Priv: 0, Sess: 127.0.0.1:50740 ) , Type: JavaScript
+25 Jan 2016 | 06:09:33,135 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 73, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:50740 }
+25 Jan 2016 | 06:09:33,137 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#72, Id: 72, Priv: 0, Sess: 127.0.0.1:50740 ) , SessionLen: 137737, Type: JavaScript
+25 Jan 2016 | 06:09:44,103 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 74, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 50753
+25 Jan 2016 | 06:09:44,113 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#73, Id: 73, Priv: 0, Sess: 127.0.0.1:50753 ) , Type: JavaScript
+25 Jan 2016 | 06:10:54,176 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 74, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:50753 }
+25 Jan 2016 | 06:10:54,177 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#73, Id: 73, Priv: 0, Sess: 127.0.0.1:50753 ) , SessionLen: 70064, Type: JavaScript
+25 Jan 2016 | 06:11:07,489 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 75, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 50765
+25 Jan 2016 | 06:11:07,501 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#74, Id: 74, Priv: 0, Sess: 127.0.0.1:50765 ) , Type: JavaScript
+25 Jan 2016 | 06:11:30,800 | WARN  | SFSWorker:Ext:4 | components.signup.SignUpAssistant |     | Username: helmut is already in use, from ( User Name: Guest#74, Id: 74, Priv: 0, Sess: 127.0.0.1:50765 ) 
+25 Jan 2016 | 06:11:57,949 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 75, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:50765 }
+25 Jan 2016 | 06:11:57,950 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#74, Id: 74, Priv: 0, Sess: 127.0.0.1:50765 ) , SessionLen: 50449, Type: JavaScript
+25 Jan 2016 | 06:12:06,535 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 76, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 50781
+25 Jan 2016 | 06:12:06,567 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 75, Priv: 0, Sess: 127.0.0.1:50781 ) , Type: JavaScript
+25 Jan 2016 | 06:12:06,580 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 75, Priv: 0, Sess: 127.0.0.1:50781 ) , asSpect: false
+25 Jan 2016 | 06:12:23,213 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+25 Jan 2016 | 06:12:23,265 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+25 Jan 2016 | 06:12:23,287 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room153, Id: 15, Group: default, isGame: true ]
+25 Jan 2016 | 06:12:23,289 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room153, Id: 15, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 75, Priv: 0, Sess: 127.0.0.1:50781 ) , asSpect: false
+25 Jan 2016 | 06:13:01,580 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: [Room153, [( User Name: tkutschk, Id: 75, Priv: 0, Sess: 127.0.0.1:50781 ) ], [Actor, Person, Movie], [21st-century American Businesspeople, Founders Of Religions, Films Shot In California]] 
+25 Jan 2016 | 06:18:11,797 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 76, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:50781 }
+25 Jan 2016 | 06:18:11,798 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 75, Priv: 0, Sess: 127.0.0.1:50781 ) , SessionLen: 365231, Type: JavaScript
+25 Jan 2016 | 06:18:11,830 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room153, Id: 15, Group: default, isGame: true ], Duration: 348608
+25 Jan 2016 | 06:55:37,587 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+25 Jan 2016 | 06:55:37,595 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+25 Jan 2016 | 06:55:37,596 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/1
+25 Jan 2016 | 06:55:37,597 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

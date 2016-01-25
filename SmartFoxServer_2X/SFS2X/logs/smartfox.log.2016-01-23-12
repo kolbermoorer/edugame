@@ -1,0 +1,18 @@
+23 Jan 2016 | 12:00:50,712 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 206, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:64771 }
+23 Jan 2016 | 12:00:50,716 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 204, Priv: 0, Sess: 127.0.0.1:64771 ) , SessionLen: 285660, Type: JavaScript
+23 Jan 2016 | 12:00:50,738 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room1, Id: 164, Group: default, isGame: true ], Duration: 277463
+23 Jan 2016 | 12:00:52,963 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 207, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 52042
+23 Jan 2016 | 12:00:52,989 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 205, Priv: 0, Sess: 127.0.0.1:52042 ) , Type: JavaScript
+23 Jan 2016 | 12:00:53,007 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 205, Priv: 0, Sess: 127.0.0.1:52042 ) , asSpect: false
+23 Jan 2016 | 12:01:02,715 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+23 Jan 2016 | 12:01:02,737 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+23 Jan 2016 | 12:01:02,755 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room1, Id: 165, Group: default, isGame: true ]
+23 Jan 2016 | 12:01:02,757 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room1, Id: 165, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 205, Priv: 0, Sess: 127.0.0.1:52042 ) , asSpect: false
+23 Jan 2016 | 12:01:31,931 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: [Room1, [( User Name: tkutschk, Id: 205, Priv: 0, Sess: 127.0.0.1:52042 ) ], [Capital, Philosopher, Administrative Region], [Capitals In Asia, Fellows Of The Royal Society, NUTS 1 Statistical Regions Of The European Union]] 
+23 Jan 2016 | 12:33:08,102 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 207, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:52042 }
+23 Jan 2016 | 12:33:08,106 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 205, Priv: 0, Sess: 127.0.0.1:52042 ) , SessionLen: 1935116, Type: JavaScript
+23 Jan 2016 | 12:33:08,148 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room1, Id: 165, Group: default, isGame: true ], Duration: 1925420
+23 Jan 2016 | 12:55:05,648 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+23 Jan 2016 | 12:55:05,650 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+23 Jan 2016 | 12:55:05,651 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+23 Jan 2016 | 12:55:05,652 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

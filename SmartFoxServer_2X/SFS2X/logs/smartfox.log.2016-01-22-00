@@ -1,0 +1,15 @@
+22 Jan 2016 | 00:09:27,968 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 50, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53732
+22 Jan 2016 | 00:09:28,057 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 49, Priv: 0, Sess: 127.0.0.1:53732 ) , Type: JavaScript
+22 Jan 2016 | 00:09:28,080 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 49, Priv: 0, Sess: 127.0.0.1:53732 ) , asSpect: false
+22 Jan 2016 | 00:10:23,610 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 50, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53732 }
+22 Jan 2016 | 00:10:23,611 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 49, Priv: 0, Sess: 127.0.0.1:53732 ) , SessionLen: 55554, Type: JavaScript
+22 Jan 2016 | 00:10:25,909 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 51, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 53807
+22 Jan 2016 | 00:10:25,929 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 50, Priv: 0, Sess: 127.0.0.1:53807 ) , Type: JavaScript
+22 Jan 2016 | 00:10:25,944 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 50, Priv: 0, Sess: 127.0.0.1:53807 ) , asSpect: false
+22 Jan 2016 | 00:44:19,439 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+22 Jan 2016 | 00:51:30,140 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 51, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:53807 }
+22 Jan 2016 | 00:51:30,142 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 50, Priv: 0, Sess: 127.0.0.1:53807 ) , SessionLen: 2464214, Type: JavaScript
+22 Jan 2016 | 00:55:20,139 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+22 Jan 2016 | 00:55:20,139 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+22 Jan 2016 | 00:55:20,140 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+22 Jan 2016 | 00:55:20,140 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

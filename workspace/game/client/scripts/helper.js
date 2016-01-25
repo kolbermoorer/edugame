@@ -20,7 +20,10 @@ function onGameExtensionResponse(event)
 
     switch(cmd){
         case "updateRoomTable":
-            updatePlayersInRoom(event.params);
+            updateRoomData(event.params);
+            break;
+        case "updateRoomTableCategories":
+            updateCategoriesInRoom(event.params);
             break;
         case "getAllUsersInZone":
             populateUsersLists(event.params);
@@ -36,34 +39,38 @@ function onGameExtensionResponse(event)
             break;
         case "getEntries":
             var entries = JSON.parse(event.params.data);
-            trace(entries);
             populateEntryList(entries);
+            break;
+        case "setMultiplayerView":
+            waitGameWin.jqxWindow('close');
+            setView("game", true);
             break;
         case "init":
             params.cardData = JSON.parse(params.cardData);
             trace(params);
             initFirstPhase(params);
-            //initGame(params);
+            break;
+        case "updateStartStatusText":
+            $("#startStatusText").html(params.text);
             break;
         case "start":
             startGame(params);
             break;
         case "pickCard":
-            //var cardDetails = JSON.parse(params.card);
             questionData = JSON.parse(params.card);
+            trace(questionData);
             fillCard(questionData);
-            singePlayerMove();
-            //createQuestion(cardDetails);
-            //createQuestionUI(cardDetails);
-            //flip();
+            if(gameType == "single")
+                singePlayerOpenCard();
             break;
-        case "sendQuestion":
-            /*buildTestButtons();
-            flipFrontwards();
-            moveLeft();*/
+        case "setPlayedCard":
+            if(gameType == "single")
+                singePlayerOpenCard();
             break;
         case "checkAnswer":
             markAnswer(params);
+            if(params.gameEnd)
+                stopGame(params);
             break;
     }
 }
@@ -82,6 +89,8 @@ function setView(viewId, doSwitch)
     }
     else if (viewId == "game")
     {
+        if(gameType != "single")
+            showGamePopUp("loading", '<div class="popupContent"><img src="img/loader.gif"/> <br> Loading cards (<span id="loadingTime" ms="45000">30</span>)</div>', "Please Wait ...");
     }
 
     // Switch view
@@ -99,6 +108,28 @@ function switchView(viewId)
             $( this ).addClass('hidden');
         }
     });
+}
+
+/*
+ Fisher-Yates (aka Knuth) Shuffle
+ */
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex ;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
 }
 
 //Upper case each first letter in listbox

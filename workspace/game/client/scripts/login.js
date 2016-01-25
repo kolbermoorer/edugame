@@ -42,7 +42,8 @@ function onLogin(event)
 
     var points = event.data.points;
     var rankingVar = new SFS2X.Entities.Variables.SFSUserVariable(USERVAR_RANKING, points);
-    sfs.send(new SFS2X.Requests.System.SetUserVariablesRequest([rankingVar]));
+    var id = new SFS2X.Entities.Variables.SFSUserVariable("id", event.data.id);
+    sfs.send(new SFS2X.Requests.System.SetUserVariablesRequest([rankingVar, id]));
 
     updateBadges(event.data);
     joinLobbyRoom();

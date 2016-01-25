@@ -17,6 +17,21 @@ body {
 	user-select: none;
 }
 
+#menuBar {
+	font-size: 18px;
+	top: 20px;
+	position: relative;
+	color: gray;
+	cursor: default;
+}
+
+#universityLogo{
+	right: 10px;
+	top: -10px;
+	position: absolute;
+	width: 200px;
+}
+
 #game {
 	margin: 0 auto;
 	width: 620px;
@@ -24,6 +39,7 @@ body {
 
 #lobby{
     padding: 20px;
+	cursor: default;
 }
 
 #userInfo {
@@ -50,6 +66,17 @@ body {
     padding-right: 20px;
 }
 
+.categoriesInTable {
+	float: left;
+	padding: 3px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	text-shadow: none;
+	color: #333333;
+}
+
 .chatControls {
 	margin-top: 10px;
 	margin-right: 10px;
@@ -57,7 +84,6 @@ body {
 }
 
 #publicMsgIn {
-	/*padding-top: 5px;*/
 	padding-left: 5px;
 }
 
@@ -75,6 +101,11 @@ body {
 
 #createGameBt{
     float: right;
+}
+
+#closeGameBt{
+	float: right;
+	margin-right: 10px;
 }
 
 #joinGameBt{
@@ -191,6 +222,10 @@ body {
 	float:left;
 }
 
+.loadingCircle {
+	text-align: center;
+	margin-top: 100px;
+}
 
 
 /* buttons */
@@ -205,12 +240,6 @@ body {
 	left: 16px;
 	bottom: 22px;
 }
-
-/*.middleBt {
-	position: absolute;
-	left: 150px;
-	bottom: 22px;
-}*/
 
 .nextBt {
 	position: absolute;
@@ -232,9 +261,120 @@ body {
 }
 
 /* game css */
+#gameContainer {
+	position: relative;
+	z-index: 20;
+}
+
+#gameBackground {
+	width: 1000px;
+	position: absolute;
+	z-index: 1;
+}
+
+#gameButtons {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	z-index: 20;
+}
+
+#gameButtonsLeft {
+	float: left;
+	width: 95px;
+	margin-top: 22px;
+}
+
+#timerText {
+	position: absolute;
+	display: block;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	margin-left: -36px;
+	margin-top: 59px;
+	text-shadow: none;
+	color: #333333;
+	padding-left: 2px;
+	cursor: default;
+}
+
+#startStatusTextWrapper {
+	width: 264px;
+	text-align: center;
+	position: absolute;
+	margin-left: -22px;
+	top: 113px;
+}
+
+#startStatusText {
+	text-shadow: none;
+	color: #333333;
+	font-size: 13px;
+	font-style: italic;
+	cursor: default;
+}
+
+.timeToStartEnd {
+	height: 90px;
+	width: 90px;
+	position: absolute;
+	opacity: 1;
+	cursor: default;
+}
+
+#gameButtonsRight {
+	float: right;
+	margin-top: 30px;
+	margin-right: 30px;
+}
+
+.gameButtonFields {
+	width: 130px;
+	height: 30px;
+	cursor: pointer;
+	background: lightgray;
+	border-radius: 5px;
+	border: 1px solid #8b9798;
+	text-align: center;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.disabled {
+	color: gray;
+	cursor: default;
+}
+
+.enabled {
+	cursor: pointer !important;
+}
+
+.enabled:hover {
+	background: #deeff1 !important;
+}
+
+#stackOverview {
+	position: absolute;
+	text-shadow: none;
+	color: #333333;
+	left: 820px;
+	top: 160px;
+	display: none;
+	width: 163px;
+	z-index: 20;
+	cursor: default;
+}
+
+.stacks {
+	height: 135px;
+}
+
 .popupContent {
 	text-align: center;
 	margin-top: 9px;
+	cursor: default;
 }
 
 .game {
@@ -249,23 +389,18 @@ progress[value] {
 
 #lookupWiki {
 	position: absolute;
-	top: 30px;
-	left: 30px;
-	/*border: 1px solid black;*/
+	top: 25px;
+	left: 20px;
 	display: none;
+	z-index: 50;
 }
 
 .gameBarControls {
 	position: absolute;
-	right: 20px;
-	bottom: 20px;
+	right: 15px;
+	bottom: 5px;
 	display: none;
-}
-
-#leaveGameBt {
-	position: absolute;
-	top: 0;
-	right: 10px;
+	z-index: 20;
 }
 
 /* question fields */
@@ -273,10 +408,14 @@ progress[value] {
 	height: 100px;
 	width: 100px;
 	position: absolute;
-	left: 550px;
-	bottom: 50px;
+	left: 562px;
+	bottom: 45px;
 	opacity: 0;
+	z-index: 20;
+	cursor: default;
 }
+
+
 
 #questionBox {
 	display: none;
@@ -287,39 +426,43 @@ progress[value] {
 	width: 500px;
 	height: 60px;
 	position: absolute;
-	left: 100px;
+	left: 109px;
 	top: 200px;
 	letter-spacing: +0.06em;
 	background: wheat;
-	border: 2px solid #8b9798;
+	border: 1px solid #8b9798;
 	border-radius: 5px;
 	line-height: 60px;
 	vertical-align: middle;
+	z-index: 20;
+	cursor: default;
 }
 
 #questionAnswers {
 	position: absolute;
 	height: 60px;
 	top: 270px;
-	left: 100px;
+	left: 109px;
+	z-index: 20;
 }
 
 .answerFields {
-	width: 160px;
+	width: 162px;
 	height: 50px;
-	cursor: pointer;
 	background: lightgray;
 	border-radius: 5px;
-	border: 2px solid #8b9798;
+	border: 1px solid #8b9798;
 	text-align: center;
 	float: left;
 	position: relative;
 	margin-right: 5px;
+	z-index: 20;
 }
 
+/*
 .answerFields:hover {
-	background: #deeff1;
-}
+	background: #deeff1 !important;
+}*/
 
 .answerFieldsContent {
 	top: 16px;
@@ -327,42 +470,58 @@ progress[value] {
 }
 
 #errorAnswer {
-	width: 200px;
+	width: 500px;
 	height: 50px;
-	background: lightgray;
+	background: #fdd5ce;
 	position: absolute;
-	top: 350px;
-	left: 250px;
-	border: 2px solid gray;
+	top: 330px;
+	left: 109px;
+	border: 1px solid #8b9798;
 	border-radius: 5px;
 	cursor: pointer;
+	text-align: left;
+	color: red;
+	z-index: 20;
 }
 
 #errorAnswer:hover{
 	background:#deeff1;
 }
 
-#errorAnswerText{
-	top: 10px;
-	position: relative;
+#errorSmiley {
+	float: left;
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 10px;
 }
 
-#responseText {
+#errorAnswerText{
+	margin-top: 8px;
+	position: absolute;
+}
+
+#statusTextWrapper {
 	font-size: 18px;
 	font-weight: bold;
-	color: green;
+	color: #333333;
+	display: none;
+	position: absolute;
+	top: 150px;
+	width: 720px;
+	text-align: center;
+	z-index: 20;
+	cursor: default;
 }
-
-
 
 /* feedback box */
 #feedbackWrapper {
-	display: none;
 	position: absolute;
-	top: 350px;
-	left: 100px;
+	top: 331px;
+	left: 109px;
 	text-align: center;
 	width: 500px;
+	display: none;
+	z-index: 20;
 }
 
 #feedbackTitle {
@@ -372,29 +531,9 @@ progress[value] {
 	position: relative;
 }
 
-#feedback {
-	float: left;
-}
-
-#feedbackLeft {
-	float: left;
-	margin-left: 15px;
-	text-align: center;
-	padding-bottom: 5px;
-}
-
-#feedbackRight {
-	float: right;
-	margin-right: 95px;
-	text-align: center;
-	padding-bottom: 5px;
-}
-
 #nextAction {
-	font-size: 16px;
-	margin-top: 10px;
-	font-weight: bold;
-	text-align: left;
+	margin-top: 0px;
+	cursor: default;
 }
 
 #nextActionContent {
@@ -410,30 +549,28 @@ progress[value] {
 	color: #333333;
 	font-size: 14px;
 	text-align: center;
-	border: 1px solid transparent;
+	border: 1px solid lightgray;
 	cursor: pointer;
-	margin-bottom: 5px;
-	margin-top: 5px;
+	margin: 2px;
 }
 
-/* gauge */
-.gaugeWidget {
-	position: absolute;
-	bottom: 40px;
-	right: 48px;
-	width: 200px;
-	height: 200px;
-	z-index: 50;
-	opacity: 0;
+#gameChatAreaPn {
+	border-color: #8b9798;
+	border-radius: 9px;
+	margin-bottom: 7px;
+}
+
+#sendGameMsgBt {
+	width: 80px;
+	float: right;
 }
 
 /* rating */
 #jqxRating {
 	display: block;
-	height: 18px;
-	width: 100px;
-	margin-top: -3px;
-	margin-left: 12px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 20px;
 }
 
 /* Floats self-clearing */

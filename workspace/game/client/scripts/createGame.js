@@ -1,5 +1,5 @@
 var DETAILS_HEIGHT = 220;
-var rowIsAlreadyOpen = false;
+var isLoaded;
 
 
 /**
@@ -7,19 +7,42 @@ var rowIsAlreadyOpen = false;
  * Shows the game room creation panel.
  */
 function onCreateGameBtClick() {
+    joined = false;
     $("#createGameWin").jqxWindow("open");
+    $('#createGameWin').jqxWindow('setTitle', 'Create new game');
+    backTopicBt.jqxButton('val', "Back");
+    doCreateGameBt.jqxButton('val', "Create Game");
     createGameWinTabs.jqxTabs('disableAt', 1);
+    isLoaded = false;
+}
+
+function onJoin() {
+    joined = true;
+    gameType = roomTable.jqxDataTable('getSelection')[0]["mode"];
+    $("#createGameWin").jqxWindow("open");
+    $('#createGameWin').jqxWindow('setTitle', 'Join game #' + sfs.lastJoinedRoom.name.replace("Room",""));
+    backTopicBt.jqxButton('val', "Cancel");
+    doCreateGameBt.jqxButton('val', "Join Game");
+    createGameWinTabs.jqxTabs('disableAt', 0);
+    isLoaded = false;
+    onNextBtClick();
 }
 
 function onCloseBtClick() {
     $("#createGameWin").jqxWindow("close");
+    if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME)
+        sfs.send(new SFS2X.Requests.System.LeaveRoomRequest());
 }
 
 function onLeaveGameBtClick() {
     setView("lobby", true);
-    sfs.send( new SFS2X.Requests.System.ExtensionRequest("leaveRoom", {}, sfs.lastJoinedRoom) );
+    if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME)
+        sfs.send(new SFS2X.Requests.System.LeaveRoomRequest());
+    //sfs.send( new SFS2X.Requests.System.ExtensionRequest("leaveRoom", {}, sfs.lastJoinedRoom) );
+    resetGameBoard();
 }
 
+/* If one of the buttons is clicked to choose the mode of the game */
 function onSelectBtClick(event) {
     var buttonId = event.target.id;
     gameType = buttonId;
@@ -40,14 +63,26 @@ function onSelectBtClick(event) {
 
 function onNextBtClick() {
     createGameWinTabs.jqxTabs('enableAt', 1);
-    var params = {};
-    params.type = "getTopics";
-    sfs.send(new SFS2X.Requests.System.ExtensionRequest("sparql", params));
+    createGameWinTabs.jqxTabs({selectedItem: 1});
+
+    if(!isLoaded) {
+        var params = {};
+        params.type = "getTopics";
+        params.notInCategory = (joined ? roomTable.jqxDataTable('getSelection')[0]["categories"][0][0] : "");
+        sfs.send(new SFS2X.Requests.System.ExtensionRequest("sparql", params));
+    }
+    isLoaded = true;
 }
 
 function onTopicBackBtClick() {
-    createGameWinTabs.jqxTabs('disableAt', 1);
-    createGameWinTabs.jqxTabs({selectedItem: 0});
+    if(backTopicBt.attr('value') == "Back") {
+        createGameWinTabs.jqxTabs('disableAt', 1);
+        createGameWinTabs.jqxTabs({selectedItem: 0});
+    }
+    else {
+        onCloseBtClick();
+    }
+
 }
 
 /**
@@ -55,18 +90,38 @@ function onTopicBackBtClick() {
  * Create a new game using the parameters entered in the game creation popup window.
  */
 function onDoCreateGameBtClick() {
-    var roomType = gameType;
-    var roomTopic = topicList.jqxDataTable('getSelection')[0]["topic"];
-    var roomCategory = topicList.jqxDataTable('getSelection')[0]["category"];
-    var params = {};
-    params.roomType = roomType;
-    params.roomCategory = roomCategory;
-    params.roomTopic = roomTopic;
-    sfs.send(new SFS2X.Requests.System.ExtensionRequest("createRoom", params));
+    if(!joined) {
+        var roomType = gameType;
+        var category = topicList.jqxDataTable('getSelection')[0]["category"];
+        var color = topicList.jqxDataTable('getSelection')[0]["color"];
+        var params = {};
+        params.roomType = roomType;
+        params.category = category;
+        params.color = color;
+        sfs.send(new SFS2X.Requests.System.ExtensionRequest("createRoom", params));
+    }
+    else {
+        inGame = true;
+        setView("game", true);
+        setReadyStatus();
+    }
     $("#createGameWin").jqxWindow("close");
 }
 
+/* destroy the topic List on close of window so that each time the newest data is loaded */
+function destroyTopicList() {
+    if($("#topicList").length > 0) {
+        topicList.jqxDataTable('destroy');
+    }
+    $("#topicListWrapper").append('<div id="topicList"></div>');
+    $(".loadingCircle").css("display", "block");
+}
+
 function populateTopicList(topics) {
+    backTopicBt.jqxButton({disabled: false});
+    doCreateGameBt.jqxButton({disabled: false});
+    $(".loadingCircle").css("display", "none");
+
     topics.forEach(function (topic) {
         var pageRank = parseFloat(topic["difficulty"]);
         var barValue = Math.max(100-pageRank, 0);
@@ -84,7 +139,8 @@ function populateTopicList(topics) {
             {name: 'filteredCards', type: 'integer'},
             {name: 'bar'},
             {name: 'upperRank', type: 'double'},
-            {name: 'lowerRank', type: 'double'}
+            {name: 'lowerRank', type: 'double'},
+            {name: 'color', type: 'string'}
         ]
     };
     var dataAdapter = new $.jqx.dataAdapter(source);
@@ -105,12 +161,13 @@ function populateTopicList(topics) {
             {text: 'Topic', dataField: 'topic', width: 232},
             {text: 'Category', dataField: 'category', width: 140},
             {text: 'Cards', dataField: 'filteredCards', width: 60, align: 'center', cellsAlign: 'center'},
-            {text: 'Difficulty', dataField: 'bar', width: 90, align: 'center', cellsAlign: 'center', filterable: false}
+            {text: 'Difficulty', dataField: 'bar', width: 90, align: 'center', cellsAlign: 'center', filterable: false, sortable: false}
         ]
     });
     topicList.on('rowSelect', function (event) {
         topic = topicList.jqxDataTable('getSelection')[0]["topic"];
         category = topicList.jqxDataTable('getSelection')[0]["category"];
+        color = topicList.jqxDataTable('getSelection')[0]["color"];
         upperRank = topicList.jqxDataTable('getSelection')[0]["upperRank"];
         lowerRank = topicList.jqxDataTable('getSelection')[0]["lowerRank"];
     });
@@ -125,6 +182,8 @@ function populateTopicList(topics) {
             if(selection.uid != event.args.row.uid)
                 topicList.jqxDataTable('selectRow', row);
 
+            trace(last_row_opened);
+            last_row_opened.append($("<div style='text-align: center; margin-top: 50px'><img src='img/loader.gif'/> <br> Loading Cards</div>"));
             var params = {};
             params.type = "getEntries";
             params.category = args.row.category;
@@ -133,9 +192,9 @@ function populateTopicList(topics) {
             sfs.send(new SFS2X.Requests.System.ExtensionRequest("sparql", params));
         });
 
-    createGameWinTabs.jqxTabs({selectedItem: 1});
+
     $(".jqx-icon-search").trigger( "click" );
-    topicList.jqxDataTable('sortBy', 'topic', 'asc');
+    topicList.jqxDataTable('sortBy', 'category', 'asc');
     topicList.jqxDataTable('selectRow', 0);
 
 }
@@ -156,6 +215,7 @@ function populateEntryList(data) {
             {name: 'uri', type: 'string'}
         ]
     };
+    $(last_row_opened.children()[0]).remove();
     last_row_opened.append($("<div style='margin-left: 20px;'></div>"));
     var nestedDataTable = $(last_row_opened.children()[0]);
     var dataAdapter = new $.jqx.dataAdapter(source);
@@ -170,7 +230,7 @@ function populateEntryList(data) {
         showHeader: false,
         columns: [
             {text: 'Card', dataField: 'label', width: 372},
-            {text: 'Wikipedia', dataField: 'wikipedia', width: 80, cellsRenderer: function (row) { return '<a href="' + data[row]["wikipedia"] + '" target="_blank">WikiLink</a>';}}
+            {text: 'Wikipedia', dataField: 'wikipedia', width: 80, cellsRenderer: function (row) { return '<a href="' + data[row]["wikipedia"] + '" target="_blank">Wikipedia</a>';}}
         ]
     });
 }

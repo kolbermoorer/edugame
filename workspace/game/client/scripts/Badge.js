@@ -64,13 +64,13 @@ function onBadgeClick(event) {
             content = "Awarded to a player who won at least 3 games in row. <i>Only the longest series is included.</i><br><br>Game Mode: All";
             break;
         case "Invincible":
-            content = "Arwarded to a player with a win percentage over 70%. <i>This badge can be lost again.</i><br><br>Game Mode: All";
+            content = "Arwarded to a player with a right answer percentage over 70%. <i>This badge can be lost again.</i><br><br>Game Mode: All";
             break;
         case "V for Victory":
             content = "Won for the number of points earned. <br><i>Class IV: 5 <br>Class III: 20<br>Class II: 50<br>Class I: 100</i><br><br>Game Mode: All";
             break;
         case "Crucial Contribution":
-            content = "Awarded to a team that answer at least 25 questions right.<i> Only the longest series is included.</i><br><br>Game Mode: The Will To Cooperate";
+            content = "Awarded to a team that answer at least 20 questions right.<i> Only the longest series is included.</i><br><br>Game Mode: The Will To Cooperate";
             break;
         case "Take Survey":
             content = "Awarded to players who filled out the survey after they have played <b>at least</b> 3 games.<i><br><br> Important: If you don't fill out the survey you can't get any prizes!. Click on the button 'Take Survey' under this badge to open the survey. </i>";

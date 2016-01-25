@@ -3,19 +3,17 @@ var BOARD_WIDTH = 700;
 var BOARD_HEIGHT = 700;
 var CARD_BACKSIDE_WIDTH = 80;
 var CARD_BACKSIDE_HEIGHT = 114;
-var SPACE_BETWEEN_CARDS = 10;
-var CARD_FRONTSIDE_WIDTH = 240;
-var CARD_FRONTSIDE_HEIGHT = 342;
+var SPACE_BETWEEN_CARDS = 17;
+var CARD_FRONTSIDE_WIDTH = 263;
+var CARD_FRONTSIDE_HEIGHT = 375;
 var NUMBER_OF_CATEGORIES = 3;
 var NUMBER_OF_CARDS_PER_CATEGORY = 6;
 var NUMBER_OF_PROPERTIES_PER_CARD = 4;
-var BUTTON_WIDTH = 100;
-var BUTTON_HEIGHT = 25;
 
 //game variables
 var gameType = "single";
 var multiPlayer = false;
-var category, topic, upperRank, lowerRank;
+var category, topic, color, upperRank, lowerRank;
 
 var previousSelectedCard;
 var selectedCard;
@@ -29,6 +27,8 @@ var canvas;
 var stage;
 var board;
 
+var timeLeft;
+
 var cardContainer;
 var cards = [];
 
@@ -41,10 +41,6 @@ var p2NameCont;
 
 var gameStarted = false;
 
-var timerTF;
-var statusTF;
-var startButton;
-
 var currentPopUp;
 
 var ready;
@@ -55,35 +51,51 @@ function setReadyStatus(){
     stage = new createjs.Stage(canvas);
     stage.enableMouseOver();
     stage.mouseEventsEnabled = true;
-    var boardBackground = new createjs.Bitmap("http://tkutschk.dubhe.uberspace.de/game/client/img/background/LAUAN.jpg");
-    stage.addChild(boardBackground);
+
+    var line = new createjs.Shape();
+    line.graphics.beginStroke("black").setStrokeStyle(1).beginFill("black").drawRoundRect(BOARD_WIDTH+20.5, 15.5, STAGE_WIDTH-BOARD_WIDTH-37, 120, 10);
+    line.alpha = 0.2;
+
+    stage.addChild(line);
+
+
     createjs.Ticker.addEventListener("tick", handleTick);
     function handleTick(event) {
-        if(!gameStarted & gameType == "single")
+        if(!inited)
             updateLoadingScreen(event);
-        else if(inited)
+        else
             setTimer(event);
         stage.update();
     }
 
-    resetGameBoard();
+    $("#timerText").text("Autostart");
+    $("#startGameBt").removeClass("enabled").addClass("disabled");
 
-    var message = "Waiting for other players ...";
-    if(gameType == "single") {
-        showGamePopUp("wait", '<div class="popupContent"><img src="img/loader.gif"/> <br> Loading cards (<span id="loadingTime" ms="30000">30</span>)</div>', "Please Wait ...");
-    }
-
+    if(gameType == "single")
+        showGamePopUp("loading", '<div class="popupContent"><img src="img/loader.gif"/> <br> Loading cards (<span id="loadingTime" ms="45000">45</span>)</div>', "Please Wait ...");
+    //$("#instructionsWin").jqxWindow("open");
 
     var params = {};
     params.category = category;
     params.topic = topic;
+    params.color = color;
     params.upperRank = upperRank;
     params.lowerRank = lowerRank;
     sfs.send( new SFS2X.Requests.System.ExtensionRequest("ready", params, sfs.lastJoinedRoom) );
 }
 
 function resetGameBoard() {
+    $(".timeToStartEnd").TimeCircles().destroy();
+    $("#startGameBt").children(0).text("Start Game");
+    $("#startGameBt").removeClass("disabled").addClass("enabled");
+    $("#timerText").text("Autostart");
+    $("#startStatusText").text("Click on 'Start Game' if you are ready!");
+
     $(".gameBarControls").css("display", "none");
+    $("#gameButtons").css("display", "none");
+    $("#statusTextWrapper").css("display","none");
+    gameChatAreaPn.jqxPanel('clearcontent');
+    inited = false;
 }
 
 function initFirstPhase(data) {
@@ -105,86 +117,146 @@ function initFirstPhase(data) {
         buildFirstPhaseUI(data.cardData, data.layouts);
     }
     removeGamePopUp();
+    $("#gameButtons").css("display", "block");
+    $("#stackOverview").css("display", "block");
+
+    if(gameType != "single") {
+        $(".gameBarControls").css("display", "block");
+    }
+    $("#startGameBt").removeClass("disabled").addClass("enabled");
+    $(".timeToStartEnd").TimeCircles().restart();
 }
 
 function initSecondPhase() {
-    $(".gameBarControls").css("display", "block");
+    //$(".gameBarControls").css("display", "block");
 }
 
 function buildFirstPhaseUI(cards, layouts) {
     board = new createjs.Container();
-    var boardBG = new createjs.Shape();
-    boardBG.graphics.beginStroke("black").setStrokeStyle(3);
-    boardBG.graphics.drawRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
-    boardBG.width = BOARD_WIDTH;
-    boardBG.height = BOARD_HEIGHT;
-    boardBG.cache(0, 0, boardBG.width, boardBG.height);
-
-    board.addChild(boardBG);
     board.width = BOARD_WIDTH;
     board.height = BOARD_HEIGHT;
-    buildTimer(1800000);
-    buildCards(cards, layouts);
-    buildStartGameGroup();
-
     stage.addChild(board);
+
+    timeLeft = 301000; // 5 min + 1sec for first phase
+    buildCards(cards, layouts);
 }
 
-function setStartStatus() {
+function autostart() {
+    onStartGameBtClick();
+}
+
+function onStartGameBtClick() {
+    $.each( cards, function( index, card ) {
+        card.removeEventListener("click", showWikiPage);
+        card.cursor = null;
+    });
+    if(typeof startWiki != 'undefined') {
+        var endWiki = new Date();
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("wikipedia", {time: endWiki-startWiki, i: selectedCard.cardId}, sfs.lastJoinedRoom) );
+    }
+    $("#startGameBt").children(0).text("Waiting ...");
+    $("#startStatusText").html("The opponent player is <span style ='color: red; font-weight: bold;'>NOT</span>ready to play!");
+    $("#startGameBt").removeClass("enabled").addClass("disabled");
+    $("#stackOverview").css("display", "none");
     var params = {};
     params.start = true;
+    params.clicks = clicks;
     sfs.send( new SFS2X.Requests.System.ExtensionRequest("start", params, sfs.lastJoinedRoom) );
-    startButton.removeEventListener("click", setStartStatus);
-    startButton.name.text = "Waiting ...";
-    startButton.cursor = null;
-    startButton.children[0].graphics.clear().beginFill("gray").drawRoundRect(0, 0, BUTTON_WIDTH, BUTTON_HEIGHT, 5).endFill();
 }
 
 function startGame(params) {
-    if(params.start) {
+    //if(params.start) {
         $('#lookupWiki').css('display', 'none');
+        $('#stackOverview').css('display', 'none');
+        $("#timerText").text("Game End");
+        $("#startStatusText").text("");
+
+
         $.each( cards, function( index, card ) {
             card.removeChild(card.children[1]);
         });
         gameStarted = true;
         ready = true;
-        startButton.visible = false;
+        $("#startGameBt").children(0).text("Is Running");
         buildNameContainers();
-        buildStatusField();
         shuffleCards();
-        setStatusText(1);
-        timerTF.ms = 1800000; //30 min = 18.000.000 ms
-    }
-    else {
-        startButton.waitingFor.text = startButton.waitingFor.text.replace("NOT ", "");
-        trace(params);
-    }
+        if(gameType == "single")
+            setStatusText(0);
+        else
+            setStatusText(1);
+        $("#statusTextWrapper").css("display","block");
+        timeLeft = 901000; //15 min + 1 sec
 
+        $(".timeToStartEnd").TimeCircles().destroy();
+        $(".timeToStartEnd").data('timer', 901).TimeCircles({
+            "start": true,
+            "total_duration": 901,
+            "count_past_zero": false,
+            "time": {
+                "Days": {
+                    "show": false
+                },
+                "Hours": {
+                    "show": false
+                },
+                "Minutes": {
+                    "text": "Minutes",
+                    "color": "darkgray",
+                    "show": true
+                },
+                "Seconds": {
+                    "show": false
+                }}
+        });
 }
 
-function buildTimer(milliseconds) {
-    timerTF = new createjs.Text("Time left: 180 seconds", "bold 14px Verdana", "#000000");
-    timerTF.textAlign = "center";
-    timerTF.x = STAGE_WIDTH-(STAGE_WIDTH-BOARD_WIDTH)/2;
-    timerTF.y = 20;
-    timerTF.ms = milliseconds;
-    stage.addChild(timerTF);
+function stopGame(params) {
+    var results = JSON.parse(params.results);
+    source =
+    {
+        localData: results,
+        dataType: "json",
+        dataFields:
+            [
+                { name: 'no', type: 'string' },
+                { name: 'category', type: 'string' },
+                { name: 'topic', type: 'string' },
+                { name: 'name', type: 'string' },
+                { name: 'property', type: 'string' },
+                { name: 'correct', type: 'string' },
+                { name: 'wikipedia', type: 'string' }
+            ]
+    };
+    var dataAdapter = new $.jqx.dataAdapter(source);
+    afterGameWinTable.jqxDataTable({source: dataAdapter, sortable: true});
+
+    var gameCount = results.length;
+    var rightCount = $.grep(results, function(e){ return e.correct == "true"; }).length;
+    var wrongCount = gameCount - rightCount;
+    var pointsEarned = rightCount * 2 - wrongCount*1;
+
+    var newTitle = "<strong>Game is Over &#x27a0; Total Questions: " + gameCount + "  |  Right: " + rightCount +"  |  Wrong: " + wrongCount + "  |  Points earned: " + pointsEarned + "</strong>"
+    afterGameWin.jqxWindow('setTitle', newTitle);
+    afterGameWin.jqxWindow('open');
+    afterGameWinTable.jqxDataTable('render');
+}
+
+function destroyGame() {
+    resetGameBoard();
+    setView("lobby", true);
 }
 
 function setTimer(event) {
-    timerTF.ms -= Math.floor(event.delta);
-    if(timerTF.ms >= 0) {
-        var min = Math.floor((timerTF.ms / (1000 * 60))) % 60;
-        var sec = Math.floor((timerTF.ms / 1000)) % 60;
-        min = (min.toString().length == 1 ? "0" + min : min);
-        sec = (sec.toString().length == 1 ? "0" + sec : sec);
-        timerTF.text = "Time left: " + min + ":" + sec;
+    timeLeft -= Math.floor(event.delta);
+    if(timeLeft >= 0) {
+        updateGameTimer(timeLeft);
     }
     else {
-        if(!gameStarted)
-            setStartStatus();
+        if(!gameStarted) {
+            trace("The Game was started automatically!");
+            autostart();
+        }
     }
-
 }
 
 function buildNameContainers() {
@@ -205,8 +277,15 @@ function buildNameContainers() {
     p2NameCont.name.y = 3;
     p2NameCont.addChild(p2NameCont.name);
 
-    p2NameCont.x = 20;
-    p2NameCont.y = 20;
+    if(gameType == "collaborate") {
+        p2NameCont.x = 28;
+        p2NameCont.y = BOARD_HEIGHT-pBG.height-15
+    }
+    else {
+        p2NameCont.x = 28;
+        p2NameCont.y = 15;
+    }
+
     stage.addChild(p2NameCont);
 
     //Player2
@@ -218,115 +297,58 @@ function buildNameContainers() {
     p1NameCont.name.x = p2NameCont.name.x;
     p1NameCont.name.y = p2NameCont.name.y;
     p1NameCont.addChild(p1NameCont.name);
-    p1NameCont.x = BOARD_WIDTH-pBG.width-20;
-    p1NameCont.y = BOARD_HEIGHT-pBG.height-20;
+    p1NameCont.x = BOARD_WIDTH-pBG.width-13;
+    p1NameCont.y = BOARD_HEIGHT-pBG.height-15;
 
     stage.addChild(p1NameCont);
-}
-function buildStatusField() {
-    statusTF = new createjs.Text("Hello World", "bold 14px Verdana", "#000000");
-    statusTF.textAlign = "center";
-    statusTF.x = BOARD_WIDTH/2;
-    statusTF.y = 145;
-    stage.addChild(statusTF);
-}
-
-function buildStartGameGroup() {
-    startButton = new createjs.Container();
-    var pBG = new createjs.Shape();
-    pBG.graphics.setStrokeStyle(1);
-    pBG.graphics.beginStroke("black");
-    pBG.graphics.beginFill("orange");
-    pBG.width = 100;
-    pBG.height = 25;
-    pBG.graphics.drawRoundRect(0, 0, pBG.width, pBG.height,5);
-    pBG.cache(-2.5, -2.5, pBG.width+5, pBG.height+5);
-    startButton.addChild(pBG);
-    startButton.name = new createjs.Text("Start Game", "bold 14px Verdana", "#000000");
-    startButton.name.textAlign = "center";
-    startButton.name.x = (pBG.width-5)/2;
-    startButton.name.y = 3;
-    startButton.addChild(startButton.name);
-    if(multiPlayer) {
-        startButton.waitingFor = new createjs.Text("Player '" + player2.name + "' is NOT ready!", "10px Verdana", "#000000");
-        startButton.waitingFor.textAlign = "center";
-        startButton.waitingFor.x = startButton.name.x;
-        startButton.waitingFor.y = startButton.name.y + pBG.height + 10;
-        startButton.addChild(startButton.waitingFor);
-    }
-    startButton.x = STAGE_WIDTH-(STAGE_WIDTH-BOARD_WIDTH)/2-pBG.width/2;
-    startButton.y = 60;
-    startButton.cursor = "pointer";
-    startButton.addEventListener("click", setStartStatus);
-    stage.addChild(startButton);
-
-
-
 }
 
 /**
  * Set the "Player's turn" status message
  */
-function setStatusText(level){
-    if(level == 1) {
-        statusTF.text = (myTurn()) ? "It's your turn. Select a card to create a question for your opponent!" : "It's your opponent's turn. Get ready for his cards' question!";
+function setStatusText(level, category, topic){
+    var statusText;
+    switch(level) {
+        case 0:
+            statusText = "Select a playing card from above to create a question."
+            break;
+        case 1:
+            statusText = (myTurn() ? "It's your turn. Select a card to create a question for your opponent!" : "It's your opponent's turn. Get ready for his cards' question!");
+            break;
+        case 2:
+            statusText = "Category: " + category + " | Topic: " + topic;
+            break;
     }
+    $("#statusText").text(statusText);
 }
 
 function myTurn() {
     return (player1.id == whoseTurn);
 }
 
-/**
- * Enable board click
- */
-function enableBoard(){
-    $.each( cards, function( index, card ) {
-        card.topCard = false;
-        if(card.playerId != player1.id) {
-            //if(card.stackPosition == player2.stack[card.categoryId]) { //TODO: enable again!!!!!!!!!!!!!!!!!!!
-                if (sfs.mySelf.id == whoseTurn) {
-                    card.addEventListener("click", getCardDetails);
-                    card.cursor = "pointer";
-                    card.topCard = true;
-                }
-                else {
-                    card.cursor = "not-allowed";
-                    card.topCard = true;
-                }
-            //}
-        }
-        else {
-            card.cursor = "not-allowed";
-        }
-    });
-}
-
 function getCardDetails(event) {
     selectedCard = event.target.parent;
     var cardId = selectedCard.cardId;
     trace(selectedCard);
-    $.each( cards, function( index, card ) {
-        if(card.topCard) {
-            //card.removeEventListener("click", getCardDetails); //TODO: enable again
-            if(card.cardId == cardId) {
-                card.cursor = null;
-            }
-            else
-                card.cursor = "not-allowed";
+    if (!selectedCard.hasData) {
+        selectedCard.hasData = true;
+        var params = {};
+        params.cardId = cardId;
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("pickCard", params, sfs.lastJoinedRoom) );
+    }
+    else {
+        if(gameType == "single") {
+            var params = {};
+            params.cardId = cardId;
+            sfs.send( new SFS2X.Requests.System.ExtensionRequest("setPlayedCard", params, sfs.lastJoinedRoom) );
         }
-        else if(card.zIndex == (selectedCard.zIndex-1) && card.categoryId == selectedCard.categoryId) {
-            card.cursor = "not-allowed";
-        }
-    });
-    var params = {};
-    params.cardId = cardId;
-    sfs.send( new SFS2X.Requests.System.ExtensionRequest("pickCard", params, sfs.lastJoinedRoom) );
+            singePlayerOpenCard();
+    }
 }
 
 function flip() {
     createjs.Tween.get(selectedCard, { loop: false })
-        .to({ x: BOARD_WIDTH/2, y:BOARD_HEIGHT/2}, 700, createjs.Ease.getPowInOut(4))
+        .to({ x: BOARD_WIDTH/2-5, y:BOARD_HEIGHT/2-14}, 700, createjs.Ease.getPowInOut(4))
         .call(function() {
             if(myTurn()) {
                 flipFrontwards();
@@ -413,14 +435,10 @@ function showGamePopUp(id, message, title){
     if(currentPopUp != undefined)
         removeGamePopUp();
 
-    //disabler.visible = true;
-
     currentPopUp = $("#"+id+"GameWin");
     currentPopUp.jqxWindow('setTitle', title);
     currentPopUp.jqxWindow('setContent', message);
     currentPopUp.jqxWindow("open");
-    //currentPopUp.jqxWindow("move", canvas.offsetLeft, (BOARD_HEIGHT/2) - (currentPopUp.jqxWindow("height") / 2));
-    //currentPopUp.children(".content").children(".firstRow").children(".message").html(message);
 }
 
 /**

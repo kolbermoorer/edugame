@@ -1,0 +1,15 @@
+25 Jan 2016 | 05:03:57,307 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 71, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:49731 }
+25 Jan 2016 | 05:03:57,311 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#70, Id: 70, Priv: 0, Sess: 127.0.0.1:49731 ) , SessionLen: 501313, Type: JavaScript
+25 Jan 2016 | 05:04:12,864 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 72, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 49804
+25 Jan 2016 | 05:04:12,876 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#71, Id: 71, Priv: 0, Sess: 127.0.0.1:49804 ) , Type: JavaScript
+25 Jan 2016 | 05:04:21,340 | WARN  | SFSWorker:Ext:1 | components.signup.SignUpAssistant |     | Username: rudi is already in use, from ( User Name: Guest#71, Id: 71, Priv: 0, Sess: 127.0.0.1:49804 ) 
+25 Jan 2016 | 05:04:38,465 | WARN  | SFSWorker:Ext:4 | components.signup.SignUpAssistant |     | User name is too short, min. amount of characters is 4, from ( User Name: Guest#71, Id: 71, Priv: 0, Sess: 127.0.0.1:49804 ) 
+25 Jan 2016 | 05:04:52,684 | WARN  | SFSWorker:Ext:3 | components.signup.SignUpAssistant |     | Email address: rudi@gmx.de is already in use, from ( User Name: Guest#71, Id: 71, Priv: 0, Sess: 127.0.0.1:49804 ) 
+25 Jan 2016 | 05:05:22,550 | WARN  | SFSWorker:Ext:1 | components.signup.SignUpAssistant |     | Username: rudiss is already in use, from ( User Name: Guest#71, Id: 71, Priv: 0, Sess: 127.0.0.1:49804 ) 
+25 Jan 2016 | 05:05:34,933 | WARN  | SFSWorker:Ext:4 | components.signup.SignUpAssistant |     | Email address: rudis@gmx.de is already in use, from ( User Name: Guest#71, Id: 71, Priv: 0, Sess: 127.0.0.1:49804 ) 
+25 Jan 2016 | 05:07:48,498 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 72, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:49804 }
+25 Jan 2016 | 05:07:48,499 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#71, Id: 71, Priv: 0, Sess: 127.0.0.1:49804 ) , SessionLen: 215623, Type: JavaScript
+25 Jan 2016 | 05:55:37,537 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+25 Jan 2016 | 05:55:37,540 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/0
+25 Jan 2016 | 05:55:37,543 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/1
+25 Jan 2016 | 05:55:37,547 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

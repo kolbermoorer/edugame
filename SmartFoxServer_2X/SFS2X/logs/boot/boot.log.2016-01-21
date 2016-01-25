@@ -1,0 +1,71 @@
+21 Jan 2016 | 19:50:19,636 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+21 Jan 2016 | 19:50:19,641 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+21 Jan 2016 | 19:50:19,642 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+21 Jan 2016 | 19:50:19,719 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+21 Jan 2016 | 19:50:19,728 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@41325e61
+21 Jan 2016 | 19:50:19,772 | INFO  | main | bootLogger |     | TCP Selector opened
+21 Jan 2016 | 19:50:19,783 | INFO  | main | bootLogger |     | UDP Selector opened
+21 Jan 2016 | 19:50:19,788 | INFO  | main | bootLogger |     | AcceptSelector opened
+21 Jan 2016 | 19:50:19,796 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+21 Jan 2016 | 19:50:19,801 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+21 Jan 2016 | 19:50:19,801 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+21 Jan 2016 | 19:50:19,801 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+21 Jan 2016 | 19:50:19,801 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+21 Jan 2016 | 19:50:19,802 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@7def8849
+21 Jan 2016 | 19:50:19,802 | INFO  | main | bootLogger |     | SocketReader started
+21 Jan 2016 | 19:50:19,802 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+21 Jan 2016 | 19:50:19,897 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+21 Jan 2016 | 19:50:19,898 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+21 Jan 2016 | 19:50:19,898 | INFO  | main | bootLogger |     | DatagramReader started
+21 Jan 2016 | 19:50:19,898 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+21 Jan 2016 | 19:50:19,900 | INFO  | main | bootLogger |     | Security Manager started
+21 Jan 2016 | 19:50:19,903 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]

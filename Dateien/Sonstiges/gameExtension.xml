@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project GameExtension with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="C:/Sync/Masterarbeit/workspace"/>
+    <property name="dir.jarfile" value="C:/Projekte/edugame/workspace/game/server/game"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/GameExtension.jar">
+            <manifest>
+                <attribute name="Main-Class" value="sfs2x.extensions.game.GameExtension"/>
+                <attribute name="Class-Path" value=". GameExtension_lib/sfs2x.jar GameExtension_lib/sfs2x-core.jar GameExtension_lib/json-simple-1.1.1.jar"/>
+            </manifest>
+            <fileset dir="${dir.workspace}/GameExtension/bin"/>
+        </jar>
+        <delete dir="${dir.jarfile}/GameExtension_lib"/>
+        <mkdir dir="${dir.jarfile}/GameExtension_lib"/>
+        <copy file="C:/Sync/Masterarbeit/SmartFoxServer_2X/SFS2X/lib/sfs2x.jar" todir="${dir.jarfile}/GameExtension_lib"/>
+        <copy file="C:/Sync/Masterarbeit/SmartFoxServer_2X/SFS2X/lib/sfs2x-core.jar" todir="${dir.jarfile}/GameExtension_lib"/>
+        <copy file="C:/Sync/Masterarbeit/Dateien/libs/json-simple/json-simple-1.1.1.jar" todir="${dir.jarfile}/GameExtension_lib"/>
+    </target>
+</project>
