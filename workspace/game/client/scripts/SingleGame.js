@@ -11,7 +11,7 @@ function updateLoadingScreen(event) {
 }
 
 function singePlayerOpenCard() {
-    trace(selectedCard);
+    console.log(selectedCard);
     var backSide = selectedCard.children[0];
     var frontSide = selectedCard.children[1];
 
@@ -37,6 +37,7 @@ function singlePlayerCreateQuestion() {
             selectedCard.properties.splice(index,1); //TODO: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         }
     });
+
     var propertyData = shuffle(selectedCard.properties)[0];
     var property = Object.keys(propertyData)[0];
     var answers = propertyData[Object.keys(propertyData)[0]];
@@ -57,15 +58,13 @@ function singlePlayerCreateQuestion() {
         createAnswer(answers[index-1], index, cardId, property);
     }
 
-    enableBoard(false);
-    $("#statusText").text("Please answer the question below.");
-
-    $(".gaugeWidget").css("opacity", 1);
     $(".countdown").css("opacity", 1);
-    //$('.answerFields').css("cursor", "pointer");
     $('.answerFields').addClass("enabled");
     $("#errorAnswer").css("display", "block");
 
+
+    $("#ratingText").text("How would you rate the quality of this question?");
+    $("#ratingTable").css("display", "block");
     /* build rating scale */
     $("#jqxRating").remove();
     $( "#jqxWidget" ).append( "<div id='jqxRating'></div>" );
@@ -80,16 +79,16 @@ function singlePlayerCreateQuestion() {
     $(".answerFields").css("background", "lightgray");
     $(".answerFields").removeClass("hasImpact");
     $(".answerFields").css("opacity", 1);
-    $(".answerFields").css("border", "1px solid #8b9798");
+    $(".answerFields").css("border", "4px double #8b9798");
     $(".countdown").TimeCircles().restart();
     answerTimeStart = new Date();
 }
 
-function singlePlayerHandleMove(answerCorrect) {
-    trace("Answer was " + answerCorrect + "!");
+function singlePlayerHandleMove(answerCorrect, error) {
+    console.log("Answer was " + answerCorrect + "!");
     previousSelectedCard = selectedCard;
     flipBackwards();
-    if(!answerCorrect) { //lost the card, send to top
+    if(!answerCorrect && !error) { //lost the card, send to top
         $.each(cards, function (index, card) {
             if(card.playerId != player1.id && card.categoryId == previousSelectedCard.categoryId) {
                 if (card.id != previousSelectedCard.id) {
@@ -103,7 +102,7 @@ function singlePlayerHandleMove(answerCorrect) {
                 }
                 else {
                     card.zIndex = 0;
-                    card.stackPosition = 0;
+                    card.stackPosition = 1;
                     card.initX += card.offset;
                     card.initY += card.offset;
                     card.offset = 0;
@@ -134,16 +133,7 @@ function singlePlayerHandleMove(answerCorrect) {
         .to({x: previousSelectedCard.initX, y: previousSelectedCard.initY}, 700, createjs.Ease.getPowInOut(4));
 
     stage.update();
-    //checkWinStack();
-    //setStatusText(1);
     enableBoard(true);
-}
-
-function singlePlayerCheckWin() {
-    var sumStacks = player2.stack.reduce(function(a, b) { return a + b; }, 0);
-    if(sumStacks == 0) {
-
-    }
 }
 
 /**
@@ -152,7 +142,7 @@ function singlePlayerCheckWin() {
 function enableBoard(enable){
     $.each( cards, function( index, card ) {
         card.topCard = false;
-        if(card.playerId != player1.id && myTurn()) {
+        if(card.playerId == 999 && myTurn()) {
             if(card.stackPosition == player2.stack[card.categoryId]) {
                 if(enable) {
                     card.addEventListener("click", getCardDetails);

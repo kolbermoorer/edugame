@@ -54,10 +54,15 @@ body {
 	padding-right: 20px;
 }
 
+#scoreLb {
+	font-size: 20px;
+	margin-left: 5px;
+	color: #7E7E7E;
+}
+
 #scoreIcon {
-	width: 16px;
-	padding-right: 3px;
-	margin-top: -3px;
+	width: 21px;
+	margin-left: 5px;
 }
 
 .left {
@@ -144,6 +149,15 @@ body {
 	z-index: 100;
 }
 
+.badge-text-container {
+	width: 38px;
+	height: 15px;
+	position: relative;
+	margin-top: -22px;
+	margin-left: 23px;
+	text-align: center;
+}
+
 .badges {
 	float: left;
 	width: 64px;
@@ -151,9 +165,6 @@ body {
 }
 
 .badge-text {
-	left: 36px;
-	bottom: 22px;
-	position: relative;
 	font-size: 11px;
 }
 
@@ -165,7 +176,7 @@ body {
 .clr{clear:both;}
 
 #performance-buttons{
-	margin-top: 60px;
+	margin-top: 118px;
 }
 
 #takeSurveyBt {
@@ -286,7 +297,26 @@ body {
 	margin-top: 22px;
 }
 
-#timerText {
+/* cards count */
+#countCardsTop {
+	position: absolute;
+	top: 133px;
+	z-index: 20;
+	left: 244px;
+	text-align: center;
+	display: none;
+}
+
+.countCardBox {
+	width: 80px;
+	float: left;
+	text-shadow: none;
+	color: #333333;
+	margin-right: 26px;
+	height: 20px;
+}
+
+.verticalText {
 	position: absolute;
 	display: block;
 	-webkit-transform: rotate(-90deg);
@@ -298,6 +328,19 @@ body {
 	color: #333333;
 	padding-left: 2px;
 	cursor: default;
+}
+
+#timerText {
+	margin-left: -36px;
+	margin-top: 59px;
+}
+
+#countVotes {
+	font-size: 17px;
+	color: #333333;
+	position: relative;
+	top: 35px;
+	left: 30px;
 }
 
 #startStatusTextWrapper {
@@ -334,7 +377,7 @@ body {
 	width: 130px;
 	height: 30px;
 	cursor: pointer;
-	background: lightgray;
+	background: #f0f0f0;
 	border-radius: 5px;
 	border: 1px solid #8b9798;
 	text-align: center;
@@ -343,8 +386,8 @@ body {
 }
 
 .disabled {
-	color: gray;
-	cursor: default;
+	color: gray !important;
+	cursor: default !important;
 }
 
 .enabled {
@@ -403,17 +446,32 @@ progress[value] {
 	z-index: 20;
 }
 
+.ratingWrapper {
+	float: left;
+	margin-top: -2px;
+	margin-left: 30px;
+}
+
 /* question fields */
-.countdown {
+.clock {
 	height: 100px;
 	width: 100px;
 	position: absolute;
-	left: 562px;
 	bottom: 45px;
-	opacity: 0;
 	z-index: 20;
 	cursor: default;
 }
+
+.countdown {
+	left: 562px;
+	opacity: 0;
+}
+
+.opponentCountdown {
+	left: 53px;
+	opacity: 0;
+}
+
 
 
 
@@ -423,10 +481,10 @@ progress[value] {
 }
 
 #questionTitle {
-	width: 500px;
+	width: 542px;
 	height: 60px;
 	position: absolute;
-	left: 109px;
+	left: 89px;
 	top: 200px;
 	letter-spacing: +0.06em;
 	background: wheat;
@@ -441,41 +499,51 @@ progress[value] {
 #questionAnswers {
 	position: absolute;
 	height: 60px;
-	top: 270px;
-	left: 109px;
+	top: 260px;
+	left: 76px;
 	z-index: 20;
+	border-spacing: 10px;
 }
 
 .answerFields {
-	width: 162px;
+	width: 168px;
 	height: 50px;
 	background: lightgray;
 	border-radius: 5px;
-	border: 1px solid #8b9798;
-	text-align: center;
-	float: left;
-	position: relative;
-	margin-right: 5px;
+	border: 4px double #8b9798;
 	z-index: 20;
+	vertical-align: middle;
+	display: table-cell;
 }
 
-/*
-.answerFields:hover {
-	background: #deeff1 !important;
-}*/
+.averageRating {
+	height: 100px;
+	width: 100px;
+	float: left;
+}
+
+#arrow {
+	font-size: 46px;
+	margin-left: 50px;
+	margin-top: 15px;
+}
+
+.newRating {
+	height: 100px;
+	width: 100px;
+}
 
 .answerFieldsContent {
-	top: 16px;
-	position: relative;
+	display: inline-block;
 }
 
 #errorAnswer {
-	width: 500px;
+	width: 542px;
 	height: 50px;
 	background: #fdd5ce;
 	position: absolute;
-	top: 330px;
-	left: 109px;
+	top: 336px;
+	left: 89px;
 	border: 1px solid #8b9798;
 	border-radius: 5px;
 	cursor: pointer;
@@ -506,7 +574,7 @@ progress[value] {
 	color: #333333;
 	display: none;
 	position: absolute;
-	top: 150px;
+	top: 162px;
 	width: 720px;
 	text-align: center;
 	z-index: 20;
@@ -516,10 +584,10 @@ progress[value] {
 /* feedback box */
 #feedbackWrapper {
 	position: absolute;
-	top: 331px;
-	left: 109px;
+	top: 336px;
+	left: 89px;
 	text-align: center;
-	width: 500px;
+	width: 542px;
 	display: none;
 	z-index: 20;
 }
@@ -534,6 +602,7 @@ progress[value] {
 #nextAction {
 	margin-top: 0px;
 	cursor: default;
+	overflow: hidden;
 }
 
 #nextActionContent {
@@ -570,7 +639,21 @@ progress[value] {
 	display: block;
 	margin-top: 2px;
 	margin-bottom: 2px;
-	margin-left: 20px;
+	margin-left: 25px;
+}
+
+/* end game overview */
+.correctCell {
+	background: #d7e4bc !important;
+}
+
+.wrongCell {
+	background: #e6b9b8 !important;
+}
+
+.undefinedCell {
+	opacity: 0.2;
+	background: lightgray !important;
 }
 
 /* Floats self-clearing */

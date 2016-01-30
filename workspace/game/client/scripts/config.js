@@ -23,7 +23,7 @@ var rankingWinTable;
 var roomTable;
 var closeGameBt;
 var joinGameBt;
-var quickJoinBt;
+//var quickJoinBt;
 var createGameBt;
 var roomInfoWin;
 var roomInfoWinTable;
@@ -55,7 +55,8 @@ var backTopicBt;
 var doCreateGameBt;
 var last_row_opened;
 var last_row_opened_number;
-var selectedTopicRow;
+
+var progressBar;
 
 //game view
 var instructionsWin;
@@ -72,7 +73,7 @@ var afterGameWinTable;
 
 function init()
 {
-    trace("Application started");
+    console.log("Application started");
     // Create configuration object
     var config = {};
     config.host = "localhost"; //"52.25.12.255"
@@ -82,7 +83,7 @@ function init()
 
     // Create SmartFox client instance
     sfs = new SmartFox(config);
-    trace("SmartFox API version: " + sfs.version);
+    console.log("SmartFox API version: " + sfs.version);
     sfs.addEventListener(SFS2X.SFSEvent.EXTENSION_RESPONSE, onGameExtensionResponse);
     sfs.addEventListener(SFS2X.SFSEvent.CONNECTION, onConnection, this);
     sfs.addEventListener(SFS2X.SFSEvent.CONNECTION_LOST, onConnectionLost, this);
@@ -141,7 +142,7 @@ function buildMainUI() {
             }}
         ]
     });
-    quickJoinBt = $("#quickJoinBt").jqxButton({width:150, disabled:true, theme:theme});
+    //quickJoinBt = $("#quickJoinBt").jqxButton({width:150, disabled:true, theme:theme});
     closeGameBt = $("#closeGameBt").jqxButton({width:100, disabled:true, theme:theme});
     joinGameBt = $("#joinGameBt").jqxButton({width:100, disabled:true, theme:theme});
     createGameBt = $("#createGameBt").jqxButton({width:150, theme:theme});
@@ -201,7 +202,7 @@ function buildMainUI() {
     achievementsWin = $("#achievementsWin").jqxWindow({width:400, height:190, isModal:true, autoOpen:false, resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
 
     //ranking window
-    rankingWin = $("#rankingWin").jqxWindow({width:260, height:340, isModal:true, autoOpen:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    rankingWin = $("#rankingWin").jqxWindow({width:260, height:340, isModal:true, autoOpen:false, draggable:false, resizable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
     rankingWinTable= $("#rankingWinTable").jqxDataTable({
         width: 250,
         height:290,
@@ -209,9 +210,9 @@ function buildMainUI() {
         enableHover: false,
         selectionMode: 'custom',
         columns: [
-            { text: '#', dataField: 'rank', align: 'center', cellsAlign: 'center'},
+            { text: '#', dataField: 'rank', align: 'center', cellsAlign: 'center', width: 30},
             { text: 'User', dataField: 'username', align: 'center'},
-            { text: 'Points', dataField: 'points', align: 'center', cellsAlign: 'center'}
+            { text: 'Points', dataField: 'points', align: 'center', cellsAlign: 'center', width: 60}
         ]
     });
 
@@ -233,15 +234,17 @@ function buildMainUI() {
     instructionsWin = $("#instructionsWin").jqxWindow({width:600, height:448, isModal:true, autoOpen:false, resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
     instructionsWinTabs = $("#instructionsWinTabs").jqxTabs({width:"100%", height:395, theme:theme});
 
+    createTimers();
+
     $("#nextAction").jqxExpander({
-        width: 500,
+        width: 542,
         height: 163,
         theme: theme,
         showArrow:false,
         toggleMode:'none'
     });
     var data = [
-        {button: "Rating", label:"Rate the data quality of this question."},
+        {button: "Rating", label:"How would you rate the quality of this question?"}, //Poor, Fair, Good, Very Good, Excellent
         {button: "Open in Wikipedia", label:"Get more information about 'x' in Wikipedia"},
         {button: "Next Question", label:"Open the next card"}
     ];
@@ -258,7 +261,7 @@ function buildMainUI() {
     };
     var dataAdapter = new $.jqx.dataAdapter(source);
     $("#nextActionTable").jqxDataTable({
-        width: 496,
+        width: 538,
         height: 133,
         theme: theme,
         showHeader:false,
@@ -285,13 +288,156 @@ function buildMainUI() {
         }, {
             text: 'Text',
             dataField: 'label',
-            width: 334
+            width: 334,
+            cellsRenderer: function (row, column, value, rowData) {
+                var container = '<div style="width: 100%; height: 100%;">'
+                if(row == 0)
+                    container += '<span id="ratingText">' + value +'</span>';
+                else if(row == 1)
+                    container += value;
+                else
+                    container += "Open the next card";
+                container += "</div>";
+                return container;
+            }
         }]
     });
 
     gameChatAreaPn = $("#gameChatAreaPn").jqxPanel({width:265, height:100, theme:theme, autoUpdate:true});
     gameMsgIn = $('#gameMsgIn').jqxInput({placeHolder: "Type your message", height: 29, width: 175, minLength: 1});
 
+    // game popups
+    loadingGameWin = $("#loadingGameWin").jqxWindow({width:250, height:160, autoOpen:false, resizable:false, draggable:false, isModal:true, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    waitGameWin = $("#waitGameWin").jqxWindow({
+        width:250, height:125, okButton: $('#okButton'),
+        initContent: function () {
+            $('#okButton').jqxButton({
+                width: '65px',
+                theme: theme
+            });
+            $('#okButton').focus();
+        },
+        autoOpen:false, resizable:false, draggable:false, isModal:true, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    afterGameWin = $("#afterGameWin").jqxWindow({width:800, height:600, autoOpen:false, showCloseButton:true, isModal:true,  resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    afterGameWinTable = $("#afterGameWinTable").jqxDataTable({
+        width: 789,
+        height:552,
+        pageable:false,
+        sortable: true,
+        rowDetails: true,
+        initRowDetails: initAnswerDetails,
+        enableHover: false,
+        selectionMode: 'custom',
+        columns: [
+            { text: 'No.', dataField: 'no', align: 'center', cellsAlign: 'center', width: 40 },
+            { text: 'Category', dataField: 'category', align: 'center', cellsAlign: 'center', width: 150 },
+            { text: 'Topic', dataField: 'topic', align: 'center', cellsAlign: 'center' },
+            { text: 'Card', dataField: 'name', align: 'center', cellsAlign: 'center', width: 120 },
+            { text: 'Property', dataField: 'property', align: 'center', cellsAlign: 'center', width: 120,
+                cellsRenderer: function (row, column, value, rowData) {
+                    var arr = value.split('/');
+                    var ontology = arr[arr.length - 1];
+                    return ontology;
+                }
+            },
+            { text: 'Correct', dataField: 'correct', align: 'center', cellsAlign: 'center', width: 60,
+                cellsRenderer: function (row, column, value, rowData) {
+                    var container = '<div style="font-size: 24px; color: ' + (value == "true" ? "darkgreen" : "red") +'">';
+                    container += (value == "true" ? "&#10003;" : "&#10007;");
+                    container += "</div>";
+                    return container;
+                }
+            },
+            { text: 'Link', dataField: 'wikipedia', align: 'center', cellsAlign: 'center', width: 80,
+                cellsRenderer: function (row, column, value, rowData) {
+                    return '<a data-card="' + rowData.data + '" class="afterWikipedia" href="' + value + '" target="_blank">Wikipedia</a>';}}
+        ]
+    });
+
+    $('#afterGameWin').on('close', destroyGame);
+}
+
+function addEventListenerMain() {
+    // room table
+    closeGameBt.click(onCloseGameBtClick);
+    joinGameBt.click(onJoinGameBtClick);
+    createGameBt.click(onCreateGameBtClick);
+
+
+    $(document).on("mouseenter", ".roomTableRows", onRoomTableRowEnter);
+    $(document).on("mouseleave", ".roomTableRows", onRoomTableRowExit);
+
+    //chat
+    sendPublicMsgBt.click(onSendMessageBtClick);
+    logoutBt.click(onLogoutBtClick);
+
+    //badges
+    badges = $(".badge-click").click(onBadgeClick);
+    takeSurveyBt.click(onTakeSurveyBtClick);
+
+    // highscore
+    highscoreButton.click(onHighscoreBtClick);
+
+    //game creation window
+    $(".selectBt").click(onSelectBtClick);
+    $(document).on("click", "#doCreateGameBt", onDoCreateGameBtClick);
+    closeBt.click(onCloseBtClick); // close the create the game window
+    nextBt.click(onNextBtClick); //go to topic selection
+    backTopicBt.click(onTopicBackBtClick); //go back to basic settings decision
+    $(document).on("click", ".beforeWikipedia", onBeforeWikipediaClick);
+    $(document).on("click", ".afterWikipedia", onAfterWikipediaClick);
+    createGameWin.on('open', destroyTopicList);
+
+    // game view
+    $(document).on("click", "#errorAnswer", onErrorAnswerClick);
+
+    publicMsgIn.keyup(function(e) {
+        if(e.which == 13) {
+            onSendMessageBtClick();
+        }
+    });
+
+
+    gameMsgIn.keyup(function(e) {
+        if(e.which == 13) {
+            onSendMessageBtClick();
+        }
+    });
+    $(document).on("mouseenter", ".jqx-rating-image.ratingEnabled", onMouseOverRating);
+    $(document).on("mouseleave", ".jqx-rating-image.ratingEnabled", onMouseLeaveRating);
+
+
+
+    $(document).on("click", ".answerFields.enabled", onAnswerBtClick);
+    $(document).on("click", "#startGameBt.enabled", onStartGameBtClick);
+    $(document).on("click", "#sendGameMsgBt.enabled", onSendMessageBtClick);
+    $(document).on("click", "#leaveGameBt", onLeaveGameBtClick);
+
+    $(document).on("click", "#nextQuestionBt.enabled", onNextQuestionBtClick);
+    $(document).on("click", "#openWikipediaBt", onOpenWikipediaBtClick);
+}
+
+function createTimers() {
+    $(".opponentCountdown").TimeCircles({
+        "start": false,
+        "count_past_zero": false,
+        "time": {
+            "Days": {
+                "show": false
+            },
+            "Hours": {
+                "show": false
+            },
+            "Minutes": {
+                "show": false
+            },
+            "Seconds": {
+                "text": "Seconds",
+                "color": "#dbdde0",
+                "show": true
+            }}
+    });
+    $(".opponentCountdown").TimeCircles().addListener(updateOpponentCountdown);
     $(".countdown").TimeCircles({
         "start": false,
         "count_past_zero": false,
@@ -333,105 +479,45 @@ function buildMainUI() {
             }}
     });
 
-    // game popups
-    loadingGameWin = $("#loadingGameWin").jqxWindow({width:250, height:160, autoOpen:false, resizable:false, draggable:false, isModal:true, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
-    waitGameWin = $("#waitGameWin").jqxWindow({
-        width:250, height:125, okButton: $('#okButton'),
-        initContent: function () {
-            $('#okButton').jqxButton({
-                width: '65px',
-                theme: theme
-            });
-            $('#okButton').focus();
-        },
-        autoOpen:false, resizable:false, draggable:false, isModal:true, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
-    afterGameWin = $("#afterGameWin").jqxWindow({width:1040, height:350, autoOpen:false, showCloseButton:true, isModal:true,  resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
-    afterGameWinTable = $("#afterGameWinTable").jqxDataTable({
-        width: 1030,
-        height:300,
-        pageable:false,
-        sortable: true,
-        enableHover: false,
-        selectionMode: 'custom',
-        columns: [
-            { text: 'No.', dataField: 'no', align: 'center', cellsAlign: 'center', width: 40 },
-            { text: 'Category', dataField: 'category', align: 'center', cellsAlign: 'center' },
-            { text: 'Topic', dataField: 'topic', align: 'center', cellsAlign: 'center' },
-            { text: 'Card', dataField: 'name', align: 'center', cellsAlign: 'center', width: 120 },
-            { text: 'Property', dataField: 'property', align: 'center', cellsAlign: 'center', width: 120,
-                cellsRenderer: function (row, column, value, rowData) {
-                    var arr = value.split('/');
-                    var ontology = arr[arr.length - 1];
-                    return ontology;
-                }
+    $(".averageRating").TimeCircles({
+        "start": false,
+        "total_duration": 5,
+        "count_past_zero": false,
+        "time": {
+            "Days": {
+                "show": false
             },
-            { text: 'Answer', dataField: 'answer', align: 'center', cellsAlign: 'center', width: 120 },
-            { text: 'Right', dataField: 'answerRight', align: 'center', cellsAlign: 'center', width: 120 },
-            { text: 'Correct', dataField: 'correct', align: 'center', cellsAlign: 'center', width: 60,
-                cellsRenderer: function (row, column, value, rowData) {
-                    var container = '<div style="font-size: 24px; color: ' + (value == "true" ? "darkgreen" : "red") +'">';
-                    container += (value == "true" ? "&#10003;" : "&#10007;");
-                    container += "</div>";
-                    return container;
-                }
+            "Hours": {
+                "show": false
             },
-            { text: 'Link', dataField: 'wikipedia', align: 'center', cellsAlign: 'center', width: 80, cellsRenderer: function (row, column, value, rowData) { return '<a href="' + value + '" target="_blank">Wikipedia</a>';}}
-        ]
-    });
-    //$("#afterGameWin").jqxWindow.on('close', destroyGame);
-    $('#afterGameWin').on('close', destroyGame);
-}
-
-function addEventListenerMain() {
-    // room table
-    closeGameBt.click(onCloseGameBtClick);
-    joinGameBt.click(onJoinGameBtClick);
-    createGameBt.click(onCreateGameBtClick);
-
-
-    $(document).on("mouseenter", ".roomTableRows", onRoomTableRowEnter);
-    $(document).on("mouseleave", ".roomTableRows", onRoomTableRowExit);
-
-    //chat
-    sendPublicMsgBt.click(onSendMessageBtClick);
-    logoutBt.click(onLogoutBtClick);
-
-    //badges
-    badges = $(".badge-click").click(onBadgeClick);
-    takeSurveyBt.click(onTakeSurveyBtClick);
-
-    // highscore
-    highscoreButton.click(onHighscoreBtClick);
-
-    //game creation window
-    $(".selectBt").click(onSelectBtClick);
-    doCreateGameBt.click(onDoCreateGameBtClick); //create a room trigger
-    closeBt.click(onCloseBtClick); // close the create the game window
-    nextBt.click(onNextBtClick); //go to topic selection
-    backTopicBt.click(onTopicBackBtClick); //go back to basic settings decision
-    createGameWin.on('open', destroyTopicList);
-
-    // game view
-    //$(".answerFields.enabled").click(onAnswerBtClick);
-    $("#errorAnswer").click(onErrorAnswerClick);
-
-    publicMsgIn.keyup(function(e) {
-        if(e.which == 13) {
-            onSendMessageBtClick();
-        }
+            "Minutes": {
+                "show": false
+            },
+            "Seconds": {
+                "text": "Avg. Rating",
+                "color": "darkgray",
+                "show": true
+            }}
     });
 
-
-    gameMsgIn.keyup(function(e) {
-        if(e.which == 13) {
-            onSendMessageBtClick();
-        }
+    $(".newRating").TimeCircles({
+        "start": false,
+        "total_duration": 301,
+        "count_past_zero": false,
+        "time": {
+            "Days": {
+                "show": false
+            },
+            "Hours": {
+                "show": false
+            },
+            "Minutes": {
+                "show": false
+            },
+            "Seconds": {
+                "text": "New Rating",
+                "color": "darkgray",
+                "show": true
+            }}
     });
-    $(document).on("click", ".answerFields.enabled", onAnswerBtClick);
-    $(document).on("click", "#startGameBt.enabled", onStartGameBtClick);
-    $(document).on("click", "#sendGameMsgBt.enabled", onSendMessageBtClick);
-    $(document).on("click", "#leaveGameBt", onLeaveGameBtClick);
-
-    $("#openWikipediaBt").click(onOpenWikipediaBtClick);
-    $("#nextQuestionBt").click(onNextQuestionBtClick);
 }

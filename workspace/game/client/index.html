@@ -28,6 +28,7 @@
     <script type="text/javascript" src="scripts/Chat.js"></script>
     <script type="text/javascript" src="scripts/Game.js"></script>
     <script type="text/javascript" src="scripts/SingleGame.js"></script>
+    <script type="text/javascript" src="scripts/MultiGame.js"></script>
     <script type="text/javascript" src="scripts/Card.js"></script>
     <script type="text/javascript" src="scripts/Badge.js"></script>
     <script type="text/javascript" src="scripts/Question.js"></script>
@@ -58,13 +59,14 @@
     <link href="css/TimeCircles.css" rel="stylesheet">
 
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(function() {
 
         });
     </script>
 </head>
 
 <body class="noselect" onLoad="init()">
+<div id="topLoader"></div>
 <div id="menuBar" style="text-align: center;">
     <span>Master Thesis: "Automatically Generated Learning Content for an Educational Game"</span>
     <img id="universityLogo" src="img/university_logo.jpg">
@@ -102,7 +104,7 @@
                     <input type="button" id="createGameBt" value="Start New Game"/>
                     <input type="button" id="joinGameBt" value="Join Game"/>
                     <input type="button" id="closeGameBt" value="Close Game"/>
-                    <input type="button" id="quickJoinBt" value="Quick Game Join"/>
+                    <!-- <input type="button" id="quickJoinBt" value="Quick Game Join"/> -->
                 </div>
                 <div id="publicChatAreaPn"></div>
                 <div class="chatControls">
@@ -139,31 +141,31 @@
                 <span id="achievementsHeader">Achievements</span>
                 <div id="badges-container">
                     <div class="badges badges-grey">
-                        <img id="qm-img" src="img/badges/quiz-master-box-gray.png" class="badge-click" title="Quiz Master" alt="" width="64" height="64">
-                        <span id="qm-value" class="badge-text">0</span>
+                        <img id="qm-img" src="img/badges/quiz-master-box-gray.png" class="badge-click" title="V for Victory" alt="" width="64" height="64">
+                        <div class="badge-text-container"><span id="qm-value" class="badge-text">0</span></div>
                     </div>
                     <div class="badges badges-grey">
                         <img id="vm-img" src="img/badges/victory-march-box-gray.png" class="badge-click" title="Victory March" alt="" width="64" height="64">
-                        <span id="vm-value" class="badge-text">0</span>
+                        <div class="badge-text-container"><span id="vm-value" class="badge-text">0</span></div>
                     </div>
                     <div class="badges badges-grey">
                         <img id="in-img" src="img/badges/invincible-box-gray.png" class="badge-click" title="Invincible" alt="" width="64" height="64">
-                        <span id="in-value" class="badge-text">0</span>
+                        <div class="badge-text-container"><span id="in-value" class="badge-text">0</span></div>
                     </div>
 
                     <div class="clr"></div>
 
                     <div class="badges badges-grey">
-                        <img id="vv-img" src="img/badges/victory-classIV-box-gray.png" title="V for Victory" class="badge-click" alt="" width="64" height="64">
-                        <span id="vv-value" class="badge-text">0</span>
+                        <img id="vv-img" src="img/badges/victory-classIV-box-gray.png" title="Quiz Master" class="badge-click" alt="" width="64" height="64">
+                        <div class="badge-text-container"><span id="vv-value" class="badge-text">0</span></div>
                     </div>
                     <div class="badges badges-grey">
                         <img id="cc-img" src="img/badges/contribution-box-gray.png" class="badge-click" title="Crucial Contribution" alt="invincible" width="64" height="64">
-                        <span id="cc-value" class="badge-text">0</span>
+                        <div class="badge-text-container"><span id="cc-value" class="badge-text">0</span></div>
                     </div>
                     <div class="badges badges-grey">
                         <img id="ts-img" src="img/badges/survey-box-gray.png" class="badge-click" title="Take Survey" alt="" width="64" height="64">
-                        <span id="ts-value" class="badge-text">0</span>
+                        <div class="badge-text-container"><span id="ts-value" class="badge-text">0</span></div>
                     </div>
 
                 </div>
@@ -214,6 +216,23 @@
                         <div class="content">
                             <input type="button" id="single" multiPlayer=false class="selectBt" value="&#10004;"/>
                         </div>
+                        <div id="menu_about" style="position: relative; z-index: 10;">
+                            <ul id="menu">
+                                <li >Description
+                                    <ul>
+                                        <li>Questions are generated automatically</li>
+                                        <li>60 seconds per answer</li>
+                                        <li>Game is over when all questions are answered</li>
+                                    </ul>
+                                </li>
+                                <li>Layer 1
+                                    <ul>
+                                        <li >Layer 2 blblb</li>
+                                        <li >Layer 2</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div id="multiplayer">
                         <div class="title">
@@ -221,7 +240,7 @@
                         </div>
                         <div class="gameTypeWin">
                             <div class="subtitle">
-                                <span>Defeat your enemy</span>
+                                <span>Defeat Your Enemy</span>
                             </div>
                             <div class="content">
                                 <input type="button" id="compete" multiPlayer=true class="selectBt" value="Select"/>
@@ -260,6 +279,7 @@
         <div><strong>Loading cards</strong></div>
         <div style="overflow: hidden;">
         </div>
+
     </div>
     <div id="waitGameWin" class="gamePopup">
         <div><strong>Game created</strong></div>
@@ -269,7 +289,7 @@
         </div>
     </div>
     <div id="afterGameWin" class="gamePopup">
-        <div><strong>Game is Over &#x27a0; Questions: 16 | Right: 8 | Wrong: 8 | Points earned: 67</strong></div>
+        <div><strong>Game is Over &#x27a0; Questions: - | Right: - | Wrong: - | Points earned: -</strong></div>
         <div style="overflow: hidden;">
             <div id="afterGameWinTable" style="cursor: default;"></div>
         </div>
@@ -281,8 +301,14 @@
             <iframe id="lookupWiki" width="675" height="650"></iframe>
             <div id="container">
                 <img id="gameBackground" src="img/background/LAUAN.jpg" style="width: 1000px; height: 700px;">
-                <canvas id="gameContainer" width="1000" height="700">Your Browser doesn't support Canvas</canvas>
+                <div id="gameContainerHandler"><!--<canvas id="gameContainer" width="1000" height="700">Your Browser doesn't support Canvas</canvas> --></div>
+
             </div>
+        </div>
+        <div id="countCardsTop">
+            <div class="countCardBox" id="countTop0">6</div>
+            <div class="countCardBox" id="countTop1">6</div>
+            <div class="countCardBox" id="countTop2">6</div>
         </div>
         <div id="instructionsWin" class="gamePopup">
             <div><strong>Game Instructions</strong></div>
@@ -323,7 +349,8 @@
                 </div>
             </div>
         </div>
-        <div class="countdown" data-timer="60"></div>
+        <div class="opponentCountdown clock" data-timer="60"></div>
+        <div class="countdown clock" data-timer="60"></div>
         <div id="stackOverview">
             <div class="stacks">
                 <b> Category </b><br><span></span><br><br>
@@ -358,11 +385,19 @@
         <div id="feedbackWrapper">
             <div id='nextAction'>
                 <div>Next Action</div>
-                <div><div id="nextActionTable"></div></div>
+                <div>
+                    <div><div id="nextActionTable"></div></div>
+                    <div id="ratingTable">
+                        <div class="ratingWrapper">
+                            <div class="averageRating" data-timer="5"></div>
+                            <span id="countVotes">Votes: ?</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="gameButtons">
-            <span id="timerText">Autostart</span>
+            <span class="verticalText" id="timerText">Autostart</span>
             <div id="gameButtonsLeft">
                 <div class="timeToStartEnd" data-timer="301"></div>
             </div>

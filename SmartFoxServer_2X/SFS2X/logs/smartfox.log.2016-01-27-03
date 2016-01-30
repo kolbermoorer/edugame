@@ -1,0 +1,410 @@
+27 Jan 2016 | 03:07:26,162 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 19, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55544
+27 Jan 2016 | 03:07:26,215 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:55544 ) , Type: JavaScript
+27 Jan 2016 | 03:07:26,234 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:55544 ) , asSpect: false
+27 Jan 2016 | 03:07:32,658 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+27 Jan 2016 | 03:07:32,673 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+27 Jan 2016 | 03:07:33,474 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+27 Jan 2016 | 03:07:33,521 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+27 Jan 2016 | 03:07:33,645 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+27 Jan 2016 | 03:07:33,645 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+27 Jan 2016 | 03:07:33,661 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+27 Jan 2016 | 03:07:33,677 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+27 Jan 2016 | 03:07:33,677 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+27 Jan 2016 | 03:07:33,739 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+27 Jan 2016 | 03:07:33,755 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:07:34,176 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+27 Jan 2016 | 03:07:34,207 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:07:34,223 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+27 Jan 2016 | 03:07:34,238 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+27 Jan 2016 | 03:07:34,504 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+27 Jan 2016 | 03:07:34,505 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+27 Jan 2016 | 03:07:34,506 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+27 Jan 2016 | 03:07:38,279 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55630
+27 Jan 2016 | 03:07:38,448 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:55630 ) , Type: JavaScript
+27 Jan 2016 | 03:07:38,466 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:55630 ) , asSpect: false
+27 Jan 2016 | 03:07:43,028 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:07:43,051 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:07:43,075 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room254, Id: 2, Group: default, isGame: true ]
+27 Jan 2016 | 03:07:43,079 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room254, Id: 2, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:55630 ) , asSpect: false
+27 Jan 2016 | 03:07:43,168 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room254, Id: 2, Group: default, isGame: true ] }
+Extension Cmd: ready
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sun.misc.FloatingDecimal.readJavaFormatString(Unknown Source)
+java.lang.Double.parseDouble(Unknown Source)
+sfs2x.extensions.room.play.single.ReadyHandler.handleClientRequest(ReadyHandler.java:25)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:10:00,153 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:55630 }
+27 Jan 2016 | 03:10:00,156 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:55630 ) , SessionLen: 141708, Type: JavaScript
+27 Jan 2016 | 03:10:00,174 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error during event handling: java.lang.NullPointerException, Listener: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room254, Id: 2, Group: default, isGame: true ] }
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.events.OnUserGoneHandler.handleServerEvent(OnUserGoneHandler.java:56)
+com.smartfoxserver.v2.extensions.SFSExtension.handleServerEvent(SFSExtension.java:258)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:741)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:924)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:10:02,206 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55698
+27 Jan 2016 | 03:10:02,249 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:55698 ) , Type: JavaScript
+27 Jan 2016 | 03:10:02,271 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:55698 ) , asSpect: false
+27 Jan 2016 | 03:10:12,333 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:10:12,347 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:10:12,366 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room255, Id: 3, Group: default, isGame: true ]
+27 Jan 2016 | 03:10:12,369 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room255, Id: 3, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:55698 ) , asSpect: false
+27 Jan 2016 | 03:10:39,674 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: [Room255, [( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:55698 ) ], [Administrative Region, Area, Place], [NUTS 1 Statistical Regions Of The European Union, Capitals In Europe, Member States Of The United Nations]] 
+27 Jan 2016 | 03:10:55,455 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error during event handling: java.lang.NullPointerException, Listener: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room255, Id: 3, Group: default, isGame: true ] }
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.events.OnUserGoneHandler.handleServerEvent(OnUserGoneHandler.java:56)
+com.smartfoxserver.v2.extensions.SFSExtension.handleServerEvent(SFSExtension.java:258)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:711)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:724)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:904)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:14:14,122 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+27 Jan 2016 | 03:26:33,218 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+27 Jan 2016 | 03:41:04,664 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:55698 }
+27 Jan 2016 | 03:41:04,668 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:55698 ) , SessionLen: 1862420, Type: JavaScript
+27 Jan 2016 | 03:50:36,392 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55975
+27 Jan 2016 | 03:50:36,439 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:55975 ) , Type: JavaScript
+27 Jan 2016 | 03:50:36,459 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:55975 ) , asSpect: false
+27 Jan 2016 | 03:50:39,735 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: sparql
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.SparqlHandler.handleClientRequest(SparqlHandler.java:68)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:51:13,485 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+27 Jan 2016 | 03:51:42,275 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:55975 }
+27 Jan 2016 | 03:51:42,277 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:55975 ) , SessionLen: 65837, Type: JavaScript
+27 Jan 2016 | 03:51:43,848 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56040
+27 Jan 2016 | 03:51:43,898 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56040 ) , Type: JavaScript
+27 Jan 2016 | 03:51:43,924 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56040 ) , asSpect: false
+27 Jan 2016 | 03:51:48,419 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:51:48,430 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:51:48,449 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room256, Id: 4, Group: default, isGame: true ]
+27 Jan 2016 | 03:51:48,452 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room256, Id: 4, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56040 ) , asSpect: false
+27 Jan 2016 | 03:51:48,518 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room256, Id: 4, Group: default, isGame: true ] }
+Extension Cmd: ready
++--- --- ---+
+Stack Trace:
++--- --- ---+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:52:19,538 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 4, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56040 }
+27 Jan 2016 | 03:52:19,540 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56040 ) , SessionLen: 35642, Type: JavaScript
+27 Jan 2016 | 03:52:19,583 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room256, Id: 4, Group: default, isGame: true ], Duration: 31156
+27 Jan 2016 | 03:52:21,994 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 5, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56105
+27 Jan 2016 | 03:52:22,020 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56105 ) , Type: JavaScript
+27 Jan 2016 | 03:52:22,043 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56105 ) , asSpect: false
+27 Jan 2016 | 03:52:27,208 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:52:27,216 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:52:27,232 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room257, Id: 5, Group: default, isGame: true ]
+27 Jan 2016 | 03:52:27,236 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room257, Id: 5, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56105 ) , asSpect: false
+27 Jan 2016 | 03:52:27,301 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room257, Id: 5, Group: default, isGame: true ] }
+Extension Cmd: ready
++--- --- ---+
+Stack Trace:
++--- --- ---+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:53:04,158 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+27 Jan 2016 | 03:53:04,169 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+27 Jan 2016 | 03:53:04,858 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+27 Jan 2016 | 03:53:04,896 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+27 Jan 2016 | 03:53:04,992 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+27 Jan 2016 | 03:53:04,994 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+27 Jan 2016 | 03:53:05,011 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+27 Jan 2016 | 03:53:05,020 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+27 Jan 2016 | 03:53:05,025 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+27 Jan 2016 | 03:53:05,073 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+27 Jan 2016 | 03:53:05,102 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:53:05,472 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+27 Jan 2016 | 03:53:05,495 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:53:05,522 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+27 Jan 2016 | 03:53:05,535 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+27 Jan 2016 | 03:53:05,753 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+27 Jan 2016 | 03:53:05,754 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+27 Jan 2016 | 03:53:05,755 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+27 Jan 2016 | 03:53:11,789 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56193
+27 Jan 2016 | 03:53:11,942 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56193 ) , Type: JavaScript
+27 Jan 2016 | 03:53:11,960 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56193 ) , asSpect: false
+27 Jan 2016 | 03:53:16,268 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:53:16,288 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:53:16,309 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room258, Id: 2, Group: default, isGame: true ]
+27 Jan 2016 | 03:53:16,312 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room258, Id: 2, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56193 ) , asSpect: false
+27 Jan 2016 | 03:53:16,395 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room258, Id: 2, Group: default, isGame: true ] }
+Extension Cmd: ready
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sun.misc.FloatingDecimal.readJavaFormatString(Unknown Source)
+java.lang.Double.parseDouble(Unknown Source)
+sfs2x.extensions.room.play.single.ReadyHandler.handleClientRequest(ReadyHandler.java:25)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:54:11,663 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56193 }
+27 Jan 2016 | 03:54:11,666 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56193 ) , SessionLen: 59725, Type: JavaScript
+27 Jan 2016 | 03:54:11,756 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room258, Id: 2, Group: default, isGame: true ], Duration: 55476
+27 Jan 2016 | 03:54:13,269 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56263
+27 Jan 2016 | 03:54:13,307 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) , Type: JavaScript
+27 Jan 2016 | 03:54:13,326 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) , asSpect: false
+27 Jan 2016 | 03:54:16,988 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:54:17,001 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:54:17,020 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room259, Id: 3, Group: default, isGame: true ]
+27 Jan 2016 | 03:54:17,022 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room259, Id: 3, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) , asSpect: false
+27 Jan 2016 | 03:54:44,301 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: [Room259, [( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) ], [Administrative Region, Area, Place], [NUTS 1 Statistical Regions Of The European Union, Capitals In Europe, Liberal Democracies]] 
+27 Jan 2016 | 03:55:05,763 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+27 Jan 2016 | 03:55:05,764 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+27 Jan 2016 | 03:55:05,764 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+27 Jan 2016 | 03:55:05,765 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1
+27 Jan 2016 | 03:55:11,378 | WARN  | SFSWorker:Ext:2 | entities.managers.SFSExtensionManager |     | java.lang.ClassCastException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.ClassCastException
+Message: java.lang.String cannot be cast to java.lang.Boolean
+Description: Error during event handling: java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Boolean, Listener: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room259, Id: 3, Group: default, isGame: true ] }
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.events.OnUserGoneHandler.handleServerEvent(OnUserGoneHandler.java:80)
+com.smartfoxserver.v2.extensions.SFSExtension.handleServerEvent(SFSExtension.java:258)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:711)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:724)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:904)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:57:50,918 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56263 }
+27 Jan 2016 | 03:57:50,919 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) , SessionLen: 217612, Type: JavaScript
+27 Jan 2016 | 03:57:52,684 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56397
+27 Jan 2016 | 03:57:52,732 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:56397 ) , Type: JavaScript
+27 Jan 2016 | 03:57:52,755 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:56397 ) , asSpect: false
+27 Jan 2016 | 03:58:00,192 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:58:00,205 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:58:00,226 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room260, Id: 4, Group: default, isGame: true ]
+27 Jan 2016 | 03:58:00,229 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room260, Id: 4, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:56397 ) , asSpect: false
+27 Jan 2016 | 03:58:00,949 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.IndexOutOfBoundsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IndexOutOfBoundsException
+Message: toIndex = 6
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room260, Id: 4, Group: default, isGame: true ] }
+Extension Cmd: ready
++--- --- ---+
+Stack Trace:
++--- --- ---+
+java.util.ArrayList.subListRangeCheck(Unknown Source)
+java.util.ArrayList.subList(Unknown Source)
+sfs2x.extensions.room.play.Database.getSubsetWeightedCards(Database.java:111)
+sfs2x.extensions.room.play.GameBoard.addCardDeck(GameBoard.java:50)
+sfs2x.extensions.room.play.single.ReadyHandler.handleClientRequest(ReadyHandler.java:43)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:58:31,934 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56397 }
+27 Jan 2016 | 03:58:31,936 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:56397 ) , SessionLen: 39204, Type: JavaScript
+27 Jan 2016 | 03:58:31,983 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room260, Id: 4, Group: default, isGame: true ], Duration: 31781
+27 Jan 2016 | 03:58:33,929 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56463
+27 Jan 2016 | 03:58:33,977 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56463 ) , Type: JavaScript
+27 Jan 2016 | 03:58:33,998 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56463 ) , asSpect: false
+27 Jan 2016 | 03:59:24,611 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 4, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56463 }
+27 Jan 2016 | 03:59:24,612 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56463 ) , SessionLen: 50635, Type: JavaScript
+27 Jan 2016 | 03:59:26,624 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 5, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56524
+27 Jan 2016 | 03:59:26,666 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56524 ) , Type: JavaScript
+27 Jan 2016 | 03:59:26,689 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56524 ) , asSpect: false
+27 Jan 2016 | 03:59:31,977 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:59:31,985 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:59:32,002 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room261, Id: 5, Group: default, isGame: true ]
+27 Jan 2016 | 03:59:32,005 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room261, Id: 5, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56524 ) , asSpect: false
+27 Jan 2016 | 03:59:32,698 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.IndexOutOfBoundsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IndexOutOfBoundsException
+Message: toIndex = 6
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room261, Id: 5, Group: default, isGame: true ] }
+Extension Cmd: ready
++--- --- ---+
+Stack Trace:
++--- --- ---+
+java.util.ArrayList.subListRangeCheck(Unknown Source)
+java.util.ArrayList.subList(Unknown Source)
+sfs2x.extensions.room.play.Database.getSubsetWeightedCards(Database.java:111)
+sfs2x.extensions.room.play.GameBoard.addCardDeck(GameBoard.java:50)
+sfs2x.extensions.room.play.single.ReadyHandler.handleClientRequest(ReadyHandler.java:43)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+27 Jan 2016 | 03:59:43,213 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 5, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56524 }
+27 Jan 2016 | 03:59:43,215 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56524 ) , SessionLen: 16550, Type: JavaScript
+27 Jan 2016 | 03:59:43,258 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room261, Id: 5, Group: default, isGame: true ], Duration: 11276
+27 Jan 2016 | 03:59:44,880 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 6, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56591
+27 Jan 2016 | 03:59:44,956 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:56591 ) , Type: JavaScript
+27 Jan 2016 | 03:59:44,976 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:56591 ) , asSpect: false
+27 Jan 2016 | 03:59:51,233 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+27 Jan 2016 | 03:59:51,254 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+27 Jan 2016 | 03:59:51,277 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room262, Id: 6, Group: default, isGame: true ]
+27 Jan 2016 | 03:59:51,281 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room262, Id: 6, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 5, Priv: 0, Sess: 127.0.0.1:56591 ) , asSpect: false
+27 Jan 2016 | 03:59:51,983 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.IndexOutOfBoundsException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IndexOutOfBoundsException
+Message: toIndex = 6
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room262, Id: 6, Group: default, isGame: true ] }
+Extension Cmd: ready
++--- --- ---+
+Stack Trace:
++--- --- ---+
+java.util.ArrayList.subListRangeCheck(Unknown Source)
+java.util.ArrayList.subList(Unknown Source)
+sfs2x.extensions.room.play.Database.getSubsetWeightedCards(Database.java:111)
+sfs2x.extensions.room.play.GameBoard.addCardDeck(GameBoard.java:50)
+sfs2x.extensions.room.play.single.ReadyHandler.handleClientRequest(ReadyHandler.java:43)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+

@@ -53,5 +53,7 @@ function populateRankingList(data) {
     };
     var dataAdapter = new $.jqx.dataAdapter(source);
     rankingWinTable.jqxDataTable({source: dataAdapter, sortable: true});
+
     rankingWin.jqxWindow("open");
+    rankingWinTable.jqxDataTable('render');
 }

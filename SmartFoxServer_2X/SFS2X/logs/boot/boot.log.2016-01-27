@@ -1,0 +1,852 @@
+27 Jan 2016 | 00:32:22,101 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 00:32:22,116 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 00:32:22,116 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 00:32:22,180 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 00:32:22,195 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@4bfbd6e4
+27 Jan 2016 | 00:32:22,227 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 00:32:22,242 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 00:32:22,242 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 00:32:22,258 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 00:32:22,258 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 00:32:22,258 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 00:32:22,258 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 00:32:22,258 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 00:32:22,258 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@2fb222d2
+27 Jan 2016 | 00:32:22,258 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 00:32:22,258 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 00:32:22,363 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 00:32:22,363 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 00:32:22,363 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 00:32:22,364 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 00:32:22,365 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 00:32:22,368 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 03:07:34,238 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 03:07:34,238 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 03:07:34,254 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 03:07:34,316 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 03:07:34,316 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@64486c1a
+27 Jan 2016 | 03:07:34,363 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 03:07:34,379 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 03:07:34,379 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 03:07:34,379 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 03:07:34,394 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 03:07:34,394 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 03:07:34,394 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 03:07:34,394 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 03:07:34,394 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@5eb630d1
+27 Jan 2016 | 03:07:34,394 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 03:07:34,394 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 03:07:34,496 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 03:07:34,497 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 03:07:34,497 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 03:07:34,498 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 03:07:34,499 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 03:07:34,502 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 03:53:05,536 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 03:53:05,538 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 03:53:05,539 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 03:53:05,607 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 03:53:05,615 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@612c1219
+27 Jan 2016 | 03:53:05,639 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 03:53:05,650 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 03:53:05,654 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 03:53:05,662 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 03:53:05,665 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 03:53:05,665 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 03:53:05,665 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 03:53:05,666 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 03:53:05,666 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@30f726a
+27 Jan 2016 | 03:53:05,666 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 03:53:05,666 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 03:53:05,745 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 03:53:05,746 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 03:53:05,746 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 03:53:05,747 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 03:53:05,748 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 03:53:05,751 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 04:17:30,734 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 04:17:30,737 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 04:17:30,738 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 04:17:30,810 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 04:17:30,817 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@27df377e
+27 Jan 2016 | 04:17:30,844 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 04:17:30,856 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 04:17:30,861 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 04:17:30,869 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 04:17:30,872 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 04:17:30,872 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 04:17:30,872 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 04:17:30,872 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 04:17:30,873 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@288d44e9
+27 Jan 2016 | 04:17:30,873 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 04:17:30,873 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 04:17:30,953 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 04:17:30,954 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 04:17:30,954 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 04:17:30,954 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 04:17:30,955 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 04:17:30,959 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 05:06:45,054 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 05:06:45,054 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 05:06:45,054 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 05:06:45,132 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 05:06:45,132 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@7c615213
+27 Jan 2016 | 05:06:45,163 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 05:06:45,163 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@3e335a25
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 05:06:45,179 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 05:06:45,269 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 05:06:45,269 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 05:06:45,270 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 05:06:45,270 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 05:06:45,271 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 05:06:45,274 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 05:14:49,453 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 05:14:49,456 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 05:14:49,457 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 05:14:49,527 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 05:14:49,535 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@64486c1a
+27 Jan 2016 | 05:14:49,563 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 05:14:49,573 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 05:14:49,578 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 05:14:49,586 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 05:14:49,588 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 05:14:49,589 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 05:14:49,589 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 05:14:49,589 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 05:14:49,590 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@5eb630d1
+27 Jan 2016 | 05:14:49,590 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 05:14:49,591 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 05:14:49,669 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 05:14:49,670 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 05:14:49,670 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 05:14:49,670 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 05:14:49,671 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 05:14:49,674 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 06:12:12,201 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 06:12:12,201 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 06:12:12,201 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 06:12:12,279 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 06:12:12,279 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@3efe45d3
+27 Jan 2016 | 06:12:12,311 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 06:12:12,326 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 06:12:12,326 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 06:12:12,342 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 06:12:12,342 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 06:12:12,342 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 06:12:12,342 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 06:12:12,342 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 06:12:12,342 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@1bcaa83
+27 Jan 2016 | 06:12:12,342 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 06:12:12,342 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 06:12:12,425 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 06:12:12,426 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 06:12:12,426 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 06:12:12,427 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 06:12:12,428 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 06:12:12,431 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 14:38:07,939 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 14:38:07,942 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 14:38:07,943 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 14:38:08,252 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 14:38:08,264 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@47a08f39
+27 Jan 2016 | 14:38:08,316 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 14:38:08,329 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 14:38:08,334 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 14:38:08,345 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 14:38:08,350 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 14:38:08,350 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 14:38:08,350 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 14:38:08,351 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 14:38:08,351 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@23bf2c88
+27 Jan 2016 | 14:38:08,351 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 14:38:08,351 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 14:38:08,468 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 14:38:08,479 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 14:38:08,481 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 14:38:08,483 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 14:38:08,484 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 14:38:08,486 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 14:56:02,350 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 14:56:02,360 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 14:56:02,360 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 14:56:02,420 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 14:56:02,430 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@64486c1a
+27 Jan 2016 | 14:56:02,450 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 14:56:02,460 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 14:56:02,470 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 14:56:02,480 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 14:56:02,480 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 14:56:02,480 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 14:56:02,480 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 14:56:02,480 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 14:56:02,480 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@5eb630d1
+27 Jan 2016 | 14:56:02,480 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 14:56:02,480 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 14:56:02,561 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 14:56:02,561 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 14:56:02,562 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 14:56:02,562 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 14:56:02,563 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 14:56:02,566 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 17:19:12,376 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 17:19:12,386 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 17:19:12,386 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 17:19:12,456 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 17:19:12,456 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@4bfbd6e4
+27 Jan 2016 | 17:19:12,496 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 17:19:12,506 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 17:19:12,516 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 17:19:12,526 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 17:19:12,526 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 17:19:12,526 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 17:19:12,526 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 17:19:12,526 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 17:19:12,526 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@2fb222d2
+27 Jan 2016 | 17:19:12,526 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 17:19:12,526 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 17:19:12,610 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 17:19:12,611 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 17:19:12,611 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 17:19:12,611 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 17:19:12,613 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 17:19:12,616 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 17:37:26,126 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 17:37:26,126 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 17:37:26,126 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 17:37:26,196 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+		 ->fe80:0:0:0:0:5efe:c0a8:102%12
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 17:37:26,196 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@4eb15265
+27 Jan 2016 | 17:37:26,226 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 17:37:26,236 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 17:37:26,236 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 17:37:26,246 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 17:37:26,246 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 17:37:26,246 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 17:37:26,246 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 17:37:26,246 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 17:37:26,256 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@b3f19eb
+27 Jan 2016 | 17:37:26,256 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 17:37:26,256 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 17:37:26,332 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 17:37:26,333 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 17:37:26,333 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 17:37:26,334 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler
+27 Jan 2016 | 17:37:26,335 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 17:37:26,338 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 22:04:10,822 | INFO  | main | bootLogger |     | SmartFoxServer 2X
+27 Jan 2016 | 22:04:10,832 | INFO  | main | bootLogger |     | BitSwarmEngine version: 3.30.1 { main }
+27 Jan 2016 | 22:04:10,832 | INFO  | main | bootLogger |     | System Info:
+	Processor(s): 4
+	VM Max. memory: 954MB
+	os.name: Windows 7
+	os.arch: amd64
+	os.version: 6.1
+	java.version: 1.7.0_21
+	java.vendor: Oracle Corporation
+	java.vendor.url: http://java.oracle.com/
+	java.vm.specification.version: 1.7
+	java.vm.version: 23.21-b01
+	java.vm.vendor: Oracle Corporation
+	java.vm.name: Java HotSpot(TM) 64-Bit Server VM
+	java.io.tmpdir: C:\Users\Thomas\AppData\Local\Temp\
+	Default charset: UTF-8
+
+27 Jan 2016 | 22:04:11,036 | INFO  | main | bootLogger |     | Network Info:
+	Card: Software Loopback Interface 1
+		 ->127.0.0.1
+		 ->0:0:0:0:0:0:0:1
+	Card: WAN Miniport (SSTP)
+	Card: WAN Miniport (L2TP)
+	Card: WAN Miniport (PPTP)
+	Card: WAN Miniport (PPPOE)
+	Card: WAN Miniport (IPv6)
+	Card: WAN Miniport (Network Monitor)
+	Card: WAN Miniport (IP)
+	Card: RAS Async Adapter
+	Card: WAN Miniport (IKEv2)
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)
+		 ->192.168.1.2
+		 ->fe80:0:0:0:f8f2:3254:d8a1:9706%11
+	Card: Microsoft-ISATAP-Adapter
+	Card: Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64
+	Card: Microsoft-ISATAP-Adapter #2
+		 ->fe80:0:0:0:0:5efe:c0a8:3801%14
+	Card: Microsoft-6zu4-Adapter
+	Card: VirtualBox Host-Only Ethernet Adapter
+		 ->192.168.56.1
+		 ->fe80:0:0:0:ed77:af6f:d2ca:2261%16
+	Card: Microsoft-ISATAP-Adapter #3
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-VirtualBox NDIS Light-Weight Filter-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-QoS Packet Scheduler-0000
+	Card: Realtek RTL8168D/8111D Family PCI-E Gigabit Ethernet NIC (NDIS 6.20)-WFP LightWeight Filter-0000
+	Card: WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IP)-QoS Packet Scheduler-0000
+	Card: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-VirtualBox NDIS Light-Weight Filter-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000
+	Card: VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000
+
+27 Jan 2016 | 22:04:11,060 | INFO  | main | bootLogger |     | Session manager ready: com.smartfoxserver.bitswarm.sessions.DefaultSessionManager@74e821
+27 Jan 2016 | 22:04:11,107 | INFO  | main | bootLogger |     | TCP Selector opened
+27 Jan 2016 | 22:04:11,116 | INFO  | main | bootLogger |     | UDP Selector opened
+27 Jan 2016 | 22:04:11,116 | INFO  | main | bootLogger |     | AcceptSelector opened
+27 Jan 2016 | 22:04:11,126 | INFO  | main | bootLogger |     | Added bound tcp socket --> 0.0.0.0:9933
+27 Jan 2016 | 22:04:11,136 | INFO  | main | bootLogger |     | Added bound udp socket --> 127.0.0.1:9933
+27 Jan 2016 | 22:04:11,136 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SystemReqController 
+27 Jan 2016 | 22:04:11,136 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.SmasherReqController 
+27 Jan 2016 | 22:04:11,136 | INFO  | main | bootLogger |     | Controller started: com.smartfoxserver.v2.controllers.v290.ExtensionReqController 
+27 Jan 2016 | 22:04:11,136 | INFO  | main | bootLogger |     | IOHandler: com.smartfoxserver.v2.protocol.SFSIoHandler@63e0c498
+27 Jan 2016 | 22:04:11,136 | INFO  | main | bootLogger |     | SocketReader started
+27 Jan 2016 | 22:04:11,136 | INFO  | main | bootLogger |     | SocketAcceptor initialized
+27 Jan 2016 | 22:04:11,287 | INFO  | main | bootLogger |     | WebSocketService started: 127.0.0.1:8888
+27 Jan 2016 | 22:04:11,288 | INFO  | main | bootLogger |     | Socket Writer started (pool size:3)
+27 Jan 2016 | 22:04:11,288 | INFO  | main | bootLogger |     | DatagramReader started
+27 Jan 2016 | 22:04:11,290 | INFO  | main | bootLogger |     | Security Manager started
+27 Jan 2016 | 22:04:11,293 | INFO  | main | bootLogger |     | [[[ ===--- Boot sequence complete ---=== ]]]
+27 Jan 2016 | 22:04:11,329 | INFO  | Scheduler1-thread-1 | bootLogger |     | Scheduler started: scheduler

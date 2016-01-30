@@ -99,7 +99,8 @@ function onUserExitRoom(event)
     }
     else
     {
-
+        console.log(event);
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("getBadges") );
     }
 }
 
@@ -222,7 +223,7 @@ function updateRoomData (serverRoomData) {
         var room = sfs.roomManager.getRoomByName(rowRoomName);
         var status = $.grep(room.getVariables(), function(e){ return e.name == "status"; });
         if(rowRoomName == room.name) {
-            $("#roomTable").jqxDataTable('updateRow', rows[i].uid, {id: rows[i].id, name: rows[i].name, mode: rows[i].mode, players: serverRoomData["countPlayers"] + "/2", categories: rows[i].categories, status: serverRoomData["status"]});
+            $("#roomTable").jqxDataTable('updateRow', rows[i].uid, {id: rows[i].id, name: rows[i].name, mode: rows[i].mode, players: serverRoomData["countPlayers"] + "/" + serverRoomData["maxPlayers"], categories: rows[i].categories, status: serverRoomData["status"]});
             $("#roomTable").jqxDataTable('unselectRow', rows[i].uid);
             $("#joinGameBt").jqxButton({disabled:true});
         }

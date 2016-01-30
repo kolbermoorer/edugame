@@ -13,7 +13,7 @@ var NUMBER_OF_PROPERTIES_PER_CARD = 4;
 //game variables
 var gameType = "single";
 var multiPlayer = false;
-var category, topic, color, upperRank, lowerRank;
+var category, topic, color, totalAvgPageRank, totalAvgWeight, totalCards;
 
 var previousSelectedCard;
 var selectedCard;
@@ -47,9 +47,11 @@ var ready;
 
 function setReadyStatus(){
     gameStarted = false;
+    $("#gameContainerHandler").html('<canvas id="gameContainer" width="1000" height="700">Your Browser does not support Canvas</canvas>');
     canvas = document.getElementById("gameContainer");
     stage = new createjs.Stage(canvas);
     stage.enableMouseOver();
+    stage.enableDOMEvents(true);
     stage.mouseEventsEnabled = true;
 
     var line = new createjs.Shape();
@@ -57,45 +59,71 @@ function setReadyStatus(){
     line.alpha = 0.2;
 
     stage.addChild(line);
-
-
     createjs.Ticker.addEventListener("tick", handleTick);
-    function handleTick(event) {
-        if(!inited)
-            updateLoadingScreen(event);
-        else
-            setTimer(event);
-        stage.update();
-    }
 
     $("#timerText").text("Autostart");
     $("#startGameBt").removeClass("enabled").addClass("disabled");
 
-    if(gameType == "single")
-        showGamePopUp("loading", '<div class="popupContent"><img src="img/loader.gif"/> <br> Loading cards (<span id="loadingTime" ms="45000">45</span>)</div>', "Please Wait ...");
+    if(gameType == "single") {
+        showGamePopUp("loading", '<div class="popupContent"><img src="img/loader.gif"/> <br> Loading cards (<span id="loadingTime" ms="20000">20</span>)</div>', "Please Wait ...");
+    }
+
+
     //$("#instructionsWin").jqxWindow("open");
 
     var params = {};
     params.category = category;
     params.topic = topic;
     params.color = color;
-    params.upperRank = upperRank;
-    params.lowerRank = lowerRank;
+    params.totalAvgPageRank = totalAvgPageRank;
+    params.totalAvgWeight = totalAvgWeight;
+    params.totalCards = totalCards;
     sfs.send( new SFS2X.Requests.System.ExtensionRequest("ready", params, sfs.lastJoinedRoom) );
 }
 
+function handleTick(event) {
+    if(!inited)
+        updateLoadingScreen(event);
+    else
+        setTimer(event);
+    stage.update();
+}
+
 function resetGameBoard() {
-    $(".timeToStartEnd").TimeCircles().destroy();
+    $("#gameContainer").remove();
+    createjs.Ticker.removeEventListener("tick", handleTick);
+    canvas = null;
+    stage = null;
+    board = null;
+    startWiki = null;
     $("#startGameBt").children(0).text("Start Game");
-    $("#startGameBt").removeClass("disabled").addClass("enabled");
+    $("#startGameBt").removeClass("enabled").addClass("disabled");
     $("#timerText").text("Autostart");
     $("#startStatusText").text("Click on 'Start Game' if you are ready!");
+    $("#statusTextWrapper").css("color", "#333333");
 
     $(".gameBarControls").css("display", "none");
     $("#gameButtons").css("display", "none");
     $("#statusTextWrapper").css("display","none");
+    $("#questionBox").css("display", "none");
+    $("#feedbackWrapper").css("display", "none");
+    $("#stackOverview").css("display", "none");
+    $("#countCardsTop").css("display","none");
+
+    $(".countdown").TimeCircles().stop();
+    $(".opponentCountdown").TimeCircles().stop();
+    $(".timeToStartEnd").TimeCircles().stop();
+    $(".countdown").css("opacity", 0);
+    $(".opponentCountdown").css("opacity", 0);
     gameChatAreaPn.jqxPanel('clearcontent');
     inited = false;
+    inGame = false;
+    gameStarted = false;
+    cards = [];
+    cardContainer = null;
+    player1 = {};
+    player2 = {};
+    selectedCard = null;
 }
 
 function initFirstPhase(data) {
@@ -124,11 +152,7 @@ function initFirstPhase(data) {
         $(".gameBarControls").css("display", "block");
     }
     $("#startGameBt").removeClass("disabled").addClass("enabled");
-    $(".timeToStartEnd").TimeCircles().restart();
-}
-
-function initSecondPhase() {
-    //$(".gameBarControls").css("display", "block");
+    $(".timeToStartEnd").data('timer', 301).TimeCircles().restart();
 }
 
 function buildFirstPhaseUI(cards, layouts) {
@@ -145,14 +169,15 @@ function autostart() {
     onStartGameBtClick();
 }
 
-function onStartGameBtClick() {
+function onStartGameBtClick(evt) {
+    evt.stopImmediatePropagation();
     $.each( cards, function( index, card ) {
         card.removeEventListener("click", showWikiPage);
         card.cursor = null;
     });
-    if(typeof startWiki != 'undefined') {
+    if(startWiki !== null) {
         var endWiki = new Date();
-        sfs.send( new SFS2X.Requests.System.ExtensionRequest("wikipedia", {time: endWiki-startWiki, i: selectedCard.cardId}, sfs.lastJoinedRoom) );
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("wikipedia", {time: endWiki-startWiki, when: "start", i: selectedCard.cardId}, sfs.lastJoinedRoom) );
     }
     $("#startGameBt").children(0).text("Waiting ...");
     $("#startStatusText").html("The opponent player is <span style ='color: red; font-weight: bold;'>NOT</span>ready to play!");
@@ -165,53 +190,64 @@ function onStartGameBtClick() {
 }
 
 function startGame(params) {
-    //if(params.start) {
-        $('#lookupWiki').css('display', 'none');
-        $('#stackOverview').css('display', 'none');
-        $("#timerText").text("Game End");
-        $("#startStatusText").text("");
+    $('#lookupWiki').css('display', 'none');
+    $('#stackOverview').css('display', 'none');
+    $("#timerText").text("Game End");
+    $("#startStatusText").text("Playing Mode: " + (gameType == "single" ? "Single Player" : gameType == "compete" ? "Defeat Your Enemy" : "The Will To Cooperate"));
 
 
-        $.each( cards, function( index, card ) {
-            card.removeChild(card.children[1]);
-        });
-        gameStarted = true;
-        ready = true;
-        $("#startGameBt").children(0).text("Is Running");
-        buildNameContainers();
-        shuffleCards();
-        if(gameType == "single")
-            setStatusText(0);
-        else
-            setStatusText(1);
-        $("#statusTextWrapper").css("display","block");
-        timeLeft = 901000; //15 min + 1 sec
+    $.each( cards, function( index, card ) {
+        card.removeChild(card.children[1]);
+    });
+    gameStarted = true;
+    ready = true;
+    $("#startGameBt").children(0).text("Is Running");
+    buildNameContainers();
+    shuffleCards();
+    if(gameType == "single")
+        setStatusText(0);
+    else
+        setStatusText(1);
+    $("#statusTextWrapper").css("display","block");
+    $("#countCardsTop").css("display","block");
 
-        $(".timeToStartEnd").TimeCircles().destroy();
-        $(".timeToStartEnd").data('timer', 901).TimeCircles({
-            "start": true,
-            "total_duration": 901,
-            "count_past_zero": false,
-            "time": {
-                "Days": {
-                    "show": false
-                },
-                "Hours": {
-                    "show": false
-                },
-                "Minutes": {
-                    "text": "Minutes",
-                    "color": "darkgray",
-                    "show": true
-                },
-                "Seconds": {
-                    "show": false
-                }}
-        });
+    timeLeft = 901000; //15 min + 1 sec
+
+    $(".timeToStartEnd").TimeCircles().destroy();
+    $(".timeToStartEnd").data('timer', 901).TimeCircles({
+        "start": true,
+        "total_duration": 901,
+        "count_past_zero": false,
+        "time": {
+            "Days": {
+                "show": false
+            },
+            "Hours": {
+                "show": false
+            },
+            "Minutes": {
+                "text": "Minutes",
+                "color": "darkgray",
+                "show": true
+            },
+            "Seconds": {
+                "show": false
+            }}
+    });
+
 }
 
 function stopGame(params) {
     var results = JSON.parse(params.results);
+    console.log(results);
+
+    results = $.grep(results, function (el, i) {
+        if (el["user"] != sfs.mySelf.getVariable("id").value) {
+            return false;
+        }
+        return true; // keep the element in the array
+    });
+
     source =
     {
         localData: results,
@@ -224,7 +260,11 @@ function stopGame(params) {
                 { name: 'name', type: 'string' },
                 { name: 'property', type: 'string' },
                 { name: 'correct', type: 'string' },
-                { name: 'wikipedia', type: 'string' }
+                { name: 'answerRight', type: 'string' },
+                { name: 'answer', type: 'string' },
+                { name: 'answerOptions', type: 'array' },
+                { name: 'wikipedia', type: 'string' },
+                { name: 'data', type: 'int' }
             ]
     };
     var dataAdapter = new $.jqx.dataAdapter(source);
@@ -233,17 +273,81 @@ function stopGame(params) {
     var gameCount = results.length;
     var rightCount = $.grep(results, function(e){ return e.correct == "true"; }).length;
     var wrongCount = gameCount - rightCount;
-    var pointsEarned = rightCount * 2 - wrongCount*1;
+    var pointsEarned = params["points"]; 
 
-    var newTitle = "<strong>Game is Over &#x27a0; Total Questions: " + gameCount + "  |  Right: " + rightCount +"  |  Wrong: " + wrongCount + "  |  Points earned: " + pointsEarned + "</strong>"
+    var reason =(typeof params.n == 'undefined' ? "Game is Over" : "User " + params.n + " left the game ")
+    var newTitle = "<strong>" + reason + " &#x27a0; Total Questions: " + gameCount + "  |  Right: " + rightCount +"  |  Wrong: " + wrongCount + "  |  Points earned: " + pointsEarned + "</strong>"
     afterGameWin.jqxWindow('setTitle', newTitle);
     afterGameWin.jqxWindow('open');
     afterGameWinTable.jqxDataTable('render');
 }
 
+function initAnswerDetails(id, row, element, rowinfo) {
+    rowinfo.detailsHeight = 92;
+    element.append($("<div style='margin-left: 20px;'></div>"));
+    var nestedDataTable = $(element.children()[0]);
+
+    console.log(row);
+    var options = row.answerOptions;
+    var data = [{"option1": options[0], "option2": options[1], "option3": options[2], "correct": row["answerRight"], "answer": row["answer"]}];
+
+    var source =
+    {
+        localData: data,
+        dataType: "array",
+        dataFields:
+            [
+                { name: 'option1', type: 'string' },
+                { name: 'option2', type: 'string' },
+                { name: 'option3', type: 'string' },
+                { name: 'correct', type: 'string' },
+                { name: 'answer', type: 'string' }
+            ]
+    };
+
+    var dataAdapter = new $.jqx.dataAdapter(source);
+    nestedDataTable.jqxDataTable({
+        width: 750,
+        height: rowinfo.detailsHeight-2,
+        source: dataAdapter,
+        enableHover: false,
+        selectionMode: 'custom',
+        autoRowHeight: true,
+        pageable: false,
+        showHeader: true,
+        columns: [
+            {text: 'Option 1', dataField: 'option1', width: 250, align: 'center',
+                cellsRenderer: function (row, column, value, rowData) {
+                    var className = (value == rowData["correct"] ? "correct" : value == rowData["answer"] ? "wrong" : "undefined");
+                    return '<div class="' + className +'"style="width: 100%; height=100%;">' + value +'</div>';
+                }
+            },
+            {text: 'Option 2', dataField: 'option2', width: 250,align: 'center',
+                cellsRenderer: function (row, column, value, rowData) {
+                    var className = (value == rowData["correct"] ? "correct" : value == rowData["answer"] ? "wrong" : "undefined");
+                    return '<div class="' + className +'"style="width: 100%; height=100%;">' + value +'</div>';
+                }
+            },
+            {text: 'Option 3', dataField: 'option3', width: 250,align: 'center',
+                cellsRenderer: function (row, column, value, rowData) {
+                    var className = (value == rowData["correct"] ? "correct" : value == rowData["answer"] ? "wrong" : "undefined");
+                    return '<div class="' + className +'"style="width: 100%; height=100%;">' + value +'</div>';
+                }
+            }
+        ]
+    });
+
+    $(".correct").parent().addClass("correctCell");
+    $(".wrong").parent().addClass("wrongCell");
+    $(".undefined").parent().addClass("undefinedCell");
+
+}
+
 function destroyGame() {
-    resetGameBoard();
     setView("lobby", true);
+    if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME)
+        sfs.send(new SFS2X.Requests.System.LeaveRoomRequest());
+    resetGameBoard();
 }
 
 function setTimer(event) {
@@ -253,18 +357,18 @@ function setTimer(event) {
     }
     else {
         if(!gameStarted) {
-            trace("The Game was started automatically!");
+            console.log("The Game was started automatically!");
             autostart();
         }
     }
 }
 
 function buildNameContainers() {
-    //Player2
+    //left container
     p2NameCont = new createjs.Container();
     var pBG = new createjs.Shape();
     pBG.graphics.setStrokeStyle(1);
-    pBG.graphics.beginStroke("black");
+    pBG.graphics.beginStroke("orange");
     pBG.graphics.beginFill("lightgray");
     pBG.width = 150;
     pBG.height = 25;
@@ -276,21 +380,21 @@ function buildNameContainers() {
     p2NameCont.name.x = (pBG.width)/2;
     p2NameCont.name.y = 3;
     p2NameCont.addChild(p2NameCont.name);
-
-    if(gameType == "collaborate") {
-        p2NameCont.x = 28;
-        p2NameCont.y = BOARD_HEIGHT-pBG.height-15
-    }
-    else {
-        p2NameCont.x = 28;
-        p2NameCont.y = 15;
-    }
+    p2NameCont.x = 28;
+    p2NameCont.y = BOARD_HEIGHT-pBG.height-15
 
     stage.addChild(p2NameCont);
 
-    //Player2
+    //right container
     p1NameCont = new createjs.Container();
-    var p2BG = pBG.clone();
+    var p2BG = new createjs.Shape();
+    p2BG.graphics.setStrokeStyle(1);
+    p2BG.graphics.beginStroke("blue");
+    p2BG.graphics.beginFill("lightgray");
+    p2BG.width = 150;
+    p2BG.height = 25;
+    p2BG.graphics.drawRoundRect(0, 0, pBG.width, pBG.height,12);
+    p2BG.cache(-2.5, -2.5, pBG.width+5, pBG.height+5);
     p1NameCont.addChild(p2BG);
     p1NameCont.name = new createjs.Text(player1.name, "bold 14px Verdana", "#000000");
     p1NameCont.name.textAlign = "center";
@@ -313,7 +417,7 @@ function setStatusText(level, category, topic){
             statusText = "Select a playing card from above to create a question."
             break;
         case 1:
-            statusText = (myTurn() ? "It's your turn. Select a card to create a question for your opponent!" : "It's your opponent's turn. Get ready for his cards' question!");
+            statusText = (myTurn() ? "It's your turn. Select a card to create a question for you and your opponent!" : "It's your opponent's turn. Get ready for the question!");
             break;
         case 2:
             statusText = "Category: " + category + " | Topic: " + topic;
@@ -329,21 +433,20 @@ function myTurn() {
 function getCardDetails(event) {
     selectedCard = event.target.parent;
     var cardId = selectedCard.cardId;
-    trace(selectedCard);
-    if (!selectedCard.hasData) {
-        selectedCard.hasData = true;
-        var params = {};
-        params.cardId = cardId;
-        sfs.send( new SFS2X.Requests.System.ExtensionRequest("pickCard", params, sfs.lastJoinedRoom) );
+    enableBoard(false);
+    if(gameType == "single") {
+        $("#statusText").text("Please answer the question below.");
     }
     else {
-        if(gameType == "single") {
-            var params = {};
-            params.cardId = cardId;
-            sfs.send( new SFS2X.Requests.System.ExtensionRequest("setPlayedCard", params, sfs.lastJoinedRoom) );
-        }
-            singePlayerOpenCard();
+        $("#statusText").text("Please select a property from right for which you want to generate a question.");
     }
+    var params = {};
+    params.cardId = cardId;
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("pickCard", params, sfs.lastJoinedRoom) );
+}
+
+function updateCountText(correct) {
+
 }
 
 function flip() {

@@ -1,0 +1,24 @@
+29 Jan 2016 | 17:16:05,205 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 17, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 57983
+29 Jan 2016 | 17:16:05,258 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:57983 ) , Type: JavaScript
+29 Jan 2016 | 17:16:05,280 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:57983 ) , asSpect: false
+29 Jan 2016 | 17:16:21,892 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 17:16:21,919 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 17:16:21,939 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room451, Id: 8, Group: default, isGame: true ]
+29 Jan 2016 | 17:16:21,942 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room451, Id: 8, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:57983 ) , asSpect: false
+29 Jan 2016 | 17:16:37,955 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: [Room451, [( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:57983 ) ], [Place, Philosopher, Capital], [Eastern Europe, 17th-century Philosophers, University Towns In Germany]] 
+29 Jan 2016 | 17:30:20,184 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 17, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:57983 }
+29 Jan 2016 | 17:30:20,185 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 16, Priv: 0, Sess: 127.0.0.1:57983 ) , SessionLen: 854927, Type: JavaScript
+29 Jan 2016 | 17:30:20,232 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room451, Id: 8, Group: default, isGame: true ], Duration: 838318
+29 Jan 2016 | 17:30:22,596 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 18, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58158
+29 Jan 2016 | 17:30:22,638 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 17, Priv: 0, Sess: 127.0.0.1:58158 ) , Type: JavaScript
+29 Jan 2016 | 17:30:22,659 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 17, Priv: 0, Sess: 127.0.0.1:58158 ) , asSpect: false
+29 Jan 2016 | 17:30:27,682 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 17:30:27,700 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 17:30:27,723 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room452, Id: 9, Group: default, isGame: true ]
+29 Jan 2016 | 17:30:27,726 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room452, Id: 9, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 17, Priv: 0, Sess: 127.0.0.1:58158 ) , asSpect: false
+29 Jan 2016 | 17:30:39,527 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: [Room452, [( User Name: tkutschk, Id: 17, Priv: 0, Sess: 127.0.0.1:58158 ) ], [Area, Place, Island], [Capitals In North America, Eastern Europe, Islands Of Africa]] 
+29 Jan 2016 | 17:35:31,049 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room452, Id: 9, Group: default, isGame: true ], Duration: 303353
+29 Jan 2016 | 17:55:55,934 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+29 Jan 2016 | 17:55:55,936 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+29 Jan 2016 | 17:55:55,937 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+29 Jan 2016 | 17:55:55,938 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

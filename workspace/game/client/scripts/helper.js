@@ -8,7 +8,7 @@ function trace(txt, showAlert)
 
 function showError(text)
 {
-    trace(text);
+    console.log(text);
     $("#errorLb").html("<b>ATTENTION</b><br/>" + text).toggle();
 }
 
@@ -16,9 +16,11 @@ function onGameExtensionResponse(event)
 {
     var cmd = event.cmd;
     var params = event.params;
-    //trace(params);
 
     switch(cmd){
+        case "getBadges":
+            updateBadges(event.params.data[0]);
+            break;
         case "updateRoomTable":
             updateRoomData(event.params);
             break;
@@ -34,7 +36,7 @@ function onGameExtensionResponse(event)
             break;
         case "getTopics":
             var topics = JSON.parse(event.params.data);
-            trace(topics);
+            //console.log(topics);
             populateTopicList(topics);
             break;
         case "getEntries":
@@ -47,7 +49,6 @@ function onGameExtensionResponse(event)
             break;
         case "init":
             params.cardData = JSON.parse(params.cardData);
-            trace(params);
             initFirstPhase(params);
             break;
         case "updateStartStatusText":
@@ -56,21 +57,44 @@ function onGameExtensionResponse(event)
         case "start":
             startGame(params);
             break;
+        case "stop":
+            stopGame(params);
+            break;
         case "pickCard":
             questionData = JSON.parse(params.card);
-            trace(questionData);
+            console.log(questionData);
             fillCard(questionData);
+            var countText = (player2.stack[selectedCard.categoryId]-1 == 0 ? "" : player2.stack[selectedCard.categoryId]-1);
+            $("#countTop" + selectedCard.categoryId).text(countText);
             if(gameType == "single")
                 singePlayerOpenCard();
-            break;
-        case "setPlayedCard":
-            if(gameType == "single")
-                singePlayerOpenCard();
+            else
+                multiPlayerOpenCard();
             break;
         case "checkAnswer":
-            markAnswer(params);
+            if(params.isError)
+                onNextQuestionBtClick();
+            else
+                markAnswer(params);
             if(params.gameEnd)
                 stopGame(params);
+            break;
+        case "createMultiplayerQuestion":
+            multiPlayerCreateQuestion(params);
+            break;
+        case "updateTurn":
+            console.log(params);
+            onNextQuestionBtClickCss();
+            whoseTurn = params["whoseTurn"];
+            setStatusText(1);
+            handleMove(params["enableBoard"]);
+            break;
+        case "stopTime":
+            console.log("Stop the timer of the opponent!");
+            stopOpponentTimer();
+            break;
+        case "updateWeight":
+            $(".averageRating").children().children().eq(1).children().eq(1).text(rating);
             break;
     }
 }

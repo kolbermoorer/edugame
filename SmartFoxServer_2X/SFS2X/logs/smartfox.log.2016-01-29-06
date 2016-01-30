@@ -1,0 +1,261 @@
+29 Jan 2016 | 06:10:40,049 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 17, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:55053 }
+29 Jan 2016 | 06:10:40,058 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 17, Priv: 0, Sess: 127.0.0.1:55053 ) , SessionLen: 1811080, Type: JavaScript
+29 Jan 2016 | 06:13:35,245 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+29 Jan 2016 | 06:13:41,812 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 18, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55365
+29 Jan 2016 | 06:13:41,849 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:55365 ) , Type: JavaScript
+29 Jan 2016 | 06:13:41,871 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:55365 ) , asSpect: false
+29 Jan 2016 | 06:13:47,807 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Island' AND c.topic='Islands Of Africa'  
+29 Jan 2016 | 06:14:28,614 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 06:14:28,644 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 06:14:28,668 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room441, Id: 6, Group: default, isGame: true ]
+29 Jan 2016 | 06:14:28,670 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room441, Id: 6, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:55365 ) , asSpect: false
+29 Jan 2016 | 06:14:50,592 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: [Room441, [( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:55365 ) ], [Island, Place, Area], [Islands Of Africa, Eastern Europe, Capitals In North America]] 
+29 Jan 2016 | 06:17:31,284 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+29 Jan 2016 | 06:17:35,330 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 18, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:55365 }
+29 Jan 2016 | 06:17:35,331 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 18, Priv: 0, Sess: 127.0.0.1:55365 ) , SessionLen: 233483, Type: JavaScript
+29 Jan 2016 | 06:17:35,383 | WARN  | SFSWorker:Ext:2 | entities.managers.SFSExtensionManager |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error during event handling: java.lang.NullPointerException, Listener: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room441, Id: 6, Group: default, isGame: true ] }
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.SinglePlayerExtension.stopGame(SinglePlayerExtension.java:108)
+sfs2x.extensions.room.play.single.events.OnUserGoneHandler.handleServerEvent(OnUserGoneHandler.java:90)
+com.smartfoxserver.v2.extensions.SFSExtension.handleServerEvent(SFSExtension.java:258)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:741)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:924)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+29 Jan 2016 | 06:17:36,990 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 19, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55521
+29 Jan 2016 | 06:17:37,037 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 19, Priv: 0, Sess: 127.0.0.1:55521 ) , Type: JavaScript
+29 Jan 2016 | 06:17:37,056 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 19, Priv: 0, Sess: 127.0.0.1:55521 ) , asSpect: false
+29 Jan 2016 | 06:17:42,921 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Capital' AND c.topic='University Towns In Germany'  
+29 Jan 2016 | 06:18:11,610 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Area' AND c.topic='Capitals In North America'  
+29 Jan 2016 | 06:18:19,781 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 06:18:19,811 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 06:18:19,832 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room442, Id: 7, Group: default, isGame: true ]
+29 Jan 2016 | 06:18:19,834 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room442, Id: 7, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 19, Priv: 0, Sess: 127.0.0.1:55521 ) , asSpect: false
+29 Jan 2016 | 06:18:44,711 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: [Room442, [( User Name: tkutschk, Id: 19, Priv: 0, Sess: 127.0.0.1:55521 ) ], [Area, Place, Island], [Capitals In North America, Eastern Europe, Islands Of Africa]] 
+29 Jan 2016 | 06:19:25,938 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+29 Jan 2016 | 06:19:30,065 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 19, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:55521 }
+29 Jan 2016 | 06:19:30,066 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 19, Priv: 0, Sess: 127.0.0.1:55521 ) , SessionLen: 113030, Type: JavaScript
+29 Jan 2016 | 06:19:30,110 | WARN  | SFSWorker:Ext:3 | entities.managers.SFSExtensionManager |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error during event handling: java.lang.NullPointerException, Listener: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room442, Id: 7, Group: default, isGame: true ] }
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.SinglePlayerExtension.stopGame(SinglePlayerExtension.java:108)
+sfs2x.extensions.room.play.single.events.OnUserGoneHandler.handleServerEvent(OnUserGoneHandler.java:90)
+com.smartfoxserver.v2.extensions.SFSExtension.handleServerEvent(SFSExtension.java:258)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:741)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:924)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+29 Jan 2016 | 06:19:32,002 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 20, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55643
+29 Jan 2016 | 06:19:32,039 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:55643 ) , Type: JavaScript
+29 Jan 2016 | 06:19:32,061 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:55643 ) , asSpect: false
+29 Jan 2016 | 06:19:36,814 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Place' AND c.topic='Eastern Europe'  
+29 Jan 2016 | 06:20:01,198 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Capital' AND c.topic='University Towns In Germany'  
+29 Jan 2016 | 06:20:21,749 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 06:20:21,783 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 06:20:21,808 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room443, Id: 8, Group: default, isGame: true ]
+29 Jan 2016 | 06:20:21,810 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room443, Id: 8, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:55643 ) , asSpect: false
+29 Jan 2016 | 06:21:19,488 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: [Room443, [( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:55643 ) ], [Capital, Area, Island], [University Towns In Germany, Capitals In North America, Islands Of Africa]] 
+29 Jan 2016 | 06:24:36,390 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+29 Jan 2016 | 06:24:40,131 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 20, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:55643 }
+29 Jan 2016 | 06:24:40,132 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 20, Priv: 0, Sess: 127.0.0.1:55643 ) , SessionLen: 308093, Type: JavaScript
+29 Jan 2016 | 06:24:40,177 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSExtensionManager |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error during event handling: java.lang.NullPointerException, Listener: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room443, Id: 8, Group: default, isGame: true ] }
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.SinglePlayerExtension.stopGame(SinglePlayerExtension.java:108)
+sfs2x.extensions.room.play.single.events.OnUserGoneHandler.handleServerEvent(OnUserGoneHandler.java:90)
+com.smartfoxserver.v2.extensions.SFSExtension.handleServerEvent(SFSExtension.java:258)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:741)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:924)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+29 Jan 2016 | 06:24:41,921 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 21, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55820
+29 Jan 2016 | 06:24:41,963 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 21, Priv: 0, Sess: 127.0.0.1:55820 ) , Type: JavaScript
+29 Jan 2016 | 06:24:41,985 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 21, Priv: 0, Sess: 127.0.0.1:55820 ) , asSpect: false
+29 Jan 2016 | 06:24:47,038 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Place' AND c.topic='Eastern Europe'  
+29 Jan 2016 | 06:25:00,481 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Area' AND c.topic='Capitals In North America'  
+29 Jan 2016 | 06:25:08,546 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 06:25:08,575 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 06:25:08,595 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room444, Id: 9, Group: default, isGame: true ]
+29 Jan 2016 | 06:25:08,597 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room444, Id: 9, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 21, Priv: 0, Sess: 127.0.0.1:55820 ) , asSpect: false
+29 Jan 2016 | 06:25:23,638 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: [Room444, [( User Name: tkutschk, Id: 21, Priv: 0, Sess: 127.0.0.1:55820 ) ], [Area, Capital, Aristocrat], [Capitals In North America, University Towns In Germany, 18th-century Monarchs In Europe]] 
+29 Jan 2016 | 06:29:40,701 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 21, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:55820 }
+29 Jan 2016 | 06:29:40,702 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 21, Priv: 0, Sess: 127.0.0.1:55820 ) , SessionLen: 298740, Type: JavaScript
+29 Jan 2016 | 06:29:40,736 | WARN  | SFSWorker:Ext:3 | entities.managers.SFSExtensionManager |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error during event handling: java.lang.NullPointerException, Listener: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room444, Id: 9, Group: default, isGame: true ] }
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.SinglePlayerExtension.stopGame(SinglePlayerExtension.java:108)
+sfs2x.extensions.room.play.single.events.OnUserGoneHandler.handleServerEvent(OnUserGoneHandler.java:90)
+com.smartfoxserver.v2.extensions.SFSExtension.handleServerEvent(SFSExtension.java:258)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchRoomLevelEvent(SFSExtensionManager.java:741)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:924)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+29 Jan 2016 | 06:29:42,884 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 22, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 55959
+29 Jan 2016 | 06:29:42,924 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 22, Priv: 0, Sess: 127.0.0.1:55959 ) , Type: JavaScript
+29 Jan 2016 | 06:29:42,947 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:16)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+29 Jan 2016 | 06:29:42,948 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 22, Priv: 0, Sess: 127.0.0.1:55959 ) , asSpect: false
+29 Jan 2016 | 06:29:48,426 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+29 Jan 2016 | 06:29:48,441 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+29 Jan 2016 | 06:29:49,223 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+29 Jan 2016 | 06:29:49,254 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+29 Jan 2016 | 06:29:49,379 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+29 Jan 2016 | 06:29:49,379 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+29 Jan 2016 | 06:29:49,395 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+29 Jan 2016 | 06:29:49,410 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+29 Jan 2016 | 06:29:49,410 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+29 Jan 2016 | 06:29:49,457 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+29 Jan 2016 | 06:29:49,488 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+29 Jan 2016 | 06:29:49,863 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+29 Jan 2016 | 06:29:49,894 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+29 Jan 2016 | 06:29:49,910 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+29 Jan 2016 | 06:29:49,925 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+29 Jan 2016 | 06:29:50,155 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+29 Jan 2016 | 06:29:50,157 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+29 Jan 2016 | 06:29:50,157 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+29 Jan 2016 | 06:30:05,482 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56046
+29 Jan 2016 | 06:30:05,633 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56046 ) , Type: JavaScript
+29 Jan 2016 | 06:30:05,651 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56046 ) , asSpect: false
+29 Jan 2016 | 06:30:11,418 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Capital' AND c.topic='University Towns In Germany'  
+29 Jan 2016 | 06:30:13,939 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Place' AND c.topic='Germanic Countries And Territories'  
+29 Jan 2016 | 06:30:16,596 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Aristocrat' AND c.topic='18th-century Monarchs In Europe'  
+29 Jan 2016 | 06:30:21,934 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Area' AND c.topic='Capitals In North America'  
+29 Jan 2016 | 06:30:34,504 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 06:30:34,531 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 06:30:34,557 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room445, Id: 2, Group: default, isGame: true ]
+29 Jan 2016 | 06:30:34,560 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room445, Id: 2, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56046 ) , asSpect: false
+29 Jan 2016 | 06:30:48,149 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: [Room445, [( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56046 ) ], [Area, Place, Aristocrat], [Capitals In North America, Germanic Countries And Territories, 18th-century Monarchs In Europe]] 
+29 Jan 2016 | 06:48:17,766 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56046 }
+29 Jan 2016 | 06:48:17,769 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 0, Priv: 0, Sess: 127.0.0.1:56046 ) , SessionLen: 1092136, Type: JavaScript
+29 Jan 2016 | 06:48:17,826 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room445, Id: 2, Group: default, isGame: true ], Duration: 1063304
+29 Jan 2016 | 06:48:19,874 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56263
+29 Jan 2016 | 06:48:19,922 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) , Type: JavaScript
+29 Jan 2016 | 06:48:19,947 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) , asSpect: false
+29 Jan 2016 | 06:48:23,995 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 06:48:24,054 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 06:48:24,078 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room446, Id: 3, Group: default, isGame: true ]
+29 Jan 2016 | 06:48:24,082 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room446, Id: 3, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) , asSpect: false
+29 Jan 2016 | 06:48:48,607 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: [Room446, [( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) ], [Area, Place, Aristocrat], [Capitals In North America, Eastern Europe, 18th-century Monarchs In Europe]] 
+29 Jan 2016 | 06:51:51,333 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56263 }
+29 Jan 2016 | 06:51:51,335 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 1, Priv: 0, Sess: 127.0.0.1:56263 ) , SessionLen: 211413, Type: JavaScript
+29 Jan 2016 | 06:51:51,380 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room446, Id: 3, Group: default, isGame: true ], Duration: 207331
+29 Jan 2016 | 06:51:53,498 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56384
+29 Jan 2016 | 06:51:53,517 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:56384 ) , Type: JavaScript
+29 Jan 2016 | 06:51:53,535 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:56384 ) , asSpect: false
+29 Jan 2016 | 06:52:44,652 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56384 }
+29 Jan 2016 | 06:52:44,654 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 2, Priv: 0, Sess: 127.0.0.1:56384 ) , SessionLen: 51136, Type: JavaScript
+29 Jan 2016 | 06:52:46,474 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56448
+29 Jan 2016 | 06:52:46,521 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56448 ) , Type: JavaScript
+29 Jan 2016 | 06:52:46,540 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56448 ) , asSpect: false
+29 Jan 2016 | 06:52:50,495 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 06:52:50,515 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 06:52:50,535 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room447, Id: 4, Group: default, isGame: true ]
+29 Jan 2016 | 06:52:50,538 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room447, Id: 4, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56448 ) , asSpect: false
+29 Jan 2016 | 06:53:20,915 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: [Room447, [( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56448 ) ], [Area, Aristocrat, Capital], [Capitals In North America, 18th-century Monarchs In Europe, University Towns In Germany]] 
+29 Jan 2016 | 06:55:50,181 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+29 Jan 2016 | 06:55:50,183 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+29 Jan 2016 | 06:55:50,184 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+29 Jan 2016 | 06:55:50,186 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1
+29 Jan 2016 | 06:56:39,284 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 4, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:56448 }
+29 Jan 2016 | 06:56:39,286 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 3, Priv: 0, Sess: 127.0.0.1:56448 ) , SessionLen: 232766, Type: JavaScript
+29 Jan 2016 | 06:56:39,333 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room447, Id: 4, Group: default, isGame: true ], Duration: 228821
+29 Jan 2016 | 06:56:41,270 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 5, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 56594
+29 Jan 2016 | 06:56:41,309 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56594 ) , Type: JavaScript
+29 Jan 2016 | 06:56:41,331 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56594 ) , asSpect: false
+29 Jan 2016 | 06:56:45,747 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Place' AND c.topic='Eastern Europe'  
+29 Jan 2016 | 06:56:58,863 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='tkutschk' ) l1 LEFT JOIN levels l ON c.category = l.category AND l.username = 'tkutschk' INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > IFNULL(l.level, 50-LEAST(l1.points/4,50)) AND c.category = 'Area' AND c.topic='Capitals In North America'  
+29 Jan 2016 | 06:57:03,472 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+29 Jan 2016 | 06:57:03,488 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+29 Jan 2016 | 06:57:03,509 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room448, Id: 5, Group: default, isGame: true ]
+29 Jan 2016 | 06:57:03,512 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room448, Id: 5, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56594 ) , asSpect: false
+29 Jan 2016 | 06:57:24,936 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: [Room448, [( User Name: tkutschk, Id: 4, Priv: 0, Sess: 127.0.0.1:56594 ) ], [Area, Capital, Aristocrat], [Capitals In North America, University Towns In Germany, 18th-century Monarchs In Europe]] 

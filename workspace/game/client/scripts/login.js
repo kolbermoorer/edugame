@@ -17,7 +17,7 @@ function onConnection()
 
 function onConnectionLost(event)
 {
-    trace("You have been disconnected; reason is: " + event.reason);
+    console.log("You have been disconnected; reason is: " + event.reason);
     setView("login", true);
 }
 
@@ -32,7 +32,7 @@ function performLogin() {
 
 function onLogin(event)
 {
-    trace("Login successful!" +
+    console.log("Login successful!" +
         "\n\tZone: " + event.zone +
         "\n\tUser: " + event.user +
         "\n\tData: " + event.data);
@@ -45,7 +45,7 @@ function onLogin(event)
     var id = new SFS2X.Entities.Variables.SFSUserVariable("id", event.data.id);
     sfs.send(new SFS2X.Requests.System.SetUserVariablesRequest([rankingVar, id]));
 
-    updateBadges(event.data);
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("getBadges") );
     joinLobbyRoom();
 }
 
@@ -68,6 +68,6 @@ function onLogoutBtClick()
 
 function onLogout(event)
 {
-    trace("Logout from zone " + event.zone + " performed!");
+    console.log("Logout from zone " + event.zone + " performed!");
     setView("login", true);
 }

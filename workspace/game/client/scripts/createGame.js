@@ -1,6 +1,6 @@
 var DETAILS_HEIGHT = 220;
 var isLoaded;
-
+var row_opened_clicked;
 
 /**
  * Create game button click handler.
@@ -34,12 +34,9 @@ function onCloseBtClick() {
         sfs.send(new SFS2X.Requests.System.LeaveRoomRequest());
 }
 
-function onLeaveGameBtClick() {
-    setView("lobby", true);
-    if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME)
-        sfs.send(new SFS2X.Requests.System.LeaveRoomRequest());
-    //sfs.send( new SFS2X.Requests.System.ExtensionRequest("leaveRoom", {}, sfs.lastJoinedRoom) );
-    resetGameBoard();
+function onLeaveGameBtClick(evt) {
+    evt.stopImmediatePropagation();
+    destroyGame();
 }
 
 /* If one of the buttons is clicked to choose the mode of the game */
@@ -89,7 +86,8 @@ function onTopicBackBtClick() {
  * Create game button click event listener (create game panel).
  * Create a new game using the parameters entered in the game creation popup window.
  */
-function onDoCreateGameBtClick() {
+function onDoCreateGameBtClick(evt) {
+    evt.stopImmediatePropagation();
     if(!joined) {
         var roomType = gameType;
         var category = topicList.jqxDataTable('getSelection')[0]["category"];
@@ -98,6 +96,7 @@ function onDoCreateGameBtClick() {
         params.roomType = roomType;
         params.category = category;
         params.color = color;
+        params.clicks = row_opened_clicked;
         sfs.send(new SFS2X.Requests.System.ExtensionRequest("createRoom", params));
     }
     else {
@@ -109,7 +108,8 @@ function onDoCreateGameBtClick() {
 }
 
 /* destroy the topic List on close of window so that each time the newest data is loaded */
-function destroyTopicList() {
+function destroyTopicList(evt) {
+    evt.stopImmediatePropagation();
     if($("#topicList").length > 0) {
         topicList.jqxDataTable('destroy');
     }
@@ -118,12 +118,14 @@ function destroyTopicList() {
 }
 
 function populateTopicList(topics) {
+    console.log(topics);
+    row_opened_clicked = [];
     backTopicBt.jqxButton({disabled: false});
     doCreateGameBt.jqxButton({disabled: false});
     $(".loadingCircle").css("display", "none");
 
     topics.forEach(function (topic) {
-        var pageRank = parseFloat(topic["difficulty"]);
+        var pageRank = parseFloat(topic["totalAvgPageRank"]);
         var barValue = Math.max(100-pageRank, 0);
 
         topic["bar"] = '<progress max="100" value="' + barValue + '"></progress>'
@@ -138,15 +140,15 @@ function populateTopicList(topics) {
             {name: 'category', type: 'string'},
             {name: 'filteredCards', type: 'integer'},
             {name: 'bar'},
-            {name: 'upperRank', type: 'double'},
-            {name: 'lowerRank', type: 'double'},
+            {name: 'totalAvgPageRank', type: 'double'},
+            {name: 'totalAvgWeight', type: 'double'},
             {name: 'color', type: 'string'}
         ]
     };
     var dataAdapter = new $.jqx.dataAdapter(source);
 
     topicList = $("#topicList").jqxDataTable({
-        width: 568,
+        width: 573,
         height: 290,
         source: dataAdapter,
         pageable: false,
@@ -158,7 +160,7 @@ function populateTopicList(topics) {
         initRowDetails: initRowDetails,
         selectionMode: 'singleRow',
         columns: [
-            {text: 'Topic', dataField: 'topic', width: 232},
+            {text: 'Topic', dataField: 'topic'},
             {text: 'Category', dataField: 'category', width: 140},
             {text: 'Cards', dataField: 'filteredCards', width: 60, align: 'center', cellsAlign: 'center'},
             {text: 'Difficulty', dataField: 'bar', width: 90, align: 'center', cellsAlign: 'center', filterable: false, sortable: false}
@@ -168,8 +170,10 @@ function populateTopicList(topics) {
         topic = topicList.jqxDataTable('getSelection')[0]["topic"];
         category = topicList.jqxDataTable('getSelection')[0]["category"];
         color = topicList.jqxDataTable('getSelection')[0]["color"];
-        upperRank = topicList.jqxDataTable('getSelection')[0]["upperRank"];
-        lowerRank = topicList.jqxDataTable('getSelection')[0]["lowerRank"];
+        totalAvgPageRank = topicList.jqxDataTable('getSelection')[0]["totalAvgPageRank"];
+        totalAvgWeight = topicList.jqxDataTable('getSelection')[0]["totalAvgWeight"];
+        totalCards = topicList.jqxDataTable('getSelection')[0]["filteredCards"];
+        topicList.jqxDataTable('ensureRowVisible', event.args.row);
     });
 
     topicList.on('rowExpand',
@@ -181,8 +185,6 @@ function populateTopicList(topics) {
             var selection = topicList.jqxDataTable('getSelection')[0];
             if(selection.uid != event.args.row.uid)
                 topicList.jqxDataTable('selectRow', row);
-
-            trace(last_row_opened);
             last_row_opened.append($("<div style='text-align: center; margin-top: 50px'><img src='img/loader.gif'/> <br> Loading Cards</div>"));
             var params = {};
             params.type = "getEntries";
@@ -210,6 +212,7 @@ function populateEntryList(data) {
         localData: data,
         dataType: "json",
         dataFields: [
+            {name: 'id', type: 'int'},
             {name: 'label', type: 'string'},
             {name: 'wikipedia', type: 'string'},
             {name: 'uri', type: 'string'}
@@ -230,9 +233,21 @@ function populateEntryList(data) {
         showHeader: false,
         columns: [
             {text: 'Card', dataField: 'label', width: 372},
-            {text: 'Wikipedia', dataField: 'wikipedia', width: 80, cellsRenderer: function (row) { return '<a href="' + data[row]["wikipedia"] + '" target="_blank">Wikipedia</a>';}}
+            {text: 'Wikipedia', dataField: 'wikipedia', width: 80, cellsRenderer: function (row) { return '<a data-card="' + data[row]["id"] + '" class="beforeWikipedia" href="' + data[row]["wikipedia"] + '" target="_blank">Wikipedia</a>';}}
         ]
     });
+}
+
+function onBeforeWikipediaClick(element) {
+    element.stopImmediatePropagation();
+    var cardId = $(element.target).data("card");
+    row_opened_clicked.push(cardId);
+}
+
+function onAfterWikipediaClick(element) {
+    element.stopImmediatePropagation();
+    var cardId = $(element.target).data("card");
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("wikipedia", {time: 0, when: "after", i: cardId}, sfs.lastJoinedRoom) );
 }
 
 
