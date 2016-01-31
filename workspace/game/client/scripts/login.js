@@ -17,8 +17,8 @@ function onConnection()
 
 function onConnectionLost(event)
 {
-    console.log("You have been disconnected; reason is: " + event.reason);
     setView("login", true);
+    setStatusTextLogin("You have been disconnected; reason is: " + event.reason, false);
 }
 
 function performLogin() {
@@ -32,6 +32,7 @@ function performLogin() {
 
 function onLogin(event)
 {
+    setStatusTextLogin("You Have Successfully Logged In", true);
     console.log("Login successful!" +
         "\n\tZone: " + event.zone +
         "\n\tUser: " + event.user +
@@ -51,10 +52,28 @@ function onLogin(event)
 
 function onLoginError(event)
 {
-    //TODO: add error message to UI
-    // Show error
-    var error = "Login error: " + event.errorMessage + " (code " + event.errorCode + ")";
-    showError(error);
+    setStatusTextLogin(event.errorMessage, false);
+}
+
+function setStatusTextLogin(text, success) {
+    var statusText = $("#statusTextLogin");
+    statusText.css("display", "block");
+    statusText.text(text);
+    if(success) {
+        statusText.css("background", "#badc52");
+        statusText.css("color", "green");
+        statusText.css("border", "1px solid green");
+    }
+    else {
+        statusText.css("background", "#fecccb");
+        statusText.css("color", "red");
+        statusText.css("border", "1px solid red");
+    }
+}
+
+function onToSignupBtClick()
+{
+    window.open("http://tkutschk.dubhe.uberspace.de/game/client/signup.html","_self");
 }
 
 /**
@@ -70,4 +89,5 @@ function onLogout(event)
 {
     console.log("Logout from zone " + event.zone + " performed!");
     setView("login", true);
+    setStatusTextLogin("You Have Successfully Logged Out", true);
 }

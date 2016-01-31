@@ -43,16 +43,20 @@ function onLeaveGameBtClick(evt) {
 function onSelectBtClick(event) {
     var buttonId = event.target.id;
     gameType = buttonId;
+    $(".selectText").css("color", "lightgray");
     multiPlayer = $(event.target).attr("multiPlayer");
     $( ".selectBt" ).each(function( index ) {
         if($(this).val() == "Select" && $(this).attr("id") == buttonId) { //button is pressed and was not selected yet
+            $("#" + buttonId + "Text").css("color", "black");
             $(this).val($("<div>").html("&#10004;").text());
         }
         else if($(this).val() != "Select" && $(this).attr("id") != buttonId) { //button is not pressed and was selected
+            $("#" + buttonId + "Text").css("color", "black");
             $(this).jqxToggleButton('unCheck');
             $(this).val("Select");
         }
         else if($(this).val() != "Select" && $(this).attr("id") == buttonId) { //button was pressed and was selected
+            $("#" + buttonId + "Text").css("color", "black");
             $(this).jqxToggleButton('check');
         }
     });
@@ -61,7 +65,7 @@ function onSelectBtClick(event) {
 function onNextBtClick() {
     createGameWinTabs.jqxTabs('enableAt', 1);
     createGameWinTabs.jqxTabs({selectedItem: 1});
-
+    $("#doCreateGameBt").addClass("nextBt");
     if(!isLoaded) {
         var params = {};
         params.type = "getTopics";
@@ -92,11 +96,13 @@ function onDoCreateGameBtClick(evt) {
         var roomType = gameType;
         var category = topicList.jqxDataTable('getSelection')[0]["category"];
         var color = topicList.jqxDataTable('getSelection')[0]["color"];
+        var level = topicList.jqxDataTable('getSelection')[0]["bar"];
         var params = {};
         params.roomType = roomType;
         params.category = category;
         params.color = color;
         params.clicks = row_opened_clicked;
+        params.level = level;
         sfs.send(new SFS2X.Requests.System.ExtensionRequest("createRoom", params));
     }
     else {
@@ -163,7 +169,7 @@ function populateTopicList(topics) {
             {text: 'Topic', dataField: 'topic'},
             {text: 'Category', dataField: 'category', width: 140},
             {text: 'Cards', dataField: 'filteredCards', width: 60, align: 'center', cellsAlign: 'center'},
-            {text: 'Difficulty', dataField: 'bar', width: 90, align: 'center', cellsAlign: 'center', filterable: false, sortable: false}
+            {text: 'Level', dataField: 'bar', width: 90, align: 'center', cellsAlign: 'center', filterable: false, sortable: false}
         ]
     });
     topicList.on('rowSelect', function (event) {

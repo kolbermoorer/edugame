@@ -36,33 +36,38 @@ function createAnswer(answerContent, index, cardId, property) {
 }
 
 function onAnswerBtClick(event) {
-    event.stopImmediatePropagation();
-    $(".countdown").TimeCircles().stop();
-    $('.answerFields').removeClass("enabled");
-    selectedAnswer = $(event.target);
-    selectedAnswer.closest('.answerFields').css("border","4px double blue");
+    if(gameStarted) {
+        event.stopImmediatePropagation();
+        $(".countdown").TimeCircles().stop();
+        $('.answerFields').removeClass("enabled");
+        selectedAnswer = $(event.target);
+        selectedAnswer.closest('.answerFields').css("border","4px double blue");
 
-    $("#errorAnswer").css("display", "none");
-    if(gameType == "single") {
-        $("#feedbackWrapper").css("display", "block");
+        $("#errorAnswer").css("display", "none");
+        if(gameType == "single") {
+            $("#feedbackWrapper").css("display", "block");
+        }
+        else {
+            var params = {};
+            params.type = "stopTime";
+            sfs.send( new SFS2X.Requests.System.ExtensionRequest("exchangeData", params, sfs.lastJoinedRoom) );
+        }
+
+        answerError = false;
+
+        var params = {};
+        params.gameType = gameType;
+        params.answer = selectedAnswer.text(); //$(event.target).text()
+        params.property = $("#questionTitleProperty").text();
+        params.answerTime = new Date() - answerTimeStart;
+        params.answerOptions = $('.answerFields').map(function () { return $(this).text(); }).get();
+        params.isError = false;
+
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
     }
     else {
-        var params = {};
-        params.type = "stopTime";
-        sfs.send( new SFS2X.Requests.System.ExtensionRequest("exchangeData", params, sfs.lastJoinedRoom) );
+        openSurvey(event.target);
     }
-
-    answerError = false;
-
-    var params = {};
-    params.gameType = gameType;
-    params.answer = selectedAnswer.text(); //$(event.target).text()
-    params.property = $("#questionTitleProperty").text();
-    params.answerTime = new Date() - answerTimeStart;
-    params.answerOptions = $('.answerFields').map(function () { return $(this).text(); }).get();
-    params.isError = false;
-
-    sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
 }
 
 function stopOpponentTimer() {
@@ -70,19 +75,42 @@ function stopOpponentTimer() {
 }
 
 function onErrorAnswerClick() {
-    event.stopImmediatePropagation();
-    var playedProperty = $("#questionTitleProperty").text();
-    answerCorrect = false;
-    answerError = true;
+    if(gameType == "single") {
+        var playedProperty = $("#questionTitleProperty").text();
+        answerCorrect = false;
+        answerError = true;
 
-    var params = {};
-    params.isError = true;
-    sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
+        var params = {};
+        params.isError = true;
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
 
+        var params = {};
+        params.type = "error";
+        params.playedProperty = playedProperty;
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("updateWeights", params, sfs.lastJoinedRoom) );
+    }
+    else {
+        var params = {};
+        params.type = "error";
+        sfs.send( new SFS2X.Requests.System.ExtensionRequest("exchangeData", params, sfs.lastJoinedRoom) );
+    }
+
+}
+
+function onIsNoErrorBtClick() {
+    $("#isErrorWin").jqxWindow('close');
+    $("#errorAnswer").css("display", "none");
     var params = {};
-    params.type = "error";
-    params.playedProperty = playedProperty;
-    sfs.send( new SFS2X.Requests.System.ExtensionRequest("updateWeights", params, sfs.lastJoinedRoom) );
+    params.type = "noError";
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("exchangeData", params, sfs.lastJoinedRoom) );
+}
+
+function onIsYesErrorBtClick() {
+    $("#isErrorWin").jqxWindow('close');
+    $("#errorAnswer").css("display", "none");
+    var params = {};
+    params.type = "yesError";
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("exchangeData", params, sfs.lastJoinedRoom) );
 }
 
 function markAnswer(answer) {
@@ -180,10 +208,20 @@ function markAnswer(answer) {
                 }}
         });
     }
-    $("#nextActionTable").css("height", "35px");
+
+    if(answer["feedback"]["alreadyAnswered"] == 0) {
+        $("#nextActionTable").css("height", "35px");
+        $('#row1nextActionTable').css("opacity", 0);
+        $('#row2nextActionTable').css("opacity", 0);
+        $("#feedbackWrapper").css("display", "block");
+    }
+    else {
+
+    }
+    /*$("#nextActionTable").css("height", "35px");
     $('#row1nextActionTable').css("opacity", 0);
     $('#row2nextActionTable').css("opacity", 0);
-    $("#feedbackWrapper").css("display", "block");
+    $("#feedbackWrapper").css("display", "block");*/
 
 
     $('.answerFields').not(".hasImpact").css("opacity",0.2);
@@ -297,6 +335,9 @@ function updateCountdown(unit, value, total) {
 function updateGameTimer(value) {
     var timeMax = $(".timeToStartEnd").data('timer');
     var c=(timeMax-Math.floor(value/1000))/timeMax;
+
+    if(value < 500 && gameStarted)
+        destroyGame();
 
     $(".timeToStartEnd").TimeCircles({time: {Minutes: {color: getColor(c)}}});
 }

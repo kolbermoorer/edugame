@@ -8,10 +8,12 @@ var inGame = false;
 
 var theme = "arctic";
 
+// first question window for survey
+var firstQuestionWin;
+
 //badges section
 var highscoreButton;
 var takeSurveyBt;
-var enableSurveyBt;
 var gamesPlayedTotal;
 var badges;
 
@@ -56,8 +58,6 @@ var doCreateGameBt;
 var last_row_opened;
 var last_row_opened_number;
 
-var progressBar;
-
 //game view
 var instructionsWin;
 var instructionsWinTabs;
@@ -70,6 +70,10 @@ var waitGameWin;
 var loadingGameWin;
 var afterGameWin;
 var afterGameWinTable;
+var isErrorWin;
+
+//survey
+var wikiClicked = false;
 
 function init()
 {
@@ -97,7 +101,8 @@ function init()
     sfs.addEventListener(SFS2X.SFSEvent.USER_ENTER_ROOM, onUserEnterRoom, this);
     sfs.addEventListener(SFS2X.SFSEvent.USER_EXIT_ROOM, onUserExitRoom, this);
     sfs.addEventListener(SFS2X.SFSEvent.PUBLIC_MESSAGE, onPublicMessage, this);
-    //TODO: Add Rome Creation error handling
+
+    $(document).on("click", "#toSignupBt", onToSignupBtClick);
 
 }
 
@@ -109,7 +114,6 @@ function buildMainUI() {
         pageable:false,
         sortable: true,
         filterable: true,
-        //selectionMode: 'custom',
         columns: [
             { text: 'No.', dataField: 'id', align: 'center', cellsalign: 'center', width: 40 },
             { text: 'Mode', dataField: 'mode', align: 'center', cellsalign: 'center', width: 100},
@@ -142,7 +146,7 @@ function buildMainUI() {
             }}
         ]
     });
-    //quickJoinBt = $("#quickJoinBt").jqxButton({width:150, disabled:true, theme:theme});
+
     closeGameBt = $("#closeGameBt").jqxButton({width:100, disabled:true, theme:theme});
     joinGameBt = $("#joinGameBt").jqxButton({width:100, disabled:true, theme:theme});
     createGameBt = $("#createGameBt").jqxButton({width:150, theme:theme});
@@ -198,7 +202,7 @@ function buildMainUI() {
 
     // badges section
     highscoreButton = $("#highscoreBt").jqxButton({width:120, disabled:false, theme:theme});
-    takeSurveyBt = $("#takeSurveyBt").jqxButton({width:120, disabled:!enableSurveyBt, theme:theme});
+    takeSurveyBt = $("#takeSurveyBt").jqxButton({width:120, disabled:true, theme:theme});
     achievementsWin = $("#achievementsWin").jqxWindow({width:400, height:190, isModal:true, autoOpen:false, resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
 
     //ranking window
@@ -223,6 +227,10 @@ function buildMainUI() {
     closeBt = $("#closeBt").jqxButton({width:100, theme:theme});
     nextBt = $("#nextBt").jqxButton({width:100, theme:theme});
 
+    //instructions
+    $(".nextBt").jqxButton({width:100, theme:theme});
+    $(".backBt").jqxButton({width:100, theme:theme});
+
     singleBt = $("#single").jqxToggleButton({width:80, toggled: true, theme:theme});
     competeBt = $("#compete").jqxToggleButton({width:80, toggled: false, theme:theme});
     collaborateBt = $("#collaborate").jqxToggleButton({width:80, toggled: false, theme:theme});
@@ -231,8 +239,8 @@ function buildMainUI() {
     doCreateGameBt = $("#doCreateGameBt").jqxButton({width:100, theme:theme, disabled: true});
 
     // game view
-    instructionsWin = $("#instructionsWin").jqxWindow({width:600, height:448, isModal:true, autoOpen:false, resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
-    instructionsWinTabs = $("#instructionsWinTabs").jqxTabs({width:"100%", height:395, theme:theme});
+    instructionsWin = $("#instructionsWin").jqxWindow({width:800, height:600, isModal:true, autoOpen:false, showCloseButton:false, resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    instructionsWinTabs = $("#instructionsWinTabs").jqxTabs({width:"100%", height:550, theme:theme});
 
     createTimers();
 
@@ -308,6 +316,8 @@ function buildMainUI() {
 
     // game popups
     loadingGameWin = $("#loadingGameWin").jqxWindow({width:250, height:160, autoOpen:false, resizable:false, draggable:false, isModal:true, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    isErrorWin = $("#isErrorWin").jqxWindow({width:250, height:160, autoOpen:false, resizable:false, draggable:false, isModal:true, showCloseButton: false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+
     waitGameWin = $("#waitGameWin").jqxWindow({
         width:250, height:125, okButton: $('#okButton'),
         initContent: function () {
@@ -354,7 +364,10 @@ function buildMainUI() {
         ]
     });
 
-    $('#afterGameWin').on('close', destroyGame);
+    $('#afterGameWin').on('close', getBadges);
+
+    firstQuestionWin = $("#firstQuestionWin").jqxWindow({width:530, height:268, autoOpen:false, showCloseButton:false, isModal:true,  resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+
 }
 
 function addEventListenerMain() {
@@ -409,12 +422,47 @@ function addEventListenerMain() {
 
 
     $(document).on("click", ".answerFields.enabled", onAnswerBtClick);
+    $(document).on("click", "#isErrorNo", onIsNoErrorBtClick);
+    $(document).on("click", "#isErrorYes", onIsYesErrorBtClick);
     $(document).on("click", "#startGameBt.enabled", onStartGameBtClick);
     $(document).on("click", "#sendGameMsgBt.enabled", onSendMessageBtClick);
     $(document).on("click", "#leaveGameBt", onLeaveGameBtClick);
 
     $(document).on("click", "#nextQuestionBt.enabled", onNextQuestionBtClick);
     $(document).on("click", "#openWikipediaBt", onOpenWikipediaBtClick);
+
+    $(document).on("click", "#surveyWikipediaLink", function() {
+        wikiClicked = true;
+    });
+
+    //instructions
+    $(document).on("click", "instructions.nextBt", function() {
+        var selected = $("#instructionsWinTabs").val();
+        $("#instructionsWinTabs").jqxTabs('val', selected+1);
+    });
+    $(document).on("click", "instructions.backBt", function() {
+        var selected = $("#instructionsWinTabs").val();
+        $("#instructionsWinTabs").jqxTabs('val', selected-1);
+    });
+    $(document).on("click", "#showTopicsBt", function() {
+        $("#instructionsWin").jqxWindow("close");
+        $('#instructionsWin').jqxWindow('setTitle', '<strong>Game Instructions (2 | 3)</strong>');
+        $("#createGameWin").jqxWindow("open");
+        backTopicBt.jqxButton('disabled', true);
+        onCreateGameBtClick();
+    });
+
+    $(document).on("click", "#startWarmUp", function() {
+        $("#instructionsWin").jqxWindow("close");
+        $('#instructionsWin').jqxWindow('setTitle', '<strong>Game Instructions (3 | 3)</strong>');
+    });
+
+    $(document).on("click", "#startInstructionsGameBt", function() {
+        $("#instructionsWin").jqxWindow("close");
+    });
+
+
+
 }
 
 function createTimers() {
@@ -478,6 +526,7 @@ function createTimers() {
                 "show": false
             }}
     });
+    $(".timeToStartEnd").TimeCircles().addListener(updateGameTimer);
 
     $(".averageRating").TimeCircles({
         "start": false,

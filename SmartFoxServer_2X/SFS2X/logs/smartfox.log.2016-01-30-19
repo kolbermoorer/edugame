@@ -1,0 +1,247 @@
+30 Jan 2016 | 19:22:47,917 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 42, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58192 }
+30 Jan 2016 | 19:22:47,920 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 41, Priv: 0, Sess: 127.0.0.1:58192 ) , SessionLen: 1434429, Type: JavaScript
+30 Jan 2016 | 19:27:12,055 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 43, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58629
+30 Jan 2016 | 19:27:12,085 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk6, Id: 42, Priv: 0, Sess: 127.0.0.1:58629 ) , Type: JavaScript
+30 Jan 2016 | 19:27:12,098 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk6, Id: 42, Priv: 0, Sess: 127.0.0.1:58629 ) , asSpect: false
+30 Jan 2016 | 19:27:12,115 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:19)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+30 Jan 2016 | 19:27:15,496 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: tkutschk6, Id: 42, Priv: 0, Sess: 127.0.0.1:58629 ) , SessionLen: 3410, Type: JavaScript
+30 Jan 2016 | 19:27:22,637 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: fhsk
+30 Jan 2016 | 19:29:30,122 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 43, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:58629 }
+30 Jan 2016 | 19:34:33,364 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 44, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 58963
+30 Jan 2016 | 19:34:33,380 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#43, Id: 43, Priv: 0, Sess: 127.0.0.1:58963 ) , Type: JavaScript
+30 Jan 2016 | 19:40:27,858 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 45, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59096
+30 Jan 2016 | 19:40:27,881 | WARN  | SFSWorker:Ext:3 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: tkutschk64
+30 Jan 2016 | 19:40:33,674 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 45, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59096 }
+30 Jan 2016 | 19:40:41,617 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 46, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59154
+30 Jan 2016 | 19:40:41,637 | WARN  | SFSWorker:Ext:2 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: tkutschk4645
+30 Jan 2016 | 19:41:27,906 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: hdfkshfk
+30 Jan 2016 | 19:41:59,461 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 46, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59154 }
+30 Jan 2016 | 19:42:04,601 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 47, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59217
+30 Jan 2016 | 19:42:04,646 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: tkutschkfjs
+30 Jan 2016 | 19:44:05,101 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 47, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59217 }
+30 Jan 2016 | 19:44:07,480 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 48, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59282
+30 Jan 2016 | 19:44:07,510 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 44, Priv: 0, Sess: 127.0.0.1:59282 ) , Type: JavaScript
+30 Jan 2016 | 19:44:07,533 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 44, Priv: 0, Sess: 127.0.0.1:59282 ) , asSpect: false
+30 Jan 2016 | 19:44:07,564 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:19)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+30 Jan 2016 | 19:44:13,418 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: tkutschk, Id: 44, Priv: 0, Sess: 127.0.0.1:59282 ) , SessionLen: 5908, Type: JavaScript
+30 Jan 2016 | 19:45:07,534 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 48, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59282 }
+30 Jan 2016 | 19:45:09,528 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 49, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59357
+30 Jan 2016 | 19:45:09,572 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 45, Priv: 0, Sess: 127.0.0.1:59357 ) , Type: JavaScript
+30 Jan 2016 | 19:45:09,590 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 45, Priv: 0, Sess: 127.0.0.1:59357 ) , asSpect: false
+30 Jan 2016 | 19:45:09,604 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:19)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+30 Jan 2016 | 19:45:12,306 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: tkutschk, Id: 45, Priv: 0, Sess: 127.0.0.1:59357 ) , SessionLen: 2733, Type: JavaScript
+30 Jan 2016 | 19:45:55,039 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 49, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59357 }
+30 Jan 2016 | 19:45:57,846 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 50, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59421
+30 Jan 2016 | 19:45:57,894 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 46, Priv: 0, Sess: 127.0.0.1:59421 ) , Type: JavaScript
+30 Jan 2016 | 19:45:57,913 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 46, Priv: 0, Sess: 127.0.0.1:59421 ) , asSpect: false
+30 Jan 2016 | 19:45:57,934 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:19)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+30 Jan 2016 | 19:46:02,720 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: tkutschk, Id: 46, Priv: 0, Sess: 127.0.0.1:59421 ) , SessionLen: 4827, Type: JavaScript
+30 Jan 2016 | 19:47:11,512 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 50, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59421 }
+30 Jan 2016 | 19:47:49,312 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 51, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59486
+30 Jan 2016 | 19:47:49,339 | WARN  | SFSWorker:Ext:3 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: tkutschkgg
+30 Jan 2016 | 19:47:55,024 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 51, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59486 }
+30 Jan 2016 | 19:48:03,693 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 52, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59546
+30 Jan 2016 | 19:48:03,714 | WARN  | SFSWorker:Ext:2 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: tkutschkfsfs
+30 Jan 2016 | 19:48:06,745 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 52, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59546 }
+30 Jan 2016 | 19:53:53,495 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 53, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59808
+30 Jan 2016 | 19:53:53,539 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 47, Priv: 0, Sess: 127.0.0.1:59808 ) , Type: JavaScript
+30 Jan 2016 | 19:53:53,558 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 47, Priv: 0, Sess: 127.0.0.1:59808 ) , asSpect: false
+30 Jan 2016 | 19:53:53,567 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:19)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+30 Jan 2016 | 19:54:41,131 | INFO  | New I/O worker #5 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 53, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:59808 }
+30 Jan 2016 | 19:54:41,132 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 47, Priv: 0, Sess: 127.0.0.1:59808 ) , SessionLen: 47593, Type: JavaScript
+30 Jan 2016 | 19:54:43,716 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 54, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59872
+30 Jan 2016 | 19:54:43,762 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 48, Priv: 0, Sess: 127.0.0.1:59872 ) , Type: JavaScript
+30 Jan 2016 | 19:54:43,784 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 48, Priv: 0, Sess: 127.0.0.1:59872 ) , asSpect: false
+30 Jan 2016 | 19:54:43,803 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:19)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+30 Jan 2016 | 19:54:47,853 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: tkutschk, Id: 48, Priv: 0, Sess: 127.0.0.1:59872 ) , SessionLen: 4092, Type: JavaScript
+30 Jan 2016 | 19:55:10,207 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+30 Jan 2016 | 19:55:10,210 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+30 Jan 2016 | 19:55:10,210 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/1
+30 Jan 2016 | 19:55:10,211 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/2
+30 Jan 2016 | 19:56:14,651 | INFO  | New I/O worker #6 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 54, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59872 }
+30 Jan 2016 | 19:56:20,009 | INFO  | New I/O worker #4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 44, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:58963 }
+30 Jan 2016 | 19:56:20,014 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#43, Id: 43, Priv: 0, Sess: 127.0.0.1:58963 ) , SessionLen: 1306634, Type: JavaScript
+30 Jan 2016 | 19:56:23,432 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 55, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59940
+30 Jan 2016 | 19:56:23,476 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 49, Priv: 0, Sess: 127.0.0.1:59940 ) , Type: JavaScript
+30 Jan 2016 | 19:56:23,494 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 49, Priv: 0, Sess: 127.0.0.1:59940 ) , asSpect: false
+30 Jan 2016 | 19:56:23,503 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:19)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+30 Jan 2016 | 19:56:27,139 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 56, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 59944
+30 Jan 2016 | 19:56:27,181 | INFO  | SFSWorker:Ext:1 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: tkutschk, Id: 49, Priv: 0, Sess: 127.0.0.1:59940 ) 
+30 Jan 2016 | 19:56:27,183 | INFO  | SFSWorker:Ext:1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 55, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:59940 }
+30 Jan 2016 | 19:56:27,184 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 49, Priv: 0, Sess: 127.0.0.1:59940 ) , SessionLen: 3709, Type: JavaScript
+30 Jan 2016 | 19:56:27,185 | INFO  | New I/O worker #7 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 55, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1:59940 }
+30 Jan 2016 | 19:56:29,190 | INFO  | pool-1-thread-3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 50, Priv: 0, Sess: 127.0.0.1:59944 ) , Type: JavaScript
+30 Jan 2016 | 19:56:29,205 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 50, Priv: 0, Sess: 127.0.0.1:59944 ) , asSpect: false
+30 Jan 2016 | 19:56:29,214 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:19)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+30 Jan 2016 | 19:58:22,628 | INFO  | Thread-4 | entities.managers.SFSExtensionManager |     | Reloading extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+30 Jan 2016 | 19:58:28,597 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 57, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 60009
+30 Jan 2016 | 19:58:28,641 | INFO  | SFSWorker:Ext:2 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: tkutschk, Id: 50, Priv: 0, Sess: 127.0.0.1:59944 ) 
+30 Jan 2016 | 19:58:28,643 | INFO  | SFSWorker:Ext:2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 56, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:59944 }
+30 Jan 2016 | 19:58:28,644 | INFO  | New I/O worker #8 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 56, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:59944 }
+30 Jan 2016 | 19:58:28,646 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 50, Priv: 0, Sess: 127.0.0.1:59944 ) , SessionLen: 119455, Type: JavaScript
+30 Jan 2016 | 19:58:30,649 | INFO  | pool-1-thread-4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 51, Priv: 0, Sess: 127.0.0.1:60009 ) , Type: JavaScript
+30 Jan 2016 | 19:58:30,684 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 51, Priv: 0, Sess: 127.0.0.1:60009 ) , asSpect: false
+30 Jan 2016 | 19:58:38,377 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 58, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 60077
+30 Jan 2016 | 19:58:38,422 | INFO  | SFSWorker:Ext:3 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: tkutschk, Id: 51, Priv: 0, Sess: 127.0.0.1:60009 ) 
+30 Jan 2016 | 19:58:38,424 | INFO  | SFSWorker:Ext:3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 57, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:60009 }
+30 Jan 2016 | 19:58:38,425 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 57, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:60009 }
+30 Jan 2016 | 19:58:38,426 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 51, Priv: 0, Sess: 127.0.0.1:60009 ) , SessionLen: 7778, Type: JavaScript
+30 Jan 2016 | 19:58:40,430 | INFO  | pool-1-thread-4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 52, Priv: 0, Sess: 127.0.0.1:60077 ) , Type: JavaScript
+30 Jan 2016 | 19:58:40,452 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 52, Priv: 0, Sess: 127.0.0.1:60077 ) , asSpect: false
+30 Jan 2016 | 19:59:16,754 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 58, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:60077 }
+30 Jan 2016 | 19:59:16,754 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tkutschk, Id: 52, Priv: 0, Sess: 127.0.0.1:60077 ) , SessionLen: 36325, Type: JavaScript
+30 Jan 2016 | 19:59:27,034 | INFO  | New I/O worker #3 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 59, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 60203
+30 Jan 2016 | 19:59:27,078 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tkutschk, Id: 53, Priv: 0, Sess: 127.0.0.1:60203 ) , Type: JavaScript
+30 Jan 2016 | 19:59:27,096 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tkutschk, Id: 53, Priv: 0, Sess: 127.0.0.1:60203 ) , asSpect: false

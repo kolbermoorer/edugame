@@ -82,15 +82,57 @@
             <div>
                 <input type="password" placeholder="Password" required="" id="password" value="leoleo1988"/>
             </div>
-            <div>
+            <!--<div>
                 <input type="submit" value="Login"/>
                 <a href="#">Lost your password?</a>
                 <a href="#">Register</a>
+            </div> -->
+            <div id="statusTextLogin"></div>
+            <div>
+                <div id="toSignupBt" class="nextActionLogin">&#x27a5; To Sign Up</div>
+                <input type="submit" value="Sign in" />
+
             </div>
         </form>
     </div>
 </div>
 <div class="wrapper hidden viewStack lobby">
+    <div id="firstQuestionWin">
+        <div><strong>1. This was your first wrong answer! Do you now know the answers?</strong></div>
+        <div style="overflow: hidden;">
+            <table style="width:100%; font-size: 13px;">
+                <tbody><tr>
+                    <td style="width: 150px;">Category</td>
+                    <td id="surveyCategory">xxx</td>
+
+                </tr>
+                <tr>
+                    <td>Topic</td>
+                    <td id="surveyTopic">xxx</td>
+
+                </tr>
+                <tr>
+                    <td>Card</td>
+                    <td id="surveyCard">xxx</td>
+
+                </tr><tr>
+                    <td>Link</td>
+                    <td id="surveyWikipedia">xxx</td>
+
+                </tr></tbody>
+            </table>
+            <div>
+                <div id="surveyQuestion">
+                    <span>What is the correct value for property '<span id="surveyProperty"></span>'?</span>
+                </div>
+                <div style="top: 25px;position: relative;text-align: center;">
+                    <div class="answerFields"><span class="answerFieldsContent"><span id="survey0"></span></span></div>
+                    <div class="answerFields"><span class="answerFieldsContent"><span id="survey1"></span></span></div>
+                    <div class="answerFields"><span class="answerFieldsContent"><span id="survey2"></span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="lobby" class="panel hidden viewStack lobby">
         <div id="userInfo">
             <span id="usernameLb"></span><img id="scoreIcon" src="css/jqwidgets/styles/images/star.png"/><span
@@ -217,18 +259,19 @@
                             <input type="button" id="single" multiPlayer=false class="selectBt" value="&#10004;"/>
                         </div>
                         <div id="menu_about" style="position: relative; z-index: 10;">
-                            <ul id="menu">
-                                <li >Description
-                                    <ul>
-                                        <li>Questions are generated automatically</li>
-                                        <li>60 seconds per answer</li>
-                                        <li>Game is over when all questions are answered</li>
+                            <ul id="singleText" class="selectText">
+                                <li style="margin-left: -20px; list-style-type: none;margin-bottom: 20px;"><pre>Questions</pre>
+                                    <ul style="margin-left: -20px">
+                                        <li><pre>Automatic</pre></li>
+                                        <li><pre>18 cards</pre></li>
+                                        <li><pre>60 sec/answer</pre></li>
+                                        <li><pre>15 min/game</pre></li>
                                     </ul>
                                 </li>
-                                <li>Layer 1
-                                    <ul>
-                                        <li >Layer 2 blblb</li>
-                                        <li >Layer 2</li>
+                                <li style="margin-left: -20px; list-style-type: none;"><pre>Answer (You | -)</pre>
+                                    <ul style="margin-left: -20px">
+                                        <li ><pre>Right | - : +2</pre></li>
+                                        <li ><pre>Wrong | - : -1</pre></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -245,6 +288,24 @@
                             <div class="content">
                                 <input type="button" id="compete" multiPlayer=true class="selectBt" value="Select"/>
                             </div>
+                            <ul id="competeText" class="selectText" style="color: lightgray;">
+                                <li style="margin-left: -20px; list-style-type: none;margin-bottom: 20px;"><pre>Questions</pre>
+                                    <ul style="margin-left: -20px">
+                                        <li><pre>By User</pre></li>
+                                        <li><pre>18 cards</pre></li>
+                                        <li><pre>60 sec/answer</pre></li>
+                                        <li><pre>15 min/game</pre></li>
+                                    </ul>
+                                </li>
+                                <li style="margin-left: -20px; list-style-type: none;"><pre>Answer (You | Enemy)</pre>
+                                    <ul style="margin-left: -20px; ">
+                                        <li ><pre>Right | Wrong: +3</pre></li>
+                                        <li ><pre>Right | Right: +2</pre></li>
+                                        <li ><pre>Wrong | Right: -1</pre></li>
+                                        <li ><pre>Wrong | Wrong: -2</pre></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                         <div class="gameTypeWin">
                             <div class="subtitle">
@@ -253,6 +314,24 @@
                             <div class="content">
                                 <input type="button" id="collaborate" multiPlayer=true class="selectBt" value="Select"/>
                             </div>
+                            <ul id="collaborateText" class="selectText"  style="color: lightgray;">
+                                <li style="margin-left: -20px; list-style-type: none;margin-bottom: 20px;"><pre>Questions</pre>
+                                    <ul style="margin-left: -20px">
+                                        <li><pre>By User</pre></li>
+                                        <li><pre>18 cards</pre></li>
+                                        <li><pre>60 sec/answer</pre></li>
+                                        <li><pre>15 min/game</pre></li>
+                                    </ul>
+                                </li>
+                                <li style="margin-left: -20px; list-style-type: none;"><pre>Answer (You | Friend)</pre>
+                                    <ul style="margin-left: -20px; ">
+                                        <li ><pre>Right | Right: +3</pre></li>
+                                        <li ><pre>Right | Wrong: +2</pre></li>
+                                        <li ><pre>Wrong | Right: -1</pre></li>
+                                        <li ><pre>Wrong | Wrong: -2</pre></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div id="nextBtControl" class="popupWinControls">
@@ -288,6 +367,14 @@
             <input type="button" id="okButton" value="OK" style="margin-right: 10px" />
         </div>
     </div>
+    <div id="isErrorWin" class="gamePopup">
+        <div><strong>Error? </strong></div>
+        <div class="content" style="text-align: center;">
+            <p class="gameMessage message">Your opponent wants to discard this question. Do you agree?</p>
+            <input type="button" class="backBt" id="isErrorNo" value="No"/>
+            <input type="button" class="nextBt" id="isErrorYes" value="Yes"/>
+        </div>
+    </div>
     <div id="afterGameWin" class="gamePopup">
         <div><strong>Game is Over &#x27a0; Questions: - | Right: - | Wrong: - | Points earned: -</strong></div>
         <div style="overflow: hidden;">
@@ -295,6 +382,7 @@
         </div>
     </div>
 </div>
+
 <div class="wrapper hidden viewStack game">
     <div id="game" class="panel hidden viewStack game">
         <div id="gamebox" class="leftBox">
@@ -311,39 +399,156 @@
             <div class="countCardBox" id="countTop2">6</div>
         </div>
         <div id="instructionsWin" class="gamePopup">
-            <div><strong>Game Instructions</strong></div>
+            <div><strong>Game Instructions (1 | 3)</strong></div>
             <div class="content">
                 <div id="instructionsWinTabs">
                     <ul>
-                        <li>Card</li>
+                        <li>Welcome</li>
+                        <li>Lobby</li>
+                        <li>Create a Game</li>
+                        <li>Choose Cards</li>
+                        <li>Warm Up Phase</li>
                         <li>Wikipedia</li>
-                        <li>Time</li>
+                        <li>Gameplay</li>
                     </ul>
                     <div class="item">
-                        <div class="instructionsTabText">Thank you for participating in my game! Before the actual game starts, you have now the possibility to onform yourself about the content in the game. </div>
-                        <div class="instructionsTabImage">
-                            <img src="img/cards/category01.png" style="width: 160px;">
-                            <div>The game consists of 16 playing cards in 3 different categories and topics about a specific person/thing/entity. </div>
+                        <div class="instructionsTabText" style="text-align: center; margin-top: 170px;"><span style="font-size: 3em;">Welcome to my game!</span><br>This instruction should help you to open and play your first game. <p>Click on 'Next' to proceed.
                         </div>
+
                         <div class="popupWinControls">
-                            <input type="button" class="backBt" value="Back"/>
                             <input type="button" class="nextBt" value="Next"/>
                         </div>
                     </div>
                     <div class="item">
-                        <div class="instructionsTabText"></div>
-                        <div class="instructionsTabImage"></div>
+                        <img src="img/lobby.png" style="width: 630px;margin-top: -10px;margin-left: 64px;">
                         <div class="popupWinControls">
-                            <input type="button" class="backBt" value="Back"/>
-                            <input type="button" class="nextBt" value="Next"/>
+                            <input type="button" class="instructions backBt" value="Back"/>
+                            <input type="button" class="instructions nextBt" value="Next"/>
                         </div>
                     </div>
                     <div class="item">
-                        <div class="instructionsTabText"></div>
-                        <div class="instructionsTabImage"></div>
+                        <table style="width:100%; font-size: 13px;">
+                            <tbody><tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Game Mode</b></td>
+                                <td>Decide if you want to play alone, with your teammate or against him.</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Points</b></td>
+                                <td>Based on the game mode you get different points for a correct or false answer.</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Game Ends</b></td>
+                                <td>A game ends if all cards are played. You get points per question and not per game.</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        <img src="img/instructions1.png" style="width: 500px;margin-top: 20px;margin-left: 130px;">
+                        <div class="popupWinControls">
+                            <input type="button" class="instructions backBt" value="Back"/>
+                            <input type="button" class="instructions nextBt" value="Next"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <table style="width:100%; font-size: 13px;">
+                            <tbody>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Category</b></td>
+                                <td>A category is the umbrella term of multiple topics with the same scope.</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Topic</b></td>
+                                <td>A topic is the theme that have all cards in common. Each game has 3 topics, you choose 1.</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Cards</b></td>
+                                <td>Maximum number of cards that can be chosen from. 8 cards per topic represents one stack.</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Level</b></td>
+                                <td>Shows the awareness of the cards. Higher levels might be more difficult. </td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Dynamic</b></td>
+                                <td>The cards and levels change through game. A maximum of 30 topics can be played. </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        <img src="img/instructions2.png" style="width: 460px;margin-top: 16px;margin-left: 140px;">
                         <div class="popupWinControls">
                             <input type="button" class="backBt" value="Back"/>
-                            <input type="button" class="nextBt" value="Next"/>
+                            <input type="button" id="showTopicsBt" class="instructions nextBt" value="Choose Topic"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <table style="width:100%; font-size: 13px;">
+                            <tbody>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Warm Up Phase</b></td>
+                                <td>You have 5 minutes to gain as much as possible knowledge about the cards in the game.</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Card Stack</b></td>
+                                <td>Each of the stacks contains 8 cards. If you click on one card, a Wikipedia page is opened on the left.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <img src="img/instructions3.png" style="width: 200px;margin-top: 16px;margin-left: 130px;">
+                        <div class="popupWinControls">
+                            <input type="button" class="instructions nextBt" value="Next"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <table style="width:100%; font-size: 13px;">
+                            <tbody>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Wikipedia</b></td>
+                                <td>Everything that is inside the drawn red box may be important for the game. Remember as much as possible!</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Start</b></td>
+                                <td>If you want to start the game before the 5 minutes are over, click on the start button.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <img src="img/instructions4.png" style="width: 550px;margin-top: 16px;margin-left: 130px;">
+                        <div class="popupWinControls">
+                            <input type="button" class="instructions backBt" value="Back"/>
+                            <input type="button" id="startWarmUp" class="instructions nextBt" value="Warm Up"/>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <table style="width:100%; font-size: 13px;">
+                            <tbody>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Create Question</b></td>
+                                <td>Click on one of the cards at the top to create a question. The card will be opened afterwards.</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Answer</b></td>
+                                <td>Click on one of the answer boxes in the middle. If the question makes totally no sense, click on red box.</td>
+
+                            </tr>
+                            <tr>
+                                <td style="width: 130px; padding-bottom: 2px;"><b>Feedback</b></td>
+                                <td>After you have answered the question, you are asked to rate the quality of the question once per property/card</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        <img src="img/instructions5.png" style="width: 460px;margin-top: 16px;margin-left: 130px;">
+                        <div class="popupWinControls">
+                            <input type="button" id="startInstructionsGameBt" class="instructions nextBt" value="Play!"/>
                         </div>
                     </div>
                 </div>

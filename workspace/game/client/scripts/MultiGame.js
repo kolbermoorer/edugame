@@ -71,12 +71,12 @@ function multiPlayerCreateQuestion(params) {
     answerTimeStart = new Date();
 }
 
-function handleMove(enable) {
+function handleMove(enable, error) {
     var data = multiPlayerAnswerData;
-    console.log("Answer was " + multiPlayerAnswerData.correct + "!");
+    //console.log("Answer was " + multiPlayerAnswerData.correct + "!");
     previousSelectedCard = selectedCard;
     flipBackwards();
-    if(!answerCorrect && multiPlayerAnswerData["opponentAnswer"] != multiPlayerAnswerData["right"] ) { //if nobody got the right answer
+    if(!answerCorrect && multiPlayerAnswerData["opponentAnswer"] != multiPlayerAnswerData["right"] && !error ) { //if nobody got the right answer
         $.each(cards, function (index, card) {
             if(card.playerId == 999 && card.categoryId == previousSelectedCard.categoryId) {
                 if (card.id != previousSelectedCard.id) {

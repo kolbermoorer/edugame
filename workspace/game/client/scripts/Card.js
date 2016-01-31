@@ -136,6 +136,13 @@ function spreadCards() {
         waitTime = waitTime + randomWait;
     });
     enableBoard(true);
+
+    if(gameType == "single")
+        setStatusText(0);
+    else
+        setStatusText(1);
+    $("#statusTextWrapper").css("display","block");
+    $("#countCardsTop").css("display","block");
 }
 
 function calculateFontSize(text, startPixel, font, width, height) {

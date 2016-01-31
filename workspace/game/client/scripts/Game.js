@@ -68,8 +68,16 @@ function setReadyStatus(){
         showGamePopUp("loading", '<div class="popupContent"><img src="img/loader.gif"/> <br> Loading cards (<span id="loadingTime" ms="20000">20</span>)</div>', "Please Wait ...");
     }
 
-
-    //$("#instructionsWin").jqxWindow("open");
+    if(instructions) {
+        $("#instructionsWin").jqxWindow("open");
+        $('#instructionsWinTabs').jqxTabs('disableAt', 0);
+        $('#instructionsWinTabs').jqxTabs('disableAt', 1);
+        $('#instructionsWinTabs').jqxTabs('disableAt', 2);
+        $('#instructionsWinTabs').jqxTabs('disableAt', 3);
+        $('#instructionsWinTabs').jqxTabs('enableAt', 4);
+        $('#instructionsWinTabs').jqxTabs('enableAt', 5);
+        $("#instructionsWinTabs").jqxTabs('val', 4);
+    }
 
     var params = {};
     params.category = category;
@@ -124,6 +132,9 @@ function resetGameBoard() {
     player1 = {};
     player2 = {};
     selectedCard = null;
+    $("#closeGameBt").jqxButton({disabled:true, theme:theme});
+    $("#joinGameBt").jqxButton({disabled:true, theme:theme});
+    $("#createGameBt").jqxButton({disabled:false, theme:theme});
 }
 
 function initFirstPhase(data) {
@@ -170,7 +181,15 @@ function autostart() {
 }
 
 function onStartGameBtClick(evt) {
-    evt.stopImmediatePropagation();
+    if(instructions) {
+        $("#instructionsWin").jqxWindow("open");
+        $('#instructionsWinTabs').jqxTabs('disableAt', 4);
+        $('#instructionsWinTabs').jqxTabs('disableAt', 5);
+        $('#instructionsWinTabs').jqxTabs('enableAt', 6);
+        $("#instructionsWinTabs").jqxTabs('val', 6);
+    }
+    if (typeof evt != 'undefined')
+        evt.stopImmediatePropagation();
     $.each( cards, function( index, card ) {
         card.removeEventListener("click", showWikiPage);
         card.cursor = null;
@@ -204,12 +223,6 @@ function startGame(params) {
     $("#startGameBt").children(0).text("Is Running");
     buildNameContainers();
     shuffleCards();
-    if(gameType == "single")
-        setStatusText(0);
-    else
-        setStatusText(1);
-    $("#statusTextWrapper").css("display","block");
-    $("#countCardsTop").css("display","block");
 
     timeLeft = 901000; //15 min + 1 sec
 
@@ -237,9 +250,10 @@ function startGame(params) {
 
 }
 
-function stopGame(params) {
+function showResults(params) {
     var results = JSON.parse(params.results);
     console.log(results);
+
 
     results = $.grep(results, function (el, i) {
         if (el["user"] != sfs.mySelf.getVariable("id").value) {
@@ -275,7 +289,8 @@ function stopGame(params) {
     var wrongCount = gameCount - rightCount;
     var pointsEarned = params["points"]; 
 
-    var reason =(typeof params.n == 'undefined' ? "Game is Over" : "User " + params.n + " left the game ")
+    //var reason =(typeof params.n == 'undefined' ? "Game is Over" : "User " + params.n + " left the game ")
+    var reason = "Game Is Over";
     var newTitle = "<strong>" + reason + " &#x27a0; Total Questions: " + gameCount + "  |  Right: " + rightCount +"  |  Wrong: " + wrongCount + "  |  Points earned: " + pointsEarned + "</strong>"
     afterGameWin.jqxWindow('setTitle', newTitle);
     afterGameWin.jqxWindow('open');
@@ -348,6 +363,10 @@ function destroyGame() {
     if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME)
         sfs.send(new SFS2X.Requests.System.LeaveRoomRequest());
     resetGameBoard();
+}
+
+function getBadges() {
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("getBadges") );
 }
 
 function setTimer(event) {
@@ -453,12 +472,12 @@ function flip() {
     createjs.Tween.get(selectedCard, { loop: false })
         .to({ x: BOARD_WIDTH/2-5, y:BOARD_HEIGHT/2-14}, 700, createjs.Ease.getPowInOut(4))
         .call(function() {
-            if(myTurn()) {
+            //if(myTurn()) {
                 flipFrontwards();
-            }
-            else
-                createjs.Tween.get(selectedCard, {loop: false})
-                    .to({alpha:1}, 1000);
+            //}
+            //else
+            //    createjs.Tween.get(selectedCard, {loop: false})
+            //        .to({alpha:1}, 1000);
         });
 }
 

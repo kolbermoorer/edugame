@@ -6,18 +6,15 @@ function trace(txt, showAlert)
         alert(txt);
 }
 
-function showError(text)
-{
-    console.log(text);
-    $("#errorLb").html("<b>ATTENTION</b><br/>" + text).toggle();
-}
-
 function onGameExtensionResponse(event)
 {
     var cmd = event.cmd;
     var params = event.params;
 
     switch(cmd){
+        case "setBadges":
+            getBadges();
+            break;
         case "getBadges":
             updateBadges(event.params.data[0]);
             break;
@@ -57,8 +54,11 @@ function onGameExtensionResponse(event)
         case "start":
             startGame(params);
             break;
-        case "stop":
-            stopGame(params);
+        case "stopGame":
+            destroyGame();
+            break;
+        case "showResults":
+            showResults(params);
             break;
         case "pickCard":
             questionData = JSON.parse(params.card);
@@ -72,12 +72,26 @@ function onGameExtensionResponse(event)
                 multiPlayerOpenCard();
             break;
         case "checkAnswer":
-            if(params.isError)
+            if(params.isError) {
+                answerError = true;
                 onNextQuestionBtClick();
-            else
+            }
+            else {
+                answerError = false;
                 markAnswer(params);
+            }
+
             if(params.gameEnd)
-                stopGame(params);
+                destroyGame();
+            break;
+        case "hideErrorBox":
+            $("#errorAnswer").css("display", "none");
+            break;
+        case "agreeError":
+            $("#isErrorWin").jqxWindow('open');
+            break;
+        case "noError":
+            $("#errorAnswer").css("display", "none");
             break;
         case "createMultiplayerQuestion":
             multiPlayerCreateQuestion(params);
@@ -87,7 +101,7 @@ function onGameExtensionResponse(event)
             onNextQuestionBtClickCss();
             whoseTurn = params["whoseTurn"];
             setStatusText(1);
-            handleMove(params["enableBoard"]);
+            handleMove(params["enableBoard"], answerError);
             break;
         case "stopTime":
             console.log("Stop the timer of the opponent!");
@@ -95,6 +109,9 @@ function onGameExtensionResponse(event)
             break;
         case "updateWeight":
             $(".averageRating").children().children().eq(1).children().eq(1).text(rating);
+            break;
+        case "getSurveyData":
+            fillOutSurveyQuestion(params["surveyData"]);
             break;
     }
 }
@@ -110,6 +127,7 @@ function setView(viewId, doSwitch)
         addEventListenerMain();
         updateUserLists();
         populateRoomsList();
+        $("#statusTextLogin").css("display", "none");
     }
     else if (viewId == "game")
     {
