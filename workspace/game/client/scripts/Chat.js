@@ -1,6 +1,6 @@
 function onSendMessageBtClick()
 {
-    var chatWindow = (inGame && gameStarted ? $("#gameMsgIn") : $("#publicMsgIn"));
+    var chatWindow = (inGame ? $("#gameMsgIn") : $("#publicMsgIn"));
     if(chatWindow.jqxInput('val') != "") {
         var isSent = sfs.send(new SFS2X.Requests.System.PublicMessageRequest(chatWindow.val()));
         if (isSent) {
@@ -16,7 +16,7 @@ function onPublicMessage(event)
 }
 
 function writeToChatArea(text) {
-    var chatWindow = (inGame && gameStarted ? $("#gameChatAreaPn") : $("#publicChatAreaPn"));
+    var chatWindow = (inGame ? $("#gameChatAreaPn") : $("#publicChatAreaPn"));
     chatWindow.jqxPanel("append", "<p class='chatAreaElement'>" + text + "</p>");
     if (chatWindow.jqxPanel("getScrollHeight") != 1000)
         chatWindow.jqxPanel("scrollTo", 0, chatWindow.jqxPanel("getScrollHeight"));

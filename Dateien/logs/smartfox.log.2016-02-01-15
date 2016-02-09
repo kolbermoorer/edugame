@@ -1,0 +1,402 @@
+01 Feb 2016 | 15:01:44,916 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room368, Id: 392, Group: default, isGame: true ], Duration: 406820
+01 Feb 2016 | 15:03:23,223 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:03:23,227 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:03:23,236 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room369, Id: 393, Group: default, isGame: true ]
+01 Feb 2016 | 15:03:23,237 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room369, Id: 393, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 246, Priv: 0, Sess: 128.176.53.19:59011 ) , asSpect: false
+01 Feb 2016 | 15:03:42,694 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 365, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247 } on Server port: 8888 <---> 4645
+01 Feb 2016 | 15:03:42,695 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 15:03:42,695 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 365, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247:4645 }
+01 Feb 2016 | 15:04:44,628 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 366, Type: WEBSOCKET, Logged: No, IP: 188.192.178.58 } on Server port: 8888 <---> 48142
+01 Feb 2016 | 15:04:45,006 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: lapacho
+01 Feb 2016 | 15:04:54,027 | WARN  | SFSWorker:Ext:2 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: lapach
+01 Feb 2016 | 15:04:57,639 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 366, Type: WEBSOCKET, Logged: No, IP: 188.192.178.58:48142 }
+01 Feb 2016 | 15:06:52,467 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room369, Id: 393, Group: default, isGame: true ], Duration: 209241
+01 Feb 2016 | 15:07:07,013 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:07:07,017 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:07:07,026 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room370, Id: 394, Group: default, isGame: true ]
+01 Feb 2016 | 15:07:07,026 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room370, Id: 394, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 246, Priv: 0, Sess: 128.176.53.19:59011 ) , asSpect: false
+01 Feb 2016 | 15:14:13,752 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room370, Id: 394, Group: default, isGame: true ], Duration: 426736
+01 Feb 2016 | 15:16:32,385 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 367, Type: WEBSOCKET, Logged: No, IP: 199.19.249.196 } on Server port: 8888 <---> 56977
+01 Feb 2016 | 15:16:32,535 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 367, Type: WEBSOCKET, Logged: No, IP: 199.19.249.196:56977 }
+01 Feb 2016 | 15:16:32,762 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 368, Type: WEBSOCKET, Logged: No, IP: 192.35.17.12 } on Server port: 8888 <---> 54211
+01 Feb 2016 | 15:16:33,119 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#250, Id: 250, Priv: 0, Sess: 192.35.17.12:54211 ) , Type: JavaScript
+01 Feb 2016 | 15:16:33,301 | WARN  | SFSWorker:Ext:3 | components.signup.SignUpAssistant |     | User name is too short, min. amount of characters is 4, from ( User Name: Guest#250, Id: 250, Priv: 0, Sess: 192.35.17.12:54211 ) 
+01 Feb 2016 | 15:16:58,698 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 368, Type: WEBSOCKET, Logged: Yes, IP: 192.35.17.12:54211 }
+01 Feb 2016 | 15:16:58,699 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#250, Id: 250, Priv: 0, Sess: 192.35.17.12:54211 ) , SessionLen: 25580, Type: JavaScript
+01 Feb 2016 | 15:17:01,301 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 369, Type: WEBSOCKET, Logged: No, IP: 192.35.17.12 } on Server port: 8888 <---> 51016
+01 Feb 2016 | 15:17:01,686 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: ChrisM, Id: 251, Priv: 0, Sess: 192.35.17.12:51016 ) , Type: JavaScript
+01 Feb 2016 | 15:17:01,877 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: ChrisM, Id: 251, Priv: 0, Sess: 192.35.17.12:51016 ) , asSpect: false
+01 Feb 2016 | 15:21:53,675 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 370, Type: WEBSOCKET, Logged: No, IP: 192.35.17.12 } on Server port: 8888 <---> 62946
+01 Feb 2016 | 15:21:54,056 | INFO  | SFSWorker:Ext:3 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: ChrisM, Id: 251, Priv: 0, Sess: 192.35.17.12:51016 ) 
+01 Feb 2016 | 15:21:54,057 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 369, Type: WEBSOCKET, Logged: Yes, IP: 192.35.17.12:51016 }
+01 Feb 2016 | 15:21:54,057 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: ChrisM, Id: 251, Priv: 0, Sess: 192.35.17.12:51016 ) , SessionLen: 292371, Type: JavaScript
+01 Feb 2016 | 15:21:54,059 | INFO  | SFSWorker:Ext:3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 369, Type: WEBSOCKET, Logged: No, IP: 192.35.17.12:51016 }
+01 Feb 2016 | 15:21:54,060 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: ChrisM, Id: 251, Priv: 0, Sess: 192.35.17.12:51016 ) , SessionLen: 292374, Type: JavaScript
+01 Feb 2016 | 15:21:56,061 | INFO  | pool-1-thread-1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: ChrisM, Id: 252, Priv: 0, Sess: 192.35.17.12:62946 ) , Type: JavaScript
+01 Feb 2016 | 15:21:56,259 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: ChrisM, Id: 252, Priv: 0, Sess: 192.35.17.12:62946 ) , asSpect: false
+01 Feb 2016 | 15:22:08,497 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:22:08,502 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:22:08,510 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room371, Id: 395, Group: default, isGame: true ]
+01 Feb 2016 | 15:22:08,511 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room371, Id: 395, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: ChrisM, Id: 252, Priv: 0, Sess: 192.35.17.12:62946 ) , asSpect: false
+01 Feb 2016 | 15:26:47,950 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 371, Type: WEBSOCKET, Logged: No, IP: 192.35.17.12 } on Server port: 8888 <---> 55431
+01 Feb 2016 | 15:26:48,310 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: chrisM, Id: 253, Priv: 0, Sess: 192.35.17.12:55431 ) , Type: JavaScript
+01 Feb 2016 | 15:26:48,486 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: chrisM, Id: 253, Priv: 0, Sess: 192.35.17.12:55431 ) , asSpect: false
+01 Feb 2016 | 15:27:45,971 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:27:45,976 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 15:27:45,985 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room372, Id: 396, Group: default, isGame: true ]
+01 Feb 2016 | 15:27:45,986 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room372, Id: 396, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: chrisM, Id: 253, Priv: 0, Sess: 192.35.17.12:55431 ) , asSpect: false
+01 Feb 2016 | 15:28:02,023 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:28:02,027 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:28:02,036 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room373, Id: 397, Group: default, isGame: true ]
+01 Feb 2016 | 15:28:02,037 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room373, Id: 397, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: chrisM, Id: 253, Priv: 0, Sess: 192.35.17.12:55431 ) , asSpect: false
+01 Feb 2016 | 15:28:37,545 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room373, Id: 397, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 15:28:37,555 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room373, Id: 397, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 15:28:55,147 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room373, Id: 397, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 15:28:55,149 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room373, Id: 397, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 15:28:55,195 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room373, Id: 397, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 15:28:55,196 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room373, Id: 397, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 15:29:55,430 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 372, Type: WEBSOCKET, Logged: No, IP: 192.35.17.17 } on Server port: 8888 <---> 64877
+01 Feb 2016 | 15:29:55,794 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: CchrisM
+01 Feb 2016 | 15:30:03,233 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 372, Type: WEBSOCKET, Logged: No, IP: 192.35.17.17:64877 }
+01 Feb 2016 | 15:30:09,857 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 373, Type: WEBSOCKET, Logged: No, IP: 192.35.17.17 } on Server port: 8888 <---> 56698
+01 Feb 2016 | 15:30:10,211 | INFO  | SFSWorker:Ext:2 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: chrisM, Id: 253, Priv: 0, Sess: 192.35.17.12:55431 ) 
+01 Feb 2016 | 15:30:10,211 | INFO  | SFSWorker:Ext:2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 371, Type: WEBSOCKET, Logged: Yes, IP: 192.35.17.12:55431 }
+01 Feb 2016 | 15:30:10,212 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 371, Type: WEBSOCKET, Logged: No, IP: 192.35.17.12:55431 }
+01 Feb 2016 | 15:30:10,214 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: chrisM, Id: 253, Priv: 0, Sess: 192.35.17.12:55431 ) , SessionLen: 201904, Type: JavaScript
+01 Feb 2016 | 15:30:10,216 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room372, Id: 396, Group: default, isGame: true ], Duration: 144242
+01 Feb 2016 | 15:30:10,222 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room373, Id: 397, Group: default, isGame: true ], Duration: 128196
+01 Feb 2016 | 15:30:12,215 | INFO  | pool-1-thread-2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: chrisM, Id: 254, Priv: 0, Sess: 192.35.17.17:56698 ) , Type: JavaScript
+01 Feb 2016 | 15:30:12,392 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: chrisM, Id: 254, Priv: 0, Sess: 192.35.17.17:56698 ) , asSpect: false
+01 Feb 2016 | 15:30:24,174 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:30:24,178 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:30:24,187 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room374, Id: 398, Group: default, isGame: true ]
+01 Feb 2016 | 15:30:24,188 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room374, Id: 398, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: chrisM, Id: 254, Priv: 0, Sess: 192.35.17.17:56698 ) , asSpect: false
+01 Feb 2016 | 15:30:55,043 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | java.io.IOException: Connection reset by peer
+01 Feb 2016 | 15:30:55,043 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 370, Type: WEBSOCKET, Logged: Yes, IP: 192.35.17.12:62946 }
+01 Feb 2016 | 15:30:55,044 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: ChrisM, Id: 252, Priv: 0, Sess: 192.35.17.12:62946 ) , SessionLen: 538983, Type: JavaScript
+01 Feb 2016 | 15:30:55,059 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room371, Id: 395, Group: default, isGame: true ], Duration: 526559
+01 Feb 2016 | 15:31:51,159 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 374, Type: WEBSOCKET, Logged: No, IP: 212.185.16.250 } on Server port: 8888 <---> 19648
+01 Feb 2016 | 15:31:51,478 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#255, Id: 255, Priv: 0, Sess: 212.185.16.250:19648 ) , Type: JavaScript
+01 Feb 2016 | 15:31:55,967 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 374, Type: WEBSOCKET, Logged: Yes, IP: 212.185.16.250:19648 }
+01 Feb 2016 | 15:31:55,967 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#255, Id: 255, Priv: 0, Sess: 212.185.16.250:19648 ) , SessionLen: 4489, Type: JavaScript
+01 Feb 2016 | 15:32:01,907 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 375, Type: WEBSOCKET, Logged: No, IP: 212.185.16.250 } on Server port: 8888 <---> 49175
+01 Feb 2016 | 15:32:02,237 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: laura, Id: 256, Priv: 0, Sess: 212.185.16.250:49175 ) , Type: JavaScript
+01 Feb 2016 | 15:32:02,408 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: laura, Id: 256, Priv: 0, Sess: 212.185.16.250:49175 ) , asSpect: false
+01 Feb 2016 | 15:32:34,683 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:32:34,692 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:32:34,701 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room375, Id: 399, Group: default, isGame: true ]
+01 Feb 2016 | 15:32:34,702 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room375, Id: 399, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: laura, Id: 256, Priv: 0, Sess: 212.185.16.250:49175 ) , asSpect: false
+01 Feb 2016 | 15:33:13,788 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 376, Type: WEBSOCKET, Logged: No, IP: 61.160.213.55 } on Server port: 8888 <---> 2574
+01 Feb 2016 | 15:33:13,789 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 15:33:13,789 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 376, Type: WEBSOCKET, Logged: No, IP: 61.160.213.55:2574 }
+01 Feb 2016 | 15:33:23,231 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room375, Id: 399, Group: default, isGame: true ], Duration: 48541
+01 Feb 2016 | 15:33:58,044 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:33:58,048 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:33:58,056 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room376, Id: 400, Group: default, isGame: true ]
+01 Feb 2016 | 15:33:58,057 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room376, Id: 400, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: laura, Id: 256, Priv: 0, Sess: 212.185.16.250:49175 ) , asSpect: false
+01 Feb 2016 | 15:35:30,628 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 373, Type: WEBSOCKET, Logged: Yes, IP: 192.35.17.17:56698 }
+01 Feb 2016 | 15:35:30,629 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: chrisM, Id: 254, Priv: 0, Sess: 192.35.17.17:56698 ) , SessionLen: 318414, Type: JavaScript
+01 Feb 2016 | 15:35:30,639 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room374, Id: 398, Group: default, isGame: true ], Duration: 306462
+01 Feb 2016 | 15:39:53,104 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room376, Id: 400, Group: default, isGame: true ], Duration: 355058
+01 Feb 2016 | 15:41:46,613 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 375, Type: WEBSOCKET, Logged: Yes, IP: 212.185.16.250:49175 }
+01 Feb 2016 | 15:41:46,615 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: laura, Id: 256, Priv: 0, Sess: 212.185.16.250:49175 ) , SessionLen: 584378, Type: JavaScript
+01 Feb 2016 | 15:45:38,635 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:45:38,640 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:45:38,648 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room377, Id: 401, Group: default, isGame: true ]
+01 Feb 2016 | 15:45:38,649 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room377, Id: 401, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 246, Priv: 0, Sess: 128.176.53.19:59011 ) , asSpect: false
+01 Feb 2016 | 15:47:03,868 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 377, Type: WEBSOCKET, Logged: No, IP: 188.195.67.101 } on Server port: 8888 <---> 59582
+01 Feb 2016 | 15:47:04,252 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tobiknobi, Id: 257, Priv: 0, Sess: 188.195.67.101:59582 ) , Type: JavaScript
+01 Feb 2016 | 15:47:04,451 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tobiknobi, Id: 257, Priv: 0, Sess: 188.195.67.101:59582 ) , asSpect: false
+01 Feb 2016 | 15:47:49,875 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 378, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 1464
+01 Feb 2016 | 15:47:49,878 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 15:47:49,879 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 378, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:1464 }
+01 Feb 2016 | 15:48:14,474 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:48:14,478 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:48:14,486 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room378, Id: 402, Group: default, isGame: true ]
+01 Feb 2016 | 15:48:14,487 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room378, Id: 402, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tobiknobi, Id: 257, Priv: 0, Sess: 188.195.67.101:59582 ) , asSpect: false
+01 Feb 2016 | 15:48:39,208 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room378, Id: 402, Group: default, isGame: true ], Duration: 24732
+01 Feb 2016 | 15:49:06,438 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room377, Id: 401, Group: default, isGame: true ], Duration: 207800
+01 Feb 2016 | 15:49:07,244 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:49:07,248 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:49:07,257 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room379, Id: 403, Group: default, isGame: true ]
+01 Feb 2016 | 15:49:07,258 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room379, Id: 403, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tobiknobi, Id: 257, Priv: 0, Sess: 188.195.67.101:59582 ) , asSpect: false
+01 Feb 2016 | 15:49:36,840 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: Mali, Id: 246, Priv: 0, Sess: 128.176.53.19:59011 ) , SessionLen: 9474972, Type: JavaScript
+01 Feb 2016 | 15:49:36,841 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,012 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,012 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,012 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,013 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,013 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,013 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,014 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,014 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,014 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,015 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,015 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,015 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:37,015 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 15:49:39,661 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 356, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:59011 }
+01 Feb 2016 | 15:52:51,918 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room379, Id: 403, Group: default, isGame: true ], Duration: 224672
+01 Feb 2016 | 15:53:34,312 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:53:34,316 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:53:34,324 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room380, Id: 404, Group: default, isGame: true ]
+01 Feb 2016 | 15:53:34,325 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room380, Id: 404, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tobiknobi, Id: 257, Priv: 0, Sess: 188.195.67.101:59582 ) , asSpect: false
+01 Feb 2016 | 15:55:00,032 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+01 Feb 2016 | 15:55:00,033 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 1/3
+01 Feb 2016 | 15:55:00,033 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+01 Feb 2016 | 15:55:00,033 | INFO  | pool-1-thread-1 | util.stats.CCULoggerTask |     | CCU stats: CCU: 1/3
+01 Feb 2016 | 15:57:06,088 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room380, Id: 404, Group: default, isGame: true ], Duration: 211774
+01 Feb 2016 | 15:57:37,256 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 15:57:37,261 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 15:57:37,269 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room381, Id: 405, Group: default, isGame: true ]
+01 Feb 2016 | 15:57:37,270 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room381, Id: 405, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tobiknobi, Id: 257, Priv: 0, Sess: 188.195.67.101:59582 ) , asSpect: false

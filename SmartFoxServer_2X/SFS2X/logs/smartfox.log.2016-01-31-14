@@ -1,0 +1,18 @@
+31 Jan 2016 | 14:01:46,726 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 0 } on Server port: 9933 <---> 0
+31 Jan 2016 | 14:01:46,741 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: DEFAULT, Logged: No, IP: 0 } on Server port: 9933 <---> 0
+31 Jan 2016 | 14:01:56,727 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: DEFAULT, Logged: No, IP: 0 }
+31 Jan 2016 | 14:03:33,214 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: DEFAULT, Logged: No, IP: 0 }
+31 Jan 2016 | 14:04:02,187 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: DEFAULT, Logged: No, IP: 127.0.0.1:49435 } on Server port: 9933 <---> 49435
+31 Jan 2016 | 14:04:02,189 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: DEFAULT, Logged: No, IP: 127.0.0.1:49436 } on Server port: 9933 <---> 49436
+31 Jan 2016 | 14:04:10,685 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: DEFAULT, Logged: No, IP: 127.0.0.1:49435 }
+31 Jan 2016 | 14:04:10,696 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 5, Type: DEFAULT, Logged: No, IP: 127.0.0.1:49438 } on Server port: 9933 <---> 49438
+31 Jan 2016 | 14:04:26,725 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 5, Type: DEFAULT, Logged: No, IP: 127.0.0.1:49438 }
+31 Jan 2016 | 14:05:27,608 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 4, Type: DEFAULT, Logged: No, IP: 127.0.0.1:49436 }
+31 Jan 2016 | 14:32:24,271 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 6, Type: WEBSOCKET, Logged: No, IP: 127.0.0.1 } on Server port: 8888 <---> 49789
+31 Jan 2016 | 14:32:24,429 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#0, Id: 0, Priv: 0, Sess: 127.0.0.1:49789 ) , Type: JavaScript
+31 Jan 2016 | 14:33:50,590 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 6, Type: WEBSOCKET, Logged: Yes, IP: 127.0.0.1:49789 }
+31 Jan 2016 | 14:33:50,593 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#0, Id: 0, Priv: 0, Sess: 127.0.0.1:49789 ) , SessionLen: 86165, Type: JavaScript
+31 Jan 2016 | 14:55:20,361 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+31 Jan 2016 | 14:55:20,363 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/0
+31 Jan 2016 | 14:55:20,365 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/1
+31 Jan 2016 | 14:55:20,366 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

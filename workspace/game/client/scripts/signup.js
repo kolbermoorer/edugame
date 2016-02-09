@@ -6,7 +6,7 @@ function init()
     trace("Registration started");
     // Create configuration object
     var config = {};
-    config.host = "localhost"; //"52.25.12.255"
+    config.host = "52.27.156.152"; //"52.25.12.255" localhost
     config.port = 8888;
     config.zone = "Registration";
     config.debug = true;
@@ -131,7 +131,7 @@ function onExtensionResponse(event)
     else {
         setStatusText(errorMessage, false);
     }
-    trace(event);
+    //trace(event);
 
 }
 

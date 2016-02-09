@@ -1,0 +1,644 @@
+02 Feb 2016 | 15:07:27,698 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 542, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 1604
+02 Feb 2016 | 15:07:27,712 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 15:07:27,712 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 542, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:1604 }
+02 Feb 2016 | 15:22:21,530 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 543, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 2000
+02 Feb 2016 | 15:22:21,531 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 15:22:21,531 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 543, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:2000 }
+02 Feb 2016 | 15:30:53,646 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19 } on Server port: 8888 <---> 50503
+02 Feb 2016 | 15:30:54,011 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: Mali, Id: 333, Priv: 0, Sess: 128.176.53.19:50503 ) , Type: JavaScript
+02 Feb 2016 | 15:30:54,356 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: Mali, Id: 333, Priv: 0, Sess: 128.176.53.19:50503 ) , asSpect: false
+02 Feb 2016 | 15:31:47,067 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 15:31:47,071 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 15:31:47,080 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room582, Id: 606, Group: default, isGame: true ]
+02 Feb 2016 | 15:31:47,081 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room582, Id: 606, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 333, Priv: 0, Sess: 128.176.53.19:50503 ) , asSpect: false
+02 Feb 2016 | 15:35:22,214 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room582, Id: 606, Group: default, isGame: true ], Duration: 215144
+02 Feb 2016 | 15:40:41,979 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 15:40:41,984 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 15:40:41,992 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room583, Id: 607, Group: default, isGame: true ]
+02 Feb 2016 | 15:40:41,993 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room583, Id: 607, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 333, Priv: 0, Sess: 128.176.53.19:50503 ) , asSpect: false
+02 Feb 2016 | 15:43:46,028 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room583, Id: 607, Group: default, isGame: true ], Duration: 184046
+02 Feb 2016 | 15:44:41,592 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 15:44:41,598 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 15:44:41,607 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room584, Id: 608, Group: default, isGame: true ]
+02 Feb 2016 | 15:44:41,607 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room584, Id: 608, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 333, Priv: 0, Sess: 128.176.53.19:50503 ) , asSpect: false
+02 Feb 2016 | 15:47:25,787 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room584, Id: 608, Group: default, isGame: true ], Duration: 164193
+02 Feb 2016 | 15:47:31,221 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 545, Type: DEFAULT, Logged: No, IP: 89.14.26.185:55888 } on Server port: 9933 <---> 55888
+02 Feb 2016 | 15:47:31,418 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Admin login refused to user 'eduhack': invalid credentials
+02 Feb 2016 | 15:47:31,742 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 545, Type: DEFAULT, Logged: No, IP: 89.14.26.185:55888 }
+02 Feb 2016 | 15:47:45,186 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 546, Type: DEFAULT, Logged: No, IP: 89.14.26.185:55893 } on Server port: 9933 <---> 55893
+02 Feb 2016 | 15:47:45,384 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 334, Priv: 0, Sess: 89.14.26.185:55893 ) , Type: Flash PlugIn:WIN 20,0,0,286
+02 Feb 2016 | 15:47:45,385 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 334, Priv: 0, Sess: 89.14.26.185:55893 ) , asSpect: false
+02 Feb 2016 | 15:47:49,990 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 15:47:49,994 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 15:47:50,002 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room585, Id: 609, Group: default, isGame: true ]
+02 Feb 2016 | 15:47:50,003 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room585, Id: 609, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 333, Priv: 0, Sess: 128.176.53.19:50503 ) , asSpect: false
+02 Feb 2016 | 15:49:49,033 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room585, Id: 609, Group: default, isGame: true ], Duration: 119041
+02 Feb 2016 | 15:50:25,016 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: Mali, Id: 333, Priv: 0, Sess: 128.176.53.19:50503 ) , SessionLen: 1171005, Type: JavaScript
+02 Feb 2016 | 15:50:25,190 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,191 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,191 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,192 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,192 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,192 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,194 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,194 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,195 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,195 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,195 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,195 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,196 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,196 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,196 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,197 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,197 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,192 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,199 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,200 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,200 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,200 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,201 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,197 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,201 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,202 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,202 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,202 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,203 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,203 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,203 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,203 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,204 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,204 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,204 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,205 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,197 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,206 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,206 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,207 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,207 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,207 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,207 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,208 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,208 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,208 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,209 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,201 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,209 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:25,210 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+02 Feb 2016 | 15:50:30,030 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 544, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19:50503 }
+02 Feb 2016 | 15:51:54,362 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 547, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 3570
+02 Feb 2016 | 15:51:54,363 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 15:51:54,363 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 547, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:3570 }
+02 Feb 2016 | 15:55:00,032 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/1
+02 Feb 2016 | 15:55:00,032 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+02 Feb 2016 | 15:55:00,033 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+02 Feb 2016 | 15:55:00,033 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/2

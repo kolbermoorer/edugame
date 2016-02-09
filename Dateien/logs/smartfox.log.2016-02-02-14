@@ -1,0 +1,21 @@
+02 Feb 2016 | 14:08:29,768 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 538, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 4198
+02 Feb 2016 | 14:08:29,775 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 14:08:29,775 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 538, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:4198 }
+02 Feb 2016 | 14:23:18,563 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 539, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247 } on Server port: 8888 <---> 2734
+02 Feb 2016 | 14:23:18,565 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 14:23:18,565 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 539, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247:2734 }
+02 Feb 2016 | 14:26:30,348 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 530, Type: WEBSOCKET, Logged: Yes, IP: 128.176.53.19:63563 }
+02 Feb 2016 | 14:26:30,348 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , SessionLen: 8024244, Type: JavaScript
+02 Feb 2016 | 14:29:02,055 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 540, Type: WEBSOCKET, Logged: No, IP: 80.187.126.226 } on Server port: 8888 <---> 20549
+02 Feb 2016 | 14:29:02,796 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tim04, Id: 332, Priv: 0, Sess: 80.187.126.226:20549 ) , Type: JavaScript
+02 Feb 2016 | 14:29:03,185 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tim04, Id: 332, Priv: 0, Sess: 80.187.126.226:20549 ) , asSpect: false
+02 Feb 2016 | 14:38:21,973 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 541, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 1569
+02 Feb 2016 | 14:38:21,974 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 14:38:21,974 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 541, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:1569 }
+02 Feb 2016 | 14:55:00,032 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/0
+02 Feb 2016 | 14:55:00,033 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/2
+02 Feb 2016 | 14:55:00,033 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+02 Feb 2016 | 14:55:00,033 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/2
+02 Feb 2016 | 14:59:30,071 | INFO  | Scheduler1-thread-1 | bitswarm.sessions.DefaultSessionManager |     | Terminated idle logged-in session: { Id: 540, Type: WEBSOCKET, Logged: Yes, IP: 80.187.126.226:20549 }
+02 Feb 2016 | 14:59:30,071 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 540, Type: WEBSOCKET, Logged: Yes, IP: 80.187.126.226:20549 }
+02 Feb 2016 | 14:59:30,071 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tim04, Id: 332, Priv: 0, Sess: 80.187.126.226:20549 ) , SessionLen: 1827275, Type: JavaScript

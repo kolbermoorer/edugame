@@ -1,0 +1,28 @@
+02 Feb 2016 | 03:05:26,573 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 479, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 3269
+02 Feb 2016 | 03:05:26,574 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 03:05:26,574 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 479, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:3269 }
+02 Feb 2016 | 03:20:08,241 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 480, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 4528
+02 Feb 2016 | 03:20:08,242 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 03:20:08,242 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 480, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:4528 }
+02 Feb 2016 | 03:21:54,193 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 481, Type: DEFAULT, Logged: No, IP: 89.14.26.185:61351 } on Server port: 9933 <---> 61351
+02 Feb 2016 | 03:21:54,389 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 481, Type: DEFAULT, Logged: No, IP: 89.14.26.185:61351 }
+02 Feb 2016 | 03:21:54,601 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 482, Type: DEFAULT, Logged: No, IP: 89.14.26.185:61352 } on Server port: 9933 <---> 61352
+02 Feb 2016 | 03:21:54,850 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 316, Priv: 0, Sess: 89.14.26.185:61352 ) , Type: Flash PlugIn:WIN 20,0,0,286
+02 Feb 2016 | 03:21:54,851 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 316, Priv: 0, Sess: 89.14.26.185:61352 ) , asSpect: false
+02 Feb 2016 | 03:22:30,468 | INFO  | SFSWorker:Ext:4 | util.extprocess.LogAnalysisProcessManagerThread |     | Starting external log analysis process
+02 Feb 2016 | 03:22:35,186 | INFO  | LogAnalysisThread | util.extprocess.LogAnalysisProcessManagerThread |     | Log analysis process output:
+log4j:WARN No appenders could be found for logger (com.smartfoxserver.v2.admin.LogAnalyzer).
+log4j:WARN Please initialize the log4j system properly.
+02 Feb 2016 | 03:22:35,188 | INFO  | LogAnalysisThread | util.extprocess.LogAnalysisProcessManagerThread |     | Log analysis process completed successfully
+02 Feb 2016 | 03:35:06,166 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 483, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 2314
+02 Feb 2016 | 03:35:06,167 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 03:35:06,167 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 483, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:2314 }
+02 Feb 2016 | 03:44:18,157 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 482, Type: DEFAULT, Logged: Yes, IP: 89.14.26.185:61352 }
+02 Feb 2016 | 03:44:18,158 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 316, Priv: 0, Sess: 89.14.26.185:61352 ) , SessionLen: 1343308, Type: Flash PlugIn:WIN 20,0,0,286
+02 Feb 2016 | 03:49:40,366 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 484, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247 } on Server port: 8888 <---> 2398
+02 Feb 2016 | 03:49:42,422 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 03:49:42,422 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 484, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247:2398 }
+02 Feb 2016 | 03:55:00,032 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/1
+02 Feb 2016 | 03:55:00,033 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/0
+02 Feb 2016 | 03:55:00,033 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+02 Feb 2016 | 03:55:00,033 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

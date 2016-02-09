@@ -11,7 +11,6 @@ function updateLoadingScreen(event) {
 }
 
 function singePlayerOpenCard() {
-    console.log(selectedCard);
     var backSide = selectedCard.children[0];
     var frontSide = selectedCard.children[1];
 
@@ -85,7 +84,6 @@ function singlePlayerCreateQuestion() {
 }
 
 function singlePlayerHandleMove(answerCorrect, error) {
-    console.log("Answer was " + answerCorrect + "!");
     previousSelectedCard = selectedCard;
     flipBackwards();
     if(!answerCorrect && !error) { //lost the card, send to top

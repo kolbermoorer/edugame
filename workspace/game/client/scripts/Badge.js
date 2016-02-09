@@ -9,6 +9,8 @@ function updateBadges(data) {
         $('#instructionsWinTabs').jqxTabs('disableAt', 5);
         $('#instructionsWinTabs').jqxTabs('disableAt', 6);
     }
+    else
+        instructions = false;
 
     var winQuestionsRow = data["winQuestionsRow"];
     var winCompeteRow = data["winCompeteRow"];
@@ -47,7 +49,8 @@ function updateBadges(data) {
 
     if(winCompeteRow > 2) replaceImageBadge($("#qm-img"));
     if(winQuestionsRow > 9) replaceImageBadge($("#vm-img"));
-    if(winrate > 0.75) replaceImageBadge($("#in-img"));
+
+    if(winrate > 70) replaceImageBadge($("#in-img"));
     if(points > 19) replaceBadge($("#vv-img"), level);
     if(winCollaborateRow > 4) replaceImageBadge($("#cc-img"));
     if(surveyTaken === "yes") replaceImageBadge($("#ts-img"));
@@ -97,12 +100,20 @@ function onBadgeClick(event) {
 }
 
 function onTakeSurveyBtClick() {
+    /*var win = window.open('http://www.surveygizmo.com/s3/2531497/Survey-on-EduGame?u=' + $("#usernameLb").text(), '_blank');
+    if(win){
+        //Browser has allowed it to be opened
+        win.focus();
+    }else{
+        //Broswer has blocked it
+        alert('Please allow popups for this site');
+    }*/
     $("#firstQuestionWin").jqxWindow("open");
     sfs.send(new SFS2X.Requests.System.ExtensionRequest("getSurveyData"));
 }
 
 function fillOutSurveyQuestion(data) {
-    trace(data);
+    //trace(data);
 
     var property = data[0]["property"].split('/');
     property = property[property.length - 1];
@@ -121,7 +132,7 @@ function fillOutSurveyQuestion(data) {
 }
 
 function openSurvey(element) {
-    var win = window.open('http://www.surveygizmo.com/s3/2531497/Survey-on-EduGame?u=' + $("#usernameLb").text() + "&c=" + gamesPlayedTotal, '_blank');
+    var win = window.open('http://www.surveygizmo.com/s3/2531497/Survey-on-EduGame?u=' + $("#usernameLb").text(), '_blank');
     if(win){
         //Browser has allowed it to be opened
         win.focus();

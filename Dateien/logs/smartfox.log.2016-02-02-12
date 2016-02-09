@@ -1,0 +1,84 @@
+02 Feb 2016 | 12:03:46,020 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 528, Type: WEBSOCKET, Logged: No, IP: 89.14.26.185 } on Server port: 8888 <---> 55298
+02 Feb 2016 | 12:03:46,443 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: thomas, Id: 328, Priv: 0, Sess: 89.14.26.185:55298 ) , Type: JavaScript
+02 Feb 2016 | 12:03:46,658 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: thomas, Id: 328, Priv: 0, Sess: 89.14.26.185:55298 ) , asSpect: false
+02 Feb 2016 | 12:03:51,197 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: thomas, Id: 328, Priv: 0, Sess: 89.14.26.185:55298 ) , SessionLen: 4754, Type: JavaScript
+02 Feb 2016 | 12:04:28,646 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 528, Type: WEBSOCKET, Logged: No, IP: 89.14.26.185:55298 }
+02 Feb 2016 | 12:10:33,024 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 529, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247 } on Server port: 8888 <---> 3210
+02 Feb 2016 | 12:10:36,077 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 12:10:36,077 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 529, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247:3210 }
+02 Feb 2016 | 12:12:45,738 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 530, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19 } on Server port: 8888 <---> 63563
+02 Feb 2016 | 12:12:46,104 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , Type: JavaScript
+02 Feb 2016 | 12:12:46,451 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:13:25,908 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:13:25,912 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:13:25,926 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room568, Id: 592, Group: default, isGame: true ]
+02 Feb 2016 | 12:13:25,926 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room568, Id: 592, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:17:48,062 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room568, Id: 592, Group: default, isGame: true ], Duration: 262152
+02 Feb 2016 | 12:18:09,458 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:18:09,462 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:18:09,471 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room569, Id: 593, Group: default, isGame: true ]
+02 Feb 2016 | 12:18:09,471 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room569, Id: 593, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:20:43,759 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room569, Id: 593, Group: default, isGame: true ], Duration: 154299
+02 Feb 2016 | 12:21:02,517 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:21:02,521 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:21:02,529 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room570, Id: 594, Group: default, isGame: true ]
+02 Feb 2016 | 12:21:02,530 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room570, Id: 594, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:25:08,070 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room570, Id: 594, Group: default, isGame: true ], Duration: 245551
+02 Feb 2016 | 12:25:18,431 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 531, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 4068
+02 Feb 2016 | 12:25:18,432 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 12:25:18,432 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 531, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:4068 }
+02 Feb 2016 | 12:25:31,030 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:25:31,035 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:25:31,043 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room571, Id: 595, Group: default, isGame: true ]
+02 Feb 2016 | 12:25:31,044 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room571, Id: 595, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:27:12,724 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room571, Id: 595, Group: default, isGame: true ], Duration: 101691
+02 Feb 2016 | 12:27:26,047 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:27:26,052 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:27:26,060 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room572, Id: 596, Group: default, isGame: true ]
+02 Feb 2016 | 12:27:26,061 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room572, Id: 596, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:34:19,584 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room572, Id: 596, Group: default, isGame: true ], Duration: 413534
+02 Feb 2016 | 12:34:34,543 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:34:34,548 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:34:34,556 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room573, Id: 597, Group: default, isGame: true ]
+02 Feb 2016 | 12:34:34,557 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room573, Id: 597, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:37:24,180 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room573, Id: 597, Group: default, isGame: true ], Duration: 169634
+02 Feb 2016 | 12:37:39,410 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:37:39,414 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:37:39,423 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room574, Id: 598, Group: default, isGame: true ]
+02 Feb 2016 | 12:37:39,423 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room574, Id: 598, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:40:03,164 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 532, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 1139
+02 Feb 2016 | 12:40:03,165 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 12:40:03,165 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 532, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:1139 }
+02 Feb 2016 | 12:41:40,692 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room574, Id: 598, Group: default, isGame: true ], Duration: 241278
+02 Feb 2016 | 12:42:14,006 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:42:14,011 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:42:14,019 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room575, Id: 599, Group: default, isGame: true ]
+02 Feb 2016 | 12:42:14,020 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room575, Id: 599, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:43:41,614 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room575, Id: 599, Group: default, isGame: true ], Duration: 87605
+02 Feb 2016 | 12:44:01,268 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:44:01,272 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:44:01,282 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room576, Id: 600, Group: default, isGame: true ]
+02 Feb 2016 | 12:44:01,283 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room576, Id: 600, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:47:29,430 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room576, Id: 600, Group: default, isGame: true ], Duration: 208160
+02 Feb 2016 | 12:48:12,948 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:48:12,952 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:48:12,960 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room577, Id: 601, Group: default, isGame: true ]
+02 Feb 2016 | 12:48:12,961 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room577, Id: 601, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:50:48,722 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room577, Id: 601, Group: default, isGame: true ], Duration: 155772
+02 Feb 2016 | 12:51:03,194 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+02 Feb 2016 | 12:51:03,198 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+02 Feb 2016 | 12:51:03,207 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room578, Id: 602, Group: default, isGame: true ]
+02 Feb 2016 | 12:51:03,207 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room578, Id: 602, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 329, Priv: 0, Sess: 128.176.53.19:63563 ) , asSpect: false
+02 Feb 2016 | 12:55:00,032 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 1/1
+02 Feb 2016 | 12:55:00,032 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+02 Feb 2016 | 12:55:00,033 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+02 Feb 2016 | 12:55:00,033 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 1/2
+02 Feb 2016 | 12:55:00,226 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 533, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 1470
+02 Feb 2016 | 12:55:00,227 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+02 Feb 2016 | 12:55:00,228 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 533, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:1470 }
+02 Feb 2016 | 12:56:37,858 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room578, Id: 602, Group: default, isGame: true ], Duration: 334662
+02 Feb 2016 | 12:57:08,165 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 534, Type: WEBSOCKET, Logged: No, IP: 188.195.67.101 } on Server port: 8888 <---> 53053
+02 Feb 2016 | 12:57:08,543 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tobiknobi, Id: 330, Priv: 0, Sess: 188.195.67.101:53053 ) , Type: JavaScript
+02 Feb 2016 | 12:57:08,737 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tobiknobi, Id: 330, Priv: 0, Sess: 188.195.67.101:53053 ) , asSpect: false
+02 Feb 2016 | 12:58:01,900 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: tobiknobi, Id: 330, Priv: 0, Sess: 188.195.67.101:53053 ) , SessionLen: 53357, Type: JavaScript
+02 Feb 2016 | 12:58:03,799 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 534, Type: WEBSOCKET, Logged: No, IP: 188.195.67.101:53053 }

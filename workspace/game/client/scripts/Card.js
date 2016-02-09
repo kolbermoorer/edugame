@@ -8,7 +8,7 @@ function buildCards(data, layouts) {
     clicks = 0;
     var zIndex = 0;
     cardContainer = new createjs.Container();
-    console.log(data);
+    //console.log(data);
     for (var j=0;j < data.length;j++) {
         var stack = data[j];
         var cardsInStack = stack["cards"];
@@ -143,6 +143,8 @@ function spreadCards() {
         setStatusText(1);
     $("#statusTextWrapper").css("display","block");
     $("#countCardsTop").css("display","block");
+    $(".notClickable").css("display","block");
+
 }
 
 function calculateFontSize(text, startPixel, font, width, height) {
@@ -331,7 +333,6 @@ function changeBackground(event) {
 
 function showAnswers(rightAnswers) {
     var propertyFields = selectedCard.children[1].children.slice(5,9);
-    console.log(rightAnswers);
     $.each(propertyFields, function (index, propertyField) {
         var answerField = propertyField.children[2];
         var answerFieldProperty = "http://dbpedia.org/ontology/" + propertyField.property.text;

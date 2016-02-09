@@ -1,0 +1,847 @@
+01 Feb 2016 | 08:00:21,173 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 289, Type: WEBSOCKET, Logged: No, IP: 91.67.78.117 } on Server port: 8888 <---> 50816
+01 Feb 2016 | 08:00:21,600 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#209, Id: 209, Priv: 0, Sess: 91.67.78.117:50816 ) , Type: JavaScript
+01 Feb 2016 | 08:00:37,221 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 289, Type: WEBSOCKET, Logged: Yes, IP: 91.67.78.117:50816 }
+01 Feb 2016 | 08:00:37,222 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#209, Id: 209, Priv: 0, Sess: 91.67.78.117:50816 ) , SessionLen: 15622, Type: JavaScript
+01 Feb 2016 | 08:01:10,767 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:01:10,771 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:01:10,780 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room231, Id: 255, Group: default, isGame: true ]
+01 Feb 2016 | 08:01:10,781 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room231, Id: 255, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 206, Priv: 0, Sess: 91.21.194.154:49269 ) , asSpect: false
+01 Feb 2016 | 08:03:23,597 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 285, Type: WEBSOCKET, Logged: Yes, IP: 91.21.194.154:49269 }
+01 Feb 2016 | 08:03:23,598 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: tim04, Id: 206, Priv: 0, Sess: 91.21.194.154:49269 ) , SessionLen: 682134, Type: JavaScript
+01 Feb 2016 | 08:03:23,608 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room231, Id: 255, Group: default, isGame: true ], Duration: 132839
+01 Feb 2016 | 08:03:35,941 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 290, Type: WEBSOCKET, Logged: No, IP: 91.21.194.154 } on Server port: 8888 <---> 49388
+01 Feb 2016 | 08:03:36,333 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Type: JavaScript
+01 Feb 2016 | 08:03:36,532 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:03:52,096 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:03:52,100 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:03:52,109 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room232, Id: 256, Group: default, isGame: true ]
+01 Feb 2016 | 08:03:52,110 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room232, Id: 256, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:06:41,530 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room230, Id: 254, Group: default, isGame: true ], Duration: 525343
+01 Feb 2016 | 08:07:00,192 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room232, Id: 256, Group: default, isGame: true ], Duration: 188094
+01 Feb 2016 | 08:07:27,221 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:07:27,225 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 08:07:27,235 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room233, Id: 257, Group: default, isGame: true ]
+01 Feb 2016 | 08:07:27,236 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room233, Id: 257, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:08:04,029 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room233, Id: 257, Group: default, isGame: true ], Duration: 36806
+01 Feb 2016 | 08:08:15,175 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:08:15,179 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:08:15,188 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room234, Id: 258, Group: default, isGame: true ]
+01 Feb 2016 | 08:08:15,189 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room234, Id: 258, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:09:14,041 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 291, Type: WEBSOCKET, Logged: No, IP: 89.14.22.128 } on Server port: 8888 <---> 53954
+01 Feb 2016 | 08:09:14,454 | WARN  | SFSWorker:Ext:4 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. Password don't match for User: thomas
+01 Feb 2016 | 08:09:41,786 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 288, Type: WEBSOCKET, Logged: Yes, IP: 128.176.53.19:52471 }
+01 Feb 2016 | 08:09:41,787 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: Mali, Id: 208, Priv: 0, Sess: 128.176.53.19:52471 ) , SessionLen: 745721, Type: JavaScript
+01 Feb 2016 | 08:09:51,518 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 292, Type: WEBSOCKET, Logged: No, IP: 128.176.53.19 } on Server port: 8888 <---> 52999
+01 Feb 2016 | 08:09:51,871 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: Mali, Id: 211, Priv: 0, Sess: 128.176.53.19:52999 ) , Type: JavaScript
+01 Feb 2016 | 08:09:52,221 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: Mali, Id: 211, Priv: 0, Sess: 128.176.53.19:52999 ) , asSpect: false
+01 Feb 2016 | 08:10:56,311 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 293, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 4166
+01 Feb 2016 | 08:10:56,324 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 08:10:56,325 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 293, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:4166 }
+01 Feb 2016 | 08:11:21,232 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room234, Id: 258, Group: default, isGame: true ], Duration: 186055
+01 Feb 2016 | 08:12:16,293 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:12:16,297 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:12:16,305 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room235, Id: 259, Group: default, isGame: true ]
+01 Feb 2016 | 08:12:16,306 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room235, Id: 259, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:13:49,801 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room235, Id: 259, Group: default, isGame: true ], Duration: 93506
+01 Feb 2016 | 08:13:59,262 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:13:59,267 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:13:59,275 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room236, Id: 260, Group: default, isGame: true ]
+01 Feb 2016 | 08:13:59,276 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room236, Id: 260, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:14:08,600 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:14:08,607 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:14:08,626 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room237, Id: 261, Group: default, isGame: true ]
+01 Feb 2016 | 08:14:08,627 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room237, Id: 261, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 211, Priv: 0, Sess: 128.176.53.19:52999 ) , asSpect: false
+01 Feb 2016 | 08:14:20,012 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 291, Type: WEBSOCKET, Logged: No, IP: 89.14.22.128:53954 }
+01 Feb 2016 | 08:15:29,635 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 294, Type: WEBSOCKET, Logged: No, IP: 134.3.44.155 } on Server port: 8888 <---> 62247
+01 Feb 2016 | 08:15:30,032 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#212, Id: 212, Priv: 0, Sess: 134.3.44.155:62247 ) , Type: JavaScript
+01 Feb 2016 | 08:15:32,883 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 294, Type: WEBSOCKET, Logged: Yes, IP: 134.3.44.155:62247 }
+01 Feb 2016 | 08:15:32,883 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#212, Id: 212, Priv: 0, Sess: 134.3.44.155:62247 ) , SessionLen: 2852, Type: JavaScript
+01 Feb 2016 | 08:15:43,356 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 295, Type: WEBSOCKET, Logged: No, IP: 134.3.44.155 } on Server port: 8888 <---> 62308
+01 Feb 2016 | 08:15:43,744 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: dusi1994, Id: 213, Priv: 0, Sess: 134.3.44.155:62308 ) , Type: JavaScript
+01 Feb 2016 | 08:15:43,933 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: dusi1994, Id: 213, Priv: 0, Sess: 134.3.44.155:62308 ) , asSpect: false
+01 Feb 2016 | 08:15:57,611 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:15:57,615 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:15:57,624 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room238, Id: 262, Group: default, isGame: true ]
+01 Feb 2016 | 08:15:57,625 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room238, Id: 262, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: dusi1994, Id: 213, Priv: 0, Sess: 134.3.44.155:62308 ) , asSpect: false
+01 Feb 2016 | 08:17:58,815 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 296, Type: WEBSOCKET, Logged: No, IP: 91.67.78.117 } on Server port: 8888 <---> 49421
+01 Feb 2016 | 08:17:59,351 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , Type: JavaScript
+01 Feb 2016 | 08:17:59,541 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , asSpect: false
+01 Feb 2016 | 08:18:31,191 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room236, Id: 260, Group: default, isGame: true ], Duration: 271926
+01 Feb 2016 | 08:18:50,981 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:18:50,985 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:18:50,994 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room239, Id: 263, Group: default, isGame: true ]
+01 Feb 2016 | 08:18:50,995 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room239, Id: 263, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , asSpect: false
+01 Feb 2016 | 08:19:02,949 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:19:02,953 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:19:02,961 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room240, Id: 264, Group: default, isGame: true ]
+01 Feb 2016 | 08:19:02,965 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room240, Id: 264, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:19:31,016 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 297, Type: WEBSOCKET, Logged: No, IP: 80.66.6.99 } on Server port: 8888 <---> 20109
+01 Feb 2016 | 08:19:31,017 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | java.io.IOException: Connection reset by peer
+01 Feb 2016 | 08:19:31,018 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 297, Type: WEBSOCKET, Logged: No, IP: 80.66.6.99:20109 }
+01 Feb 2016 | 08:19:43,701 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 298, Type: WEBSOCKET, Logged: No, IP: 80.66.6.99 } on Server port: 8888 <---> 4250
+01 Feb 2016 | 08:19:43,702 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | java.io.IOException: Connection reset by peer
+01 Feb 2016 | 08:19:43,702 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 298, Type: WEBSOCKET, Logged: No, IP: 80.66.6.99:4250 }
+01 Feb 2016 | 08:20:37,173 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room238, Id: 262, Group: default, isGame: true ] }
+Extension Cmd: pickCard
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.PickCardHandler.handleClientRequest(PickCardHandler.java:31)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:20:37,851 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room238, Id: 262, Group: default, isGame: true ] }
+Extension Cmd: pickCard
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.PickCardHandler.handleClientRequest(PickCardHandler.java:31)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:20:38,361 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room238, Id: 262, Group: default, isGame: true ] }
+Extension Cmd: pickCard
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.PickCardHandler.handleClientRequest(PickCardHandler.java:31)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:20:47,086 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room238, Id: 262, Group: default, isGame: true ], Duration: 289472
+01 Feb 2016 | 08:20:59,343 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 295, Type: WEBSOCKET, Logged: Yes, IP: 134.3.44.155:62308 }
+01 Feb 2016 | 08:20:59,346 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: dusi1994, Id: 213, Priv: 0, Sess: 134.3.44.155:62308 ) , SessionLen: 315602, Type: JavaScript
+01 Feb 2016 | 08:21:08,279 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 299, Type: WEBSOCKET, Logged: No, IP: 134.3.44.155 } on Server port: 8888 <---> 62433
+01 Feb 2016 | 08:21:08,679 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: dusi1994, Id: 215, Priv: 0, Sess: 134.3.44.155:62433 ) , Type: JavaScript
+01 Feb 2016 | 08:21:08,867 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: dusi1994, Id: 215, Priv: 0, Sess: 134.3.44.155:62433 ) , asSpect: false
+01 Feb 2016 | 08:21:29,438 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:21:29,442 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 08:21:29,451 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room241, Id: 265, Group: default, isGame: true ]
+01 Feb 2016 | 08:21:29,452 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room241, Id: 265, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: dusi1994, Id: 215, Priv: 0, Sess: 134.3.44.155:62433 ) , asSpect: false
+01 Feb 2016 | 08:21:58,572 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room240, Id: 264, Group: default, isGame: true ], Duration: 175621
+01 Feb 2016 | 08:22:04,768 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room241, Id: 265, Group: default, isGame: true ], Duration: 35328
+01 Feb 2016 | 08:22:12,739 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:22:12,743 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:22:12,752 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room242, Id: 266, Group: default, isGame: true ]
+01 Feb 2016 | 08:22:12,753 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room242, Id: 266, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: dusi1994, Id: 215, Priv: 0, Sess: 134.3.44.155:62433 ) , asSpect: false
+01 Feb 2016 | 08:22:14,127 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:22:14,134 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 08:22:14,150 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room243, Id: 267, Group: default, isGame: true ]
+01 Feb 2016 | 08:22:14,152 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room243, Id: 267, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:22:19,471 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room243, Id: 267, Group: default, isGame: true ], Duration: 5339
+01 Feb 2016 | 08:22:19,471 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:22:19,472 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:22:19,472 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:22:19,473 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:22:19,473 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:22:28,330 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:22:28,338 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:22:28,356 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ]
+01 Feb 2016 | 08:22:28,361 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room244, Id: 268, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:25:33,622 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: pickCard
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.PickCardHandler.handleClientRequest(PickCardHandler.java:31)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:35,708 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:35,717 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:35,726 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:35,734 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:35,744 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:35,752 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:36,702 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:36,710 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:36,718 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:36,726 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:36,734 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:36,742 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:38,165 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | java.lang.NullPointerException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.NullPointerException
+Message: *** Null ***
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ] }
+Extension Cmd: pickCard
++--- --- ---+
+Stack Trace:
++--- --- ---+
+sfs2x.extensions.room.play.single.PickCardHandler.handleClientRequest(PickCardHandler.java:31)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:25:40,437 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 300, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 2229
+01 Feb 2016 | 08:25:40,438 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 08:25:40,438 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 300, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:2229 }
+01 Feb 2016 | 08:25:41,876 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room244, Id: 268, Group: default, isGame: true ], Duration: 193543
+01 Feb 2016 | 08:26:01,859 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:26:01,863 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:26:01,871 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room245, Id: 269, Group: default, isGame: true ]
+01 Feb 2016 | 08:26:01,872 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room245, Id: 269, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:27:48,344 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room242, Id: 266, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:27:48,770 | ERROR | SFSWorker:Ext:1 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room242, Id: 266, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:27:48,939 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room242, Id: 266, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:27:51,398 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room242, Id: 266, Group: default, isGame: true ], Duration: 338657
+01 Feb 2016 | 08:28:18,253 | ERROR | SFSWorker:Ext:3 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room237, Id: 261, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:28:53,002 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 299, Type: WEBSOCKET, Logged: Yes, IP: 134.3.44.155:62433 }
+01 Feb 2016 | 08:28:53,003 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: dusi1994, Id: 215, Priv: 0, Sess: 134.3.44.155:62433 ) , SessionLen: 464324, Type: JavaScript
+01 Feb 2016 | 08:29:28,570 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room239, Id: 263, Group: default, isGame: true ], Duration: 637586
+01 Feb 2016 | 08:29:38,243 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room245, Id: 269, Group: default, isGame: true ], Duration: 216382
+01 Feb 2016 | 08:29:44,542 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room237, Id: 261, Group: default, isGame: true ], Duration: 935937
+01 Feb 2016 | 08:29:55,142 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:29:55,146 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 08:29:55,156 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room246, Id: 270, Group: default, isGame: true ]
+01 Feb 2016 | 08:29:55,157 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room246, Id: 270, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:30:19,909 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:30:19,913 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:30:19,921 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room247, Id: 271, Group: default, isGame: true ]
+01 Feb 2016 | 08:30:19,922 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room247, Id: 271, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , asSpect: false
+01 Feb 2016 | 08:30:30,694 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room246, Id: 270, Group: default, isGame: true ], Duration: 35549
+01 Feb 2016 | 08:30:30,695 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:30:30,695 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:30:30,695 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:30:30,696 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:30:30,697 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:30:30,698 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:30:30,699 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:30:43,542 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:30:43,546 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:30:43,555 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room248, Id: 272, Group: default, isGame: true ]
+01 Feb 2016 | 08:30:43,556 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room248, Id: 272, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:31:53,155 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:31:53,160 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 08:31:53,169 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room249, Id: 273, Group: default, isGame: true ]
+01 Feb 2016 | 08:31:53,170 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room249, Id: 273, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 211, Priv: 0, Sess: 128.176.53.19:52999 ) , asSpect: false
+01 Feb 2016 | 08:33:59,887 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room249, Id: 273, Group: default, isGame: true ], Duration: 126729
+01 Feb 2016 | 08:34:04,803 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room248, Id: 272, Group: default, isGame: true ], Duration: 201259
+01 Feb 2016 | 08:34:27,093 | INFO  | SFSWorker:Ext:1 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:34:27,097 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:34:27,106 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room250, Id: 274, Group: default, isGame: true ]
+01 Feb 2016 | 08:34:27,107 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: Room250, Id: 274, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 211, Priv: 0, Sess: 128.176.53.19:52999 ) , asSpect: false
+01 Feb 2016 | 08:34:38,540 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:34:38,544 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:34:38,553 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room251, Id: 275, Group: default, isGame: true ]
+01 Feb 2016 | 08:34:38,554 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room251, Id: 275, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:38:04,396 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room251, Id: 275, Group: default, isGame: true ], Duration: 205853
+01 Feb 2016 | 08:38:17,072 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room247, Id: 271, Group: default, isGame: true ], Duration: 477161
+01 Feb 2016 | 08:38:32,507 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:38:32,511 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 08:38:32,525 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room252, Id: 276, Group: default, isGame: true ]
+01 Feb 2016 | 08:38:32,526 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room252, Id: 276, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:38:42,639 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | Room joined: [ Room: Room252, Id: 276, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , asSpect: false
+01 Feb 2016 | 08:38:42,645 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , Room: [ Room: Room252, Id: 276, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:38:42,646 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , Room: [ Room: Room252, Id: 276, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:38:54,535 | INFO  | SFSWorker:Ext:1 | Extensions |     | {room}: The opponent player is: tim04 
+01 Feb 2016 | 08:40:35,817 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 301, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32 } on Server port: 8888 <---> 4588
+01 Feb 2016 | 08:40:35,818 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 08:40:35,818 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 301, Type: WEBSOCKET, Logged: No, IP: 61.160.213.32:4588 }
+01 Feb 2016 | 08:41:08,927 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room250, Id: 274, Group: default, isGame: true ], Duration: 401831
+01 Feb 2016 | 08:42:10,460 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:42:10,464 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:42:10,472 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room253, Id: 277, Group: default, isGame: true ]
+01 Feb 2016 | 08:42:10,473 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room253, Id: 277, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 211, Priv: 0, Sess: 128.176.53.19:52999 ) , asSpect: false
+01 Feb 2016 | 08:45:01,182 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 302, Type: WEBSOCKET, Logged: No, IP: 47.66.42.131 } on Server port: 8888 <---> 54631
+01 Feb 2016 | 08:45:01,604 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#216, Id: 216, Priv: 0, Sess: 47.66.42.131:54631 ) , Type: JavaScript
+01 Feb 2016 | 08:45:08,475 | WARN  | SFSWorker:Ext:3 | components.signup.SignUpAssistant |     | Username: Hanswurst is already in use, from ( User Name: Guest#216, Id: 216, Priv: 0, Sess: 47.66.42.131:54631 ) 
+01 Feb 2016 | 08:45:26,218 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 302, Type: WEBSOCKET, Logged: Yes, IP: 47.66.42.131:54631 }
+01 Feb 2016 | 08:45:26,218 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#216, Id: 216, Priv: 0, Sess: 47.66.42.131:54631 ) , SessionLen: 24614, Type: JavaScript
+01 Feb 2016 | 08:46:44,009 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 303, Type: WEBSOCKET, Logged: No, IP: 47.66.42.131 } on Server port: 8888 <---> 54708
+01 Feb 2016 | 08:46:44,494 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: hanswurst, Id: 217, Priv: 0, Sess: 47.66.42.131:54708 ) , Type: JavaScript
+01 Feb 2016 | 08:46:44,729 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: hanswurst, Id: 217, Priv: 0, Sess: 47.66.42.131:54708 ) , asSpect: false
+01 Feb 2016 | 08:48:22,159 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 303, Type: WEBSOCKET, Logged: Yes, IP: 47.66.42.131:54708 }
+01 Feb 2016 | 08:48:22,160 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: hanswurst, Id: 217, Priv: 0, Sess: 47.66.42.131:54708 ) , SessionLen: 97666, Type: JavaScript
+01 Feb 2016 | 08:48:43,614 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 304, Type: WEBSOCKET, Logged: No, IP: 47.66.42.131 } on Server port: 8888 <---> 54786
+01 Feb 2016 | 08:48:44,061 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: Hanswurst, Id: 218, Priv: 0, Sess: 47.66.42.131:54786 ) , Type: JavaScript
+01 Feb 2016 | 08:48:44,300 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: Hanswurst, Id: 218, Priv: 0, Sess: 47.66.42.131:54786 ) , asSpect: false
+01 Feb 2016 | 08:49:52,625 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:49:52,629 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:49:52,638 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room254, Id: 278, Group: default, isGame: true ]
+01 Feb 2016 | 08:49:52,639 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room254, Id: 278, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Hanswurst, Id: 218, Priv: 0, Sess: 47.66.42.131:54786 ) , asSpect: false
+01 Feb 2016 | 08:50:33,268 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room253, Id: 277, Group: default, isGame: true ], Duration: 502806
+01 Feb 2016 | 08:51:33,133 | ERROR | SFSWorker:Ext:2 | controllers.v290.ExtensionReqController |     | com.smartfoxserver.v2.exceptions.SFSRuntimeException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.smartfoxserver.v2.exceptions.SFSRuntimeException
+Message: Request handler not found: 'exchangeData'. Make sure the handler is registered in your extension using addRequestHandler()
+Description: Error while handling client request in extension: { Ext: room, Type: JAVA, Lev: ROOM, { Zone: EduGame }, [ Room: Room254, Id: 278, Group: default, isGame: true ] }
+Extension Cmd: exchangeData
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:197)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+01 Feb 2016 | 08:51:46,669 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:51:46,674 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:51:46,682 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room255, Id: 279, Group: default, isGame: true ]
+01 Feb 2016 | 08:51:46,684 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room255, Id: 279, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Mali, Id: 211, Priv: 0, Sess: 128.176.53.19:52999 ) , asSpect: false
+01 Feb 2016 | 08:51:53,438 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room254, Id: 278, Group: default, isGame: true ], Duration: 120811
+01 Feb 2016 | 08:52:11,634 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:52:11,638 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:52:11,649 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room256, Id: 280, Group: default, isGame: true ]
+01 Feb 2016 | 08:52:11,650 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room256, Id: 280, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: Hanswurst, Id: 218, Priv: 0, Sess: 47.66.42.131:54786 ) , asSpect: false
+01 Feb 2016 | 08:52:33,139 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room252, Id: 276, Group: default, isGame: true ], Duration: 840629
+01 Feb 2016 | 08:52:33,647 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) 
+01 Feb 2016 | 08:53:02,043 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:53:02,047 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:53:02,056 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room257, Id: 281, Group: default, isGame: true ]
+01 Feb 2016 | 08:53:02,057 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room257, Id: 281, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:55:00,032 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 1/1
+01 Feb 2016 | 08:55:00,033 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 2/4
+01 Feb 2016 | 08:55:00,033 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+01 Feb 2016 | 08:55:00,033 | INFO  | pool-1-thread-4 | util.stats.CCULoggerTask |     | CCU stats: CCU: 3/5
+01 Feb 2016 | 08:55:08,255 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room256, Id: 280, Group: default, isGame: true ], Duration: 176619
+01 Feb 2016 | 08:56:09,573 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room257, Id: 281, Group: default, isGame: true ], Duration: 187528
+01 Feb 2016 | 08:56:26,045 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:56:26,049 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:56:26,058 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room258, Id: 282, Group: default, isGame: true ]
+01 Feb 2016 | 08:56:26,058 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | Room joined: [ Room: Room258, Id: 282, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:56:33,545 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 304, Type: WEBSOCKET, Logged: Yes, IP: 47.66.42.131:54786 }
+01 Feb 2016 | 08:56:33,546 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: Hanswurst, Id: 218, Priv: 0, Sess: 47.66.42.131:54786 ) , SessionLen: 469485, Type: JavaScript
+01 Feb 2016 | 08:56:52,027 | INFO  | SFSWorker:Ext:3 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room258, Id: 282, Group: default, isGame: true ], Duration: 25980
+01 Feb 2016 | 08:57:03,091 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:57:03,095 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 08:57:03,103 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room259, Id: 283, Group: default, isGame: true ]
+01 Feb 2016 | 08:57:03,104 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room259, Id: 283, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:57:35,997 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room255, Id: 279, Group: default, isGame: true ], Duration: 349325
+01 Feb 2016 | 08:58:32,686 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:58:32,691 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 08:58:32,700 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room260, Id: 284, Group: default, isGame: true ]
+01 Feb 2016 | 08:58:32,701 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room260, Id: 284, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , asSpect: false
+01 Feb 2016 | 08:59:01,010 | INFO  | SFSWorker:Ext:1 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room260, Id: 284, Group: default, isGame: true ], Duration: 28321
+01 Feb 2016 | 08:59:01,015 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) 
+01 Feb 2016 | 08:59:01,016 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) 
+01 Feb 2016 | 08:59:01,016 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | LeaveRoom failed: user is not joined in any room. ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) 
+01 Feb 2016 | 08:59:18,929 | INFO  | SFSWorker:Ext:3 | Extensions |     | {game}: SELECT c.id, c.uri, c.label, c.wikipedia, c.rank FROM cards c CROSS JOIN ( SELECT points FROM users WHERE username='vecno' ) l1 INNER JOIN ( SELECT card, COUNT( DISTINCT property ) AS count FROM dbo WHERE weight > 0 GROUP BY card HAVING count>5 ) x ON c.uri = x.card WHERE c.rank > (50-LEAST(l1.points/4,50)) AND c.category = 'Place' AND c.topic='Eastern Europe'  
+01 Feb 2016 | 08:59:21,937 | INFO  | SFSWorker:Ext:2 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 08:59:21,941 | INFO  | SFSWorker:Ext:2 | Extensions |     | {room}: EduGame Extension: Multiplayer started, rel. 1.0.5 
+01 Feb 2016 | 08:59:21,950 | INFO  | SFSWorker:Ext:2 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room261, Id: 285, Group: default, isGame: true ]
+01 Feb 2016 | 08:59:21,951 | INFO  | SFSWorker:Ext:2 | v2.api.SFSApi |     | Room joined: [ Room: Room261, Id: 285, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: vecno, Id: 214, Priv: 0, Sess: 91.67.78.117:49421 ) , asSpect: false
+01 Feb 2016 | 08:59:26,770 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room removed: { Zone: EduGame }, [ Room: Room259, Id: 283, Group: default, isGame: true ], Duration: 143677
+01 Feb 2016 | 08:59:32,260 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Room261, Id: 285, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , asSpect: false
+01 Feb 2016 | 08:59:32,269 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,269 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,271 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,272 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,272 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,274 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,275 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,275 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,277 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,276 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,276 | WARN  | SFSWorker:Sys:3 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,278 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,279 | WARN  | SFSWorker:Sys:4 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:32,280 | WARN  | SFSWorker:Sys:1 | controllers.v290.SystemReqController |     | com.smartfoxserver.v2.exceptions.SFSJoinRoomException: Join Error - User already joined: ( User Name: tim04, Id: 210, Priv: 0, Sess: 91.21.194.154:49388 ) , Room: [ Room: Room261, Id: 285, Group: default, isGame: true ], Zone: { Zone: EduGame }
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:983)
+	com.smartfoxserver.v2.api.SFSApi.joinRoom(SFSApi.java:801)
+	com.smartfoxserver.v2.controllers.system.JoinRoom.execute(JoinRoom.java:87)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 08:59:44,380 | INFO  | SFSWorker:Ext:3 | Extensions |     | {room}: The opponent player is: vecno 

@@ -13,6 +13,8 @@ function onCreateGameBtClick() {
     backTopicBt.jqxButton('val', "Back");
     doCreateGameBt.jqxButton('val', "Create Game");
     createGameWinTabs.jqxTabs('disableAt', 1);
+    createGameWinTabs.jqxTabs('enableAt', 0); //TODO
+    createGameWinTabs.jqxTabs('val', 0); //TODO
     isLoaded = false;
 }
 
@@ -116,7 +118,7 @@ function onDoCreateGameBtClick(evt) {
 /* destroy the topic List on close of window so that each time the newest data is loaded */
 function destroyTopicList(evt) {
     evt.stopImmediatePropagation();
-    if($("#topicList").length > 0) {
+    if(typeof topicList != 'undefined') {
         topicList.jqxDataTable('destroy');
     }
     $("#topicListWrapper").append('<div id="topicList"></div>');
@@ -124,7 +126,6 @@ function destroyTopicList(evt) {
 }
 
 function populateTopicList(topics) {
-    console.log(topics);
     row_opened_clicked = [];
     backTopicBt.jqxButton({disabled: false});
     doCreateGameBt.jqxButton({disabled: false});
@@ -253,7 +254,7 @@ function onBeforeWikipediaClick(element) {
 function onAfterWikipediaClick(element) {
     element.stopImmediatePropagation();
     var cardId = $(element.target).data("card");
-    sfs.send( new SFS2X.Requests.System.ExtensionRequest("wikipedia", {time: 0, when: "after", i: cardId}, sfs.lastJoinedRoom) );
+    sfs.send( new SFS2X.Requests.System.ExtensionRequest("wikipedia", {time: 0, when: "after", i: cardId, roomName: lastJoinedRoom}) );
 }
 
 

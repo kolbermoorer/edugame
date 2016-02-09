@@ -11,7 +11,6 @@ function showQuestion(element) {
     if(gameType == "single")
         singlePlayerCreateQuestion();
     else {
-        console.log(element);
         $.each(cardPropertiesContainer, function (index, cardPropertyContainer) { //delete the mouse over abilities of the properties
             cardPropertyContainer.cursor = "default";
             cardPropertyContainer.removeEventListener("rollover", changeBackground);
@@ -114,8 +113,6 @@ function onIsYesErrorBtClick() {
 }
 
 function markAnswer(answer) {
-    console.log(answer);
-
     $(".countdown").css("opacity", 0);
     $(".opponentCountdown").css("opacity", 0);
     $("#nextQuestionBt").removeClass("disabled").addClass("enabled");
@@ -182,8 +179,6 @@ function markAnswer(answer) {
     rating = "?";
     if(feedback["count"] > 0) {
         rating = Math.round( (feedback["sum"]/feedback["count"]) * 10 ) / 10;
-        //var percent = Math.round((rating/5)*100);
-
         var color = getColor((5-rating)/5);
 
         $(".averageRating").TimeCircles().destroy();
@@ -218,11 +213,6 @@ function markAnswer(answer) {
     else {
 
     }
-    /*$("#nextActionTable").css("height", "35px");
-    $('#row1nextActionTable').css("opacity", 0);
-    $('#row2nextActionTable').css("opacity", 0);
-    $("#feedbackWrapper").css("display", "block");*/
-
 
     $('.answerFields').not(".hasImpact").css("opacity",0.2);
     $('.answerFields').css("cursor", "default");
@@ -268,8 +258,6 @@ function onOpenWikipediaBtClick(evt) {
 }
 
 function onSendFeedbackBtClick(value) {
-    console.log("update weight: " + value);
-
     $("#ratingTable").css("display", "none");
     $("#nextActionTable").jqxDataTable('render');
     $("#ratingText").text("Thank you for your feedback!");
@@ -315,6 +303,7 @@ function updateOpponentCountdown(unit, value, total) {
         params.answer = "";
         params.property = $("#questionTitleProperty").text();
         params.answerTime = new Date() - answerTimeStart;
+        params.isError = false;
         sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
     }
 }
@@ -325,6 +314,7 @@ function updateCountdown(unit, value, total) {
         params.answer = "";
         params.property = $("#questionTitleProperty").text();
         params.answerTime = new Date() - answerTimeStart;
+        params.isError = false;
         sfs.send( new SFS2X.Requests.System.ExtensionRequest("checkAnswer", params, sfs.lastJoinedRoom) );
     }
     var c=(60-value)/60;

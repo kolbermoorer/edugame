@@ -1,0 +1,60 @@
+01 Feb 2016 | 04:00:37,217 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 251, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 2380
+01 Feb 2016 | 04:00:37,218 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 04:00:37,218 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 251, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:2380 }
+01 Feb 2016 | 04:09:39,622 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 252, Type: WEBSOCKET, Logged: No, IP: 89.14.22.128 } on Server port: 8888 <---> 50140
+01 Feb 2016 | 04:09:40,036 | INFO  | SFSWorker:Ext:3 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: thomas, Id: 185, Priv: 0, Sess: 89.14.22.128:49846 ) 
+01 Feb 2016 | 04:09:40,037 | INFO  | SFSWorker:Ext:3 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 250, Type: WEBSOCKET, Logged: Yes, IP: 89.14.22.128:49846 }
+01 Feb 2016 | 04:09:40,037 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 250, Type: WEBSOCKET, Logged: Yes, IP: 89.14.22.128:49846 }
+01 Feb 2016 | 04:09:40,038 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: thomas, Id: 185, Priv: 0, Sess: 89.14.22.128:49846 ) , SessionLen: 944049, Type: JavaScript
+01 Feb 2016 | 04:09:40,039 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: thomas, Id: 185, Priv: 0, Sess: 89.14.22.128:49846 ) , SessionLen: 944051, Type: JavaScript
+01 Feb 2016 | 04:09:42,040 | INFO  | pool-1-thread-3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: thomas, Id: 186, Priv: 0, Sess: 89.14.22.128:50140 ) , Type: JavaScript
+01 Feb 2016 | 04:09:42,290 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: thomas, Id: 186, Priv: 0, Sess: 89.14.22.128:50140 ) , asSpect: false
+01 Feb 2016 | 04:09:55,458 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: thomas, Id: 186, Priv: 0, Sess: 89.14.22.128:50140 ) , SessionLen: 13418, Type: JavaScript
+01 Feb 2016 | 04:10:05,021 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: thomas, Id: 187, Priv: 0, Sess: 89.14.22.128:50140 ) , Type: JavaScript
+01 Feb 2016 | 04:10:05,217 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: thomas, Id: 187, Priv: 0, Sess: 89.14.22.128:50140 ) , asSpect: false
+01 Feb 2016 | 04:10:08,490 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: thomas, Id: 187, Priv: 0, Sess: 89.14.22.128:50140 ) , SessionLen: 3469, Type: JavaScript
+01 Feb 2016 | 04:10:08,491 | WARN  | SFSWorker:Sys:2 | controllers.v290.SystemReqController |     | java.lang.IllegalArgumentException: Logout failure. Session is not logged in: { Id: 252, Type: WEBSOCKET, Logged: No, IP: 89.14.22.128:50140 }
+	com.smartfoxserver.v2.controllers.system.Logout.execute(Logout.java:30)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.processRequest(SystemReqController.java:157)
+	com.smartfoxserver.v2.controllers.v290.SystemReqController.enqueueRequest(SystemReqController.java:114)
+	com.smartfoxserver.bitswarm.io.protocols.AbstractProtocolCodec.dispatchRequestToController(AbstractProtocolCodec.java:39)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.dispatchRequest(WebSocketProtocolCodec.java:139)
+	com.smartfoxserver.bitswarm.websocket.WebSocketProtocolCodec.onPacketRead(WebSocketProtocolCodec.java:65)
+	com.smartfoxserver.bitswarm.websocket.netty.WebSocketServerHandler$WSIOExecutor.run(WebSocketServerHandler.java:105)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+01 Feb 2016 | 04:14:50,130 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 252, Type: WEBSOCKET, Logged: No, IP: 89.14.22.128:50140 }
+01 Feb 2016 | 04:15:19,824 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 253, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 3214
+01 Feb 2016 | 04:15:19,826 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 04:15:19,826 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 253, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:3214 }
+01 Feb 2016 | 04:30:00,815 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 254, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 2522
+01 Feb 2016 | 04:30:00,816 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 04:30:00,816 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 254, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:2522 }
+01 Feb 2016 | 04:44:43,509 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 255, Type: WEBSOCKET, Logged: No, IP: 61.160.213.55 } on Server port: 8888 <---> 3262
+01 Feb 2016 | 04:44:43,510 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 04:44:43,510 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 255, Type: WEBSOCKET, Logged: No, IP: 61.160.213.55:3262 }
+01 Feb 2016 | 04:49:36,202 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 256, Type: WEBSOCKET, Logged: No, IP: 89.14.22.128 } on Server port: 8888 <---> 50677
+01 Feb 2016 | 04:49:36,611 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: thomas, Id: 188, Priv: 0, Sess: 89.14.22.128:50677 ) , Type: JavaScript
+01 Feb 2016 | 04:49:36,822 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: thomas, Id: 188, Priv: 0, Sess: 89.14.22.128:50677 ) , asSpect: false
+01 Feb 2016 | 04:49:40,023 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User logout: { Zone: EduGame }, ( User Name: thomas, Id: 188, Priv: 0, Sess: 89.14.22.128:50677 ) , SessionLen: 3412, Type: JavaScript
+01 Feb 2016 | 04:50:14,447 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 256, Type: WEBSOCKET, Logged: No, IP: 89.14.22.128:50677 }
+01 Feb 2016 | 04:51:40,085 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 257, Type: WEBSOCKET, Logged: No, IP: 92.73.144.149 } on Server port: 8888 <---> 55558
+01 Feb 2016 | 04:51:40,444 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#189, Id: 189, Priv: 0, Sess: 92.73.144.149:55558 ) , Type: JavaScript
+01 Feb 2016 | 04:51:45,931 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 257, Type: WEBSOCKET, Logged: Yes, IP: 92.73.144.149:55558 }
+01 Feb 2016 | 04:51:45,931 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#189, Id: 189, Priv: 0, Sess: 92.73.144.149:55558 ) , SessionLen: 5487, Type: JavaScript
+01 Feb 2016 | 04:51:53,008 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 258, Type: WEBSOCKET, Logged: No, IP: 92.73.144.149 } on Server port: 8888 <---> 55625
+01 Feb 2016 | 04:51:53,375 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: tsugus, Id: 190, Priv: 0, Sess: 92.73.144.149:55625 ) , Type: JavaScript
+01 Feb 2016 | 04:51:53,561 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: tsugus, Id: 190, Priv: 0, Sess: 92.73.144.149:55625 ) , asSpect: false
+01 Feb 2016 | 04:54:22,222 | INFO  | SFSWorker:Ext:4 | Extensions |     | {game}: Create new room. 
+01 Feb 2016 | 04:54:22,226 | INFO  | SFSWorker:Ext:4 | Extensions |     | {room}: EduGame Extension: SinglePlayer started, rel. 1.0.5 
+01 Feb 2016 | 04:54:22,235 | INFO  | SFSWorker:Ext:4 | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Room212, Id: 236, Group: default, isGame: true ]
+01 Feb 2016 | 04:54:22,236 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: Room212, Id: 236, Group: default, isGame: true ], { Zone: EduGame }, ( User Name: tsugus, Id: 190, Priv: 0, Sess: 92.73.144.149:55625 ) , asSpect: false
+01 Feb 2016 | 04:55:00,032 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 1/1
+01 Feb 2016 | 04:55:00,032 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+01 Feb 2016 | 04:55:00,033 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+01 Feb 2016 | 04:55:00,033 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 1/2
+01 Feb 2016 | 04:59:23,516 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 259, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 2146
+01 Feb 2016 | 04:59:23,532 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 04:59:23,532 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 259, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:2146 }

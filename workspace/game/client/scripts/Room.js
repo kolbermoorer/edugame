@@ -11,7 +11,7 @@ function joinLobbyRoom()
  */
 function onRoomAdd(event)
 {
-    console.log("Room added: " + event.room);
+    //console.log("Room added: " + event.room);
     updateUserLists();
     insertRoomInTable(event.room);
 }
@@ -21,7 +21,7 @@ function onRoomAdd(event)
  */
 function onRoomRemove(event)
 {
-    console.log("Room removed: " + event.room);
+    //console.log("Room removed: " + event.room);
     updateUserLists();
     removeRoomFromTable(event.room);
 
@@ -32,7 +32,7 @@ function onRoomRemove(event)
  */
 function onRoomJoin(event)
 {
-    console.log("Room joined: " + event.room);
+    //console.log("Room joined: " + event.room);
 
     // User joined the lobby
     if (event.room.name == LOBBY_ROOM_NAME)

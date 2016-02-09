@@ -73,14 +73,14 @@
 </div>
 <div class="wrapper">
     <div id="login" class="panel viewStack login">
-        <form action="javascript:onLoginBtClick();">
+        <form>
             <h1>EduGame</h1>
 
             <div>
-                <input type="text" placeholder="Username" required="" id="username" value="tkutschk"/>
+                <input type="text" placeholder="Username" required="" id="username" />
             </div>
             <div>
-                <input type="password" placeholder="Password" required="" id="password" value="leoleo1988"/>
+                <input type="password" placeholder="Password" required="" id="password"/>
             </div>
             <!--<div>
                 <input type="submit" value="Login"/>
@@ -299,10 +299,10 @@
                                 </li>
                                 <li style="margin-left: -20px; list-style-type: none;"><pre>Answer (You | Enemy)</pre>
                                     <ul style="margin-left: -20px; ">
-                                        <li ><pre>Right | Wrong: +3</pre></li>
                                         <li ><pre>Right | Right: +2</pre></li>
-                                        <li ><pre>Wrong | Right: -1</pre></li>
-                                        <li ><pre>Wrong | Wrong: -2</pre></li>
+                                        <li ><pre>Right | Wrong: +3</pre></li>
+                                        <li ><pre>Wrong | Right: -2</pre></li>
+                                        <li ><pre>Wrong | Wrong: -1</pre></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -393,6 +393,9 @@
 
             </div>
         </div>
+        <div class="notClickable enabled" id="topCardNotClickable" style="top: 14px;">Top Card not clickable</div>
+        <div class="notClickable enabled" id="bigCardNotClickable" style="top: 44px;">Big Card not clickable</div>
+        <div class="notClickable enabled" id="noFeedbackBox" style="top: 74px;">No Next Action Box</div>
         <div id="countCardsTop">
             <div class="countCardBox" id="countTop0">6</div>
             <div class="countCardBox" id="countTop1">6</div>
@@ -416,7 +419,7 @@
                         </div>
 
                         <div class="popupWinControls">
-                            <input type="button" class="nextBt" value="Next"/>
+                            <input type="button" class="instructions nextBt" value="Next"/>
                         </div>
                     </div>
                     <div class="item">
@@ -483,7 +486,7 @@
                         </table>
                         <img src="img/instructions2.png" style="width: 460px;margin-top: 16px;margin-left: 140px;">
                         <div class="popupWinControls">
-                            <input type="button" class="backBt" value="Back"/>
+                            <input type="button" class="instructions backBt" value="Back"/>
                             <input type="button" id="showTopicsBt" class="instructions nextBt" value="Choose Topic"/>
                         </div>
                     </div>

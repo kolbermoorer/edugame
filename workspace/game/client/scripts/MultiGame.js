@@ -1,5 +1,4 @@
 function multiPlayerOpenCard() {
-    console.log(selectedCard);
     var backSide = selectedCard.children[0];
     var frontSide = selectedCard.children[1];
 
@@ -76,7 +75,9 @@ function handleMove(enable, error) {
     //console.log("Answer was " + multiPlayerAnswerData.correct + "!");
     previousSelectedCard = selectedCard;
     flipBackwards();
-    if(!answerCorrect && multiPlayerAnswerData["opponentAnswer"] != multiPlayerAnswerData["right"] && !error ) { //if nobody got the right answer
+    var opponentAnswer = (typeof multiPlayerAnswerData["opponentAnswer"] == "undefined" ? "" : multiPlayerAnswerData["opponentAnswer"]);
+    var right = (typeof multiPlayerAnswerData["right"] == "undefined" ? "" : multiPlayerAnswerData["right"]);
+    if(!answerCorrect && opponentAnswer != right && !error ) { //if nobody got the right answer
         $.each(cards, function (index, card) {
             if(card.playerId == 999 && card.categoryId == previousSelectedCard.categoryId) {
                 if (card.id != previousSelectedCard.id) {

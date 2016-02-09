@@ -45,6 +45,8 @@ var currentPopUp;
 
 var ready;
 
+var lastJoinedRoom;
+
 function setReadyStatus(){
     gameStarted = false;
     $("#gameContainerHandler").html('<canvas id="gameContainer" width="1000" height="700">Your Browser does not support Canvas</canvas>');
@@ -109,7 +111,7 @@ function resetGameBoard() {
     $("#timerText").text("Autostart");
     $("#startStatusText").text("Click on 'Start Game' if you are ready!");
     $("#statusTextWrapper").css("color", "#333333");
-
+    $(".notClickable").css("display","none");
     $(".gameBarControls").css("display", "none");
     $("#gameButtons").css("display", "none");
     $("#statusTextWrapper").css("display","none");
@@ -252,8 +254,6 @@ function startGame(params) {
 
 function showResults(params) {
     var results = JSON.parse(params.results);
-    console.log(results);
-
 
     results = $.grep(results, function (el, i) {
         if (el["user"] != sfs.mySelf.getVariable("id").value) {
@@ -302,7 +302,6 @@ function initAnswerDetails(id, row, element, rowinfo) {
     element.append($("<div style='margin-left: 20px;'></div>"));
     var nestedDataTable = $(element.children()[0]);
 
-    console.log(row);
     var options = row.answerOptions;
     var data = [{"option1": options[0], "option2": options[1], "option3": options[2], "correct": row["answerRight"], "answer": row["answer"]}];
 
@@ -360,7 +359,9 @@ function initAnswerDetails(id, row, element, rowinfo) {
 
 function destroyGame() {
     setView("lobby", true);
-    if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME)
+    if (sfs.lastJoinedRoom == null || sfs.lastJoinedRoom.name != LOBBY_ROOM_NAME) {
+        lastJoinedRoom = sfs.lastJoinedRoom.name;
+    }
         sfs.send(new SFS2X.Requests.System.LeaveRoomRequest());
     resetGameBoard();
 }
@@ -376,7 +377,6 @@ function setTimer(event) {
     }
     else {
         if(!gameStarted) {
-            console.log("The Game was started automatically!");
             autostart();
         }
     }

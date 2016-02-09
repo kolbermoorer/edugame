@@ -1,0 +1,590 @@
+31 Jan 2016 | 13:06:33,600 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49498 } on Server port: 9933 <---> 49498
+31 Jan 2016 | 13:06:33,796 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49498 }
+31 Jan 2016 | 13:06:34,013 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49499 } on Server port: 9933 <---> 49499
+31 Jan 2016 | 13:06:34,252 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 1, Priv: 0, Sess: 77.178.151.107:49499 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:06:34,253 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 1, Priv: 0, Sess: 77.178.151.107:49499 ) , asSpect: false
+31 Jan 2016 | 13:08:31,661 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 4, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:49499 }
+31 Jan 2016 | 13:08:31,662 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: sfsadmin, Id: 1, Priv: 0, Sess: 77.178.151.107:49499 ) , SessionLen: 117410, Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:08:44,214 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 5, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49581 } on Server port: 9933 <---> 49581
+31 Jan 2016 | 13:08:44,407 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 2, Priv: 0, Sess: 77.178.151.107:49581 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:08:44,408 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 2, Priv: 0, Sess: 77.178.151.107:49581 ) , asSpect: false
+31 Jan 2016 | 13:09:02,330 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 5, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:49581 }
+31 Jan 2016 | 13:09:02,330 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User disconnected: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 2, Priv: 0, Sess: 77.178.151.107:49581 ) , SessionLen: 17923, Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:09:12,099 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 6, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49587 } on Server port: 9933 <---> 49587
+31 Jan 2016 | 13:09:12,302 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 3, Priv: 0, Sess: 77.178.151.107:49587 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:09:12,304 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 3, Priv: 0, Sess: 77.178.151.107:49587 ) , asSpect: false
+31 Jan 2016 | 13:29:09,503 | INFO  | SFSWorker:Ext:1 | Extensions |     | {Admin}: Restarting SmartFoxServer... 
+31 Jan 2016 | 13:29:09,503 | WARN  | SFSWorker:Ext:1 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER RESTARTING ***
+31 Jan 2016 | 13:29:09,503 | WARN  | SocketWriter-1 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-1,5,main]
+31 Jan 2016 | 13:29:09,504 | WARN  | SocketWriter-3 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-3,5,main]
+31 Jan 2016 | 13:29:09,504 | WARN  | SocketWriter-2 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-2,5,main]
+31 Jan 2016 | 13:29:09,504 | WARN  | SocketReader | bitswarm.core.SocketReader |     | Problems in SocketReader main loop: java.lang.InterruptedException: sleep interrupted, Thread: Thread[SocketReader,5,main]
+31 Jan 2016 | 13:29:09,505 | WARN  | SocketReader | bitswarm.core.SocketReader |     | java.lang.InterruptedException: sleep interrupted
+	java.lang.Thread.sleep(Native Method)
+	com.smartfoxserver.bitswarm.core.SocketReader.run(SocketReader.java:173)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+31 Jan 2016 | 13:29:12,506 | INFO  | SFSWorker:Ext:1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 6, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:49587 }
+31 Jan 2016 | 13:29:13,012 | INFO  | :::SFSRestarter::: | v2.util.SFSRestart |     | Process restarted: java.lang.UNIXProcess@4a1f826d
+31 Jan 2016 | 13:29:17,024 | INFO  | Thread-2 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+31 Jan 2016 | 13:29:17,033 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+31 Jan 2016 | 13:29:17,095 | INFO  | Thread-3 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+31 Jan 2016 | 13:29:14,162 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+31 Jan 2016 | 13:29:14,210 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "/tmp/vfs_cache" as temporary files store.
+31 Jan 2016 | 13:29:14,329 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+31 Jan 2016 | 13:29:14,330 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+31 Jan 2016 | 13:29:14,331 | INFO  | main | entities.managers.SFSBannedUserManager |     | No BannedUser data available, starting with a clean DB.
+31 Jan 2016 | 13:29:14,346 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+31 Jan 2016 | 13:29:14,353 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/EduGame.zone.xml
+31 Jan 2016 | 13:29:14,448 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/Registration.zone.xml
+31 Jan 2016 | 13:29:14,494 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:29:14,534 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+31 Jan 2016 | 13:29:14,535 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:29:14,880 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+31 Jan 2016 | 13:29:14,890 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+31 Jan 2016 | 13:29:15,024 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 172.31.23.95:8888 (WebSocket) }
+31 Jan 2016 | 13:29:15,024 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+31 Jan 2016 | 13:29:15,025 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+31 Jan 2016 | 13:29:17,851 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+31 Jan 2016 | 13:29:43,636 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49764 } on Server port: 9933 <---> 49764
+31 Jan 2016 | 13:29:43,837 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49764 }
+31 Jan 2016 | 13:29:44,044 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49765 } on Server port: 9933 <---> 49765
+31 Jan 2016 | 13:29:44,297 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:49765 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:29:44,302 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:49765 ) , asSpect: false
+31 Jan 2016 | 13:30:38,399 | INFO  | SFSWorker:Ext:4 | Extensions |     | {Admin}: Restarting SmartFoxServer... 
+31 Jan 2016 | 13:30:38,400 | WARN  | SFSWorker:Ext:4 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER RESTARTING ***
+31 Jan 2016 | 13:30:38,401 | WARN  | SocketWriter-3 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-3,5,main]
+31 Jan 2016 | 13:30:38,401 | WARN  | SocketWriter-2 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-2,5,main]
+31 Jan 2016 | 13:30:38,401 | WARN  | SocketWriter-1 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-1,5,main]
+31 Jan 2016 | 13:30:38,402 | WARN  | SocketReader | bitswarm.core.SocketReader |     | Problems in SocketReader main loop: java.lang.InterruptedException: sleep interrupted, Thread: Thread[SocketReader,5,main]
+31 Jan 2016 | 13:30:38,403 | WARN  | SocketReader | bitswarm.core.SocketReader |     | java.lang.InterruptedException: sleep interrupted
+	java.lang.Thread.sleep(Native Method)
+	com.smartfoxserver.bitswarm.core.SocketReader.run(SocketReader.java:173)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+31 Jan 2016 | 13:30:41,403 | INFO  | SFSWorker:Ext:4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:49765 }
+31 Jan 2016 | 13:30:41,909 | INFO  | :::SFSRestarter::: | v2.util.SFSRestart |     | Process restarted: java.lang.UNIXProcess@3893055d
+31 Jan 2016 | 13:30:42,216 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+31 Jan 2016 | 13:30:42,225 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+31 Jan 2016 | 13:30:43,041 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+31 Jan 2016 | 13:30:43,072 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "/tmp/vfs_cache" as temporary files store.
+31 Jan 2016 | 13:30:43,201 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+31 Jan 2016 | 13:30:43,203 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+31 Jan 2016 | 13:30:43,229 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+31 Jan 2016 | 13:30:43,243 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+31 Jan 2016 | 13:30:43,249 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/EduGame.zone.xml
+31 Jan 2016 | 13:30:43,353 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/Registration.zone.xml
+31 Jan 2016 | 13:30:43,399 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:30:43,439 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+31 Jan 2016 | 13:30:43,440 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:30:43,791 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+31 Jan 2016 | 13:30:43,801 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+31 Jan 2016 | 13:30:43,945 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 172.31.23.95:8888 (WebSocket) }
+31 Jan 2016 | 13:30:43,945 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+31 Jan 2016 | 13:30:43,946 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+31 Jan 2016 | 13:30:45,921 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+31 Jan 2016 | 13:30:45,933 | INFO  | Thread-0 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+31 Jan 2016 | 13:30:45,976 | INFO  | Thread-1 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+31 Jan 2016 | 13:30:46,832 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+31 Jan 2016 | 13:30:57,529 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49768 } on Server port: 9933 <---> 49768
+31 Jan 2016 | 13:30:57,753 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:49768 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:30:57,758 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:49768 ) , asSpect: false
+31 Jan 2016 | 13:41:14,965 | INFO  | SFSWorker:Ext:4 | Extensions |     | {Admin}: Restarting SmartFoxServer... 
+31 Jan 2016 | 13:41:14,966 | WARN  | SFSWorker:Ext:4 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER RESTARTING ***
+31 Jan 2016 | 13:41:14,967 | WARN  | SocketWriter-1 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-1,5,main]
+31 Jan 2016 | 13:41:14,967 | WARN  | SocketWriter-3 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-3,5,main]
+31 Jan 2016 | 13:41:14,967 | WARN  | SocketWriter-2 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-2,5,main]
+31 Jan 2016 | 13:41:14,968 | WARN  | SocketReader | bitswarm.core.SocketReader |     | Problems in SocketReader main loop: java.lang.InterruptedException: sleep interrupted, Thread: Thread[SocketReader,5,main]
+31 Jan 2016 | 13:41:14,968 | WARN  | SocketReader | bitswarm.core.SocketReader |     | java.lang.InterruptedException: sleep interrupted
+	java.lang.Thread.sleep(Native Method)
+	com.smartfoxserver.bitswarm.core.SocketReader.run(SocketReader.java:173)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+31 Jan 2016 | 13:41:17,970 | INFO  | SFSWorker:Ext:4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:49768 }
+31 Jan 2016 | 13:41:18,475 | INFO  | :::SFSRestarter::: | v2.util.SFSRestart |     | Process restarted: java.lang.UNIXProcess@6a08648
+31 Jan 2016 | 13:41:18,780 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+31 Jan 2016 | 13:41:18,789 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+31 Jan 2016 | 13:41:19,570 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+31 Jan 2016 | 13:41:19,616 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "/tmp/vfs_cache" as temporary files store.
+31 Jan 2016 | 13:41:19,738 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+31 Jan 2016 | 13:41:19,739 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+31 Jan 2016 | 13:41:19,767 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+31 Jan 2016 | 13:41:19,783 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+31 Jan 2016 | 13:41:19,788 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/EduGame.zone.xml
+31 Jan 2016 | 13:41:19,889 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/Registration.zone.xml
+31 Jan 2016 | 13:41:19,935 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:41:19,975 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+31 Jan 2016 | 13:41:19,976 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:41:20,322 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+31 Jan 2016 | 13:41:20,331 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+31 Jan 2016 | 13:41:20,465 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 172.31.23.95:8888 (WebSocket) }
+31 Jan 2016 | 13:41:20,465 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+31 Jan 2016 | 13:41:20,465 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+31 Jan 2016 | 13:41:22,485 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+31 Jan 2016 | 13:41:22,495 | INFO  | Thread-1 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+31 Jan 2016 | 13:41:22,495 | INFO  | Thread-0 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+31 Jan 2016 | 13:41:23,259 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+31 Jan 2016 | 13:41:32,291 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 77.178.151.107:49922 } on Server port: 9933 <---> 49922
+31 Jan 2016 | 13:41:32,514 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:49922 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:41:32,519 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:49922 ) , asSpect: false
+31 Jan 2016 | 13:42:12,528 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107 } on Server port: 8888 <---> 49933
+31 Jan 2016 | 13:42:12,533 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107 } on Server port: 8888 <---> 49934
+31 Jan 2016 | 13:42:12,869 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+31 Jan 2016 | 13:42:12,870 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107:49933 }
+31 Jan 2016 | 13:42:13,061 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+31 Jan 2016 | 13:42:13,062 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107:49934 }
+31 Jan 2016 | 13:42:13,438 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107 } on Server port: 8888 <---> 49935
+31 Jan 2016 | 13:42:13,443 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+31 Jan 2016 | 13:42:13,443 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 4, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107:49935 }
+31 Jan 2016 | 13:43:07,385 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 5, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107 } on Server port: 8888 <---> 49946
+31 Jan 2016 | 13:43:07,842 | INFO  | SFSWorker:Sys:2 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#1, Id: 1, Priv: 0, Sess: 77.178.151.107:49946 ) , Type: JavaScript
+31 Jan 2016 | 13:43:13,809 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 5, Type: WEBSOCKET, Logged: Yes, IP: 77.178.151.107:49946 }
+31 Jan 2016 | 13:43:13,814 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | User disconnected: { Zone: Registration }, ( User Name: Guest#1, Id: 1, Priv: 0, Sess: 77.178.151.107:49946 ) , SessionLen: 5972, Type: JavaScript
+31 Jan 2016 | 13:45:28,660 | INFO  | SFSWorker:Ext:4 | Extensions |     | {Admin}: Restarting SmartFoxServer... 
+31 Jan 2016 | 13:45:28,660 | WARN  | SFSWorker:Ext:4 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER RESTARTING ***
+31 Jan 2016 | 13:45:28,662 | WARN  | SocketWriter-3 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-3,5,main]
+31 Jan 2016 | 13:45:28,662 | WARN  | SocketWriter-2 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-2,5,main]
+31 Jan 2016 | 13:45:28,662 | WARN  | SocketWriter-1 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-1,5,main]
+31 Jan 2016 | 13:45:28,663 | WARN  | SocketReader | bitswarm.core.SocketReader |     | Problems in SocketReader main loop: java.lang.InterruptedException: sleep interrupted, Thread: Thread[SocketReader,5,main]
+31 Jan 2016 | 13:45:28,664 | WARN  | SocketReader | bitswarm.core.SocketReader |     | java.lang.InterruptedException: sleep interrupted
+	java.lang.Thread.sleep(Native Method)
+	com.smartfoxserver.bitswarm.core.SocketReader.run(SocketReader.java:173)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+31 Jan 2016 | 13:45:31,665 | INFO  | SFSWorker:Ext:4 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:49922 }
+31 Jan 2016 | 13:45:32,170 | INFO  | :::SFSRestarter::: | v2.util.SFSRestart |     | Process restarted: java.lang.UNIXProcess@36ba1fc7
+31 Jan 2016 | 13:45:32,473 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+31 Jan 2016 | 13:45:32,482 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+31 Jan 2016 | 13:45:33,268 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+31 Jan 2016 | 13:45:33,316 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "/tmp/vfs_cache" as temporary files store.
+31 Jan 2016 | 13:45:33,445 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+31 Jan 2016 | 13:45:33,447 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+31 Jan 2016 | 13:45:33,470 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+31 Jan 2016 | 13:45:33,487 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+31 Jan 2016 | 13:45:33,493 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/EduGame.zone.xml
+31 Jan 2016 | 13:45:33,594 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/Registration.zone.xml
+31 Jan 2016 | 13:45:33,641 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:45:33,679 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+31 Jan 2016 | 13:45:33,694 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:45:34,043 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+31 Jan 2016 | 13:45:34,058 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+31 Jan 2016 | 13:45:34,190 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 172.31.23.95:8888 (WebSocket) }
+31 Jan 2016 | 13:45:34,190 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+31 Jan 2016 | 13:45:34,190 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+31 Jan 2016 | 13:45:36,181 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+31 Jan 2016 | 13:45:36,192 | INFO  | Thread-1 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+31 Jan 2016 | 13:45:36,207 | INFO  | Thread-0 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+31 Jan 2016 | 13:45:36,996 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+31 Jan 2016 | 13:45:45,253 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 77.178.151.107:50052 } on Server port: 9933 <---> 50052
+31 Jan 2016 | 13:45:45,466 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:50052 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:45:45,471 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:50052 ) , asSpect: false
+31 Jan 2016 | 13:46:41,932 | INFO  | SFSWorker:Ext:1 | Extensions |     | {Admin}: Restarting SmartFoxServer... 
+31 Jan 2016 | 13:46:41,932 | WARN  | SFSWorker:Ext:1 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER RESTARTING ***
+31 Jan 2016 | 13:46:41,933 | WARN  | SocketWriter-2 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-2,5,main]
+31 Jan 2016 | 13:46:41,933 | WARN  | SocketWriter-3 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-3,5,main]
+31 Jan 2016 | 13:46:41,933 | WARN  | SocketWriter-1 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-1,5,main]
+31 Jan 2016 | 13:46:41,934 | WARN  | SocketReader | bitswarm.core.SocketReader |     | Problems in SocketReader main loop: java.lang.InterruptedException: sleep interrupted, Thread: Thread[SocketReader,5,main]
+31 Jan 2016 | 13:46:41,934 | WARN  | SocketReader | bitswarm.core.SocketReader |     | java.lang.InterruptedException: sleep interrupted
+	java.lang.Thread.sleep(Native Method)
+	com.smartfoxserver.bitswarm.core.SocketReader.run(SocketReader.java:173)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+31 Jan 2016 | 13:46:44,935 | INFO  | SFSWorker:Ext:1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:50052 }
+31 Jan 2016 | 13:46:45,441 | INFO  | :::SFSRestarter::: | v2.util.SFSRestart |     | Process restarted: java.lang.UNIXProcess@16950f89
+31 Jan 2016 | 13:46:45,763 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+31 Jan 2016 | 13:46:45,771 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+31 Jan 2016 | 13:46:46,580 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+31 Jan 2016 | 13:46:46,628 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "/tmp/vfs_cache" as temporary files store.
+31 Jan 2016 | 13:46:46,753 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+31 Jan 2016 | 13:46:46,754 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+31 Jan 2016 | 13:46:46,779 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+31 Jan 2016 | 13:46:46,795 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+31 Jan 2016 | 13:46:46,805 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/EduGame.zone.xml
+31 Jan 2016 | 13:46:46,906 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/Registration.zone.xml
+31 Jan 2016 | 13:46:46,952 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:46:46,992 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+31 Jan 2016 | 13:46:47,006 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:46:47,350 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+31 Jan 2016 | 13:46:47,365 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+31 Jan 2016 | 13:46:47,494 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 172.31.23.95:8888 (WebSocket) }
+31 Jan 2016 | 13:46:47,494 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+31 Jan 2016 | 13:46:47,494 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+31 Jan 2016 | 13:46:49,449 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+31 Jan 2016 | 13:46:49,467 | INFO  | Thread-1 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+31 Jan 2016 | 13:46:49,468 | INFO  | Thread-0 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+31 Jan 2016 | 13:46:50,286 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+31 Jan 2016 | 13:46:58,689 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 77.178.151.107:50075 } on Server port: 9933 <---> 50075
+31 Jan 2016 | 13:46:58,912 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:50075 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:46:58,918 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:50075 ) , asSpect: false
+31 Jan 2016 | 13:48:23,663 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107 } on Server port: 8888 <---> 50154
+31 Jan 2016 | 13:48:24,167 | WARN  | SFSWorker:Ext:1 | entities.managers.SFSExtensionManager |     | java.sql.SQLException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.sql.SQLException
+Message: The DBManager is NOT active in this Zone. SQL Query failed. Please activate it the DBManager from the AdminTool
+Description: Error during event handling: java.sql.SQLException: The DBManager is NOT active in this Zone. SQL Query failed. Please activate it the DBManager from the AdminTool, Listener: com.smartfoxserver.v2.components.login.LoginAssistantEventHandler@7952198d
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.db.SFSDBManager.checkState(SFSDBManager.java:339)
+com.smartfoxserver.v2.db.SFSDBManager.executeQuery(SFSDBManager.java:131)
+com.smartfoxserver.v2.components.login.LoginAssistantEventHandler.handleServerEvent(LoginAssistantEventHandler.java:59)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchEvent(SFSExtensionManager.java:769)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.dispatchZoneLevelEvent(SFSExtensionManager.java:690)
+com.smartfoxserver.v2.entities.managers.SFSExtensionManager.handleServerEvent(SFSExtensionManager.java:887)
+com.smartfoxserver.v2.core.SFSEventManager$SFSEventRunner.run(SFSEventManager.java:63)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:48:57,607 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107:50154 }
+31 Jan 2016 | 13:52:39,935 | INFO  | SFSWorker:Ext:1 | Extensions |     | {Admin}: Restarting SmartFoxServer... 
+31 Jan 2016 | 13:52:39,936 | WARN  | SFSWorker:Ext:1 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER RESTARTING ***
+31 Jan 2016 | 13:52:39,937 | WARN  | SocketWriter-1 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-1,5,main]
+31 Jan 2016 | 13:52:39,937 | WARN  | SocketWriter-3 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-3,5,main]
+31 Jan 2016 | 13:52:39,937 | WARN  | SocketWriter-2 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-2,5,main]
+31 Jan 2016 | 13:52:39,938 | WARN  | SocketReader | bitswarm.core.SocketReader |     | Problems in SocketReader main loop: java.lang.InterruptedException: sleep interrupted, Thread: Thread[SocketReader,5,main]
+31 Jan 2016 | 13:52:39,938 | WARN  | SocketReader | bitswarm.core.SocketReader |     | java.lang.InterruptedException: sleep interrupted
+	java.lang.Thread.sleep(Native Method)
+	com.smartfoxserver.bitswarm.core.SocketReader.run(SocketReader.java:173)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+31 Jan 2016 | 13:52:42,939 | INFO  | SFSWorker:Ext:1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:50075 }
+31 Jan 2016 | 13:52:43,444 | INFO  | :::SFSRestarter::: | v2.util.SFSRestart |     | Process restarted: java.lang.UNIXProcess@1ee5a137
+31 Jan 2016 | 13:52:43,745 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+31 Jan 2016 | 13:52:43,754 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+31 Jan 2016 | 13:52:44,546 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+31 Jan 2016 | 13:52:44,596 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "/tmp/vfs_cache" as temporary files store.
+31 Jan 2016 | 13:52:44,721 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+31 Jan 2016 | 13:52:44,722 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+31 Jan 2016 | 13:52:44,749 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+31 Jan 2016 | 13:52:44,761 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+31 Jan 2016 | 13:52:44,767 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/EduGame.zone.xml
+31 Jan 2016 | 13:52:44,859 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/Registration.zone.xml
+31 Jan 2016 | 13:52:44,904 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:52:45,280 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+31 Jan 2016 | 13:52:45,295 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:52:45,311 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+31 Jan 2016 | 13:52:45,327 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+31 Jan 2016 | 13:52:45,467 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 172.31.23.95:8888 (WebSocket) }
+31 Jan 2016 | 13:52:45,468 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+31 Jan 2016 | 13:52:45,468 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+31 Jan 2016 | 13:52:47,452 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+31 Jan 2016 | 13:52:47,472 | INFO  | Thread-1 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+31 Jan 2016 | 13:52:47,472 | INFO  | Thread-0 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+31 Jan 2016 | 13:52:48,271 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+31 Jan 2016 | 13:52:52,512 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 77.178.151.107:50173 } on Server port: 9933 <---> 50173
+31 Jan 2016 | 13:52:52,731 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:50173 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:52:52,736 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:50173 ) , asSpect: false
+31 Jan 2016 | 13:53:59,886 | INFO  | SFSWorker:Ext:1 | Extensions |     | {Admin}: Restarting SmartFoxServer... 
+31 Jan 2016 | 13:53:59,887 | WARN  | SFSWorker:Ext:1 | smartfoxserver.v2.SmartFoxServer |     | *** SERVER RESTARTING ***
+31 Jan 2016 | 13:53:59,888 | WARN  | SocketWriter-1 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-1,5,main]
+31 Jan 2016 | 13:53:59,888 | WARN  | SocketWriter-2 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-2,5,main]
+31 Jan 2016 | 13:53:59,888 | WARN  | SocketWriter-3 | bitswarm.core.SocketWriter |     | SocketWriter thread interrupted: Thread[SocketWriter-3,5,main]
+31 Jan 2016 | 13:53:59,889 | WARN  | SocketReader | bitswarm.core.SocketReader |     | Problems in SocketReader main loop: java.lang.InterruptedException: sleep interrupted, Thread: Thread[SocketReader,5,main]
+31 Jan 2016 | 13:53:59,889 | WARN  | SocketReader | bitswarm.core.SocketReader |     | java.lang.InterruptedException: sleep interrupted
+	java.lang.Thread.sleep(Native Method)
+	com.smartfoxserver.bitswarm.core.SocketReader.run(SocketReader.java:173)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	java.lang.Thread.run(Unknown Source)
+
+31 Jan 2016 | 13:54:02,891 | INFO  | SFSWorker:Ext:1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 1, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:50173 }
+31 Jan 2016 | 13:54:03,396 | INFO  | :::SFSRestarter::: | v2.util.SFSRestart |     | Process restarted: java.lang.UNIXProcess@4dbf3e93
+31 Jan 2016 | 13:54:03,701 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+31 Jan 2016 | 13:54:03,710 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+31 Jan 2016 | 13:54:04,507 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+31 Jan 2016 | 13:54:04,557 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "/tmp/vfs_cache" as temporary files store.
+31 Jan 2016 | 13:54:04,681 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+31 Jan 2016 | 13:54:04,682 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+31 Jan 2016 | 13:54:04,707 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+31 Jan 2016 | 13:54:04,723 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+31 Jan 2016 | 13:54:04,730 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/EduGame.zone.xml
+31 Jan 2016 | 13:54:04,837 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones/Registration.zone.xml
+31 Jan 2016 | 13:54:04,884 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:54:05,254 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+31 Jan 2016 | 13:54:05,269 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:54:05,286 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+31 Jan 2016 | 13:54:05,301 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+31 Jan 2016 | 13:54:05,436 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 172.31.23.95:8888 (WebSocket) }
+31 Jan 2016 | 13:54:05,436 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+31 Jan 2016 | 13:54:05,436 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!
+31 Jan 2016 | 13:54:07,401 | WARN  | SFS2X ShutdownHook | v2.core.SFSShutdownHook |     | SFS2X is shutting down. The process may take a few seconds...
+31 Jan 2016 | 13:54:07,422 | INFO  | Thread-1 | entities.managers.SFSBannedUserManager |     | BanUser data saved.
+31 Jan 2016 | 13:54:07,423 | INFO  | Thread-0 | entities.managers.SFSZoneManager |     | BuddyList saveAll...
+31 Jan 2016 | 13:54:08,248 | INFO  | main | bluebox.v3.SessionFilter |     | BlueBox-2X Service (3.0.0) ready.
+31 Jan 2016 | 13:54:14,262 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 1, Type: DEFAULT, Logged: No, IP: 77.178.151.107:50245 } on Server port: 9933 <---> 50245
+31 Jan 2016 | 13:54:14,480 | INFO  | SFSWorker:Ext:3 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:50245 ) , Type: Flash PlugIn:WIN 20,0,0,286
+31 Jan 2016 | 13:54:14,486 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 0, Priv: 0, Sess: 77.178.151.107:50245 ) , asSpect: false
+31 Jan 2016 | 13:54:26,350 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 2, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107 } on Server port: 8888 <---> 50310
+31 Jan 2016 | 13:54:26,858 | WARN  | SFSWorker:Ext:3 | entities.managers.SFSExtensionManager |     | com.smartfoxserver.v2.exceptions.SFSLoginException: Login failed. User not found: tkutschk
+31 Jan 2016 | 13:54:36,249 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User login: { Zone: EduGame }, ( User Name: admin, Id: 1, Priv: 0, Sess: 77.178.151.107:50310 ) , Type: JavaScript
+31 Jan 2016 | 13:54:36,461 | INFO  | SFSWorker:Sys:1 | v2.api.SFSApi |     | Room joined: [ Room: Lobby, Id: 0, Group: default, isGame: false ], { Zone: EduGame }, ( User Name: admin, Id: 1, Priv: 0, Sess: 77.178.151.107:50310 ) , asSpect: false
+31 Jan 2016 | 13:54:36,479 | ERROR | SFSWorker:Ext:4 | controllers.v290.ExtensionReqController |     | java.lang.IllegalArgumentException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: java.lang.IllegalArgumentException
+Message: SFSObject requires a non-null value! If you need to add a null use the putNull() method.
+Description: Error while handling client request in extension: { Ext: game, Type: JAVA, Lev: ZONE, { Zone: EduGame }, {} }
+Extension Cmd: getBadges
++--- --- ---+
+Stack Trace:
++--- --- ---+
+com.smartfoxserver.v2.entities.data.SFSObject.putObj(SFSObject.java:682)
+com.smartfoxserver.v2.entities.data.SFSObject.putUtfStringArray(SFSObject.java:648)
+sfs2x.extensions.game.GetBadgesHandler.handleClientRequest(GetBadgesHandler.java:22)
+com.smartfoxserver.v2.extensions.SFSExtension.handleClientRequest(SFSExtension.java:208)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController.processRequest(ExtensionReqController.java:174)
+com.smartfoxserver.v2.controllers.v290.ExtensionReqController$1.run(ExtensionReqController.java:68)
+java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+java.lang.Thread.run(Unknown Source)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+31 Jan 2016 | 13:55:05,446 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/1
+31 Jan 2016 | 13:55:05,447 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/1
+31 Jan 2016 | 13:55:05,447 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+31 Jan 2016 | 13:55:05,447 | INFO  | pool-1-thread-3 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/2
+31 Jan 2016 | 13:56:45,723 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 2, Type: WEBSOCKET, Logged: Yes, IP: 77.178.151.107:50310 }
+31 Jan 2016 | 13:56:45,724 | INFO  | SFSWorker:Sys:3 | v2.api.SFSApi |     | User disconnected: { Zone: EduGame }, ( User Name: admin, Id: 1, Priv: 0, Sess: 77.178.151.107:50310 ) , SessionLen: 129475, Type: JavaScript
+31 Jan 2016 | 13:59:55,983 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 3, Type: WEBSOCKET, Logged: No, IP: 77.178.151.107 } on Server port: 8888 <---> 50343
+31 Jan 2016 | 13:59:56,382 | INFO  | SFSWorker:Sys:4 | v2.api.SFSApi |     | User login: { Zone: Registration }, ( User Name: Guest#2, Id: 2, Priv: 0, Sess: 77.178.151.107:50343 ) , Type: JavaScript

@@ -80,7 +80,7 @@ function init()
     console.log("Application started");
     // Create configuration object
     var config = {};
-    config.host = "localhost"; //"52.25.12.255"
+    config.host = "52.27.156.152"; //"52.25.12.255" localhost
     config.port = 8888;
     config.zone = ZONE_NAME;
     config.debug = false;
@@ -113,7 +113,7 @@ function buildMainUI() {
         height:289,
         pageable:false,
         sortable: true,
-        filterable: true,
+        filterable: true, 
         columns: [
             { text: 'No.', dataField: 'id', align: 'center', cellsalign: 'center', width: 40 },
             { text: 'Mode', dataField: 'mode', align: 'center', cellsalign: 'center', width: 100},
@@ -202,7 +202,7 @@ function buildMainUI() {
 
     // badges section
     highscoreButton = $("#highscoreBt").jqxButton({width:120, disabled:false, theme:theme});
-    takeSurveyBt = $("#takeSurveyBt").jqxButton({width:120, disabled:true, theme:theme});
+    takeSurveyBt = $("#takeSurveyBt").jqxButton({width:120, disabled:false, theme:theme});
     achievementsWin = $("#achievementsWin").jqxWindow({width:400, height:190, isModal:true, autoOpen:false, resizable:false, draggable:false, showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
 
     //ranking window
@@ -222,7 +222,7 @@ function buildMainUI() {
 
 
     //game creation popup
-    createGameWin = $("#createGameWin").jqxWindow({width:600, height:448, isModal:true, autoOpen:false, resizable:false, draggable:false, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
+    createGameWin = $("#createGameWin").jqxWindow({width:600, height:448, isModal:true, autoOpen:false, resizable:false, draggable:false, showCloseButton:false, cancelButton:$("#cancelBt"), showAnimationDuration: 200, closeAnimationDuration: 100, theme:theme});
     createGameWinTabs = $("#createGameWinTabs").jqxTabs({width:"100%", height:395, theme:theme});
     closeBt = $("#closeBt").jqxButton({width:100, theme:theme});
     nextBt = $("#nextBt").jqxButton({width:100, theme:theme});
@@ -435,12 +435,29 @@ function addEventListenerMain() {
         wikiClicked = true;
     });
 
+    //TODO
+    $(document).on("click", "#topCardNotClickable", function() {
+        $.each( cards, function( index, card ) {
+            card.addEventListener("click", getCardDetails);
+            card.cursor = "pointer";
+            card.addEventListener("rollover", onRollOverCard);
+            card.addEventListener("rollout", onRollOutCard);
+        });
+    });
+    $(document).on("click", "#bigCardNotClickable", function() {
+        onIsYesErrorBtClick();
+    });
+    $(document).on("click", "#noFeedbackBox", function() {
+        $("#feedbackWrapper").css("display", "block");
+    });
+    //TODO
+
     //instructions
-    $(document).on("click", "instructions.nextBt", function() {
+    $(document).on("click", ".instructions.nextBt", function() {
         var selected = $("#instructionsWinTabs").val();
         $("#instructionsWinTabs").jqxTabs('val', selected+1);
     });
-    $(document).on("click", "instructions.backBt", function() {
+    $(document).on("click", ".instructions.backBt", function() {
         var selected = $("#instructionsWinTabs").val();
         $("#instructionsWinTabs").jqxTabs('val', selected-1);
     });

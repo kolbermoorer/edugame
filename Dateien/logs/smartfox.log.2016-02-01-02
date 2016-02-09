@@ -1,0 +1,22 @@
+01 Feb 2016 | 02:02:32,447 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 239, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247 } on Server port: 8888 <---> 2883
+01 Feb 2016 | 02:02:32,448 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 02:02:32,448 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 239, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247:2883 }
+01 Feb 2016 | 02:17:18,993 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 240, Type: WEBSOCKET, Logged: No, IP: 61.160.213.55 } on Server port: 8888 <---> 4115
+01 Feb 2016 | 02:17:18,998 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 02:17:18,999 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 240, Type: WEBSOCKET, Logged: No, IP: 61.160.213.55:4115 }
+01 Feb 2016 | 02:32:11,642 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 241, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247 } on Server port: 8888 <---> 4635
+01 Feb 2016 | 02:32:11,643 | WARN  | New I/O worker #2 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 02:32:11,644 | INFO  | New I/O worker #2 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 241, Type: WEBSOCKET, Logged: No, IP: 61.160.213.247:4635 }
+01 Feb 2016 | 02:35:58,376 | INFO  | SocketReader | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 242, Type: DEFAULT, Logged: No, IP: 89.14.22.128:64458 } on Server port: 9933 <---> 64458
+01 Feb 2016 | 02:35:58,578 | INFO  | SFSWorker:Ext:1 | v2.scala.DefLI |     | User already logged in. Disconnecting previous instance : ( User Name: eduhack, Id: 181, Priv: 0, Sess: 77.178.151.107:63477 ) 
+01 Feb 2016 | 02:35:58,579 | INFO  | SFSWorker:Ext:1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 238, Type: DEFAULT, Logged: Yes, IP: 77.178.151.107:63477 }
+01 Feb 2016 | 02:35:58,579 | INFO  | SFSWorker:Ext:1 | v2.api.SFSApi |     | User disconnected: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 181, Priv: 0, Sess: 77.178.151.107:63477 ) , SessionLen: 2607320, Type: Flash PlugIn:WIN 20,0,0,286
+01 Feb 2016 | 02:36:00,580 | INFO  | pool-1-thread-2 | v2.api.SFSApi |     | User login: { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 182, Priv: 0, Sess: 89.14.22.128:64458 ) , Type: Flash PlugIn:WIN 20,0,0,286
+01 Feb 2016 | 02:36:00,581 | INFO  | SFSWorker:Ext:4 | v2.api.SFSApi |     | Room joined: [ Room: AdminRoom, Id: 1, Group: default, isGame: false ], { Zone: --=={{{ AdminZone }}}==-- }, ( User Name: eduhack, Id: 182, Priv: 0, Sess: 89.14.22.128:64458 ) , asSpect: false
+01 Feb 2016 | 02:47:00,206 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session created: { Id: 243, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56 } on Server port: 8888 <---> 3946
+01 Feb 2016 | 02:47:00,207 | WARN  | New I/O worker #1 | websocket.netty.WebSocketServerHandler |     | org.jboss.netty.handler.codec.http.websocketx.WebSocketHandshakeException: not a WebSocket handshake request: missing upgrade
+01 Feb 2016 | 02:47:00,207 | INFO  | New I/O worker #1 | bitswarm.sessions.DefaultSessionManager |     | Session removed: { Id: 243, Type: WEBSOCKET, Logged: No, IP: 61.160.213.56:3946 }
+01 Feb 2016 | 02:55:00,032 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: --=={{{ AdminZone }}}==-- }, CCU: 0/1
+01 Feb 2016 | 02:55:00,033 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: EduGame }, CCU: 0/0
+01 Feb 2016 | 02:55:00,033 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: { Zone: Registration }, CCU: 0/0
+01 Feb 2016 | 02:55:00,033 | INFO  | pool-1-thread-2 | util.stats.CCULoggerTask |     | CCU stats: CCU: 0/1

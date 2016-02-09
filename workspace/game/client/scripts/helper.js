@@ -62,7 +62,7 @@ function onGameExtensionResponse(event)
             break;
         case "pickCard":
             questionData = JSON.parse(params.card);
-            console.log(questionData);
+
             fillCard(questionData);
             var countText = (player2.stack[selectedCard.categoryId]-1 == 0 ? "" : player2.stack[selectedCard.categoryId]-1);
             $("#countTop" + selectedCard.categoryId).text(countText);
@@ -97,14 +97,14 @@ function onGameExtensionResponse(event)
             multiPlayerCreateQuestion(params);
             break;
         case "updateTurn":
-            console.log(params);
+
             onNextQuestionBtClickCss();
             whoseTurn = params["whoseTurn"];
             setStatusText(1);
             handleMove(params["enableBoard"], answerError);
             break;
         case "stopTime":
-            console.log("Stop the timer of the opponent!");
+
             stopOpponentTimer();
             break;
         case "updateWeight":
