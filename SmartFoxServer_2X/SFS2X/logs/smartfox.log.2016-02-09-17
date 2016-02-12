@@ -1,0 +1,67 @@
+09 Feb 2016 | 17:22:05,245 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+09 Feb 2016 | 17:22:05,265 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+09 Feb 2016 | 17:22:06,448 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+09 Feb 2016 | 17:22:06,499 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+09 Feb 2016 | 17:22:06,707 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+09 Feb 2016 | 17:22:06,710 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+09 Feb 2016 | 17:22:06,732 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+09 Feb 2016 | 17:22:06,745 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+09 Feb 2016 | 17:22:06,754 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+09 Feb 2016 | 17:22:06,812 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+09 Feb 2016 | 17:22:06,842 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+09 Feb 2016 | 17:22:07,504 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException
+Message: Unknown database 'game'
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+09 Feb 2016 | 17:22:07,531 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+09 Feb 2016 | 17:22:07,572 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+09 Feb 2016 | 17:22:07,589 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException
+Message: Unknown database 'game'
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+09 Feb 2016 | 17:22:07,608 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: --=={{{ AdminZone }}}==-- }, [ Room: AdminRoom, Id: 1, Group: default, isGame: false ]
+09 Feb 2016 | 17:22:07,625 | INFO  | main | v2.core.AdminToolService |     | AdminTool Service started
+09 Feb 2016 | 17:22:08,157 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | Listening Sockets: { 0.0.0.0:9933, (Tcp) } { 127.0.0.1:9933, (Udp) } { 127.0.0.1:8888 (WebSocket) }
+09 Feb 2016 | 17:22:08,159 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     |  
+ _____ _____ _____    ___ __ __ 
+|   __|   __|   __|  |_  |  |  |
+|__   |   __|__   |  |  _|-   -|
+|_____|__|  |_____|  |___|__|__|                                         
+ _____ _____ _____ ____  __ __ 
+| __  |   __|  _  |    \|  |  |
+|    -|   __|     |  |  |_   _|
+|__|__|_____|__|__|____/  |_|  
+[ 2.9.0 ] 
+
+09 Feb 2016 | 17:22:08,160 | INFO  | SFSWorker:Sys:1 | smartfoxserver.v2.SmartFoxServer |     | SmartFoxServer 2X (2.9.0) READY!

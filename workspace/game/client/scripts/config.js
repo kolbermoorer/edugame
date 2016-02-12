@@ -113,7 +113,7 @@ function buildMainUI() {
         height:289,
         pageable:false,
         sortable: true,
-        filterable: true, 
+        filterable: true,
         columns: [
             { text: 'No.', dataField: 'id', align: 'center', cellsalign: 'center', width: 40 },
             { text: 'Mode', dataField: 'mode', align: 'center', cellsalign: 'center', width: 100},

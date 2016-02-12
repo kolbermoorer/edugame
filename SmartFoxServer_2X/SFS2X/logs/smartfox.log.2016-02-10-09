@@ -1,0 +1,44 @@
+10 Feb 2016 | 09:37:24,048 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Boot sequence starts...
+10 Feb 2016 | 09:37:24,080 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | 
+ _____ _____ _____    ___ __ __    _____ _____ _____ _____ 
+|   __|   __|   __|  |_  |  |  |  | __  |     |     |_   _|
+|__   |   __|__   |  |  _|-   -|  | __ -|  |  |  |  | | |  
+|_____|__|  |_____|  |___|__|__|  |_____|_____|_____| |_|
+
+10 Feb 2016 | 09:37:25,107 | INFO  | main | v2.core.SFSEventManager |     | AnonymousService-1 initalized
+10 Feb 2016 | 09:37:25,163 | INFO  | main | vfs.impl.DefaultFileReplicator |     | Using "C:\Users\Thomas\AppData\Local\Temp\vfs_cache" as temporary files store.
+10 Feb 2016 | 09:37:25,364 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | License loaded:
+
+===================================
+LICENSE DETAILS
+-----------------------------------
+Type            : Community Edition
+Max users       : 100
+===================================
+
+10 Feb 2016 | 09:37:25,367 | INFO  | main | entities.managers.SFSBannedUserStorage |     | BanUserStorage initialized
+10 Feb 2016 | 09:37:25,398 | INFO  | main | entities.managers.SFSBannedUserManager |     | BanUser data loaded: 0 records.
+10 Feb 2016 | 09:37:25,412 | INFO  | main | smartfoxserver.v2.SmartFoxServer |     | Protocol Type is: BINARY
+10 Feb 2016 | 09:37:25,422 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\EduGame.zone.xml
+10 Feb 2016 | 09:37:25,484 | INFO  | main | v2.config.DefaultConfigLoader |     | Loading: zones\Registration.zone.xml
+10 Feb 2016 | 09:37:25,524 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: EduGame 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+10 Feb 2016 | 09:37:25,996 | ERROR | main | v2.db.SFSDBManager |     | com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException:
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException
+Message: Unknown database 'game'
+Description: The DBManager Test SQL failed
+Please double check your SQL code and make sure that Database server is running.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+10 Feb 2016 | 09:37:26,015 | INFO  | main | entities.managers.SFSRoomManager |     | Room created: { Zone: EduGame }, [ Room: Lobby, Id: 0, Group: default, isGame: false ]
+10 Feb 2016 | 09:37:26,050 | INFO  | main | entities.managers.SFSZoneManager |     | 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ >> Zone: Registration 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
